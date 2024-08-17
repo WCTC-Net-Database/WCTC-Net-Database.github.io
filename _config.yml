@@ -1,11 +1,10 @@
 # Site settings
-title: My Organization's GitHub Page
-email: your-email@example.com
-description: > # this means to ignore newlines until "baseurl:"
-  This is the official GitHub Pages site for My Organization where we share
-  updates, projects, and documentation.
+title: WCTC .NET Database
+email: contact@wctc.edu
+description: >- # this means to ignore newlines until "baseurl:"
+  This is the GitHub Pages site for the WCTC .NET Database course.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://exampleorg.github.io" # the base hostname & protocol for your site
+url: "https://wctc-net-database.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
