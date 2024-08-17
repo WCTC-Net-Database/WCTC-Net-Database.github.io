@@ -1,0 +1,39 @@
+# Site settings
+title: My Organization's GitHub Page
+email: your-email@example.com
+description: > # this means to ignore newlines until "baseurl:"
+  This is the official GitHub Pages site for My Organization where we share
+  updates, projects, and documentation.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://exampleorg.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from production build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle
+  - vendor/cache
+  - vendor/gems
+  - vendor/ruby
+
+# Optional settings
+google_analytics: UA-XXXXX-Y # Replace with your Google Analytics tracking ID
+twitter_username: exampleorg # Replace with your organization's Twitter username
+github_username:  exampleorg # Replace with your organization's GitHub username
+
+# Jekyll theme configuration (for themes supporting this)
+minima:
+  skin: air # Theme skin can be set if the theme supports different skins
+
+# SEO tags
+author: My Organization
+twitter:
+  username: exampleorg
