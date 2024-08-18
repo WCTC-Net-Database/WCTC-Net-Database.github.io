@@ -19,7 +19,7 @@ jobs:
       - name: Convert Marp to HTML
         uses: KoharaKazuya/marp-cli-action@v2
         with:
-          args: 'markdown/*.md --html --output ./html'
+          args: '--input-dir markdown --html'
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

@@ -1,8 +1,6 @@
 ---
 marp: true
 theme: wctc
-style: |
-  @import 'wctc-theme.css';
 ---
 ![WCTC Logo](https://www.wctc.edu/Files/waukesha_logo.svg)
 
