@@ -13,32 +13,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Ensure HTML directory exists
-      run: mkdir -p html
+      - name: Ensure HTML directory exists
+        run: mkdir -p html
 
-    - name: List Markdown directory contents
-      run: ls -la markdown
+      - name: Convert Markdown to HTML
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install markdown-to-html
+        run: npm install -g markdown-to-html
+      - name: Convert Markdown files
+        run: markdown-to-html markdown/*.md -o html
 
-    - name: Convert Markdown to HTML
-      uses: KoharaKazuya/marp-cli-action@v2
-      with:
-        args: 'markdown/*.md --html --output ./html'
-
-    - name: List HTML directory contents
-      run: ls -la html
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.PAGES_TOKEN }}
-        publish_dir: ./html
-        publish_branch: gh-pages
-        allow_empty_commit: false
-        keep_files: false
-        force_orphan: false
-        enable_jekyll: false
-        disable_nojekyll: false
-        exclude_assets: .github
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PAGES_TOKEN }}
+          publish_dir: ./html
+          publish_branch: gh-pages
+          allow_empty_commit: false
+          keep_files: false
+          force_orphan: false
+          enable_jekyll: false
+          disable_nojekyll: false
+          exclude_assets: .github
