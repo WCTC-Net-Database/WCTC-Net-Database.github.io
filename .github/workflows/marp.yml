@@ -9,23 +9,23 @@ on:
   workflow_dispatch:  # Allow manual triggering of the workflow
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Convert Markdown to HTML
-      uses: KoharaKazuya/marp-cli-action@v2
-      with:
-        args: 'markdown/*.md --html --output ./html'
-
     - name: Ensure HTML directory exists
       run: mkdir -p html
 
     - name: List Markdown directory contents
       run: ls -la markdown
+
+    - name: Convert Markdown to HTML
+      uses: KoharaKazuya/marp-cli-action@v2
+      with:
+        args: 'markdown/*.md --html --output ./html'
 
     - name: List HTML directory contents
       run: ls -la html
