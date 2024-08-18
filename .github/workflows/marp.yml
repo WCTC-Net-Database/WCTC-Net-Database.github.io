@@ -23,10 +23,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Install markdown-to-html
-        run: npm install -g markdown-to-html
+      - name: Install dependencies
+        run: npm install markdown-to-html
       - name: Convert Markdown files
-        run: markdown-to-html markdown/*.md -o html
+        run: npx markdown-to-html markdown/*.md -o html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
