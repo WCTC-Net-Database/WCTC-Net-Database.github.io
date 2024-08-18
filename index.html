@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCTC Net Database</title>
+    <link rel="stylesheet" href="wctc-theme.css">
+    <style>
+        /* Additional styles for the navigation menu */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .submenu a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .submenu a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .submenu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="waukesha_logo.svg" alt="WCTC Logo" style="width: 150px;">
+        <h1>Welcome to WCTC .Net Database's GitHub Page</h1>
+        <nav>
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <a href="#">Documents</a>
+                <div class="submenu">
+                    <a href="/html-docs/">HTML Files</a>
+                    <a href="/pdf-docs/">PDF Files</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Course Description</h2>
+            <p>Learn basic C# methodologies, including classes, objects, types and the difference between value and reference. Apply object-oriented methodologies and utilize constructors, and inheritance and class hierarchies. Also become familiar with Common Language Runtime (CLR) techniques for using .Net code natively in MS SQL Server.</p>
+            <a href="/about/">Learn More</a>
+        </section>
+        <section>
+            <h2>About WCTC</h2>
+            <h3>Beyond the Horizon</h3>
+            <p>WCTC stands at the forefront of a new era in higher education. Surrounded by a rapidly changing landscape, we’re forging ahead while keeping our eyes on the horizon.</p>
+            <p>At the precipice of a new educational frontier, WCTC recognizes the importance of being proactive, agile and forward-thinking in order to meet the diverse needs of learners in the 21st century. We invite our students, faculty, staff, and the entire WCTC community to join us in transforming the future of higher education.</p>
+            <h3>Mission Statement</h3>
+            <p>Waukesha County Technical College provides accessible career and technical education to strengthen our community through lifelong learning.</p>
+            <h3>Horizon Statement</h3>
+            <p>To be the modern comprehensive regional college that ignites people to thrive in a changing world.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 WCTC Net Database</p>
+    </footer>
+</body>
+</html>
