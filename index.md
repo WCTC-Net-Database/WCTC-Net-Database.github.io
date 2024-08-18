@@ -3,8 +3,9 @@ layout: default
 title: Home
 ---
 
-# Welcome to My Organization's GitHub Page
+# Welcome to WCTC .Net Database's GitHub Page
 
-Here you will find project updates, documentation, and insights.
+## Course Description
+Learn basic C# methodologies, including classes, objects, types and the difference between value and reference. Apply object-oriented methodologies and utilize constructors, and inheritance and class hierarchies. Also become familiar with Common Language Runtime (CLR) techniques for using .Net code natively in MS SQL Server.
 
 [Learn More](/about/)
