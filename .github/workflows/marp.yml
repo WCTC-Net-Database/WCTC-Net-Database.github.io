@@ -16,11 +16,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Convert Markdown to HTML
-        uses: natescherer/markdown-to-html-with-github-style-action@v1  # Change action if needed
+      - name: Convert Marp to HTML
+        uses: KoharaKazuya/marp-cli-action@v2
         with:
-          path: 'markdown/**/*.md'  # Adjust pattern for your Markdown files
-          outputpath: 'html'        # Adjust output directory if needed
+          args: 'markdown/*.md --html --output ./html'
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
