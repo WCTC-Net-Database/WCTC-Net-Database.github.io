@@ -1,35 +1,31 @@
-name: Generate HTML from Markdown
+name: Publish Markdown to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Ensures this only runs on pushes to the main branch
+      - main  # or your default branch
     paths:
-      - '**/*.md'  # Runs only when Markdown files are changed
+      - '**/*.md'  # Trigger the workflow only on changes to Markdown files
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'  # Specify the Node.js version
+    - name: Convert Markdown into HTML and PDF
+      uses: KoharaKazuya/marp-cli-action@v2
+      with:
+        entrypoint: '*.md'
+        output: './'  # Adjust based on your specific needs
+        html: true
+        pdf: false
 
-      - name: Install and run Marp CLI
-        uses: marp-team/marp-cli-action@v1
-        with:
-          input_dir: './markdown'  # Specifies the directory where Markdown files are located
-          output_dir: './html'  # Output the HTML files to a specific directory
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./  # Ensure this points to the directory where your HTML/PDF files are generated
 
-      - name: Commit HTML files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add ./html/*
-          git commit -m "Generate HTML from Markdown using Marp" -a || echo "No changes to commit"
-          git push
