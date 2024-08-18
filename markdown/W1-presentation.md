@@ -1,6 +1,10 @@
 ---
 marp: true
 theme: wctc
+style: |
+  section {
+    font-size: 14px;
+  }
 ---
 ![WCTC Logo](https://www.wctc.edu/Files/waukesha_logo.svg)
 
