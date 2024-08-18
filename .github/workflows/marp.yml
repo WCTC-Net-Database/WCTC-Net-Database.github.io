@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'markdown/**/*.md'  # Trigger the workflow only on changes to Markdown files in the markdown directory
+  workflow_dispatch:  # Allow manual triggering of the workflow
 
 jobs:
   build:
