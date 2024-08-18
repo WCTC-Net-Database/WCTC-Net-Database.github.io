@@ -34,9 +34,6 @@ jobs:
 
       - name: Convert Marp to HTML
         uses: KoharaKazuya/marp-cli-action@v2
-        with:
-          generate-html: true  # Explicitly set to true (default is already true)
-          config-file: marp.config.json  # Path to your configuration file
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

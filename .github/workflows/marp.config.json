@@ -1,7 +1,0 @@
-{
-    "inputDir": "./markdown",
-    "outputDir": "./html",
-    "theme": "gaia",
-    "html": true,
-    "pdf": false
-  }
