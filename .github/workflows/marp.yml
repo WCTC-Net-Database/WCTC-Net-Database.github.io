@@ -22,6 +22,11 @@ jobs:
       - name: List installed packages
         run: npm ls
 
+      - name: Install dependencies (with logging)
+        run: |
+          npm install markdown-to-html
+          npm list markdown-to-html
+        
       - name: Checkout repository
         uses: actions/checkout@v3
 
