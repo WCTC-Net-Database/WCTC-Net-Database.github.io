@@ -16,15 +16,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Convert Markdown into HTML and PDF
+    - name: Convert Markdown to HTML
       uses: KoharaKazuya/marp-cli-action@v2
       with:
-        entryPoint: 'markdown/*.md'  # Adjust to match the markdown directory
-        generate-html: true
-        generate-pdf: false
+        args: 'markdown/*.md --html --output ./html'
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: html  # Ensure this points to the directory where your HTML files are generated
+        publish_dir: ./html  # Ensure this points to the directory where your HTML files are generated
