@@ -31,17 +31,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Convert Marp to HTML
-        uses: KoharaKazuya/marp-cli-action@v3
+        uses: KoharaKazuya/marp-cli-action@v2
         with:
-          args: '--input-dir markdown --html'        
+          generate-html: true  # Explicitly set to true (default is already true)
+          config-file: marp.config.js  # Path to your configuration file
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: '.'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
