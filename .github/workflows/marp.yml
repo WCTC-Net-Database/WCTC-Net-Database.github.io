@@ -13,34 +13,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Node version
-        run: node --version
-    
-      - name: Print npm version
-        run: npm --version
-    
-      - name: List installed packages
-        run: npm ls
-
-      - name: Install dependencies (with logging)
-        run: |
-          npm install markdown-to-html
-          npm list markdown-to-html
-        
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Ensure HTML directory exists
-        run: mkdir -p html
-
       - name: Convert Markdown to HTML
-        uses: actions/setup-node@v3
+        uses: natescherer/markdown-to-html-with-github-style-action@v1  # Change action if needed
         with:
-          node-version: 16
-      - name: Install dependencies
-        run: npm install markdown-to-html
-      - name: Convert Markdown files
-        run: npx markdown-to-html markdown/*.md -o html
+          path: 'markdown/**/*.md'  # Adjust pattern for your Markdown files
+          outputpath: 'html'        # Adjust output directory if needed
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
