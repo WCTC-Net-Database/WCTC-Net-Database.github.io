@@ -13,6 +13,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Print Node version
+        run: node --version
+    
+      - name: Print npm version
+        run: npm --version
+    
+      - name: List installed packages
+        run: npm ls
+
       - name: Checkout repository
         uses: actions/checkout@v3
 
