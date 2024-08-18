@@ -1,5 +1,5 @@
 inputDir: ./markdown
 outputDir: ./html
-theme: gaia
+theme: uncover
 html: true
 pdf: false
