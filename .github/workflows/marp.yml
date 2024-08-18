@@ -23,7 +23,7 @@ jobs:
       - name: Install and run Marp CLI
         uses: marp-team/marp-cli-action@v1
         with:
-          input_dir: '.'  # Specifies the directory where Markdown files are located
+          input_dir: './markdown'  # Specifies the directory where Markdown files are located
           output_dir: './html'  # Output the HTML files to a specific directory
 
       - name: Commit HTML files
