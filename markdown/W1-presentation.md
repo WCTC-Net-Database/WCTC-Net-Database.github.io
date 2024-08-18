@@ -3,7 +3,7 @@ marp: true
 theme: wctc
 style: |
   section {
-    font-size: 14px;
+    font-size: 16px;
   }
 ---
 ![WCTC Logo](https://www.wctc.edu/Files/waukesha_logo.svg)
@@ -269,6 +269,10 @@ int num = (int)obj;  // Unboxing: obj is unboxed back to a value type and moved 
 - **"C# 9.0 in a Nutshell"** by Joseph Albahari - A comprehensive guide to the C# language and its uses.
 - **"The C# Player's Guide"** by RB Whitaker - A beginner-friendly guide to learning C#, great for those starting out.
 
+---
+
+### Additional Resources for Learning C#
+
 #### Online Courses
 - **Udemy** - Various courses ranging from beginner to advanced levels, often with comprehensive projects and downloadable resources.
   - [Udemy C# Courses](https://www.udemy.com/topic/c-sharp/)
@@ -286,8 +290,6 @@ int num = (int)obj;  // Unboxing: obj is unboxed back to a value type and moved 
   - [.NET Microsoft YouTube](https://www.youtube.com/user/VisualStudio)
 - **IAmTimCorey** - Focuses on practical C# tutorials and projects.
   - [IAmTimCorey YouTube](https://www.youtube.com/user/IAmTimCorey)
-
-
 
 ---
 
