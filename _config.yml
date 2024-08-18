@@ -25,8 +25,7 @@ exclude:
 
 # Optional settings
 google_analytics: UA-XXXXX-Y # Replace with your Google Analytics tracking ID
-twitter_username: exampleorg # Replace with your organization's Twitter username
-github_username:  exampleorg # Replace with your organization's GitHub username
+github_username:  wctc-net-database # Replace with your organization's GitHub username
 
 # Jekyll theme configuration (for themes supporting this)
 minima:
@@ -34,5 +33,3 @@ minima:
 
 # SEO tags
 author: WCTC .NET Database
-linkedin:
-  username: markmcarthey
