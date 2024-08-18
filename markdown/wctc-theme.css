@@ -1,4 +1,7 @@
 /* wctc-theme.css */
+@theme wctc;
+
+/* Your custom styles */
 :root {
   --color-primary: #003e7a; /* Primary blue color */
   --color-secondary: #0077bf; /* Secondary blue color */
