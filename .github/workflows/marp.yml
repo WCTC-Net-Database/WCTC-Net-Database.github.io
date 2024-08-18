@@ -22,7 +22,7 @@ jobs:
           args: '--input-dir markdown --html'
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-            github_token: ${{ secrets.PAGES_TOKEN }}
-            source: ./markdown  # Assuming converted files are in markdown directory
+          path: ./markdown
+          github_token: ${{ secrets.GITHUB_TOKEN }}
