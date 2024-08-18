@@ -1,6 +1,6 @@
 # Site settings
 title: WCTC .NET Database
-email: contact@wctc.edu
+email: mmcarthey@wctc.edu
 description: >- # this means to ignore newlines until "baseurl:"
   This is the GitHub Pages site for the WCTC .NET Database course.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -33,6 +33,6 @@ minima:
   skin: air # Theme skin can be set if the theme supports different skins
 
 # SEO tags
-author: My Organization
-twitter:
-  username: exampleorg
+author: WCTC .NET Database
+linkedin:
+  username: markmcarthey
