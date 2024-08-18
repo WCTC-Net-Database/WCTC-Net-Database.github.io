@@ -24,4 +24,4 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/upload-pages-artifact@v3.0.1
         with:
-          path: ./markdown
+          path: .  # Deploy the entire repository
