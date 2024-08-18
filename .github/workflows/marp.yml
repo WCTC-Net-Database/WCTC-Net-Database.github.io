@@ -1,15 +1,12 @@
-name: Publish Markdown to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # or your default branch
-    paths:
-      - 'markdown/**/*.md'  # Trigger the workflow only on changes to Markdown files in the markdown directory
-  workflow_dispatch:  # Allow manual triggering of the workflow
+      - main
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,6 +17,15 @@ jobs:
       uses: KoharaKazuya/marp-cli-action@v2
       with:
         args: 'markdown/*.md --html --output ./html'
+
+    - name: Ensure HTML directory exists
+      run: mkdir -p html
+
+    - name: List Markdown directory contents
+      run: ls -la markdown
+
+    - name: List HTML directory contents
+      run: ls -la html
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
