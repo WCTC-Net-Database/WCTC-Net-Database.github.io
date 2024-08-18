@@ -5,7 +5,8 @@ on:
     branches:
       - main  # or your default branch
     paths:
-      - '**/*.md'  # Trigger the workflow only on changes to Markdown files
+      - 'markdown/**/*.md'  # Trigger the workflow only on changes to Markdown files in the markdown directory
+  workflow_dispatch:  # Allow manual triggering of the workflow
 
 jobs:
   build-and-deploy:
@@ -18,8 +19,8 @@ jobs:
     - name: Convert Markdown into HTML and PDF
       uses: KoharaKazuya/marp-cli-action@v2
       with:
-        entrypoint: '*.md'
-        output: './'  # Adjust based on your specific needs
+        entrypoint: 'markdown/*.md'  # Adjust to match the markdown directory
+        output: 'html'  # Output directory for HTML files
         html: true
         pdf: false
 
@@ -27,5 +28,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./  # Ensure this points to the directory where your HTML/PDF files are generated
-
+        publish_dir: html  # Ensure this points to the directory where your HTML files are generated
