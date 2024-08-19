@@ -41,6 +41,12 @@ jobs:
           pdf_files=$(find markdown -name "*.pdf" -type f | jq -R '. + "\n"' | jq -S -c '["\(.|trim)]' )
           echo "$pdf_files" > pdf-files.json
 
+      - name: Update html-files.json
+        run: |
+          # Find HTML files in the markdown directory and create a JSON array
+          html_files=$(find markdown -name "*.html" -type f | jq -R '. + "\n"' | jq -S -c '["\(.|trim)]' )
+          echo "$html_files" > html_files.json
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
