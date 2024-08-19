@@ -2,9 +2,12 @@
 marp: true
 theme: wctc
 style: |
-  section {
+section {
     font-size: 16px;
-  }
+    max-height: 100vh;
+    overflow-y: auto;
+    background: red; /* Temporarily set a background color to highlight overflow */
+}
 ---
 ![WCTC Logo](https://www.wctc.edu/Files/waukesha_logo.svg)
 
@@ -259,6 +262,10 @@ int num = (int)obj;  // Unboxing: obj is unboxed back to a value type and moved 
 - **DotNet Perls** - Offers detailed tutorials and practical examples on various C# concepts.
   - [DotNet Perls](https://www.dotnetperls.com/)
 
+---
+
+### Additional Resources for Learning C#
+
 #### Interactive Learning Platforms
 - **Microsoft Learn** - Interactive modules and learning paths tailored to using C# in different scenarios.
   - [Microsoft Learn for C#](https://docs.microsoft.com/en-us/learn/paths/csharp-first-steps/)
@@ -284,6 +291,10 @@ int num = (int)obj;  // Unboxing: obj is unboxed back to a value type and moved 
   - [Stack Overflow](https://stackoverflow.com/questions/tagged/c%23)
 - **GitHub** - Explore open-source C# projects to see how other developers use the language.
   - [GitHub C# Projects](https://github.com/topics/c-sharp)
+
+---
+
+### Additional Resources for Learning C#
 
 #### YouTube Channels
 - **.NET Microsoft** - Official channel with tutorials, product announcements, and community content.
