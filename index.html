@@ -4,55 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WCTC Net Database</title>
-    <link rel="stylesheet" href="wctc-theme.css">
+
+    <!-- Bootstrap CSS (for layout and styling) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
+
+    <!-- jQuery (for any necessary JavaScript) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Bootstrap JS (for interactive components like dropdowns) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom inline CSS for basic styling -->
     <style>
-        /* Additional styles for the navigation menu */
-        nav {
-            background-color: #333;
-            overflow: hidden;
+        /* Custom basic styling for header and nav */
+        .navbar-nav .nav-item .nav-link {
+            color: white !important;
         }
-        nav a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
+
+        .dropdown-menu a {
+            color: black !important;
         }
     </style>
 </head>
-<body class="theme-wctc">
-    <header>
-        <img src="https://www.wctc.edu/Files/waukesha_logo.svg" alt="WCTC Logo" style="width: 150px;">
-        <h1>Welcome to WCTC .Net Database's GitHub Page</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="documents.html">Documents</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Course Description</h2>
-            <p>Learn basic C# methodologies, including classes, objects, types and the difference between value and reference. Apply object-oriented methodologies and utilize constructors, and inheritance and class hierarchies. Also become familiar with Common Language Runtime (CLR) techniques for using .Net code natively in MS SQL Server.</p>
-            <a href="/about/">Learn More</a>
-        </section>
-        <section>
-            <h2>About WCTC</h2>
-            <h3>Beyond the Horizon</h3>
-            <p>WCTC stands at the forefront of a new era in higher education. Surrounded by a rapidly changing landscape, we’re forging ahead while keeping our eyes on the horizon.</p>
-            <p>At the precipice of a new educational frontier, WCTC recognizes the importance of being proactive, agile and forward-thinking in order to meet the diverse needs of learners in the 21st century. We invite our students, faculty, staff, and the entire WCTC community to join us in transforming the future of higher education.</p>
-            <h3>Mission Statement</h3>
-            <p>Waukesha County Technical College provides accessible career and technical education to strengthen our community through lifelong learning.</p>
-            <h3>Horizon Statement</h3>
-            <p>To be the modern comprehensive regional college that ignites people to thrive in a changing world.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 WCTC Net Database</p>
-    </footer>
+<body>
+
+<!-- Navbar inclusion -->
+<div id="navbar-placeholder"></div>
+
+<script>
+    $(function(){
+        $("#navbar-placeholder").load("navbar.html");
+    });
+</script>
+
+<!-- Content Section -->
+<main class="container mt-5">
+    <h2>Course Description</h2>
+    <p>Learn basic C# methodologies, including classes, objects, types, and the difference between value and reference. Apply object-oriented methodologies and utilize constructors, inheritance, and class hierarchies. Also, become familiar with Common Language Runtime (CLR) techniques for using .Net code natively in MS SQL Server.</p>
+</main>
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2023 WCTC Net Database</p>
+</footer>
+
 </body>
 </html>

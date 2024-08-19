@@ -1,38 +1,93 @@
-/* wctc-theme.css */
-@theme wctc;
-
-/* Your custom styles */
-:root {
-  --color-primary: #003e7a; /* Primary blue color */
-  --color-secondary: #0077bf; /* Secondary blue color */
-  --color-accent: #a5ce39; /* Green accent color */
-  --color-background: #ffffff; /* Background color */
-  --color-text: #000000; /* Text color */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-/* Apply the theme colors */
-.theme-wctc {
-  background-color: var(--color-background);
+header {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  text-align: center;
+  padding: 1rem;
+}
+
+header img {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+nav {
+  background-color: var(--color-secondary);
+  padding: 0.5rem;
+}
+
+.dropdown-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-menu li {
+  position: relative;
+}
+
+.dropdown-menu a {
+  color: var(--color-background);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--color-accent);
   color: var(--color-text);
 }
 
-.theme-wctc h1,
-.theme-wctc h2,
-.theme-wctc h3 {
-  color: var(--color-primary);
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: var(--color-secondary);
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.theme-wctc a,
-.theme-wctc a:visited {
-  color: var(--color-secondary);
-}
-
-.theme-wctc strong {
-  color: var(--color-accent);
-}
-
-img[alt~="WCTC"] {
-  width: 75%;
+.dropdown-menu li:hover .submenu {
   display: block;
-  margin: 0 auto;
+}
+
+.submenu a {
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background-color: var(--color-background);
+  border-radius: 5px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

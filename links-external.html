@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External References</title>
+
+    <!-- Bootstrap CSS (for layout and styling) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
+
+    <!-- jQuery (for any necessary JavaScript) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Bootstrap JS (for interactive components like dropdowns) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom inline CSS for basic styling -->
+    <style>
+        .navbar-nav .nav-item .nav-link {
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar inclusion -->
+<div id="navbar-placeholder"></div>
+
+<script>
+    $(function(){
+        $("#navbar-placeholder").load("navbar.html");
+    });
+</script>
+
+<!-- Content Section -->
+<main class="container mt-5">
+    <h2>External References</h2>
+
+    <section class="mt-4">
+        <h3>Official Documentation</h3>
+        <ul>
+            <li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">Microsoft C# Docs</a></li>
+        </ul>
+    </section>
+
+    <section class="mt-5">
+        <h3>Tutorials and Code Examples</h3>
+        <ul>
+            <li><a href="https://www.tutorialspoint.com/csharp/index.htm" target="_blank">TutorialsPoint C#</a></li>
+            <li><a href="https://www.dotnetperls.com/" target="_blank">DotNet Perls</a></li>
+        </ul>
+    </section>
+
+    <section class="mt-5">
+        <h3>Interactive Learning Platforms</h3>
+        <ul>
+            <li><a href="https://docs.microsoft.com/en-us/learn/paths/csharp-first-steps/" target="_blank">Microsoft Learn for C#</a></li>
+            <li><a href="https://www.codecademy.com/learn/learn-c-sharp" target="_blank">Codecademy C# Course</a></li>
+        </ul>
+    </section>
+
+    <section class="mt-5">
+        <h3>Books</h3>
+        <ul>
+            <li>"C# 9.0 in a Nutshell" by Joseph Albahari</li>
+            <li>"The C# Player's Guide" by RB Whitaker</li>
+        </ul>
+    </section>
+
+    <section class="mt-5">
+        <h3>Online Courses</h3>
+        <ul>
+            <li><a href="https://www.udemy.com/topic/c-sharp/" target="_blank">Udemy C# Courses</a></li>
+            <li><a href="https://www.pluralsight.com/courses/csharp-fundamentals-dev" target="_blank">Pluralsight C# Courses</a></li>
+        </ul>
+    </section>
+
+    <section class="mt-5">
+        <h3>Community and Forums</h3>
+        <ul>
+            <li><a href="https://stackoverflow.com/questions/tagged/c%23" target="_blank">Stack Overflow</a></li>
+            <li><a href="https://github.com/topics/c-sharp" target="_blank">GitHub C# Projects</a></li>
+        </ul>
+    </section>
+
+    <section class="mt-5">
+        <h3>YouTube Channels</h3>
+        <ul>
+            <li><a href="https://www.youtube.com/user/VisualStudio" target="_blank">.NET Microsoft YouTube</a></li>
+            <li><a href="https://www.youtube.com/user/IAmTimCorey" target="_blank">IAmTimCorey YouTube</a></li>
+        </ul>
+    </section>
+
+</main>
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2023 WCTC Net Database</p>
+</footer>
+
+</body>
+</html>
