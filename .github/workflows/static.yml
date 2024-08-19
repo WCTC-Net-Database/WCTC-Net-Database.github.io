@@ -40,7 +40,7 @@ jobs:
           pdf_files=$(find markdown -name "*.pdf" -type f)
           echo "[" > pdf-files.json
           for file in $pdf_files; do
-            echo "$file" >> pdf-files.json
+            echo "\"$(echo "$file" | sed 's/"/\\"/g')\"" >> pdf-files.json
             if [[ "$file" != "${pdf_files: -1}" ]]; then
               echo "," >> pdf-files.json
             fi
