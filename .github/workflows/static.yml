@@ -35,11 +35,14 @@ jobs:
       - name: Convert Marp to HTML
         uses: KoharaKazuya/marp-cli-action@v2
 
-      - name: Update pdf-files.json
+      - name: Generate pdf-files.json
         run: |
-          # Find PDF files in the markdown directory and create a JSON array
-          pdf_files=$(find markdown -name "*.pdf" -type f | jq -R '. + "\n"' | jq -S -c '["\(.|trim)]' )
-          echo "$pdf_files" > pdf-files.json
+          pdf_files=$(find markdown -name "*.pdf" -type f)
+          echo "[" > pdf-files.json
+          for file in $pdf_files; do
+            echo "\"$(echo "$file" | jq -R .)\"" >> pdf-files.json
+          done
+          echo "]" >> pdf-files.json
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
