@@ -2,12 +2,17 @@
 marp: true
 theme: wctc
 style: |
-section {
-    font-size: 16px;
+  section {
+    font-size: 20px;
     max-height: 100vh;
     overflow-y: auto;
-    background: red; /* Temporarily set a background color to highlight overflow */
-}
+    overflow-x: hidden;
+    background-color: var(--color-background);
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
 ---
 ![WCTC Logo](https://www.wctc.edu/Files/waukesha_logo.svg)
 
@@ -220,6 +225,12 @@ object obj = 123;    // Boxing: 123 is wrapped in an object and moved to the hea
 int num = (int)obj;  // Unboxing: obj is unboxed back to a value type and moved to the stack
 ```
 --- 
+<!-- Scoped style -->
+<style scoped>
+ul {
+  font-size: 16px;
+}
+</style>
 ### Basic C# Methodologies
 #### Encapsulation 
  - Refers to the bundling of data (variables) and methods (functions) that operate on the data into a single unit, or class. This approach restricts direct access to some of the object's components, which can prevent the accidental modification of data. In essence, encapsulation helps protect an object’s internal state from unintended or harmful modifications and promotes modularity in programming.
@@ -229,6 +240,12 @@ int num = (int)obj;  // Unboxing: obj is unboxed back to a value type and moved 
 - Allows methods to do different things based on the object it is acting upon. This means that a single function name can be used for different types. More technically, it enables objects of different classes to be treated as objects of a common superclass; the specific method that is invoked is determined at runtime, depending on the actual object being referred to. This can be achieved in C# through method overriding and method overloading, enabling more flexible and easily manageable code.
 
 ---
+<!-- Scoped style -->
+<style scoped>
+ul {
+  font-size: 16px;
+}
+</style>
 ### Basic C# Methodologies
 
 #### SOLID Principles
