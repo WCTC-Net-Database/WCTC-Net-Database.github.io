@@ -40,7 +40,10 @@ jobs:
           pdf_files=$(find markdown -name "*.pdf" -type f)
           echo "[" > pdf-files.json
           for file in $pdf_files; do
-            echo "\"$(echo "$file" | jq -R .)\"" >> pdf-files.json
+            echo "$file" >> pdf-files.json
+            if [[ "$file" != "${pdf_files: -1}" ]]; then
+              echo "," >> pdf-files.json
+            fi
           done
           echo "]" >> pdf-files.json
 
