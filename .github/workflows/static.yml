@@ -50,9 +50,16 @@ jobs:
 
       - name: Update html-files.json
         run: |
-          # Find HTML files in the markdown directory and create a JSON array
-          html_files=$(find markdown -name "*.html" -type f | jq -R '. + "\n"' | jq -S -c '["\(.|trim)]' )
-          echo "$html_files" > html_files.json
+          html_files=$(find markdown -name "*.html" -type f)
+          echo "[" > html-files.json
+          for i in $(seq 1 $(echo "$html_files" | wc -l)); do
+            file=$(echo "$html_files" | sed -n "${i}p")
+            echo "\"$(echo "$file" | sed 's/"/\\"/g')\"" >> html-files.json
+            if [ "$i" -lt $(echo "$html_files" | wc -l) ]; then
+              echo "," >> html-files.json
+            fi
+          done
+          echo "]" >> html-files.json
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
