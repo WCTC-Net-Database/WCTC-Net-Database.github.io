@@ -17,7 +17,7 @@ style: |
 ![WCTC Logo](https://www.wctc.edu/Files/waukesha_logo.svg)
 
 # .Net Database Programming (156-101)
-## Week 2 Curriculum
+## Week 2 Curriculum - Git
 *Instructor: Mark McArthey*
 
 ---
