@@ -323,6 +323,7 @@ public class PlayerRepositoryService
 ---
 
 # References
+- [Reddit: Difference between Repository and Service Pattern](https://www.reddit.com/r/dotnet/comments/17g22r4/what_is_the_difference_between_repository_and/)
 - [Microsoft Docs: Repository Pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/repository)
 - [Microsoft Docs: Dependency Injection](https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection)
 - [SOLID Principles Overview](https://en.wikipedia.org/wiki/SOLID)
