@@ -19,7 +19,7 @@ style: |
 ![WCTC Logo](https://www.wctc.edu/Files/waukesha_logo.svg)
 
 # .Net Database Programming (156-101)
-### Week 11: Entity Framework Core and SOLID Principles in ConsoleRPG
+### Week 11: Equipment System & Room Navigation
 *Instructor: Mark McArthey*
 
 ---
