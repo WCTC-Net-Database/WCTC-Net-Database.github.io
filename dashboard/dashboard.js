@@ -1,56 +1,106 @@
 // Dashboard JavaScript
 let allStudents = [];
 let currentFilter = 'all';
+let currentAssignmentFilter = 'all';
 let currentDateFilter = { start: null, end: null };
+let availableAssignments = [];
 
-// Load available assignments
+// Load current state (all students, deduplicated)
+async function loadCurrentData() {
+    try {
+        const response = await fetch('data/current.json');
+        const data = await response.json();
+
+        if (data.generated) {
+            document.getElementById('last-updated').textContent = `Last updated: ${formatDate(data.generated)}`;
+        }
+
+        allStudents = data.students || [];
+
+        // Extract unique assignment patterns for filter
+        const patterns = [...new Set(allStudents.map(s => s.assignmentPattern).filter(Boolean))];
+        availableAssignments = patterns.sort();
+
+        populateAssignmentFilter();
+        applyFiltersAndRender();
+    } catch (error) {
+        console.error('Failed to load current data:', error);
+        // Fallback to loading assignments the old way
+        loadAssignments();
+    }
+}
+
+// Populate assignment filter dropdown
+function populateAssignmentFilter() {
+    const select = document.getElementById('assignment-select');
+    select.innerHTML = '<option value="all">All Assignments</option>';
+
+    availableAssignments.forEach(pattern => {
+        const option = document.createElement('option');
+        option.value = pattern;
+        const name = pattern.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        option.textContent = name;
+        select.appendChild(option);
+    });
+}
+
+// Fallback: Load assignments the old way
 async function loadAssignments() {
     try {
         const response = await fetch('data/assignments.json');
         const data = await response.json();
 
         const select = document.getElementById('assignment-select');
-        select.innerHTML = '';
+        select.innerHTML = '<option value="all">All Assignments</option>';
 
         if (data.assignments && data.assignments.length > 0) {
-            data.assignments.forEach((assignment, index) => {
+            availableAssignments = data.assignments.map(a => a.pattern);
+            data.assignments.forEach(assignment => {
                 const option = document.createElement('option');
                 option.value = assignment.pattern;
-                option.textContent = `${assignment.name} (${assignment.pattern})`;
+                option.textContent = assignment.name;
                 select.appendChild(option);
             });
 
-            // Load first assignment by default
+            // Load first assignment data
             loadAssignmentData(data.assignments[0].pattern);
         } else {
-            select.innerHTML = '<option value="">No assignments found</option>';
             showNoData();
         }
     } catch (error) {
         console.error('Failed to load assignments:', error);
-        document.getElementById('assignment-select').innerHTML = '<option value="">Error loading assignments</option>';
         showNoData();
     }
 }
 
-// Load data for a specific assignment
+// Load data for a specific assignment (for backward compatibility)
 async function loadAssignmentData(pattern) {
     try {
         const response = await fetch(`data/${pattern}.json`);
         const data = await response.json();
 
-        // Update last updated timestamp
         if (data.generated) {
-            document.getElementById('last-updated').textContent = `Last updated: ${data.generated}`;
+            document.getElementById('last-updated').textContent = `Last updated: ${formatDate(data.generated)}`;
         }
 
-        allStudents = data.students || [];
-        updateSummary(allStudents);
-        renderStudents(filterStudents(allStudents, currentFilter));
+        // Add assignmentPattern to each student for consistency
+        allStudents = (data.students || []).map(s => ({
+            ...s,
+            assignmentPattern: pattern
+        }));
+
+        applyFiltersAndRender();
     } catch (error) {
         console.error('Failed to load assignment data:', error);
         showNoData();
     }
+}
+
+// Format date for display
+function formatDate(dateStr) {
+    if (!dateStr) return '';
+    const date = new Date(dateStr);
+    return date.toLocaleString();
 }
 
 // Filter students by date
@@ -60,7 +110,7 @@ function filterByDate(students) {
     }
 
     return students.filter(s => {
-        if (!s.submittedAt) return true; // Include if no date
+        if (!s.submittedAt) return true;
         const date = new Date(s.submittedAt);
         if (currentDateFilter.start && date < currentDateFilter.start) return false;
         if (currentDateFilter.end && date > currentDateFilter.end) return false;
@@ -68,22 +118,37 @@ function filterByDate(students) {
     });
 }
 
-// Filter students based on criteria
-function filterStudents(students, filter) {
-    // First apply date filter
-    let filtered = filterByDate(students);
+// Filter students by assignment
+function filterByAssignment(students) {
+    if (currentAssignmentFilter === 'all') {
+        return students;
+    }
+    return students.filter(s => s.assignmentPattern === currentAssignmentFilter);
+}
 
-    // Then apply status filter
+// Filter students based on status criteria
+function filterByStatus(students, filter) {
     switch (filter) {
         case 'failed':
-            return filtered.filter(s => s.build?.status === 'failure');
+            return students.filter(s => s.build?.status === 'failure');
         case 'review':
-            return filtered.filter(s => s.needsReview);
+            return students.filter(s => s.needsReview);
         case 'stretch':
-            return filtered.filter(s => s.hasStretch);
+            return students.filter(s => s.hasStretch);
         default:
-            return filtered;
+            return students;
     }
+}
+
+// Apply all filters and render
+function applyFiltersAndRender() {
+    let filtered = allStudents;
+    filtered = filterByDate(filtered);
+    filtered = filterByAssignment(filtered);
+    filtered = filterByStatus(filtered, currentFilter);
+
+    updateSummary(filtered);
+    renderStudents(filtered);
 }
 
 // Update summary cards
@@ -113,13 +178,13 @@ function renderStudents(students) {
         container.innerHTML = `
             <div class="col-12 text-center py-5">
                 <i class="fas fa-inbox fa-3x text-muted"></i>
-                <p class="mt-3 text-muted">No students match the current filter</p>
+                <p class="mt-3 text-muted">No students match the current filters</p>
             </div>
         `;
         return;
     }
 
-    // Sort: needs review first, then by score descending
+    // Sort: needs review first, then failed builds, then by score descending
     students.sort((a, b) => {
         if (a.needsReview !== b.needsReview) return b.needsReview - a.needsReview;
         if (a.build?.status === 'failure' && b.build?.status !== 'failure') return -1;
@@ -130,7 +195,7 @@ function renderStudents(students) {
     container.innerHTML = students.map((student, index) => renderStudentCard(student, index)).join('');
 }
 
-// Render a single student card with expandable details
+// Render a single student card
 function renderStudentCard(student, index) {
     const buildStatus = student.build?.status || 'unknown';
     const buildIcon = buildStatus === 'success' ? 'check' : buildStatus === 'failure' ? 'times' : 'question';
@@ -156,16 +221,31 @@ function renderStudentCard(student, index) {
 
     const collapseId = `details-${index}`;
 
+    // Format assignment pattern for display
+    const assignmentBadge = student.assignmentPattern
+        ? `<span class="badge badge-info ml-2" title="Current repo">${student.assignmentPattern}</span>`
+        : '';
+
+    // Format submission date
+    const submittedDate = student.submittedAt
+        ? new Date(student.submittedAt).toLocaleDateString()
+        : '';
+
     return `
         <div class="col-md-6 col-lg-4">
             <div class="card ${cardClass}">
                 <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
                         <h5 class="card-title mb-0">
                             <span class="status-badge status-${buildClass}"></span>
                             ${student.name}
                         </h5>
                         <span class="badge badge-secondary">${student.estimatedScore || '-'}%</span>
+                    </div>
+
+                    <div class="mb-2">
+                        ${assignmentBadge}
+                        ${submittedDate ? `<small class="text-muted ml-2">${submittedDate}</small>` : ''}
                     </div>
 
                     <div class="row mb-2">
@@ -340,14 +420,13 @@ function showNoData() {
         </div>
     `;
 
-    // Reset summary
     ['total', 'passed', 'failed', 'review', 'stretch'].forEach(id => {
         document.getElementById(`${id}-count`).textContent = '-';
     });
     document.getElementById('avg-score').textContent = '-';
 }
 
-// Update date filter and re-render
+// Update date filter
 function updateDateFilter() {
     const startInput = document.getElementById('start-date');
     const endInput = document.getElementById('end-date');
@@ -355,9 +434,7 @@ function updateDateFilter() {
     currentDateFilter.start = startInput.value ? new Date(startInput.value) : null;
     currentDateFilter.end = endInput.value ? new Date(endInput.value + 'T23:59:59') : null;
 
-    const filtered = filterStudents(allStudents, currentFilter);
-    updateSummary(filtered);
-    renderStudents(filtered);
+    applyFiltersAndRender();
 }
 
 // Set date preset
@@ -382,22 +459,22 @@ function setDatePreset(days) {
 
 // Event listeners
 document.addEventListener('DOMContentLoaded', () => {
-    loadAssignments();
+    // Load current data (all students, deduplicated)
+    loadCurrentData();
 
-    // Assignment selector change
+    // Assignment filter change
     document.getElementById('assignment-select').addEventListener('change', (e) => {
-        if (e.target.value) {
-            loadAssignmentData(e.target.value);
-        }
+        currentAssignmentFilter = e.target.value;
+        applyFiltersAndRender();
     });
 
-    // Filter buttons
+    // Status filter buttons
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             e.target.classList.add('active');
             currentFilter = e.target.dataset.filter;
-            renderStudents(filterStudents(allStudents, currentFilter));
+            applyFiltersAndRender();
         });
     });
 

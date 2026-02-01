@@ -1,70 +1,36 @@
 // Students History JavaScript
 let allStudentData = {};
-let allAssignments = [];
 let currentStudent = null;
 let currentDateFilter = { start: null, end: null };
+let currentAssignmentFilter = '';
 
-// Load all assignment data and aggregate by student
+// Load all student data from current.json and history
 async function loadAllData() {
     try {
-        // First load the assignments list
-        const assignmentsResponse = await fetch('data/assignments.json');
-        const assignmentsData = await assignmentsResponse.json();
-        allAssignments = assignmentsData.assignments || [];
+        // Load current state (deduplicated students)
+        const currentResponse = await fetch('data/current.json');
+        const currentData = await currentResponse.json();
 
-        // Populate assignment filter dropdown
-        const assignmentFilter = document.getElementById('assignment-filter');
-        allAssignments.forEach(assignment => {
-            const option = document.createElement('option');
-            option.value = assignment.pattern;
-            option.textContent = assignment.name;
-            assignmentFilter.appendChild(option);
-        });
+        // Initialize student data from current state
+        if (currentData.students) {
+            for (const student of currentData.students) {
+                const studentKey = student.name.toLowerCase();
 
-        // Load each assignment's data
-        for (const assignment of allAssignments) {
-            try {
-                const response = await fetch(`data/${assignment.pattern}.json`);
-                const data = await response.json();
-
-                // Process each student in this assignment
-                if (data.students) {
-                    for (const student of data.students) {
-                        const studentName = student.name.toLowerCase();
-
-                        if (!allStudentData[studentName]) {
-                            allStudentData[studentName] = {
-                                name: student.name,
-                                assignments: [],
-                                history: []
-                            };
-                        }
-
-                        // Add this assignment to the student's record
-                        allStudentData[studentName].assignments.push({
-                            assignment: assignment.pattern,
-                            assignmentName: assignment.name,
-                            repo: student.repo,
-                            build: student.build,
-                            sonar: student.sonar,
-                            todoCount: student.todoCount,
-                            estimatedScore: student.estimatedScore,
-                            hasStretch: student.hasStretch,
-                            needsReview: student.needsReview,
-                            comments: student.comments,
-                            todos: student.todos,
-                            stretchGoals: student.stretchGoals,
-                            notes: student.notes,
-                            submittedAt: student.submittedAt || data.generated
-                        });
-                    }
-                }
-            } catch (error) {
-                console.error(`Failed to load ${assignment.pattern}:`, error);
+                allStudentData[studentKey] = {
+                    name: student.name,
+                    currentRepo: student.repo,
+                    currentPattern: student.assignmentPattern,
+                    current: student,
+                    snapshots: []
+                };
             }
         }
 
-        // Load historical snapshots if available
+        // Extract unique assignment patterns for filter
+        const patterns = [...new Set(currentData.students?.map(s => s.assignmentPattern).filter(Boolean) || [])];
+        populateAssignmentFilter(patterns.sort());
+
+        // Load historical snapshots
         try {
             const historyResponse = await fetch('data/history.json');
             const historyData = await historyResponse.json();
@@ -72,24 +38,34 @@ async function loadAllData() {
             if (historyData.snapshots) {
                 for (const snapshot of historyData.snapshots) {
                     for (const student of snapshot.students || []) {
-                        const studentName = student.name.toLowerCase();
-                        if (allStudentData[studentName]) {
-                            allStudentData[studentName].history.push({
-                                date: snapshot.date,
-                                assignment: snapshot.assignment,
-                                ...student
-                            });
+                        const studentKey = student.name.toLowerCase();
+
+                        // Create student entry if not exists (student in history but not in current)
+                        if (!allStudentData[studentKey]) {
+                            allStudentData[studentKey] = {
+                                name: student.name,
+                                currentRepo: student.repo,
+                                currentPattern: student.assignmentPattern,
+                                current: null,
+                                snapshots: []
+                            };
                         }
+
+                        allStudentData[studentKey].snapshots.push({
+                            date: snapshot.date,
+                            ...student
+                        });
                     }
                 }
             }
         } catch (error) {
-            // History file may not exist yet
             console.log('No history data available yet');
         }
 
-        // Update last updated timestamp
-        document.getElementById('last-updated').textContent = `Data loaded from ${allAssignments.length} assignment(s)`;
+        // Update timestamp
+        if (currentData.generated) {
+            document.getElementById('last-updated').textContent = `Last updated: ${formatDate(currentData.generated)}`;
+        }
 
         // Render student list
         renderStudentList();
@@ -105,14 +81,35 @@ async function loadAllData() {
     }
 }
 
-// Apply date filter to assignments
-function filterByDate(assignments) {
+// Populate assignment filter dropdown
+function populateAssignmentFilter(patterns) {
+    const select = document.getElementById('assignment-filter');
+    select.innerHTML = '<option value="">All Assignments</option>';
+
+    patterns.forEach(pattern => {
+        const option = document.createElement('option');
+        option.value = pattern;
+        const name = pattern.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        option.textContent = name;
+        select.appendChild(option);
+    });
+}
+
+// Format date for display
+function formatDate(dateStr) {
+    if (!dateStr) return '';
+    const date = new Date(dateStr);
+    return date.toLocaleString();
+}
+
+// Apply date filter to snapshots
+function filterSnapshotsByDate(snapshots) {
     if (!currentDateFilter.start && !currentDateFilter.end) {
-        return assignments;
+        return snapshots;
     }
 
-    return assignments.filter(a => {
-        const date = new Date(a.submittedAt);
+    return snapshots.filter(s => {
+        const date = new Date(s.date);
         if (currentDateFilter.start && date < currentDateFilter.start) return false;
         if (currentDateFilter.end && date > currentDateFilter.end) return false;
         return true;
@@ -120,34 +117,45 @@ function filterByDate(assignments) {
 }
 
 // Apply assignment filter
-function filterByAssignment(assignments) {
-    const assignmentFilter = document.getElementById('assignment-filter').value;
-    if (!assignmentFilter) return assignments;
-    return assignments.filter(a => a.assignment === assignmentFilter);
+function filterByAssignment(student) {
+    if (!currentAssignmentFilter) {
+        return true;
+    }
+    return student.currentPattern === currentAssignmentFilter ||
+           student.snapshots?.some(s => s.assignmentPattern === currentAssignmentFilter);
 }
 
 // Calculate student aggregate stats
 function calculateStudentStats(student) {
-    const assignments = filterByAssignment(filterByDate(student.assignments));
+    const snapshots = filterSnapshotsByDate(student.snapshots || []);
+    const current = student.current;
 
-    if (assignments.length === 0) {
-        return {
-            totalAssignments: 0,
-            avgScore: 0,
-            passedBuilds: 0,
-            failedBuilds: 0,
-            stretchCount: 0,
-            trend: 'stable'
-        };
+    // Get scores from snapshots (unique by date to avoid duplicates)
+    const scoresByDate = {};
+    snapshots.forEach(s => {
+        const dateKey = s.date.split('T')[0];
+        if (!scoresByDate[dateKey] || new Date(s.date) > new Date(scoresByDate[dateKey].date)) {
+            scoresByDate[dateKey] = s;
+        }
+    });
+
+    const uniqueSnapshots = Object.values(scoresByDate).sort((a, b) => new Date(a.date) - new Date(b.date));
+    const scores = uniqueSnapshots.map(s => s.estimatedScore || 0).filter(s => s > 0);
+
+    // Include current score
+    const currentScore = current?.estimatedScore || 0;
+    if (currentScore > 0 && scores.length === 0) {
+        scores.push(currentScore);
     }
 
-    const scores = assignments.map(a => a.estimatedScore || 0).filter(s => s > 0);
     const avgScore = scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
-    const passedBuilds = assignments.filter(a => a.build?.status === 'success').length;
-    const failedBuilds = assignments.filter(a => a.build?.status === 'failure').length;
-    const stretchCount = assignments.filter(a => a.hasStretch).length;
 
-    // Calculate trend based on last 3 assignments
+    // Build status from current
+    const buildPassed = current?.build?.status === 'success';
+    const buildFailed = current?.build?.status === 'failure';
+    const hasStretch = current?.hasStretch || false;
+
+    // Calculate trend from recent snapshots
     let trend = 'stable';
     if (scores.length >= 2) {
         const recent = scores.slice(-2);
@@ -156,12 +164,14 @@ function calculateStudentStats(student) {
     }
 
     return {
-        totalAssignments: assignments.length,
+        currentScore: currentScore || avgScore,
         avgScore,
-        passedBuilds,
-        failedBuilds,
-        stretchCount,
-        trend
+        snapshotCount: uniqueSnapshots.length,
+        buildPassed,
+        buildFailed,
+        hasStretch,
+        trend,
+        todoCount: current?.todoCount || 0
     };
 }
 
@@ -170,14 +180,11 @@ function renderStudentList() {
     const container = document.getElementById('student-list');
     const students = Object.values(allStudentData);
 
-    // Sort by name
-    students.sort((a, b) => a.name.localeCompare(b.name));
+    // Filter by assignment
+    const filteredStudents = students.filter(filterByAssignment);
 
-    // Filter students who have assignments in the current filter
-    const filteredStudents = students.filter(s => {
-        const filtered = filterByAssignment(filterByDate(s.assignments));
-        return filtered.length > 0;
-    });
+    // Sort by name
+    filteredStudents.sort((a, b) => a.name.localeCompare(b.name));
 
     document.getElementById('student-count').textContent = filteredStudents.length;
 
@@ -201,23 +208,20 @@ function renderStudentList() {
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
                         <strong>${student.name}</strong>
-                        <div class="text-muted small">${stats.totalAssignments} assignment(s)</div>
+                        <div class="text-muted small">${student.currentPattern || 'No current repo'}</div>
                     </div>
                     <div class="text-right">
                         <div class="h5 mb-0">
-                            ${stats.avgScore}%
+                            ${stats.currentScore}%
                             <i class="fas fa-${trendIcon} ${trendClass} ml-1"></i>
                         </div>
                         <div class="small">
-                            <span class="text-success">${stats.passedBuilds} <i class="fas fa-check"></i></span>
-                            ${stats.failedBuilds > 0 ? `<span class="text-danger ml-2">${stats.failedBuilds} <i class="fas fa-times"></i></span>` : ''}
-                            ${stats.stretchCount > 0 ? `<span class="text-info ml-2">${stats.stretchCount} <i class="fas fa-star"></i></span>` : ''}
+                            ${stats.buildPassed ? '<span class="text-success"><i class="fas fa-check"></i></span>' : ''}
+                            ${stats.buildFailed ? '<span class="text-danger"><i class="fas fa-times"></i></span>' : ''}
+                            ${stats.hasStretch ? '<span class="text-info ml-1"><i class="fas fa-star"></i></span>' : ''}
+                            ${stats.todoCount > 0 ? `<span class="text-warning ml-1">${stats.todoCount} TODOs</span>` : ''}
                         </div>
                     </div>
-                </div>
-                <div class="progress progress-mini mt-2">
-                    <div class="progress-bar bg-success" style="width: ${stats.passedBuilds / stats.totalAssignments * 100}%"></div>
-                    <div class="progress-bar bg-danger" style="width: ${stats.failedBuilds / stats.totalAssignments * 100}%"></div>
                 </div>
             </div>
         `;
@@ -238,136 +242,124 @@ function selectStudent(studentKey) {
     if (!student) return;
 
     const stats = calculateStudentStats(student);
-    const assignments = filterByAssignment(filterByDate(student.assignments));
-
-    // Sort assignments by date (most recent first)
-    assignments.sort((a, b) => new Date(b.submittedAt) - new Date(a.submittedAt));
+    const current = student.current;
+    const snapshots = filterSnapshotsByDate(student.snapshots || []).sort((a, b) => new Date(b.date) - new Date(a.date));
 
     const container = document.getElementById('student-detail');
 
     container.innerHTML = `
         <div class="mb-4">
             <h3><i class="fas fa-user"></i> ${student.name}</h3>
-            <div class="row mt-3">
-                <div class="col-md-2 text-center">
-                    <div class="h2 mb-0">${stats.avgScore}%</div>
-                    <div class="small text-muted">Average Score</div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="h2 mb-0">${stats.totalAssignments}</div>
-                    <div class="small text-muted">Assignments</div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="h2 mb-0 text-success">${stats.passedBuilds}</div>
-                    <div class="small text-muted">Passed</div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="h2 mb-0 text-danger">${stats.failedBuilds}</div>
-                    <div class="small text-muted">Failed</div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="h2 mb-0 text-info">${stats.stretchCount}</div>
-                    <div class="small text-muted">Stretch Goals</div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="h4 mb-0">
-                        ${stats.trend === 'up' ? '<i class="fas fa-arrow-up text-success"></i>' : ''}
-                        ${stats.trend === 'down' ? '<i class="fas fa-arrow-down text-danger"></i>' : ''}
-                        ${stats.trend === 'stable' ? '<i class="fas fa-minus text-secondary"></i>' : ''}
+
+            ${current ? `
+            <div class="current-info mt-3 p-3 bg-light rounded">
+                <h6><i class="fas fa-code-branch"></i> Current Repository: <code>${current.repo}</code></h6>
+                <div class="row mt-3">
+                    <div class="col-md-2 text-center">
+                        <div class="h3 mb-0">${stats.currentScore}%</div>
+                        <div class="small text-muted">Current Score</div>
                     </div>
-                    <div class="small text-muted">Trend</div>
+                    <div class="col-md-2 text-center">
+                        <div class="h4 mb-0">
+                            ${stats.buildPassed ? '<i class="fas fa-check-circle text-success"></i>' : ''}
+                            ${stats.buildFailed ? '<i class="fas fa-times-circle text-danger"></i>' : ''}
+                            ${!stats.buildPassed && !stats.buildFailed ? '<i class="fas fa-question-circle text-secondary"></i>' : ''}
+                        </div>
+                        <div class="small text-muted">Build</div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="h4 mb-0">${current.sonar?.maintainability ? `<span class="rating-badge rating-${current.sonar.maintainability}">${current.sonar.maintainability}</span>` : '-'}</div>
+                        <div class="small text-muted">Maintainability</div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="h4 mb-0">${stats.todoCount}</div>
+                        <div class="small text-muted">TODOs</div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="h4 mb-0">${stats.hasStretch ? '<i class="fas fa-star text-info"></i>' : '-'}</div>
+                        <div class="small text-muted">Stretch Goal</div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="h4 mb-0">
+                            ${stats.trend === 'up' ? '<i class="fas fa-arrow-up text-success"></i>' : ''}
+                            ${stats.trend === 'down' ? '<i class="fas fa-arrow-down text-danger"></i>' : ''}
+                            ${stats.trend === 'stable' ? '<i class="fas fa-minus text-secondary"></i>' : ''}
+                        </div>
+                        <div class="small text-muted">Trend</div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <a href="https://github.com/WCTC-Net-Database/${current.repo}" target="_blank" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github"></i> Repository
+                    </a>
+                    ${current.build?.url ? `
+                        <a href="${current.build.url}" target="_blank" class="btn btn-sm btn-outline-secondary">
+                            <i class="fas fa-cog"></i> Build
+                        </a>
+                    ` : ''}
+                    ${current.sonar?.projectKey ? `
+                        <a href="https://sonarcloud.io/project/overview?id=${current.sonar.projectKey}" target="_blank" class="btn btn-sm btn-outline-secondary">
+                            <i class="fas fa-chart-bar"></i> SonarCloud
+                        </a>
+                    ` : ''}
                 </div>
             </div>
+            ` : `
+            <div class="alert alert-warning mt-3">
+                <i class="fas fa-exclamation-triangle"></i> No current submission found for this student.
+            </div>
+            `}
         </div>
 
         <hr>
 
-        <h5><i class="fas fa-history"></i> Assignment History</h5>
+        <h5><i class="fas fa-history"></i> Score History (${snapshots.length} snapshots)</h5>
 
+        ${snapshots.length > 0 ? `
         <div class="timeline mt-4">
-            ${assignments.map(a => renderAssignmentTimeline(a)).join('')}
+            ${snapshots.slice(0, 20).map(s => renderSnapshotTimeline(s)).join('')}
+            ${snapshots.length > 20 ? `<div class="text-muted text-center py-2">...and ${snapshots.length - 20} more</div>` : ''}
         </div>
-
-        ${assignments.length === 0 ? `
-            <div class="text-center py-4 text-muted">
-                <i class="fas fa-inbox fa-2x"></i>
-                <p class="mt-2">No assignments match the current filters</p>
-            </div>
-        ` : ''}
+        ` : `
+        <div class="text-center py-4 text-muted">
+            <i class="fas fa-inbox fa-2x"></i>
+            <p class="mt-2">No historical snapshots available yet</p>
+        </div>
+        `}
     `;
 }
 
-// Render a single assignment in the timeline
-function renderAssignmentTimeline(assignment) {
-    const buildClass = assignment.build?.status === 'success' ? 'build-pass' : assignment.build?.status === 'failure' ? 'build-fail' : '';
-    const buildIcon = assignment.build?.status === 'success' ? 'check-circle text-success' : assignment.build?.status === 'failure' ? 'times-circle text-danger' : 'question-circle text-secondary';
+// Render a snapshot in the timeline
+function renderSnapshotTimeline(snapshot) {
+    const buildClass = snapshot.buildStatus === 'success' ? 'build-pass' : snapshot.buildStatus === 'failure' ? 'build-fail' : '';
+    const buildIcon = snapshot.buildStatus === 'success' ? 'check-circle text-success' : snapshot.buildStatus === 'failure' ? 'times-circle text-danger' : 'question-circle text-secondary';
 
-    const date = assignment.submittedAt ? new Date(assignment.submittedAt).toLocaleDateString('en-US', {
+    const date = new Date(snapshot.date).toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'short',
         day: 'numeric',
         hour: '2-digit',
         minute: '2-digit'
-    }) : 'Unknown date';
+    });
+
+    const patternBadge = snapshot.assignmentPattern
+        ? `<span class="badge badge-info">${snapshot.assignmentPattern}</span>`
+        : '';
 
     return `
         <div class="timeline-item ${buildClass}">
             <div class="timeline-date">${date}</div>
-            <div class="assignment-card">
-                <div class="d-flex justify-content-between align-items-start">
+            <div class="snapshot-card p-2">
+                <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <strong>${assignment.assignmentName || assignment.assignment}</strong>
-                        <div class="small text-muted">${assignment.repo}</div>
+                        ${patternBadge}
+                        <span class="small text-muted ml-2">${snapshot.repo || ''}</span>
                     </div>
-                    <div class="text-right">
-                        <span class="badge badge-${assignment.estimatedScore >= 80 ? 'success' : assignment.estimatedScore >= 60 ? 'warning' : 'danger'}">${assignment.estimatedScore || 0}%</span>
+                    <div>
+                        <span class="badge badge-${snapshot.estimatedScore >= 80 ? 'success' : snapshot.estimatedScore >= 60 ? 'warning' : 'danger'}">${snapshot.estimatedScore || 0}%</span>
+                        <i class="fas fa-${buildIcon} ml-2"></i>
+                        ${snapshot.hasStretch ? '<i class="fas fa-star text-info ml-1"></i>' : ''}
                     </div>
-                </div>
-
-                <div class="row mt-2 small">
-                    <div class="col-3">
-                        <span class="text-muted">Build:</span>
-                        <i class="fas fa-${buildIcon}"></i>
-                    </div>
-                    <div class="col-3">
-                        <span class="text-muted">Maintainability:</span>
-                        ${assignment.sonar?.maintainability ? `<span class="rating-badge rating-${assignment.sonar.maintainability}">${assignment.sonar.maintainability}</span>` : '-'}
-                    </div>
-                    <div class="col-3">
-                        <span class="text-muted">TODOs:</span>
-                        ${assignment.todoCount || 0}
-                    </div>
-                    <div class="col-3">
-                        ${assignment.hasStretch ? '<span class="stretch-badge"><i class="fas fa-star"></i> Stretch</span>' : ''}
-                    </div>
-                </div>
-
-                ${assignment.comments && assignment.comments.length > 0 ? `
-                    <div class="mt-2 small">
-                        <strong class="text-warning"><i class="fas fa-comment"></i> ${assignment.comments.length} Comment(s)</strong>
-                    </div>
-                ` : ''}
-
-                ${assignment.notes && assignment.notes.length > 0 ? `
-                    <div class="mt-2 small text-muted">
-                        ${assignment.notes.join(' | ')}
-                    </div>
-                ` : ''}
-
-                <div class="mt-2">
-                    <a href="https://github.com/WCTC-Net-Database/${assignment.repo}" target="_blank" class="btn btn-sm btn-outline-secondary">
-                        <i class="fab fa-github"></i> Repo
-                    </a>
-                    ${assignment.build?.url ? `
-                        <a href="${assignment.build.url}" target="_blank" class="btn btn-sm btn-outline-secondary">
-                            <i class="fas fa-cog"></i> Build
-                        </a>
-                    ` : ''}
-                    ${assignment.sonar?.projectKey ? `
-                        <a href="https://sonarcloud.io/project/overview?id=${assignment.sonar.projectKey}" target="_blank" class="btn btn-sm btn-outline-secondary">
-                            <i class="fas fa-chart-bar"></i> Sonar
-                        </a>
-                    ` : ''}
                 </div>
             </div>
         </div>
@@ -422,17 +414,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Date input changes
-    document.getElementById('start-date').addEventListener('change', () => {
+    document.getElementById('start-date')?.addEventListener('change', () => {
         document.querySelectorAll('.date-preset').forEach(b => b.classList.remove('active'));
         updateDateFilter();
     });
-    document.getElementById('end-date').addEventListener('change', () => {
+    document.getElementById('end-date')?.addEventListener('change', () => {
         document.querySelectorAll('.date-preset').forEach(b => b.classList.remove('active'));
         updateDateFilter();
     });
 
     // Assignment filter
-    document.getElementById('assignment-filter').addEventListener('change', () => {
+    document.getElementById('assignment-filter')?.addEventListener('change', (e) => {
+        currentAssignmentFilter = e.target.value;
         renderStudentList();
         if (currentStudent) {
             selectStudent(currentStudent);
