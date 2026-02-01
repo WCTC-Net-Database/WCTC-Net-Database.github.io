@@ -1,69 +1,12 @@
 {
-  "assignment": "w1-file-i-o",
-  "generated": "2026-02-01T22:03:34Z",
+  "generated": "2026-02-01T22:03:52Z",
   "students": [
-    {
-      "name": "irodriguez5",
-      "repo": "w1-file-i-o-irodriguez5",
-      "submittedAt": "2026-02-01T15:57:02Z",
-      "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-irodriguez5/actions/runs/21565834904"
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w1-file-i-o-irodriguez5",
-        "maintainability": "A",
-        "codeSmells": "20",
-        "bugs": "1",
-        "vulnerabilities": "0",
-        "reliability": "C",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "133"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "notes": []
-    },
-    {
-      "name": "Samuel-dotcom-rgb",
-      "repo": "w1-file-i-o-Samuel-dotcom-rgb",
-      "submittedAt": "2026-02-01T15:57:00Z",
-      "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Samuel-dotcom-rgb/actions/runs/21565834616"
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w1-file-i-o-Samuel-dotcom-rgb",
-        "maintainability": "A",
-        "codeSmells": "20",
-        "bugs": "1",
-        "vulnerabilities": "0",
-        "reliability": "C",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "133"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "notes": []
-    },
     {
       "name": "MW92007",
       "repo": "w1-file-i-o-MW92007",
+      "assignmentPattern": "w1-file-i-o",
       "submittedAt": "2026-02-01T15:56:58Z",
+      "pushedAt": "2026-02-01T15:56:58Z",
       "build": {
         "status": "success",
         "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-MW92007/actions/runs/21565834268"
@@ -90,9 +33,73 @@
       "notes": []
     },
     {
+      "name": "Samuel-dotcom-rgb",
+      "repo": "w1-file-i-o-Samuel-dotcom-rgb",
+      "assignmentPattern": "w1-file-i-o",
+      "submittedAt": "2026-02-01T15:57:00Z",
+      "pushedAt": "2026-02-01T15:57:00Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Samuel-dotcom-rgb/actions/runs/21565834616"
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w1-file-i-o-Samuel-dotcom-rgb",
+        "maintainability": "A",
+        "codeSmells": "20",
+        "bugs": "1",
+        "vulnerabilities": "0",
+        "reliability": "C",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "133"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
+    },
+    {
+      "name": "Sdunn235",
+      "repo": "w1-file-i-o-Sdunn235",
+      "assignmentPattern": "w1-file-i-o",
+      "submittedAt": "2026-02-01T14:58:20Z",
+      "pushedAt": "2026-02-01T14:58:20Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/21564968158"
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
+        "maintainability": "A",
+        "codeSmells": "2",
+        "bugs": "3",
+        "vulnerabilities": "0",
+        "reliability": "C",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "221"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
+    },
+    {
       "name": "TGustafson1",
       "repo": "w1-file-i-o-TGustafson1",
+      "assignmentPattern": "w1-file-i-o",
       "submittedAt": "2026-02-01T15:56:57Z",
+      "pushedAt": "2026-02-01T15:56:57Z",
       "build": {
         "status": "success",
         "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/21565834089"
@@ -119,15 +126,17 @@
       "notes": []
     },
     {
-      "name": "taylorharty",
-      "repo": "w1-file-i-o-taylorharty",
-      "submittedAt": "2026-02-01T15:56:55Z",
+      "name": "irodriguez5",
+      "repo": "w1-file-i-o-irodriguez5",
+      "assignmentPattern": "w1-file-i-o",
+      "submittedAt": "2026-02-01T15:57:02Z",
+      "pushedAt": "2026-02-01T15:57:02Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-taylorharty/actions/runs/21565833850"
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-irodriguez5/actions/runs/21565834904"
       },
       "sonar": {
-        "projectKey": "WCTC-Net-Database_w1-file-i-o-taylorharty",
+        "projectKey": "WCTC-Net-Database_w1-file-i-o-irodriguez5",
         "maintainability": "A",
         "codeSmells": "20",
         "bugs": "1",
@@ -135,7 +144,7 @@
         "reliability": "C",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "274"
+        "linesOfCode": "133"
       },
       "todoCount": 0,
       "studentComments": 0,
@@ -148,23 +157,25 @@
       "notes": []
     },
     {
-      "name": "Sdunn235",
-      "repo": "w1-file-i-o-Sdunn235",
-      "submittedAt": "2026-02-01T14:58:20Z",
+      "name": "taylorharty",
+      "repo": "w2-csv-parsing-taylorharty",
+      "assignmentPattern": "w2-csv-parsing",
+      "submittedAt": "2026-02-01T16:03:04Z",
+      "pushedAt": "2026-02-01T16:03:04Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/21564968158"
+        "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-taylorharty/actions/runs/21565922032"
       },
       "sonar": {
-        "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
+        "projectKey": "WCTC-Net-Database_w2-csv-parsing-taylorharty",
         "maintainability": "A",
-        "codeSmells": "2",
-        "bugs": "3",
+        "codeSmells": "22",
+        "bugs": "2",
         "vulnerabilities": "0",
         "reliability": "C",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "221"
+        "linesOfCode": "132"
       },
       "todoCount": 0,
       "studentComments": 0,
