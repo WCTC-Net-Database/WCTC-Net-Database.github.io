@@ -316,7 +316,7 @@ function renderStudentCard(student, index) {
                         </div>
                         <div class="col-6">
                             <div class="metric-label">Code Smells</div>
-                            <div class="metric-value">${student.sonar?.codeSmells ?? '-'}</div>
+                            <div class="metric-value">${student.sonar?.projectKey && student.sonar?.codeSmells !== undefined ? `<a href="https://sonarcloud.io/project/issues?id=${student.sonar.projectKey}&types=CODE_SMELL" target="_blank" title="View code smells in SonarCloud">${student.sonar.codeSmells}</a>` : (student.sonar?.codeSmells ?? '-')}</div>
                         </div>
                     </div>
 
@@ -430,8 +430,8 @@ function renderDetailsSection(student, index) {
                 <div class="detail-header"><i class="fas fa-chart-bar text-primary"></i> SonarCloud Details</div>
                 <div class="detail-content">
                     <div class="row">
-                        ${student.sonar.bugs !== undefined ? `<div class="col-6"><strong>Bugs:</strong> ${student.sonar.bugs}</div>` : ''}
-                        ${student.sonar.vulnerabilities !== undefined ? `<div class="col-6"><strong>Vulnerabilities:</strong> ${student.sonar.vulnerabilities}</div>` : ''}
+                        ${student.sonar.bugs !== undefined ? `<div class="col-6"><strong>Bugs:</strong> <a href="https://sonarcloud.io/project/issues?id=${student.sonar.projectKey}&types=BUG" target="_blank" title="View bugs in SonarCloud">${student.sonar.bugs}</a></div>` : ''}
+                        ${student.sonar.vulnerabilities !== undefined ? `<div class="col-6"><strong>Vulnerabilities:</strong> <a href="https://sonarcloud.io/project/issues?id=${student.sonar.projectKey}&types=VULNERABILITY" target="_blank" title="View vulnerabilities in SonarCloud">${student.sonar.vulnerabilities}</a></div>` : ''}
                         ${student.sonar.reliability ? `<div class="col-6"><strong>Reliability:</strong> <span class="rating-badge rating-${student.sonar.reliability}">${student.sonar.reliability}</span></div>` : ''}
                         ${student.sonar.security ? `<div class="col-6"><strong>Security:</strong> <span class="rating-badge rating-${student.sonar.security}">${student.sonar.security}</span></div>` : ''}
                         ${student.sonar.duplication !== undefined ? `<div class="col-6"><strong>Duplication:</strong> ${student.sonar.duplication}%</div>` : ''}
@@ -520,10 +520,17 @@ function generateFeedback(student) {
     // Code smells / bugs
     const smells = parseInt(student.sonar?.codeSmells) || 0;
     const bugs = parseInt(student.sonar?.bugs) || 0;
-    if (bugs > 0) {
+    const projectKey = student.sonar?.projectKey;
+    if (bugs > 0 && projectKey) {
+        lines.push(`○ Bugs: ${bugs} detected by SonarCloud - review and fix`);
+        lines.push(`  → https://sonarcloud.io/project/issues?id=${projectKey}&types=BUG`);
+    } else if (bugs > 0) {
         lines.push(`○ Bugs: ${bugs} detected by SonarCloud - review and fix`);
     }
-    if (smells > 10) {
+    if (smells > 10 && projectKey) {
+        lines.push(`○ Code Smells: ${smells} - consider refactoring for cleaner code`);
+        lines.push(`  → https://sonarcloud.io/project/issues?id=${projectKey}&types=CODE_SMELL`);
+    } else if (smells > 10) {
         lines.push(`○ Code Smells: ${smells} - consider refactoring for cleaner code`);
     }
 
