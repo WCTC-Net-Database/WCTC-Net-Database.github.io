@@ -37,15 +37,20 @@ async function loadAllData() {
 
             if (historyData.snapshots) {
                 for (const snapshot of historyData.snapshots) {
+                    // Get assignment pattern from snapshot level (older format) or student level (newer format)
+                    const snapshotAssignment = snapshot.assignment;
+
                     for (const student of snapshot.students || []) {
                         const studentKey = student.name.toLowerCase();
+                        // Use student-level assignmentPattern if available, otherwise use snapshot-level assignment
+                        const assignmentPattern = student.assignmentPattern || snapshotAssignment;
 
                         // Create student entry if not exists (student in history but not in current)
                         if (!allStudentData[studentKey]) {
                             allStudentData[studentKey] = {
                                 name: student.name,
                                 currentRepo: student.repo,
-                                currentPattern: student.assignmentPattern,
+                                currentPattern: assignmentPattern,
                                 current: null,
                                 snapshots: []
                             };
@@ -53,6 +58,7 @@ async function loadAllData() {
 
                         allStudentData[studentKey].snapshots.push({
                             date: snapshot.date,
+                            assignmentPattern: assignmentPattern,
                             ...student
                         });
                     }
