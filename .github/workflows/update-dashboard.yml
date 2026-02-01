@@ -149,7 +149,7 @@ jobs:
               REPO_DIR="/tmp/repos/$repo"
               rm -rf "$REPO_DIR"
 
-              clone_output=$(gh repo clone "WCTC-Net-Database/$repo" "$REPO_DIR" --depth 1 2>&1) && clone_success=true || clone_success=false
+              clone_output=$(gh repo clone "WCTC-Net-Database/$repo" "$REPO_DIR" -- --depth 1 2>&1) && clone_success=true || clone_success=false
               if [ "$clone_success" = "true" ]; then
                 echo "    -> Analyzing code..." >&2
 
