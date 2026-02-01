@@ -1,17 +1,19 @@
 name: Update Grading Dashboard
 
 on:
-  # Run on schedule (every 6 hours during typical grading times)
   schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
-
-  # Allow manual trigger
+    - cron: '0 */6 * * *'
   workflow_dispatch:
     inputs:
       assignment:
         description: 'Assignment pattern (e.g., w1-file-i-o) or "all"'
         required: false
         default: 'all'
+      force_full_scan:
+        description: 'Force full scan of all repos (ignore timestamps)'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   update-dashboard:
@@ -31,10 +33,23 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          # Create data directory if it doesn't exist
           mkdir -p dashboard/data
+          mkdir -p /tmp/repos
 
-          # Assignment patterns to process
+          # Load last run timestamp
+          LAST_RUN_FILE="dashboard/data/.last_run"
+          LAST_RUN_TIME=""
+          if [ -f "$LAST_RUN_FILE" ]; then
+            LAST_RUN_TIME=$(cat "$LAST_RUN_FILE")
+            echo "Last run: $LAST_RUN_TIME"
+          fi
+
+          FORCE_SCAN="${{ github.event.inputs.force_full_scan }}"
+          if [ "$FORCE_SCAN" = "true" ]; then
+            LAST_RUN_TIME=""
+            echo "Forcing full scan"
+          fi
+
           if [ "${{ github.event.inputs.assignment }}" = "all" ] || [ -z "${{ github.event.inputs.assignment }}" ]; then
             PATTERNS="w1-file-i-o w2-csv-parsing"
           else
@@ -45,21 +60,27 @@ jobs:
           echo '{"assignments":[' > dashboard/data/assignments.json
           first=true
           for pattern in $PATTERNS; do
-            if [ "$first" = true ]; then
-              first=false
-            else
-              echo ',' >> dashboard/data/assignments.json
-            fi
+            if [ "$first" = true ]; then first=false; else echo ',' >> dashboard/data/assignments.json; fi
             name=$(echo "$pattern" | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
             echo "{\"pattern\":\"$pattern\",\"name\":\"$name\"}" >> dashboard/data/assignments.json
           done
           echo ']}' >> dashboard/data/assignments.json
 
-          # Process each assignment
+          # Initialize history
+          HISTORY_FILE="dashboard/data/history.json"
+          if [ ! -f "$HISTORY_FILE" ]; then
+            echo '{"snapshots":[]}' > "$HISTORY_FILE"
+          fi
+
           for pattern in $PATTERNS; do
+            echo ""
             echo "Processing $pattern..."
 
-            # Get all student repos for this assignment
+            case "$pattern" in
+              "w1-file-i-o"|"w2-csv-parsing") STRETCH_PATTERNS="CsvHelper" ;;
+              *) STRETCH_PATTERNS="" ;;
+            esac
+
             repos=$(gh repo list WCTC-Net-Database --limit 500 --json name -q '.[].name' | grep "^${pattern}-" | grep -v "^${pattern}$" || true)
 
             if [ -z "$repos" ]; then
@@ -67,102 +88,263 @@ jobs:
               continue
             fi
 
-            # Start JSON file
+            # Start JSON
             echo "{" > "dashboard/data/${pattern}.json"
             echo "  \"assignment\": \"$pattern\"," >> "dashboard/data/${pattern}.json"
-            echo "  \"generated\": \"$(date -u '+%Y-%m-%d %H:%M UTC')\"," >> "dashboard/data/${pattern}.json"
+            echo "  \"generated\": \"$(date -u '+%Y-%m-%dT%H:%M:%SZ')\"," >> "dashboard/data/${pattern}.json"
             echo "  \"students\": [" >> "dashboard/data/${pattern}.json"
 
             first_student=true
+            snapshot_students=""
+
             for repo in $repos; do
               student_name="${repo#${pattern}-}"
 
-              if [ "$first_student" = true ]; then
-                first_student=false
+              if [ "$first_student" = true ]; then first_student=false
               else
                 echo "," >> "dashboard/data/${pattern}.json"
+                snapshot_students="${snapshot_students},"
               fi
 
-              echo "  Processing student: $student_name"
+              echo "  Student: $student_name"
 
-              # Get build status
+              # Get repo push date
+              repo_info=$(gh api "repos/WCTC-Net-Database/$repo" 2>/dev/null || echo '{}')
+              pushed_at=$(echo "$repo_info" | jq -r '.pushed_at // empty')
+
+              # Get commit date
+              commits_info=$(gh api "repos/WCTC-Net-Database/$repo/commits?per_page=1" 2>/dev/null || echo '[]')
+              commit_date=$(echo "$commits_info" | jq -r '.[0].commit.author.date // empty')
+              submitted_at="${commit_date:-$pushed_at}"
+
+              # Check if changed since last run
+              NEEDS_ANALYSIS=true
+              if [ -n "$LAST_RUN_TIME" ] && [ -n "$pushed_at" ]; then
+                last_run_epoch=$(date -d "$LAST_RUN_TIME" +%s 2>/dev/null || echo 0)
+                pushed_epoch=$(date -d "$pushed_at" +%s 2>/dev/null || echo 0)
+                if [ "$pushed_epoch" -le "$last_run_epoch" ]; then
+                  NEEDS_ANALYSIS=false
+                  echo "    -> Skipping (no changes)"
+                fi
+              fi
+
+              # Build status
               build_status="unknown"
               build_url=""
               run_info=$(gh api "repos/WCTC-Net-Database/$repo/actions/runs?per_page=1" 2>/dev/null || echo '{"total_count":0}')
               if echo "$run_info" | jq -e '.workflow_runs[0]' > /dev/null 2>&1; then
-                conclusion=$(echo "$run_info" | jq -r '.workflow_runs[0].conclusion // .workflow_runs[0].status')
-                build_status="$conclusion"
+                build_status=$(echo "$run_info" | jq -r '.workflow_runs[0].conclusion // .workflow_runs[0].status')
                 build_url=$(echo "$run_info" | jq -r '.workflow_runs[0].html_url')
               fi
 
-              # Get SonarCloud metrics
+              # SonarCloud metrics
               sonar_key="WCTC-Net-Database_${repo}"
               maintainability="-"
               code_smells="-"
+              bugs="-"
+              vulnerabilities="-"
+              reliability="-"
+              security="-"
+              duplication="-"
+              lines_of_code="-"
 
               if [ -n "$SONAR_TOKEN" ]; then
                 sonar_response=$(curl -s -u "${SONAR_TOKEN}:" \
-                  "https://sonarcloud.io/api/measures/component?component=${sonar_key}&metricKeys=bugs,code_smells,sqale_rating,reliability_rating" \
+                  "https://sonarcloud.io/api/measures/component?component=${sonar_key}&metricKeys=bugs,vulnerabilities,code_smells,sqale_rating,reliability_rating,security_rating,duplicated_lines_density,ncloc" \
                   2>/dev/null || echo '{}')
 
                 if echo "$sonar_response" | jq -e '.component.measures' > /dev/null 2>&1; then
                   sqale=$(echo "$sonar_response" | jq -r '.component.measures[] | select(.metric=="sqale_rating") | .value' 2>/dev/null || echo "")
-                  case "$sqale" in
-                    "1.0") maintainability="A" ;;
-                    "2.0") maintainability="B" ;;
-                    "3.0") maintainability="C" ;;
-                    "4.0") maintainability="D" ;;
-                    "5.0") maintainability="E" ;;
-                  esac
+                  case "$sqale" in "1.0") maintainability="A";; "2.0") maintainability="B";; "3.0") maintainability="C";; "4.0") maintainability="D";; "5.0") maintainability="E";; esac
+
+                  rel=$(echo "$sonar_response" | jq -r '.component.measures[] | select(.metric=="reliability_rating") | .value' 2>/dev/null || echo "")
+                  case "$rel" in "1.0") reliability="A";; "2.0") reliability="B";; "3.0") reliability="C";; "4.0") reliability="D";; "5.0") reliability="E";; esac
+
+                  sec=$(echo "$sonar_response" | jq -r '.component.measures[] | select(.metric=="security_rating") | .value' 2>/dev/null || echo "")
+                  case "$sec" in "1.0") security="A";; "2.0") security="B";; "3.0") security="C";; "4.0") security="D";; "5.0") security="E";; esac
+
                   code_smells=$(echo "$sonar_response" | jq -r '.component.measures[] | select(.metric=="code_smells") | .value' 2>/dev/null || echo "-")
+                  bugs=$(echo "$sonar_response" | jq -r '.component.measures[] | select(.metric=="bugs") | .value' 2>/dev/null || echo "-")
+                  vulnerabilities=$(echo "$sonar_response" | jq -r '.component.measures[] | select(.metric=="vulnerabilities") | .value' 2>/dev/null || echo "-")
+                  duplication=$(echo "$sonar_response" | jq -r '.component.measures[] | select(.metric=="duplicated_lines_density") | .value' 2>/dev/null || echo "-")
+                  lines_of_code=$(echo "$sonar_response" | jq -r '.component.measures[] | select(.metric=="ncloc") | .value' 2>/dev/null || echo "-")
                 fi
               fi
 
-              # Determine flags
-              needs_review="false"
+              # Initialize analysis
+              todo_count=0
+              todo_locations="[]"
+              student_comments="[]"
+              stretch_goals="[]"
               has_stretch="false"
-              estimated_score=85
 
-              # Adjust score based on build status
-              if [ "$build_status" = "failure" ]; then
-                estimated_score=$((estimated_score - 30))
+              # Deep analysis
+              if [ "$NEEDS_ANALYSIS" = true ]; then
+                echo "    -> Cloning..."
+                REPO_DIR="/tmp/repos/$repo"
+                rm -rf "$REPO_DIR"
+
+                if gh repo clone "WCTC-Net-Database/$repo" "$REPO_DIR" --depth 1 2>/dev/null; then
+                  echo "    -> Analyzing..."
+
+                  # Create temp files for JSON arrays
+                  todos_file=$(mktemp)
+                  comments_file=$(mktemp)
+                  echo "[" > "$todos_file"
+                  echo "[" > "$comments_file"
+                  first_todo=true
+                  first_comment=true
+
+                  # Find .cs files
+                  while IFS= read -r cs_file; do
+                    [ -z "$cs_file" ] && continue
+                    filename=$(basename "$cs_file")
+                    line_num=0
+
+                    while IFS= read -r line || [ -n "$line" ]; do
+                      line_num=$((line_num + 1))
+
+                      # Check TODOs
+                      if echo "$line" | grep -qE 'TODO:|TODO |// TODO|FIXME|HACK:'; then
+                        todo_count=$((todo_count + 1))
+                        if [ "$first_todo" = true ]; then first_todo=false; else echo "," >> "$todos_file"; fi
+                        echo "\"${filename}:${line_num}\"" >> "$todos_file"
+                      fi
+
+                      # Check student comments
+                      if echo "$line" | grep -qE '^\s*(//|/\*|\*)'; then
+                        if echo "$line" | grep -qiE '\?\s*$|is this|should I|not sure|confused|help|question:|ask instructor|review this|\*Disclosure\*'; then
+                          if [ "$first_comment" = true ]; then first_comment=false; else echo "," >> "$comments_file"; fi
+                          escaped=$(echo "$line" | sed 's/\\/\\\\/g; s/"/\\"/g' | tr -d '\r\t')
+                          echo "{\"file\":\"${filename}\",\"line\":${line_num},\"text\":\"${escaped}\"}" >> "$comments_file"
+                        fi
+                      fi
+                    done < "$cs_file"
+
+                    # Check stretch goals
+                    if [ -n "$STRETCH_PATTERNS" ] && [ "$has_stretch" = "false" ]; then
+                      if grep -q "$STRETCH_PATTERNS" "$cs_file" 2>/dev/null; then
+                        has_stretch="true"
+                        stretch_goals="[\"CsvHelper library implementation\"]"
+                      fi
+                    fi
+                  done < <(find "$REPO_DIR" -name "*.cs" -type f ! -path "*/bin/*" ! -path "*/obj/*" 2>/dev/null)
+
+                  echo "]" >> "$todos_file"
+                  echo "]" >> "$comments_file"
+                  todo_locations=$(cat "$todos_file")
+                  student_comments=$(cat "$comments_file")
+                  rm -f "$todos_file" "$comments_file"
+                  rm -rf "$REPO_DIR"
+                fi
               fi
 
-              # Adjust for maintainability
-              if [ "$maintainability" = "D" ] || [ "$maintainability" = "E" ]; then
-                estimated_score=$((estimated_score - 10))
+              # Generate notes
+              notes="[]"
+              comment_count=$(echo "$student_comments" | jq 'length' 2>/dev/null || echo 0)
+
+              if [ "$todo_count" -gt 5 ]; then
+                notes="[\"Many TODOs remaining - likely incomplete\"]"
+              elif [ "$todo_count" -gt 0 ]; then
+                notes="[\"${todo_count} TODOs remaining\"]"
+              fi
+
+              if [ "$has_stretch" = "true" ]; then
+                notes=$(echo "$notes" | jq '. + ["Completed stretch goal(s)"]')
+              fi
+              if [ "$comment_count" -gt 0 ]; then
+                notes=$(echo "$notes" | jq --arg c "$comment_count student comment(s) to review" '. + [$c]')
+              fi
+
+              # Calculate score
+              estimated_score=100
+              needs_review="false"
+
+              [ "$build_status" = "failure" ] && estimated_score=$((estimated_score - 30))
+              if [ "$todo_count" -gt 5 ]; then
+                estimated_score=$((estimated_score - 20))
                 needs_review="true"
+              elif [ "$todo_count" -gt 0 ]; then
+                estimated_score=$((estimated_score - todo_count * 3))
               fi
+              [ "$maintainability" = "D" ] || [ "$maintainability" = "E" ] && estimated_score=$((estimated_score - 10))
+              [ "$comment_count" -gt 0 ] && needs_review="true"
+              [ "$estimated_score" -lt 0 ] && estimated_score=0
 
-              # Write student JSON
-              cat >> "dashboard/data/${pattern}.json" << EOF
-    {
-      "name": "$student_name",
-      "repo": "$repo",
-      "build": {
-        "status": "$build_status",
-        "url": "$build_url"
-      },
-      "sonar": {
-        "projectKey": "$sonar_key",
-        "maintainability": "$maintainability",
-        "codeSmells": "$code_smells"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": $has_stretch,
-      "needsReview": $needs_review,
-      "estimatedScore": $estimated_score
-    }
-EOF
+              # Write student JSON using jq for safety
+              jq -n \
+                --arg name "$student_name" \
+                --arg repo "$repo" \
+                --arg submitted "$submitted_at" \
+                --arg bstatus "$build_status" \
+                --arg burl "$build_url" \
+                --arg skey "$sonar_key" \
+                --arg maint "$maintainability" \
+                --arg smells "$code_smells" \
+                --arg bugs "$bugs" \
+                --arg vulns "$vulnerabilities" \
+                --arg rel "$reliability" \
+                --arg sec "$security" \
+                --arg dup "$duplication" \
+                --arg loc "$lines_of_code" \
+                --argjson todocount "$todo_count" \
+                --argjson commentcount "$comment_count" \
+                --argjson hasstretch "$has_stretch" \
+                --argjson needsreview "$needs_review" \
+                --argjson score "$estimated_score" \
+                --argjson comments "$student_comments" \
+                --argjson todos "$todo_locations" \
+                --argjson stretch "$stretch_goals" \
+                --argjson notes "$notes" \
+                '{
+                  name: $name,
+                  repo: $repo,
+                  submittedAt: $submitted,
+                  build: { status: $bstatus, url: $burl },
+                  sonar: {
+                    projectKey: $skey,
+                    maintainability: $maint,
+                    codeSmells: $smells,
+                    bugs: $bugs,
+                    vulnerabilities: $vulns,
+                    reliability: $rel,
+                    security: $sec,
+                    duplication: $dup,
+                    linesOfCode: $loc
+                  },
+                  todoCount: $todocount,
+                  studentComments: $commentcount,
+                  hasStretch: $hasstretch,
+                  needsReview: $needsreview,
+                  estimatedScore: $score,
+                  comments: $comments,
+                  todos: $todos,
+                  stretchGoals: $stretch,
+                  notes: $notes
+                }' >> "dashboard/data/${pattern}.json"
+
+              # Snapshot data
+              snapshot_students="${snapshot_students}{\"name\":\"$student_name\",\"buildStatus\":\"$build_status\",\"estimatedScore\":$estimated_score,\"todoCount\":$todo_count,\"hasStretch\":$has_stretch}"
             done
 
-            # Close JSON file
             echo "  ]" >> "dashboard/data/${pattern}.json"
             echo "}" >> "dashboard/data/${pattern}.json"
 
+            # Fix JSON formatting (remove trailing issues)
+            tmp=$(mktemp)
+            jq '.' "dashboard/data/${pattern}.json" > "$tmp" && mv "$tmp" "dashboard/data/${pattern}.json"
+
+            # Add snapshot
+            snapshot_date=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
+            tmp_history=$(mktemp)
+            jq --arg date "$snapshot_date" --arg assign "$pattern" --argjson students "[$snapshot_students]" \
+              '.snapshots += [{date: $date, assignment: $assign, students: $students}] | .snapshots = .snapshots[-100:]' \
+              "$HISTORY_FILE" > "$tmp_history" && mv "$tmp_history" "$HISTORY_FILE"
+
             echo "Completed $pattern"
           done
+
+          date -u '+%Y-%m-%dT%H:%M:%SZ' > "$LAST_RUN_FILE"
 
       - name: Commit and Push
         run: |
