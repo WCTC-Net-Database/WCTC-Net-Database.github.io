@@ -1,0 +1,173 @@
+name: Update Grading Dashboard
+
+on:
+  # Run on schedule (every 6 hours during typical grading times)
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      assignment:
+        description: 'Assignment pattern (e.g., w1-file-i-o) or "all"'
+        required: false
+        default: 'all'
+
+jobs:
+  update-dashboard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate Dashboard Data
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          # Create data directory if it doesn't exist
+          mkdir -p dashboard/data
+
+          # Assignment patterns to process
+          if [ "${{ github.event.inputs.assignment }}" = "all" ] || [ -z "${{ github.event.inputs.assignment }}" ]; then
+            PATTERNS="w1-file-i-o w2-csv-parsing"
+          else
+            PATTERNS="${{ github.event.inputs.assignment }}"
+          fi
+
+          # Generate assignments.json
+          echo '{"assignments":[' > dashboard/data/assignments.json
+          first=true
+          for pattern in $PATTERNS; do
+            if [ "$first" = true ]; then
+              first=false
+            else
+              echo ',' >> dashboard/data/assignments.json
+            fi
+            name=$(echo "$pattern" | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
+            echo "{\"pattern\":\"$pattern\",\"name\":\"$name\"}" >> dashboard/data/assignments.json
+          done
+          echo ']}' >> dashboard/data/assignments.json
+
+          # Process each assignment
+          for pattern in $PATTERNS; do
+            echo "Processing $pattern..."
+
+            # Get all student repos for this assignment
+            repos=$(gh repo list WCTC-Net-Database --limit 500 --json name -q '.[].name' | grep "^${pattern}-" | grep -v "^${pattern}$" || true)
+
+            if [ -z "$repos" ]; then
+              echo "No repos found for $pattern"
+              continue
+            fi
+
+            # Start JSON file
+            echo "{" > "dashboard/data/${pattern}.json"
+            echo "  \"assignment\": \"$pattern\"," >> "dashboard/data/${pattern}.json"
+            echo "  \"generated\": \"$(date -u '+%Y-%m-%d %H:%M UTC')\"," >> "dashboard/data/${pattern}.json"
+            echo "  \"students\": [" >> "dashboard/data/${pattern}.json"
+
+            first_student=true
+            for repo in $repos; do
+              student_name="${repo#${pattern}-}"
+
+              if [ "$first_student" = true ]; then
+                first_student=false
+              else
+                echo "," >> "dashboard/data/${pattern}.json"
+              fi
+
+              echo "  Processing student: $student_name"
+
+              # Get build status
+              build_status="unknown"
+              build_url=""
+              run_info=$(gh api "repos/WCTC-Net-Database/$repo/actions/runs?per_page=1" 2>/dev/null || echo '{"total_count":0}')
+              if echo "$run_info" | jq -e '.workflow_runs[0]' > /dev/null 2>&1; then
+                conclusion=$(echo "$run_info" | jq -r '.workflow_runs[0].conclusion // .workflow_runs[0].status')
+                build_status="$conclusion"
+                build_url=$(echo "$run_info" | jq -r '.workflow_runs[0].html_url')
+              fi
+
+              # Get SonarCloud metrics
+              sonar_key="WCTC-Net-Database_${repo}"
+              maintainability="-"
+              code_smells="-"
+
+              if [ -n "$SONAR_TOKEN" ]; then
+                sonar_response=$(curl -s -u "${SONAR_TOKEN}:" \
+                  "https://sonarcloud.io/api/measures/component?component=${sonar_key}&metricKeys=bugs,code_smells,sqale_rating,reliability_rating" \
+                  2>/dev/null || echo '{}')
+
+                if echo "$sonar_response" | jq -e '.component.measures' > /dev/null 2>&1; then
+                  sqale=$(echo "$sonar_response" | jq -r '.component.measures[] | select(.metric=="sqale_rating") | .value' 2>/dev/null || echo "")
+                  case "$sqale" in
+                    "1.0") maintainability="A" ;;
+                    "2.0") maintainability="B" ;;
+                    "3.0") maintainability="C" ;;
+                    "4.0") maintainability="D" ;;
+                    "5.0") maintainability="E" ;;
+                  esac
+                  code_smells=$(echo "$sonar_response" | jq -r '.component.measures[] | select(.metric=="code_smells") | .value' 2>/dev/null || echo "-")
+                fi
+              fi
+
+              # Determine flags
+              needs_review="false"
+              has_stretch="false"
+              estimated_score=85
+
+              # Adjust score based on build status
+              if [ "$build_status" = "failure" ]; then
+                estimated_score=$((estimated_score - 30))
+              fi
+
+              # Adjust for maintainability
+              if [ "$maintainability" = "D" ] || [ "$maintainability" = "E" ]; then
+                estimated_score=$((estimated_score - 10))
+                needs_review="true"
+              fi
+
+              # Write student JSON
+              cat >> "dashboard/data/${pattern}.json" << EOF
+    {
+      "name": "$student_name",
+      "repo": "$repo",
+      "build": {
+        "status": "$build_status",
+        "url": "$build_url"
+      },
+      "sonar": {
+        "projectKey": "$sonar_key",
+        "maintainability": "$maintainability",
+        "codeSmells": "$code_smells"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": $has_stretch,
+      "needsReview": $needs_review,
+      "estimatedScore": $estimated_score
+    }
+EOF
+            done
+
+            # Close JSON file
+            echo "  ]" >> "dashboard/data/${pattern}.json"
+            echo "}" >> "dashboard/data/${pattern}.json"
+
+            echo "Completed $pattern"
+          done
+
+      - name: Commit and Push
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add dashboard/data/
+          git diff --staged --quiet || git commit -m "Update dashboard data $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push

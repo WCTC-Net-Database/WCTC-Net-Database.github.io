@@ -1,0 +1,114 @@
+{
+  "assignment": "w1-file-i-o",
+  "generated": "2026-02-01 16:30 UTC",
+  "students": [
+    {
+      "name": "Sdunn235",
+      "repo": "w1-file-i-o-Sdunn235",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions"
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
+        "maintainability": "A",
+        "codeSmells": "2"
+      },
+      "todoCount": 0,
+      "studentComments": 4,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 95
+    },
+    {
+      "name": "TGustafson1",
+      "repo": "w1-file-i-o-TGustafson1",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions"
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w1-file-i-o-TGustafson1",
+        "maintainability": "A",
+        "codeSmells": "16"
+      },
+      "todoCount": 3,
+      "studentComments": 1,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 86
+    },
+    {
+      "name": "taylorharty",
+      "repo": "w1-file-i-o-taylorharty",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-taylorharty/actions"
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w1-file-i-o-taylorharty",
+        "maintainability": "A",
+        "codeSmells": "20"
+      },
+      "todoCount": 2,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 84
+    },
+    {
+      "name": "MW92007",
+      "repo": "w1-file-i-o-MW92007",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-MW92007/actions"
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w1-file-i-o-MW92007",
+        "maintainability": "A",
+        "codeSmells": "20"
+      },
+      "todoCount": 16,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 70
+    },
+    {
+      "name": "irodriguez5",
+      "repo": "w1-file-i-o-irodriguez5",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-irodriguez5/actions"
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w1-file-i-o-irodriguez5",
+        "maintainability": "A",
+        "codeSmells": "20"
+      },
+      "todoCount": 16,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 70
+    },
+    {
+      "name": "Samuel-dotcom-rgb",
+      "repo": "w1-file-i-o-Samuel-dotcom-rgb",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Samuel-dotcom-rgb/actions"
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w1-file-i-o-Samuel-dotcom-rgb",
+        "maintainability": "A",
+        "codeSmells": "20"
+      },
+      "todoCount": 16,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 70
+    }
+  ]
+}
