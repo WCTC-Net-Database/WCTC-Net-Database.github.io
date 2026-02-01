@@ -1,0 +1,70 @@
+{
+  "snapshots": [
+    {
+      "date": "2026-02-01T16:45:00Z",
+      "assignment": "w1-file-i-o",
+      "students": [
+        {
+          "name": "Sdunn235",
+          "repo": "w1-file-i-o-Sdunn235",
+          "submittedAt": "2026-01-27T14:32:00Z",
+          "buildStatus": "success",
+          "estimatedScore": 95,
+          "todoCount": 0,
+          "hasStretch": true,
+          "maintainability": "A"
+        },
+        {
+          "name": "TGustafson1",
+          "repo": "w1-file-i-o-TGustafson1",
+          "submittedAt": "2026-01-28T09:15:00Z",
+          "buildStatus": "success",
+          "estimatedScore": 86,
+          "todoCount": 3,
+          "hasStretch": true,
+          "maintainability": "A"
+        },
+        {
+          "name": "taylorharty",
+          "repo": "w1-file-i-o-taylorharty",
+          "submittedAt": "2026-01-29T18:45:00Z",
+          "buildStatus": "success",
+          "estimatedScore": 84,
+          "todoCount": 2,
+          "hasStretch": false,
+          "maintainability": "A"
+        },
+        {
+          "name": "MW92007",
+          "repo": "w1-file-i-o-MW92007",
+          "submittedAt": "2026-01-30T11:22:00Z",
+          "buildStatus": "success",
+          "estimatedScore": 70,
+          "todoCount": 16,
+          "hasStretch": false,
+          "maintainability": "A"
+        },
+        {
+          "name": "irodriguez5",
+          "repo": "w1-file-i-o-irodriguez5",
+          "submittedAt": "2026-01-30T16:05:00Z",
+          "buildStatus": "success",
+          "estimatedScore": 70,
+          "todoCount": 16,
+          "hasStretch": false,
+          "maintainability": "A"
+        },
+        {
+          "name": "Samuel-dotcom-rgb",
+          "repo": "w1-file-i-o-Samuel-dotcom-rgb",
+          "submittedAt": "2026-01-31T20:30:00Z",
+          "buildStatus": "success",
+          "estimatedScore": 70,
+          "todoCount": 16,
+          "hasStretch": false,
+          "maintainability": "A"
+        }
+      ]
+    }
+  ]
+}

@@ -203,6 +203,15 @@
         .filter-btn.active {
             font-weight: bold;
         }
+
+        .date-filter-bar {
+            border: 1px solid #dee2e6;
+        }
+
+        .date-preset.active {
+            background-color: #007bff;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -224,15 +233,15 @@
         </div>
     </div>
 
-    <!-- Assignment Selector -->
+    <!-- Controls Row -->
     <div class="row mb-4">
-        <div class="col-md-4">
+        <div class="col-md-3">
             <label for="assignment-select"><strong>Assignment:</strong></label>
             <select id="assignment-select" class="form-control">
                 <option value="">Loading...</option>
             </select>
         </div>
-        <div class="col-md-8 d-flex align-items-end">
+        <div class="col-md-6 d-flex align-items-end">
             <div class="btn-group" role="group">
                 <button type="button" class="btn btn-outline-secondary filter-btn active" data-filter="all">All</button>
                 <button type="button" class="btn btn-outline-danger filter-btn" data-filter="failed">
@@ -244,6 +253,30 @@
                 <button type="button" class="btn btn-outline-success filter-btn" data-filter="stretch">
                     <i class="fas fa-star"></i> Stretch Goals
                 </button>
+            </div>
+        </div>
+        <div class="col-md-3 d-flex align-items-end justify-content-end">
+            <a href="students.html" class="btn btn-primary">
+                <i class="fas fa-users"></i> Student History
+            </a>
+        </div>
+    </div>
+
+    <!-- Date Filter -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="date-filter-bar bg-light p-2 rounded d-flex align-items-center">
+                <span class="mr-3"><strong>Date Range:</strong></span>
+                <div class="btn-group btn-group-sm mr-3" role="group">
+                    <button type="button" class="btn btn-outline-primary date-preset" data-days="7">7 Days</button>
+                    <button type="button" class="btn btn-outline-primary date-preset" data-days="14">14 Days</button>
+                    <button type="button" class="btn btn-outline-primary date-preset" data-days="30">30 Days</button>
+                    <button type="button" class="btn btn-outline-primary date-preset active" data-days="0">All Time</button>
+                </div>
+                <label class="mr-2 mb-0">From:</label>
+                <input type="date" id="start-date" class="form-control form-control-sm mr-2" style="width: auto;">
+                <label class="mr-2 mb-0">To:</label>
+                <input type="date" id="end-date" class="form-control form-control-sm" style="width: auto;">
             </div>
         </div>
     </div>

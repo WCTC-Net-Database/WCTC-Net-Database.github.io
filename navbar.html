@@ -21,8 +21,14 @@
             <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="dashboard/index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="gradingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-tachometer-alt"></i> Grading
+                </a>
+                <div class="dropdown-menu" aria-labelledby="gradingDropdown">
+                    <a class="dropdown-item" href="dashboard/index.html"><i class="fas fa-th-large"></i> Assignment Dashboard</a>
+                    <a class="dropdown-item" href="dashboard/students.html"><i class="fas fa-users"></i> Student History</a>
+                </div>
             </li>
         </ul>
     </div>

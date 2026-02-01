@@ -1,6 +1,7 @@
 // Dashboard JavaScript
 let allStudents = [];
 let currentFilter = 'all';
+let currentDateFilter = { start: null, end: null };
 
 // Load available assignments
 async function loadAssignments() {
@@ -52,17 +53,36 @@ async function loadAssignmentData(pattern) {
     }
 }
 
+// Filter students by date
+function filterByDate(students) {
+    if (!currentDateFilter.start && !currentDateFilter.end) {
+        return students;
+    }
+
+    return students.filter(s => {
+        if (!s.submittedAt) return true; // Include if no date
+        const date = new Date(s.submittedAt);
+        if (currentDateFilter.start && date < currentDateFilter.start) return false;
+        if (currentDateFilter.end && date > currentDateFilter.end) return false;
+        return true;
+    });
+}
+
 // Filter students based on criteria
 function filterStudents(students, filter) {
+    // First apply date filter
+    let filtered = filterByDate(students);
+
+    // Then apply status filter
     switch (filter) {
         case 'failed':
-            return students.filter(s => s.build?.status === 'failure');
+            return filtered.filter(s => s.build?.status === 'failure');
         case 'review':
-            return students.filter(s => s.needsReview);
+            return filtered.filter(s => s.needsReview);
         case 'stretch':
-            return students.filter(s => s.hasStretch);
+            return filtered.filter(s => s.hasStretch);
         default:
-            return students;
+            return filtered;
     }
 }
 
@@ -327,6 +347,39 @@ function showNoData() {
     document.getElementById('avg-score').textContent = '-';
 }
 
+// Update date filter and re-render
+function updateDateFilter() {
+    const startInput = document.getElementById('start-date');
+    const endInput = document.getElementById('end-date');
+
+    currentDateFilter.start = startInput.value ? new Date(startInput.value) : null;
+    currentDateFilter.end = endInput.value ? new Date(endInput.value + 'T23:59:59') : null;
+
+    const filtered = filterStudents(allStudents, currentFilter);
+    updateSummary(filtered);
+    renderStudents(filtered);
+}
+
+// Set date preset
+function setDatePreset(days) {
+    const startInput = document.getElementById('start-date');
+    const endInput = document.getElementById('end-date');
+
+    if (days === 0) {
+        startInput.value = '';
+        endInput.value = '';
+    } else {
+        const end = new Date();
+        const start = new Date();
+        start.setDate(start.getDate() - days);
+
+        startInput.value = start.toISOString().split('T')[0];
+        endInput.value = end.toISOString().split('T')[0];
+    }
+
+    updateDateFilter();
+}
+
 // Event listeners
 document.addEventListener('DOMContentLoaded', () => {
     loadAssignments();
@@ -346,5 +399,24 @@ document.addEventListener('DOMContentLoaded', () => {
             currentFilter = e.target.dataset.filter;
             renderStudents(filterStudents(allStudents, currentFilter));
         });
+    });
+
+    // Date preset buttons
+    document.querySelectorAll('.date-preset').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            document.querySelectorAll('.date-preset').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            setDatePreset(parseInt(e.target.dataset.days));
+        });
+    });
+
+    // Date input changes
+    document.getElementById('start-date')?.addEventListener('change', () => {
+        document.querySelectorAll('.date-preset').forEach(b => b.classList.remove('active'));
+        updateDateFilter();
+    });
+    document.getElementById('end-date')?.addEventListener('change', () => {
+        document.querySelectorAll('.date-preset').forEach(b => b.classList.remove('active'));
+        updateDateFilter();
     });
 });
