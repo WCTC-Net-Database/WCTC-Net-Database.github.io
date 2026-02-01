@@ -107,11 +107,11 @@ function renderStudents(students) {
         return (b.estimatedScore || 0) - (a.estimatedScore || 0);
     });
 
-    container.innerHTML = students.map(student => renderStudentCard(student)).join('');
+    container.innerHTML = students.map((student, index) => renderStudentCard(student, index)).join('');
 }
 
-// Render a single student card
-function renderStudentCard(student) {
+// Render a single student card with expandable details
+function renderStudentCard(student, index) {
     const buildStatus = student.build?.status || 'unknown';
     const buildIcon = buildStatus === 'success' ? 'check' : buildStatus === 'failure' ? 'times' : 'question';
     const buildClass = buildStatus === 'success' ? 'pass' : buildStatus === 'failure' ? 'fail' : 'unknown';
@@ -125,6 +125,16 @@ function renderStudentCard(student) {
 
     const maintainability = student.sonar?.maintainability || '-';
     const maintClass = maintainability !== '-' ? `rating-${maintainability}` : '';
+
+    // Check if there are details to show
+    const hasComments = student.comments && student.comments.length > 0;
+    const hasTodos = student.todos && student.todos.length > 0;
+    const hasStretchDetails = student.stretchGoals && student.stretchGoals.length > 0;
+    const hasSonarDetails = student.sonar && (student.sonar.bugs || student.sonar.vulnerabilities || student.sonar.reliability);
+    const hasNotes = student.notes && student.notes.length > 0;
+    const hasDetails = hasComments || hasTodos || hasStretchDetails || hasSonarDetails || hasNotes;
+
+    const collapseId = `details-${index}`;
 
     return `
         <div class="col-md-6 col-lg-4">
@@ -169,28 +179,136 @@ function renderStudentCard(student) {
 
                     <div class="mt-3">
                         ${student.hasStretch ? `<span class="stretch-badge"><i class="fas fa-star"></i> Stretch Goal</span> ` : ''}
-                        ${student.studentComments > 0 ? `<span class="attention-badge"><i class="fas fa-comment"></i> ${student.studentComments} comment(s)</span>` : ''}
+                        ${(student.studentComments > 0 || hasComments) ? `<span class="attention-badge"><i class="fas fa-comment"></i> ${student.studentComments || student.comments?.length || 0} comment(s)</span>` : ''}
                     </div>
 
-                    ${student.build?.url ? `
-                    <div class="mt-3">
+                    <!-- Action buttons -->
+                    <div class="mt-3 d-flex flex-wrap gap-1">
+                        ${hasDetails ? `
+                        <button class="btn btn-sm btn-outline-primary" type="button" data-toggle="collapse" data-target="#${collapseId}" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i> Details
+                        </button>
+                        ` : ''}
+                        ${student.build?.url ? `
                         <a href="${student.build.url}" target="_blank" class="btn btn-sm btn-outline-secondary">
-                            <i class="fas fa-external-link-alt"></i> View Build
+                            <i class="fas fa-external-link-alt"></i> Build
                         </a>
+                        ` : ''}
                         <a href="https://github.com/WCTC-Net-Database/${student.repo}" target="_blank" class="btn btn-sm btn-outline-secondary">
                             <i class="fab fa-github"></i> Repo
                         </a>
                         ${student.sonar?.projectKey ? `
                         <a href="https://sonarcloud.io/project/overview?id=${student.sonar.projectKey}" target="_blank" class="btn btn-sm btn-outline-secondary">
-                            <i class="fas fa-chart-bar"></i> SonarCloud
+                            <i class="fas fa-chart-bar"></i> Sonar
                         </a>
                         ` : ''}
+                    </div>
+
+                    <!-- Expandable Details Section -->
+                    ${hasDetails ? `
+                    <div class="collapse mt-3" id="${collapseId}">
+                        <div class="details-section">
+                            ${renderDetailsSection(student)}
+                        </div>
                     </div>
                     ` : ''}
                 </div>
             </div>
         </div>
     `;
+}
+
+// Render the expandable details section
+function renderDetailsSection(student) {
+    let html = '';
+
+    // Student Comments
+    if (student.comments && student.comments.length > 0) {
+        html += `
+            <div class="detail-group">
+                <div class="detail-header"><i class="fas fa-comment text-warning"></i> Student Comments</div>
+                <div class="detail-content">
+                    ${student.comments.map(c => `
+                        <div class="comment-item">
+                            <div class="comment-location"><code>${c.file}:${c.line}</code></div>
+                            <div class="comment-text">${escapeHtml(c.text)}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    // TODO Locations
+    if (student.todos && student.todos.length > 0) {
+        html += `
+            <div class="detail-group">
+                <div class="detail-header"><i class="fas fa-list-check text-info"></i> TODO Locations</div>
+                <div class="detail-content">
+                    <ul class="todo-list">
+                        ${student.todos.slice(0, 10).map(t => `<li><code>${t}</code></li>`).join('')}
+                        ${student.todos.length > 10 ? `<li class="text-muted">...and ${student.todos.length - 10} more</li>` : ''}
+                    </ul>
+                </div>
+            </div>
+        `;
+    }
+
+    // Stretch Goals
+    if (student.stretchGoals && student.stretchGoals.length > 0) {
+        html += `
+            <div class="detail-group">
+                <div class="detail-header"><i class="fas fa-star text-success"></i> Stretch Goals Achieved</div>
+                <div class="detail-content">
+                    <ul class="stretch-list">
+                        ${student.stretchGoals.map(g => `<li>${escapeHtml(g)}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        `;
+    }
+
+    // SonarCloud Details
+    if (student.sonar && (student.sonar.bugs || student.sonar.vulnerabilities || student.sonar.reliability || student.sonar.security)) {
+        html += `
+            <div class="detail-group">
+                <div class="detail-header"><i class="fas fa-chart-bar text-primary"></i> SonarCloud Details</div>
+                <div class="detail-content">
+                    <div class="row">
+                        ${student.sonar.bugs !== undefined ? `<div class="col-6"><strong>Bugs:</strong> ${student.sonar.bugs}</div>` : ''}
+                        ${student.sonar.vulnerabilities !== undefined ? `<div class="col-6"><strong>Vulnerabilities:</strong> ${student.sonar.vulnerabilities}</div>` : ''}
+                        ${student.sonar.reliability ? `<div class="col-6"><strong>Reliability:</strong> <span class="rating-badge rating-${student.sonar.reliability}">${student.sonar.reliability}</span></div>` : ''}
+                        ${student.sonar.security ? `<div class="col-6"><strong>Security:</strong> <span class="rating-badge rating-${student.sonar.security}">${student.sonar.security}</span></div>` : ''}
+                        ${student.sonar.duplication !== undefined ? `<div class="col-6"><strong>Duplication:</strong> ${student.sonar.duplication}%</div>` : ''}
+                        ${student.sonar.linesOfCode !== undefined ? `<div class="col-6"><strong>Lines of Code:</strong> ${student.sonar.linesOfCode}</div>` : ''}
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    // Grading Notes
+    if (student.notes && student.notes.length > 0) {
+        html += `
+            <div class="detail-group">
+                <div class="detail-header"><i class="fas fa-clipboard-list text-secondary"></i> Grading Notes</div>
+                <div class="detail-content">
+                    <ul class="notes-list">
+                        ${student.notes.map(n => `<li>${escapeHtml(n)}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        `;
+    }
+
+    return html || '<p class="text-muted">No additional details available.</p>';
+}
+
+// Escape HTML to prevent XSS
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
 }
 
 // Show no data message
