@@ -163,6 +163,18 @@ function calculateStudentStats(student) {
         else if (recent[1] < recent[0] - 5) trend = 'down';
     }
 
+    // Count unique assignments (from snapshots + current)
+    const assignmentSet = new Set();
+    if (current?.assignmentPattern) {
+        assignmentSet.add(current.assignmentPattern);
+    }
+    snapshots.forEach(s => {
+        if (s.assignmentPattern) {
+            assignmentSet.add(s.assignmentPattern);
+        }
+    });
+    const uniqueAssignments = Array.from(assignmentSet).sort();
+
     return {
         currentScore: currentScore || avgScore,
         avgScore,
@@ -171,7 +183,9 @@ function calculateStudentStats(student) {
         buildFailed,
         hasStretch,
         trend,
-        todoCount: current?.todoCount || 0
+        todoCount: current?.todoCount || 0,
+        assignmentCount: uniqueAssignments.length,
+        assignments: uniqueAssignments
     };
 }
 
@@ -203,12 +217,18 @@ function renderStudentList() {
         const trendIcon = stats.trend === 'up' ? 'arrow-up' : stats.trend === 'down' ? 'arrow-down' : 'minus';
         const trendClass = stats.trend === 'up' ? 'trend-up' : stats.trend === 'down' ? 'trend-down' : 'trend-stable';
 
+        // Show assignment badges (abbreviated)
+        const assignmentBadges = stats.assignments.map(a => {
+            const abbrev = a.replace('w', 'W').replace(/-.*/, ''); // e.g., "w1-file-i-o" -> "W1"
+            return `<span class="badge badge-info mr-1" title="${a}">${abbrev}</span>`;
+        }).join('');
+
         return `
             <div class="student-summary-card p-3" data-student="${student.name.toLowerCase()}" onclick="selectStudent('${student.name.toLowerCase()}')">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
                         <strong>${student.name}</strong>
-                        <div class="text-muted small">${student.currentPattern || 'No current repo'}</div>
+                        <div class="small mt-1">${assignmentBadges || '<span class="text-muted">No assignments</span>'}</div>
                     </div>
                     <div class="text-right">
                         <div class="h5 mb-0">
@@ -253,7 +273,7 @@ function selectStudent(studentKey) {
 
             ${current ? `
             <div class="current-info mt-3 p-3 bg-light rounded">
-                <h6><i class="fas fa-code-branch"></i> Current Repository: <code>${current.repo}</code></h6>
+                <h6><i class="fas fa-code-branch"></i> Latest Repository: <a href="https://github.com/WCTC-Net-Database/${current.repo}" target="_blank"><code>${current.repo}</code></a></h6>
                 <div class="row mt-3">
                     <div class="col-md-2 text-center">
                         <div class="h3 mb-0">${stats.currentScore}%</div>
