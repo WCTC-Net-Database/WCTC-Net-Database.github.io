@@ -1,5 +1,5 @@
-{
-  "assignments": [
-    {"pattern": "w1-file-i-o", "name": "W1 File IO"}
-  ]
-}
+{"assignments":[
+{"pattern":"w1-file-i-o","name":"W1 File I O"}
+,
+{"pattern":"w2-csv-parsing","name":"W2 Csv Parsing"}
+]}

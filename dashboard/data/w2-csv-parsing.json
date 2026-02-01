@@ -1,0 +1,35 @@
+{
+  "assignment": "w2-csv-parsing",
+  "generated": "2026-02-01T17:18:40Z",
+  "students": [
+    {
+      "name": "taylorharty",
+      "repo": "w2-csv-parsing-taylorharty",
+      "submittedAt": "2026-02-01T16:03:04Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-taylorharty/actions/runs/21565922032"
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w2-csv-parsing-taylorharty",
+        "maintainability": "A",
+        "codeSmells": "22",
+        "bugs": "2",
+        "vulnerabilities": "0",
+        "reliability": "C",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "132"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
+    }
+  ]
+}
