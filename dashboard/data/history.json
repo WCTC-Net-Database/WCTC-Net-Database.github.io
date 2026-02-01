@@ -126,6 +126,67 @@
           "hasStretch": false
         }
       ]
+    },
+    {
+      "date": "2026-02-01T18:25:42Z",
+      "assignment": "w1-file-i-o",
+      "students": [
+        {
+          "name": "irodriguez5",
+          "buildStatus": "success",
+          "estimatedScore": 100,
+          "todoCount": 0,
+          "hasStretch": false
+        },
+        {
+          "name": "Samuel-dotcom-rgb",
+          "buildStatus": "success",
+          "estimatedScore": 100,
+          "todoCount": 0,
+          "hasStretch": false
+        },
+        {
+          "name": "MW92007",
+          "buildStatus": "success",
+          "estimatedScore": 100,
+          "todoCount": 0,
+          "hasStretch": false
+        },
+        {
+          "name": "TGustafson1",
+          "buildStatus": "success",
+          "estimatedScore": 100,
+          "todoCount": 0,
+          "hasStretch": false
+        },
+        {
+          "name": "taylorharty",
+          "buildStatus": "success",
+          "estimatedScore": 100,
+          "todoCount": 0,
+          "hasStretch": false
+        },
+        {
+          "name": "Sdunn235",
+          "buildStatus": "success",
+          "estimatedScore": 100,
+          "todoCount": 0,
+          "hasStretch": false
+        }
+      ]
+    },
+    {
+      "date": "2026-02-01T18:25:43Z",
+      "assignment": "w2-csv-parsing",
+      "students": [
+        {
+          "name": "taylorharty",
+          "buildStatus": "success",
+          "estimatedScore": 100,
+          "todoCount": 0,
+          "hasStretch": false
+        }
+      ]
     }
   ]
 }
