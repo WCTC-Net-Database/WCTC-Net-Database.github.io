@@ -65,7 +65,7 @@ jobs:
             local pattern="$2"
             local student_name="$3"
 
-            echo "  Student: $student_name (repo: $repo)"
+            echo "  Student: $student_name (repo: $repo)" >&2
 
             # Get repo push date
             repo_info=$(gh api "repos/WCTC-Net-Database/$repo" 2>/dev/null || echo '{}')
@@ -83,7 +83,7 @@ jobs:
               pushed_epoch=$(date -d "$pushed_at" +%s 2>/dev/null || echo 0)
               if [ "$pushed_epoch" -le "$last_run_epoch" ]; then
                 NEEDS_ANALYSIS=false
-                echo "    -> Skipping deep analysis (no changes)"
+                echo "    -> Skipping deep analysis (no changes)" >&2
               fi
             fi
 
@@ -145,12 +145,12 @@ jobs:
 
             # Deep analysis if needed
             if [ "$NEEDS_ANALYSIS" = true ]; then
-              echo "    -> Cloning for analysis..."
+              echo "    -> Cloning for analysis..." >&2
               REPO_DIR="/tmp/repos/$repo"
               rm -rf "$REPO_DIR"
 
               if gh repo clone "WCTC-Net-Database/$repo" "$REPO_DIR" --depth 1 2>/dev/null; then
-                echo "    -> Analyzing code..."
+                echo "    -> Analyzing code..." >&2
 
                 todos_file=$(mktemp)
                 comments_file=$(mktemp)
