@@ -1,11 +1,12 @@
 // Dashboard JavaScript
 let allStudents = [];
+let studentAssignments = {}; // Track all assignments per student (from history)
 let currentFilter = 'all';
 let currentAssignmentFilter = 'all';
 let currentDateFilter = { start: null, end: null };
 let availableAssignments = [];
 
-// Load current state (all students, deduplicated)
+// Load current state (all students, deduplicated) and history for assignment badges
 async function loadCurrentData() {
     try {
         const response = await fetch('data/current.json');
@@ -17,9 +18,46 @@ async function loadCurrentData() {
 
         allStudents = data.students || [];
 
-        // Extract unique assignment patterns for filter
-        const patterns = [...new Set(allStudents.map(s => s.assignmentPattern).filter(Boolean))];
-        availableAssignments = patterns.sort();
+        // Initialize assignment tracking from current data
+        allStudents.forEach(s => {
+            const key = s.name.toLowerCase();
+            if (!studentAssignments[key]) {
+                studentAssignments[key] = new Set();
+            }
+            if (s.assignmentPattern) {
+                studentAssignments[key].add(s.assignmentPattern);
+            }
+        });
+
+        // Load history to get all assignments per student
+        try {
+            const historyResponse = await fetch('data/history.json');
+            const historyData = await historyResponse.json();
+
+            if (historyData.snapshots) {
+                for (const snapshot of historyData.snapshots) {
+                    const snapshotAssignment = snapshot.assignment;
+                    for (const student of snapshot.students || []) {
+                        const key = student.name.toLowerCase();
+                        const pattern = student.assignmentPattern || snapshotAssignment;
+                        if (!studentAssignments[key]) {
+                            studentAssignments[key] = new Set();
+                        }
+                        if (pattern) {
+                            studentAssignments[key].add(pattern);
+                        }
+                    }
+                }
+            }
+        } catch (e) {
+            console.log('No history data available');
+        }
+
+        // Extract unique assignment patterns for filter (from all sources)
+        const allPatterns = new Set();
+        allStudents.forEach(s => s.assignmentPattern && allPatterns.add(s.assignmentPattern));
+        Object.values(studentAssignments).forEach(set => set.forEach(p => allPatterns.add(p)));
+        availableAssignments = Array.from(allPatterns).sort();
 
         populateAssignmentFilter();
         applyFiltersAndRender();
@@ -221,10 +259,15 @@ function renderStudentCard(student, index) {
 
     const collapseId = `details-${index}`;
 
-    // Format assignment pattern for display
-    const assignmentBadge = student.assignmentPattern
-        ? `<span class="badge badge-info ml-2" title="Current repo">${student.assignmentPattern}</span>`
-        : '';
+    // Format assignment badges (all assignments from history)
+    const studentKey = student.name.toLowerCase();
+    const assignments = studentAssignments[studentKey]
+        ? Array.from(studentAssignments[studentKey]).sort()
+        : (student.assignmentPattern ? [student.assignmentPattern] : []);
+    const assignmentBadges = assignments.map(a => {
+        const abbrev = a.replace('w', 'W').replace(/-.*/, ''); // e.g., "w1-file-i-o" -> "W1"
+        return `<span class="badge badge-info mr-1" title="${a}">${abbrev}</span>`;
+    }).join('');
 
     // Format submission date
     const submittedDate = student.submittedAt
@@ -244,7 +287,7 @@ function renderStudentCard(student, index) {
                     </div>
 
                     <div class="mb-2">
-                        ${assignmentBadge}
+                        ${assignmentBadges}
                         ${submittedDate ? `<small class="text-muted ml-2">${submittedDate}</small>` : ''}
                     </div>
 
