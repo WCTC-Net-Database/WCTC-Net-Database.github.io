@@ -327,11 +327,9 @@ function renderStudentCard(student, index) {
 
                     <!-- Action buttons -->
                     <div class="mt-3 d-flex flex-wrap gap-1">
-                        ${hasDetails ? `
                         <button class="btn btn-sm btn-outline-primary" type="button" data-toggle="collapse" data-target="#${collapseId}" aria-expanded="false">
-                            <i class="fas fa-chevron-down"></i> Details
+                            <i class="fas fa-chevron-down"></i> Details & Feedback
                         </button>
-                        ` : ''}
                         ${student.build?.url ? `
                         <a href="${student.build.url}" target="_blank" class="btn btn-sm btn-outline-secondary">
                             <i class="fas fa-external-link-alt"></i> Build
@@ -347,14 +345,12 @@ function renderStudentCard(student, index) {
                         ` : ''}
                     </div>
 
-                    <!-- Expandable Details Section -->
-                    ${hasDetails ? `
+                    <!-- Expandable Details Section (always show for feedback) -->
                     <div class="collapse mt-3" id="${collapseId}">
                         <div class="details-section">
-                            ${renderDetailsSection(student)}
+                            ${renderDetailsSection(student, index)}
                         </div>
                     </div>
-                    ` : ''}
                 </div>
             </div>
         </div>
@@ -362,8 +358,24 @@ function renderStudentCard(student, index) {
 }
 
 // Render the expandable details section
-function renderDetailsSection(student) {
+function renderDetailsSection(student, index) {
     let html = '';
+
+    // Generated Feedback (always show)
+    const feedback = generateFeedback(student);
+    html += `
+        <div class="detail-group">
+            <div class="detail-header d-flex justify-content-between align-items-center">
+                <span><i class="fas fa-clipboard-check text-primary"></i> Generated Feedback</span>
+                <button id="copy-btn-${index}" class="btn btn-sm btn-outline-primary" onclick="copyFeedback(${index})">
+                    <i class="fas fa-copy"></i> Copy
+                </button>
+            </div>
+            <div class="detail-content">
+                <pre class="feedback-text mb-0" style="white-space: pre-wrap; font-family: inherit; font-size: 0.9em; background: #f8f9fa; padding: 10px; border-radius: 4px;">${escapeHtml(feedback)}</pre>
+            </div>
+        </div>
+    `;
 
     // Student Comments
     if (student.comments && student.comments.length > 0) {
@@ -452,6 +464,109 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+// Stretch goal descriptions per assignment (from READMEs)
+const stretchGoalDescriptions = {
+    'w1-file-i-o': 'Use the CsvHelper NuGet package for file operations',
+    'w2-csv-parsing': 'Use CsvHelper library for robust CSV handling',
+    'w3-srp-linq': 'Implement advanced LINQ queries with method syntax',
+    'w4-ocp-interfaces': 'Create additional interface implementations',
+    'w5-lsp-isp': 'Implement interface segregation patterns',
+    'w6-dip-abstractions': 'Use dependency injection container',
+    'w7-midterm-prep': 'Complete all SOLID principle implementations',
+    'w8-midterm': 'Demonstrate mastery of weeks 1-7',
+    'w9-efcore-intro': 'Implement additional entity relationships'
+};
+
+// Generate feedback text for a student
+function generateFeedback(student) {
+    const lines = [];
+    const assignment = student.assignmentPattern || 'assignment';
+    const weekNum = assignment.match(/w(\d+)/)?.[1] || '';
+    const weekLabel = weekNum ? `Week ${weekNum}` : 'Assignment';
+
+    // Build status
+    if (student.build?.status === 'success') {
+        lines.push(`✓ Build: Passing`);
+    } else if (student.build?.status === 'failure') {
+        lines.push(`✗ Build: Failing - check GitHub Actions for error details`);
+    }
+
+    // Code quality
+    const maint = student.sonar?.maintainability;
+    if (maint) {
+        if (maint === 'A') {
+            lines.push(`✓ Code Quality: Excellent (${maint} rating)`);
+        } else if (maint === 'B') {
+            lines.push(`✓ Code Quality: Good (${maint} rating)`);
+        } else if (maint === 'C') {
+            lines.push(`○ Code Quality: Acceptable (${maint} rating) - review code smells`);
+        } else {
+            lines.push(`✗ Code Quality: Needs improvement (${maint} rating) - refactor to reduce complexity`);
+        }
+    }
+
+    // Completeness (TODOs)
+    const todoCount = student.todoCount || 0;
+    if (todoCount === 0) {
+        lines.push(`✓ Completeness: All tasks completed`);
+    } else if (todoCount <= 3) {
+        lines.push(`○ Completeness: ${todoCount} TODO(s) remaining`);
+    } else {
+        lines.push(`✗ Completeness: ${todoCount} TODOs remaining - significant work incomplete`);
+    }
+
+    // Code smells / bugs
+    const smells = parseInt(student.sonar?.codeSmells) || 0;
+    const bugs = parseInt(student.sonar?.bugs) || 0;
+    if (bugs > 0) {
+        lines.push(`○ Bugs: ${bugs} detected by SonarCloud - review and fix`);
+    }
+    if (smells > 10) {
+        lines.push(`○ Code Smells: ${smells} - consider refactoring for cleaner code`);
+    }
+
+    // Stretch goal
+    if (student.hasStretch) {
+        lines.push(`★ Stretch Goal: Completed!`);
+    } else {
+        const stretchDesc = stretchGoalDescriptions[assignment];
+        if (stretchDesc) {
+            lines.push(`○ Stretch Goal: Not attempted - try: ${stretchDesc}`);
+        }
+    }
+
+    // Student comments needing attention
+    if (student.studentComments > 0 || (student.comments && student.comments.length > 0)) {
+        const count = student.studentComments || student.comments?.length || 0;
+        lines.push(`! Review: ${count} comment(s) in code may need attention`);
+    }
+
+    return lines.join('\n');
+}
+
+// Copy feedback to clipboard
+function copyFeedback(studentIndex) {
+    const student = allStudents[studentIndex];
+    if (!student) return;
+
+    const feedback = generateFeedback(student);
+    navigator.clipboard.writeText(feedback).then(() => {
+        // Show brief confirmation
+        const btn = document.querySelector(`#copy-btn-${studentIndex}`);
+        if (btn) {
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            btn.classList.add('btn-success');
+            btn.classList.remove('btn-outline-primary');
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.remove('btn-success');
+                btn.classList.add('btn-outline-primary');
+            }, 2000);
+        }
+    });
 }
 
 // Show no data message
