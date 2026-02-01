@@ -149,7 +149,8 @@ jobs:
               REPO_DIR="/tmp/repos/$repo"
               rm -rf "$REPO_DIR"
 
-              if gh repo clone "WCTC-Net-Database/$repo" "$REPO_DIR" --depth 1 2>/dev/null; then
+              clone_output=$(gh repo clone "WCTC-Net-Database/$repo" "$REPO_DIR" --depth 1 2>&1) && clone_success=true || clone_success=false
+              if [ "$clone_success" = "true" ]; then
                 echo "    -> Analyzing code..." >&2
 
                 todos_file=$(mktemp)
@@ -196,6 +197,8 @@ jobs:
                 student_comments=$(cat "$comments_file")
                 rm -f "$todos_file" "$comments_file"
                 rm -rf "$REPO_DIR"
+              else
+                echo "    -> Clone failed: $clone_output" >&2
               fi
             fi
 
