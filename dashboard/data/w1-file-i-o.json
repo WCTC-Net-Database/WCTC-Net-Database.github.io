@@ -1,6 +1,6 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-02-01T23:12:20Z",
+  "generated": "2026-02-02T01:29:13Z",
   "students": [
     {
       "name": "irodriguez5",
@@ -21,34 +21,15 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 16,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 80,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "Program.cs:10",
-        "Program.cs:81",
-        "Program.cs:99",
-        "Program.cs:118",
-        "Program.cs:126",
-        "Program.cs:137",
-        "Program.cs:143",
-        "Program.cs:146",
-        "Program.cs:149",
-        "Program.cs:155",
-        "Program.cs:174",
-        "Program.cs:178",
-        "Program.cs:181",
-        "Program.cs:182",
-        "Program.cs:183",
-        "Program.cs:185"
-      ],
+      "todos": [],
       "stretchGoals": [],
-      "notes": [
-        "Many TODOs remaining - likely incomplete"
-      ]
+      "notes": []
     },
     {
       "name": "Samuel-dotcom-rgb",
@@ -69,34 +50,15 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 16,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 80,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "Program.cs:10",
-        "Program.cs:81",
-        "Program.cs:99",
-        "Program.cs:118",
-        "Program.cs:126",
-        "Program.cs:137",
-        "Program.cs:143",
-        "Program.cs:146",
-        "Program.cs:149",
-        "Program.cs:155",
-        "Program.cs:174",
-        "Program.cs:178",
-        "Program.cs:181",
-        "Program.cs:182",
-        "Program.cs:183",
-        "Program.cs:185"
-      ],
+      "todos": [],
       "stretchGoals": [],
-      "notes": [
-        "Many TODOs remaining - likely incomplete"
-      ]
+      "notes": []
     },
     {
       "name": "MW92007",
@@ -117,34 +79,15 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 16,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 80,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "Program.cs:10",
-        "Program.cs:81",
-        "Program.cs:99",
-        "Program.cs:118",
-        "Program.cs:126",
-        "Program.cs:137",
-        "Program.cs:143",
-        "Program.cs:146",
-        "Program.cs:149",
-        "Program.cs:155",
-        "Program.cs:174",
-        "Program.cs:178",
-        "Program.cs:181",
-        "Program.cs:182",
-        "Program.cs:183",
-        "Program.cs:185"
-      ],
+      "todos": [],
       "stretchGoals": [],
-      "notes": [
-        "Many TODOs remaining - likely incomplete"
-      ]
+      "notes": []
     },
     {
       "name": "TGustafson1",
@@ -165,31 +108,15 @@
         "duplication": "0.0",
         "linesOfCode": "216"
       },
-      "todoCount": 3,
-      "studentComments": 1,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 91,
-      "comments": [
-        {
-          "file": "Program.cs",
-          "line": 7,
-          "text": "/// TODO: Revisit using CsvHelper to do all file reading/writing"
-        }
-      ],
-      "todos": [
-        "Program.cs:7",
-        "Program.cs:8",
-        "Program.cs:138"
-      ],
-      "stretchGoals": [
-        "CsvHelper library implementation"
-      ],
-      "notes": [
-        "3 TODOs remaining",
-        "Completed stretch goal(s)",
-        "1 student comment(s) to review"
-      ]
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
     },
     {
       "name": "taylorharty",
@@ -210,20 +137,15 @@
         "duplication": "0.0",
         "linesOfCode": "274"
       },
-      "todoCount": 2,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 94,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "Program.cs:135",
-        "Program.cs:259"
-      ],
+      "todos": [],
       "stretchGoals": [],
-      "notes": [
-        "2 TODOs remaining"
-      ]
+      "notes": []
     },
     {
       "name": "Sdunn235",
@@ -245,50 +167,14 @@
         "linesOfCode": "221"
       },
       "todoCount": 0,
-      "studentComments": 6,
-      "hasStretch": true,
-      "needsReview": true,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
       "estimatedScore": 100,
-      "comments": [
-        {
-          "file": "Program.cs",
-          "line": 1,
-          "text": "/// *Disclosure*: This project was initially set up using AI assistance as part of a Week 2 learning exercise."
-        },
-        {
-          "file": "Program.cs",
-          "line": 24,
-          "text": "/// *Disclosure*: The basis of this code was created by an AI language model VS Code Claude Haiku 4.5."
-        },
-        {
-          "file": "Program.cs",
-          "line": 32,
-          "text": "    // CsvHelper configuration: no header row in the CSV"
-        },
-        {
-          "file": "Program.cs",
-          "line": 222,
-          "text": "    /// Reads all characters from the CSV file using CsvHelper."
-        },
-        {
-          "file": "Program.cs",
-          "line": 238,
-          "text": "    /// Writes all characters to the CSV file using CsvHelper."
-        },
-        {
-          "file": "Program.cs",
-          "line": 262,
-          "text": "        // CsvHelper uses these mappings to match CSV column positions to Character properties."
-        }
-      ],
+      "comments": [],
       "todos": [],
-      "stretchGoals": [
-        "CsvHelper library implementation"
-      ],
-      "notes": [
-        "Completed stretch goal(s)",
-        "6 student comment(s) to review"
-      ]
+      "stretchGoals": [],
+      "notes": []
     }
   ]
 }
