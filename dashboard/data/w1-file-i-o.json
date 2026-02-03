@@ -1,6 +1,6 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-02-03T01:29:22Z",
+  "generated": "2026-02-03T06:41:56Z",
   "students": [
     {
       "name": "Samuel-dotcom-rgb",
@@ -21,34 +21,15 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 16,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 50,
+      "needsReview": false,
+      "estimatedScore": 70,
       "comments": [],
-      "todos": [
-        "Program.cs:10",
-        "Program.cs:81",
-        "Program.cs:99",
-        "Program.cs:118",
-        "Program.cs:126",
-        "Program.cs:137",
-        "Program.cs:143",
-        "Program.cs:146",
-        "Program.cs:149",
-        "Program.cs:155",
-        "Program.cs:174",
-        "Program.cs:178",
-        "Program.cs:181",
-        "Program.cs:182",
-        "Program.cs:183",
-        "Program.cs:185"
-      ],
+      "todos": [],
       "stretchGoals": [],
-      "notes": [
-        "Many TODOs remaining - likely incomplete"
-      ]
+      "notes": []
     },
     {
       "name": "irodriguez5",
@@ -69,19 +50,15 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 1,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 67,
+      "estimatedScore": 70,
       "comments": [],
-      "todos": [
-        "Program.cs:12"
-      ],
+      "todos": [],
       "stretchGoals": [],
-      "notes": [
-        "1 TODOs remaining"
-      ]
+      "notes": []
     },
     {
       "name": "MW92007",
