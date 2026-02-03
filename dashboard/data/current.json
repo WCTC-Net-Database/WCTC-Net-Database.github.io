@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-02T18:35:01Z",
+  "generated": "2026-02-03T01:29:44Z",
   "students": [
     {
       "name": "MW92007",
@@ -36,11 +36,11 @@
       "name": "Samuel-dotcom-rgb",
       "repo": "w1-file-i-o-Samuel-dotcom-rgb",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-02-01T15:57:00Z",
-      "pushedAt": "2026-02-01T15:57:00Z",
+      "submittedAt": "2026-02-03T01:21:35Z",
+      "pushedAt": "2026-02-03T01:21:35Z",
       "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Samuel-dotcom-rgb/actions/runs/21565834616"
+        "status": "failure",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Samuel-dotcom-rgb/actions/runs/21612930883"
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Samuel-dotcom-rgb",
@@ -53,15 +53,34 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 0,
+      "todoCount": 16,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 50,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:10",
+        "Program.cs:81",
+        "Program.cs:99",
+        "Program.cs:118",
+        "Program.cs:126",
+        "Program.cs:137",
+        "Program.cs:143",
+        "Program.cs:146",
+        "Program.cs:149",
+        "Program.cs:155",
+        "Program.cs:174",
+        "Program.cs:178",
+        "Program.cs:181",
+        "Program.cs:182",
+        "Program.cs:183",
+        "Program.cs:185"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     },
     {
       "name": "Sdunn235",
@@ -129,11 +148,11 @@
       "name": "irodriguez5",
       "repo": "w1-file-i-o-irodriguez5",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-02-01T15:57:02Z",
-      "pushedAt": "2026-02-01T15:57:02Z",
+      "submittedAt": "2026-02-03T01:17:30Z",
+      "pushedAt": "2026-02-03T01:17:37Z",
       "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-irodriguez5/actions/runs/21565834904"
+        "status": "failure",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-irodriguez5/actions/runs/21612840553"
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-irodriguez5",
@@ -146,15 +165,19 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 0,
+      "todoCount": 1,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 100,
+      "estimatedScore": 67,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:12"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "1 TODOs remaining"
+      ]
     },
     {
       "name": "taylorharty",
