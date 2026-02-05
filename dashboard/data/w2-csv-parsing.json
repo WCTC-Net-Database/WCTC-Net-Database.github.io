@@ -1,6 +1,6 @@
 {
   "assignment": "w2-csv-parsing",
-  "generated": "2026-02-04T18:40:15Z",
+  "generated": "2026-02-05T01:25:19Z",
   "students": [
     {
       "name": "taylorharty",
@@ -20,6 +20,35 @@
         "security": "A",
         "duplication": "0.0",
         "linesOfCode": "132"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
+    },
+    {
+      "name": "Samuel-dotcom-rgb",
+      "repo": "w2-csv-parsing-Samuel-dotcom-rgb",
+      "submittedAt": "2026-01-29T21:27:02Z",
+      "build": {
+        "status": "unknown",
+        "url": ""
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w2-csv-parsing-Samuel-dotcom-rgb",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,

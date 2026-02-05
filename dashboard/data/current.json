@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-04T18:40:21Z",
+  "generated": "2026-02-05T01:25:23Z",
   "students": [
     {
       "name": "MW92007",
@@ -36,11 +36,11 @@
       "name": "Samuel-dotcom-rgb",
       "repo": "w1-file-i-o-Samuel-dotcom-rgb",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-02-03T01:21:35Z",
-      "pushedAt": "2026-02-03T01:21:35Z",
+      "submittedAt": "2026-02-05T00:43:45Z",
+      "pushedAt": "2026-02-05T00:52:12Z",
       "build": {
         "status": "failure",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Samuel-dotcom-rgb/actions/runs/21612930883"
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Samuel-dotcom-rgb/actions/runs/21694367868"
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Samuel-dotcom-rgb",
@@ -53,15 +53,34 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 0,
+      "todoCount": 16,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 70,
+      "needsReview": true,
+      "estimatedScore": 50,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:10",
+        "Program.cs:81",
+        "Program.cs:99",
+        "Program.cs:118",
+        "Program.cs:126",
+        "Program.cs:137",
+        "Program.cs:143",
+        "Program.cs:146",
+        "Program.cs:149",
+        "Program.cs:155",
+        "Program.cs:174",
+        "Program.cs:178",
+        "Program.cs:181",
+        "Program.cs:182",
+        "Program.cs:183",
+        "Program.cs:185"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     },
     {
       "name": "Sdunn235",
