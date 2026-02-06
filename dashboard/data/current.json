@@ -1,36 +1,58 @@
 {
-  "generated": "2026-02-05T18:40:51Z",
+  "generated": "2026-02-06T01:26:26Z",
   "students": [
     {
       "name": "MW92007",
       "repo": "w1-file-i-o-MW92007",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-02-01T15:56:58Z",
-      "pushedAt": "2026-02-01T15:56:58Z",
+      "submittedAt": "2026-02-06T01:06:19Z",
+      "pushedAt": "2026-02-06T01:06:22Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-MW92007/actions/runs/21565834268"
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-MW92007/actions/runs/21734788647"
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-MW92007",
         "maintainability": "A",
-        "codeSmells": "20",
+        "codeSmells": "17",
         "bugs": "1",
         "vulnerabilities": "0",
         "reliability": "C",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "133"
+        "linesOfCode": "189"
       },
-      "todoCount": 0,
-      "studentComments": 0,
+      "todoCount": 12,
+      "studentComments": 1,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [
+        {
+          "file": "Program.cs",
+          "line": 246,
+          "text": "        // Then here it just returns all the values back to the file?"
+        }
+      ],
+      "todos": [
+        "Program.cs:13",
+        "Program.cs:84",
+        "Program.cs:123",
+        "Program.cs:143",
+        "Program.cs:154",
+        "Program.cs:160",
+        "Program.cs:163",
+        "Program.cs:187",
+        "Program.cs:261",
+        "Program.cs:264",
+        "Program.cs:265",
+        "Program.cs:266"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "1 student comment(s) to review"
+      ]
     },
     {
       "name": "Samuel-dotcom-rgb",

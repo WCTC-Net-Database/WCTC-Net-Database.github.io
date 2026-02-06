@@ -1,7 +1,58 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-02-05T18:40:31Z",
+  "generated": "2026-02-06T01:26:02Z",
   "students": [
+    {
+      "name": "MW92007",
+      "repo": "w1-file-i-o-MW92007",
+      "submittedAt": "2026-02-06T01:06:19Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-MW92007/actions/runs/21734788647"
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w1-file-i-o-MW92007",
+        "maintainability": "A",
+        "codeSmells": "17",
+        "bugs": "1",
+        "vulnerabilities": "0",
+        "reliability": "C",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "189"
+      },
+      "todoCount": 12,
+      "studentComments": 1,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [
+        {
+          "file": "Program.cs",
+          "line": 246,
+          "text": "        // Then here it just returns all the values back to the file?"
+        }
+      ],
+      "todos": [
+        "Program.cs:13",
+        "Program.cs:84",
+        "Program.cs:123",
+        "Program.cs:143",
+        "Program.cs:154",
+        "Program.cs:160",
+        "Program.cs:163",
+        "Program.cs:187",
+        "Program.cs:261",
+        "Program.cs:264",
+        "Program.cs:265",
+        "Program.cs:266"
+      ],
+      "stretchGoals": [],
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "1 student comment(s) to review"
+      ]
+    },
     {
       "name": "Samuel-dotcom-rgb",
       "repo": "w1-file-i-o-Samuel-dotcom-rgb",
@@ -55,35 +106,6 @@
       "hasStretch": false,
       "needsReview": false,
       "estimatedScore": 70,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "notes": []
-    },
-    {
-      "name": "MW92007",
-      "repo": "w1-file-i-o-MW92007",
-      "submittedAt": "2026-02-01T15:56:58Z",
-      "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-MW92007/actions/runs/21565834268"
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w1-file-i-o-MW92007",
-        "maintainability": "A",
-        "codeSmells": "20",
-        "bugs": "1",
-        "vulnerabilities": "0",
-        "reliability": "C",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "133"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
       "comments": [],
       "todos": [],
       "stretchGoals": [],
