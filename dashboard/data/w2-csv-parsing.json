@@ -1,7 +1,36 @@
 {
   "assignment": "w2-csv-parsing",
-  "generated": "2026-02-06T01:26:17Z",
+  "generated": "2026-02-06T06:44:53Z",
   "students": [
+    {
+      "name": "Samuel-dotcom-rgb",
+      "repo": "w2-csv-parsing-Samuel-dotcom-rgb",
+      "submittedAt": "2026-02-06T04:14:58Z",
+      "build": {
+        "status": "unknown",
+        "url": ""
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w2-csv-parsing-Samuel-dotcom-rgb",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
+    },
     {
       "name": "taylorharty",
       "repo": "w2-csv-parsing-taylorharty",
@@ -41,35 +70,6 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-MW92007",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "notes": []
-    },
-    {
-      "name": "Samuel-dotcom-rgb",
-      "repo": "w2-csv-parsing-Samuel-dotcom-rgb",
-      "submittedAt": "2026-01-29T21:27:02Z",
-      "build": {
-        "status": "unknown",
-        "url": ""
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w2-csv-parsing-Samuel-dotcom-rgb",
         "maintainability": "-",
         "codeSmells": "-",
         "bugs": "-",
