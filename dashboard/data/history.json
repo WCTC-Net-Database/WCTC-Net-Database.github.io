@@ -2033,6 +2033,77 @@
           "submittedAt": "2026-02-01T16:03:04Z"
         }
       ]
+    },
+    {
+      "date": "2026-02-07T12:34:19Z",
+      "students": [
+        {
+          "name": "MW92007",
+          "repo": "w1-file-i-o-MW92007",
+          "assignmentPattern": "w1-file-i-o",
+          "buildStatus": "success",
+          "estimatedScore": 100,
+          "todoCount": 0,
+          "hasStretch": false,
+          "maintainability": "A",
+          "submittedAt": "2026-02-06T01:06:19Z"
+        },
+        {
+          "name": "Samuel-dotcom-rgb",
+          "repo": "w2-csv-parsing-Samuel-dotcom-rgb",
+          "assignmentPattern": "w2-csv-parsing",
+          "buildStatus": "unknown",
+          "estimatedScore": 100,
+          "todoCount": 0,
+          "hasStretch": false,
+          "maintainability": "-",
+          "submittedAt": "2026-02-06T04:14:58Z"
+        },
+        {
+          "name": "Sdunn235",
+          "repo": "w1-file-i-o-Sdunn235",
+          "assignmentPattern": "w1-file-i-o",
+          "buildStatus": "success",
+          "estimatedScore": 100,
+          "todoCount": 0,
+          "hasStretch": false,
+          "maintainability": "A",
+          "submittedAt": "2026-02-07T01:01:48Z"
+        },
+        {
+          "name": "TGustafson1",
+          "repo": "w1-file-i-o-TGustafson1",
+          "assignmentPattern": "w1-file-i-o",
+          "buildStatus": "success",
+          "estimatedScore": 100,
+          "todoCount": 0,
+          "hasStretch": false,
+          "maintainability": "A",
+          "submittedAt": "2026-02-07T03:57:51Z"
+        },
+        {
+          "name": "irodriguez5",
+          "repo": "w1-file-i-o-irodriguez5",
+          "assignmentPattern": "w1-file-i-o",
+          "buildStatus": "failure",
+          "estimatedScore": 70,
+          "todoCount": 0,
+          "hasStretch": false,
+          "maintainability": "A",
+          "submittedAt": "2026-02-03T01:17:30Z"
+        },
+        {
+          "name": "taylorharty",
+          "repo": "w2-csv-parsing-taylorharty",
+          "assignmentPattern": "w2-csv-parsing",
+          "buildStatus": "success",
+          "estimatedScore": 100,
+          "todoCount": 0,
+          "hasStretch": false,
+          "maintainability": "A",
+          "submittedAt": "2026-02-01T16:03:04Z"
+        }
+      ]
     }
   ]
 }
