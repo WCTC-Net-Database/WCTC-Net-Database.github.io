@@ -1,5 +1,6 @@
 // Dashboard JavaScript
 let allStudents = [];
+let renderedStudents = []; // Currently displayed students (after filter/sort)
 let studentAssignments = {}; // Track all assignments per student (from history)
 let currentFilter = 'all';
 let currentAssignmentFilter = 'all';
@@ -157,9 +158,19 @@ function filterByDate(students) {
 }
 
 // Filter students by assignment
+// "All" view: deduplicate to one card per student (most recently pushed repo = their active work)
+// Assignment view: show all entries for that pattern (teacher checks Canvas for which repo matters)
 function filterByAssignment(students) {
     if (currentAssignmentFilter === 'all') {
-        return students;
+        // Deduplicate: one card per student, keep most recently pushed
+        const byStudent = {};
+        for (const s of students) {
+            const key = s.name.toLowerCase();
+            if (!byStudent[key] || (s.pushedAt && s.pushedAt > (byStudent[key].pushedAt || ''))) {
+                byStudent[key] = s;
+            }
+        }
+        return Object.values(byStudent);
     }
     return students.filter(s => s.assignmentPattern === currentAssignmentFilter);
 }
@@ -229,6 +240,9 @@ function renderStudents(students) {
         if (b.build?.status === 'failure' && a.build?.status !== 'failure') return 1;
         return (b.estimatedScore || 0) - (a.estimatedScore || 0);
     });
+
+    // Store rendered list so copyFeedback can reference the correct student
+    renderedStudents = students;
 
     container.innerHTML = students.map((student, index) => renderStudentCard(student, index)).join('');
 }
@@ -555,7 +569,7 @@ function generateFeedback(student) {
 
 // Copy feedback to clipboard
 function copyFeedback(studentIndex) {
-    const student = allStudents[studentIndex];
+    const student = renderedStudents[studentIndex];
     if (!student) return;
 
     const feedback = generateFeedback(student);
