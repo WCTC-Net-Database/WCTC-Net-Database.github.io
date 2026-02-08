@@ -1,0 +1,113 @@
+name: Fix Missing Build Workflows
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run - report only, do not push files'
+        required: false
+        default: true
+        type: boolean
+      min_commits:
+        description: 'Minimum commits to consider repo active (default: 2)'
+        required: false
+        default: '2'
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  fix-workflows:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Scan and Fix Missing Workflows
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          DRY_RUN="${{ github.event.inputs.dry_run }}"
+          MIN_COMMITS="${{ github.event.inputs.min_commits }}"
+
+          echo "Mode: $([ "$DRY_RUN" = "true" ] && echo 'DRY RUN' || echo 'LIVE - will push files')"
+          echo "Min commits: $MIN_COMMITS"
+          echo ""
+
+          # Known assignment patterns
+          ALL_PATTERNS="w1-file-i-o w2-csv-parsing w3-srp-linq w4-ocp-interfaces w5-lsp-isp w6-dip-abstractions w7-midterm-prep w8-midterm w9-efcore-intro"
+
+          # Fetch build.yml from a known-good repo (avoids expression escaping issues)
+          echo "Fetching build.yml template from w1-file-i-o-Sdunn235..."
+          BUILD_YML_B64=$(gh api "repos/WCTC-Net-Database/w1-file-i-o-Sdunn235/contents/.github/workflows/build.yml" --jq '.content' | tr -d '\n')
+
+          if [ -z "$BUILD_YML_B64" ]; then
+            echo "ERROR: Could not fetch build.yml template"
+            exit 1
+          fi
+          echo "Template fetched successfully"
+          echo ""
+
+          FIXED=0
+          SKIPPED=0
+          ALREADY_OK=0
+
+          for pattern in $ALL_PATTERNS; do
+            repos=$(gh repo list WCTC-Net-Database --limit 500 --json name -q '.[].name' | grep "^${pattern}-" | grep -v "^${pattern}$" || true)
+
+            [ -z "$repos" ] && continue
+
+            echo "--- $pattern ---"
+
+            for repo in $repos; do
+              student_name="${repo#${pattern}-}"
+
+              # Check if build.yml already exists
+              has_workflow=$(gh api "repos/WCTC-Net-Database/$repo/contents/.github/workflows/build.yml" --jq '.name' 2>/dev/null || echo "")
+
+              if [ -n "$has_workflow" ]; then
+                echo "  ✓ $student_name - build.yml exists"
+                ALREADY_OK=$((ALREADY_OK + 1))
+                continue
+              fi
+
+              # Check commit count
+              commit_count=$(gh api "repos/WCTC-Net-Database/$repo/commits?per_page=100" --jq 'length' 2>/dev/null || echo "0")
+
+              if [ "$commit_count" -lt "$MIN_COMMITS" ]; then
+                echo "  ⊘ $student_name - missing workflow but only $commit_count commit(s), skipping"
+                SKIPPED=$((SKIPPED + 1))
+                continue
+              fi
+
+              echo "  ✗ $student_name - MISSING workflow ($commit_count commits)"
+
+              if [ "$DRY_RUN" = "false" ]; then
+                # Push build.yml via GitHub Contents API
+                response=$(gh api "repos/WCTC-Net-Database/$repo/contents/.github/workflows/build.yml" \
+                  --method PUT \
+                  --field message="Add build and SonarCloud analysis workflow" \
+                  --field content="$BUILD_YML_B64" \
+                  --field "committer[name]=WCTC Instructor" \
+                  --field "committer[email]=instructor@wctc.edu" \
+                  2>&1) && push_ok=true || push_ok=false
+
+                if [ "$push_ok" = "true" ]; then
+                  echo "    → Pushed build.yml successfully"
+                  FIXED=$((FIXED + 1))
+                else
+                  echo "    → FAILED to push: $response"
+                fi
+              else
+                echo "    → Would push build.yml (dry run)"
+                FIXED=$((FIXED + 1))
+              fi
+            done
+          done
+
+          echo ""
+          echo "=========================================="
+          echo "Summary"
+          echo "=========================================="
+          echo "Already have workflow: $ALREADY_OK"
+          echo "Skipped (< $MIN_COMMITS commits): $SKIPPED"
+          echo "$([ "$DRY_RUN" = "true" ] && echo 'Would fix' || echo 'Fixed'): $FIXED"
