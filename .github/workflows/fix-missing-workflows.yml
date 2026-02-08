@@ -61,8 +61,8 @@ jobs:
             for repo in $repos; do
               student_name="${repo#${pattern}-}"
 
-              # Check if build.yml already exists
-              has_workflow=$(gh api "repos/WCTC-Net-Database/$repo/contents/.github/workflows/build.yml" --jq '.name' 2>/dev/null || echo "")
+              # Check if build.yml already exists (use '// empty' to avoid jq returning "null" string on 404)
+              has_workflow=$(gh api "repos/WCTC-Net-Database/$repo/contents/.github/workflows/build.yml" --jq '.name // empty' 2>/dev/null || echo "")
 
               if [ -n "$has_workflow" ]; then
                 echo "  ✓ $student_name - build.yml exists"
