@@ -16,19 +16,19 @@ async function loadAllData() {
             for (const student of currentData.students) {
                 const studentKey = student.name.toLowerCase();
 
-                allStudentData[studentKey] = {
-                    name: student.name,
-                    currentRepo: student.repo,
-                    currentPattern: student.assignmentPattern,
-                    current: student,
-                    snapshots: []
-                };
+                if (!allStudentData[studentKey]) {
+                    allStudentData[studentKey] = {
+                        name: student.name,
+                        currentEntries: [],
+                        snapshots: []
+                    };
+                }
+                allStudentData[studentKey].currentEntries.push(student);
             }
         }
 
-        // Extract unique assignment patterns for filter
-        const patterns = [...new Set(currentData.students?.map(s => s.assignmentPattern).filter(Boolean) || [])];
-        populateAssignmentFilter(patterns.sort());
+        // Extract unique assignment patterns for filter (populated after history loads too)
+        const patternSet = new Set(currentData.students?.map(s => s.assignmentPattern).filter(Boolean) || []);
 
         // Load historical snapshots
         try {
@@ -49,9 +49,7 @@ async function loadAllData() {
                         if (!allStudentData[studentKey]) {
                             allStudentData[studentKey] = {
                                 name: student.name,
-                                currentRepo: student.repo,
-                                currentPattern: assignmentPattern,
-                                current: null,
+                                currentEntries: [],
                                 snapshots: []
                             };
                         }
@@ -67,6 +65,13 @@ async function loadAllData() {
         } catch (error) {
             console.log('No history data available yet');
         }
+
+        // Populate assignment filter from all sources
+        Object.values(allStudentData).forEach(s => {
+            s.currentEntries.forEach(e => e.assignmentPattern && patternSet.add(e.assignmentPattern));
+            s.snapshots.forEach(snap => snap.assignmentPattern && patternSet.add(snap.assignmentPattern));
+        });
+        populateAssignmentFilter(Array.from(patternSet).sort());
 
         // Update timestamp
         if (currentData.generated) {
@@ -122,19 +127,34 @@ function filterSnapshotsByDate(snapshots) {
     });
 }
 
+// Get the appropriate "current" entry for a student based on assignment filter
+function getCurrentEntry(student) {
+    const entries = student.currentEntries || [];
+    if (currentAssignmentFilter) {
+        return entries.find(e => e.assignmentPattern === currentAssignmentFilter) || entries[entries.length - 1] || null;
+    }
+    // No filter: return most recently pushed entry
+    return entries.sort((a, b) => (b.pushedAt || '').localeCompare(a.pushedAt || ''))[0] || null;
+}
+
 // Apply assignment filter
 function filterByAssignment(student) {
     if (!currentAssignmentFilter) {
         return true;
     }
-    return student.currentPattern === currentAssignmentFilter ||
-           student.snapshots?.some(s => s.assignmentPattern === currentAssignmentFilter);
+    const hasCurrentEntry = student.currentEntries?.some(e => e.assignmentPattern === currentAssignmentFilter);
+    const hasSnapshot = student.snapshots?.some(s => s.assignmentPattern === currentAssignmentFilter);
+    return hasCurrentEntry || hasSnapshot;
 }
 
 // Calculate student aggregate stats
 function calculateStudentStats(student) {
-    const snapshots = filterSnapshotsByDate(student.snapshots || []);
-    const current = student.current;
+    let snapshots = filterSnapshotsByDate(student.snapshots || []);
+    // Filter snapshots by assignment if a filter is active
+    if (currentAssignmentFilter) {
+        snapshots = snapshots.filter(s => s.assignmentPattern === currentAssignmentFilter);
+    }
+    const current = getCurrentEntry(student);
 
     // Get scores from snapshots (unique by date to avoid duplicates)
     const scoresByDate = {};
@@ -268,8 +288,13 @@ function selectStudent(studentKey) {
     if (!student) return;
 
     const stats = calculateStudentStats(student);
-    const current = student.current;
-    const snapshots = filterSnapshotsByDate(student.snapshots || []).sort((a, b) => new Date(b.date) - new Date(a.date));
+    const current = getCurrentEntry(student);
+    let snapshots = filterSnapshotsByDate(student.snapshots || []);
+    // Filter timeline by assignment if a filter is active
+    if (currentAssignmentFilter) {
+        snapshots = snapshots.filter(s => s.assignmentPattern === currentAssignmentFilter);
+    }
+    snapshots.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     const container = document.getElementById('student-detail');
 
