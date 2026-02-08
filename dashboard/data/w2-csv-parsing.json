@@ -1,6 +1,6 @@
 {
   "assignment": "w2-csv-parsing",
-  "generated": "2026-02-08T12:35:22Z",
+  "generated": "2026-02-08T15:59:40Z",
   "students": [
     {
       "name": "Samuel-dotcom-rgb",
@@ -50,15 +50,28 @@
         "duplication": "0.0",
         "linesOfCode": "132"
       },
-      "todoCount": 0,
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     },
     {
       "name": "irodriguez5",
@@ -79,15 +92,28 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 0,
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     },
     {
       "name": "TGustafson1",
@@ -108,15 +134,28 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 0,
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     },
     {
       "name": "Sdunn235",
@@ -137,15 +176,28 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 0,
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     },
     {
       "name": "MW92007",
@@ -166,15 +218,28 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 0,
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     }
   ]
 }

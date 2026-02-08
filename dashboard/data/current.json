@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-08T12:35:37Z",
+  "generated": "2026-02-08T15:59:58Z",
   "students": [
     {
       "name": "MW92007",
@@ -22,15 +22,131 @@
         "duplication": "0.0",
         "linesOfCode": "189"
       },
-      "todoCount": 0,
+      "todoCount": 12,
+      "studentComments": 1,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [
+        {
+          "file": "Program.cs",
+          "line": 246,
+          "text": "        // Then here it just returns all the values back to the file?"
+        }
+      ],
+      "todos": [
+        "Program.cs:13",
+        "Program.cs:84",
+        "Program.cs:123",
+        "Program.cs:143",
+        "Program.cs:154",
+        "Program.cs:160",
+        "Program.cs:163",
+        "Program.cs:187",
+        "Program.cs:261",
+        "Program.cs:264",
+        "Program.cs:265",
+        "Program.cs:266"
+      ],
+      "stretchGoals": [],
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "1 student comment(s) to review"
+      ]
+    },
+    {
+      "name": "MW92007",
+      "repo": "w2-csv-parsing-MW92007",
+      "assignmentPattern": "w2-csv-parsing",
+      "submittedAt": "2026-01-29T21:27:02Z",
+      "pushedAt": "2026-01-29T21:27:02Z",
+      "build": {
+        "status": "unknown",
+        "url": ""
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w2-csv-parsing-MW92007",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
+    },
+    {
+      "name": "Samuel-dotcom-rgb",
+      "repo": "w1-file-i-o-Samuel-dotcom-rgb",
+      "assignmentPattern": "w1-file-i-o",
+      "submittedAt": "2026-02-05T00:43:45Z",
+      "pushedAt": "2026-02-05T00:52:12Z",
+      "build": {
+        "status": "failure",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Samuel-dotcom-rgb/actions/runs/21694367868"
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w1-file-i-o-Samuel-dotcom-rgb",
+        "maintainability": "A",
+        "codeSmells": "20",
+        "bugs": "1",
+        "vulnerabilities": "0",
+        "reliability": "C",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "133"
+      },
+      "todoCount": 16,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 50,
+      "comments": [],
+      "todos": [
+        "Program.cs:10",
+        "Program.cs:81",
+        "Program.cs:99",
+        "Program.cs:118",
+        "Program.cs:126",
+        "Program.cs:137",
+        "Program.cs:143",
+        "Program.cs:146",
+        "Program.cs:149",
+        "Program.cs:155",
+        "Program.cs:174",
+        "Program.cs:178",
+        "Program.cs:181",
+        "Program.cs:182",
+        "Program.cs:183",
+        "Program.cs:185"
+      ],
+      "stretchGoals": [],
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     },
     {
       "name": "Samuel-dotcom-rgb",
@@ -85,14 +201,94 @@
         "linesOfCode": "221"
       },
       "todoCount": 0,
+      "studentComments": 6,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 100,
+      "comments": [
+        {
+          "file": "Program.cs",
+          "line": 1,
+          "text": "/// *Disclosure*: This project was initially set up using AI assistance as part of a Week 2 learning exercise."
+        },
+        {
+          "file": "Program.cs",
+          "line": 24,
+          "text": "/// *Disclosure*: The basis of this code was created by an AI language model VS Code Claude Haiku 4.5."
+        },
+        {
+          "file": "Program.cs",
+          "line": 32,
+          "text": "    // CsvHelper configuration: file has a header row (Name,Class,Level,HP,Equipment)"
+        },
+        {
+          "file": "Program.cs",
+          "line": 222,
+          "text": "    /// Reads all characters from the CSV file using CsvHelper."
+        },
+        {
+          "file": "Program.cs",
+          "line": 238,
+          "text": "    /// Writes all characters to the CSV file using CsvHelper."
+        },
+        {
+          "file": "Program.cs",
+          "line": 262,
+          "text": "        // CsvHelper uses these mappings to match CSV column positions to Character properties."
+        }
+      ],
+      "todos": [],
+      "stretchGoals": [
+        "CsvHelper library implementation"
+      ],
+      "notes": [
+        "Completed stretch goal(s)",
+        "6 student comment(s) to review"
+      ]
+    },
+    {
+      "name": "Sdunn235",
+      "repo": "w2-csv-parsing-Sdunn235",
+      "assignmentPattern": "w2-csv-parsing",
+      "submittedAt": "2026-01-29T21:27:02Z",
+      "pushedAt": "2026-01-29T21:27:02Z",
+      "build": {
+        "status": "unknown",
+        "url": ""
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w2-csv-parsing-Sdunn235",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     },
     {
       "name": "TGustafson1",
@@ -115,15 +311,81 @@
         "duplication": "0.0",
         "linesOfCode": "229"
       },
-      "todoCount": 0,
+      "todoCount": 4,
+      "studentComments": 2,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 88,
+      "comments": [
+        {
+          "file": "Program.cs",
+          "line": 8,
+          "text": "/// TODO: Revisit using CsvHelper to do all file reading/writing"
+        },
+        {
+          "file": "Program.cs",
+          "line": 137,
+          "text": "        //TODO: Revisit this section, not sure if ArrayList is best"
+        }
+      ],
+      "todos": [
+        "Program.cs:8",
+        "Program.cs:137",
+        "Program.cs:138",
+        "Program.cs:180"
+      ],
+      "stretchGoals": [
+        "CsvHelper library implementation"
+      ],
+      "notes": [
+        "4 TODOs remaining",
+        "Completed stretch goal(s)",
+        "2 student comment(s) to review"
+      ]
+    },
+    {
+      "name": "TGustafson1",
+      "repo": "w2-csv-parsing-TGustafson1",
+      "assignmentPattern": "w2-csv-parsing",
+      "submittedAt": "2026-01-29T21:27:02Z",
+      "pushedAt": "2026-01-29T21:27:02Z",
+      "build": {
+        "status": "unknown",
+        "url": ""
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w2-csv-parsing-TGustafson1",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     },
     {
       "name": "irodriguez5",
@@ -146,15 +408,99 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 0,
+      "todoCount": 1,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 70,
+      "estimatedScore": 67,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:12"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "1 TODOs remaining"
+      ]
+    },
+    {
+      "name": "irodriguez5",
+      "repo": "w2-csv-parsing-irodriguez5",
+      "assignmentPattern": "w2-csv-parsing",
+      "submittedAt": "2026-01-29T21:27:02Z",
+      "pushedAt": "2026-01-29T21:27:02Z",
+      "build": {
+        "status": "unknown",
+        "url": ""
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w2-csv-parsing-irodriguez5",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 10,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
+      "stretchGoals": [],
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
+    },
+    {
+      "name": "taylorharty",
+      "repo": "w1-file-i-o-taylorharty",
+      "assignmentPattern": "w1-file-i-o",
+      "submittedAt": "2026-02-01T15:56:55Z",
+      "pushedAt": "2026-02-01T15:56:55Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-taylorharty/actions/runs/21565833850"
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w1-file-i-o-taylorharty",
+        "maintainability": "A",
+        "codeSmells": "20",
+        "bugs": "1",
+        "vulnerabilities": "0",
+        "reliability": "C",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "274"
+      },
+      "todoCount": 2,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 94,
+      "comments": [],
+      "todos": [
+        "Program.cs:135",
+        "Program.cs:259"
+      ],
+      "stretchGoals": [],
+      "notes": [
+        "2 TODOs remaining"
+      ]
     },
     {
       "name": "taylorharty",
@@ -177,15 +523,28 @@
         "duplication": "0.0",
         "linesOfCode": "132"
       },
-      "todoCount": 0,
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     }
   ]
 }
