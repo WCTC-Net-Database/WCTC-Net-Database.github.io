@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-08T15:59:58Z",
+  "generated": "2026-02-08T17:42:32Z",
   "students": [
     {
       "name": "MW92007",
@@ -152,22 +152,22 @@
       "name": "Samuel-dotcom-rgb",
       "repo": "w2-csv-parsing-Samuel-dotcom-rgb",
       "assignmentPattern": "w2-csv-parsing",
-      "submittedAt": "2026-02-06T04:14:58Z",
-      "pushedAt": "2026-02-06T04:14:58Z",
+      "submittedAt": "2026-02-08T16:40:24Z",
+      "pushedAt": "2026-02-08T16:40:24Z",
       "build": {
-        "status": "unknown",
-        "url": ""
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-Samuel-dotcom-rgb/actions/runs/21801633868"
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-Samuel-dotcom-rgb",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
+        "maintainability": "A",
+        "codeSmells": "23",
+        "bugs": "1",
+        "vulnerabilities": "0",
+        "reliability": "C",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "290"
       },
       "todoCount": 0,
       "studentComments": 0,
