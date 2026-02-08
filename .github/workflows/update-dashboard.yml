@@ -358,22 +358,22 @@ jobs:
           done
           echo ']}' >> dashboard/data/assignments.json
 
-          # Generate current.json - deduplicated by student (keep most recently pushed)
+          # Generate current.json - all student+assignment entries (no dedup)
           echo ""
           echo "=========================================="
-          echo "Generating current.json (deduplicated)"
+          echo "Generating current.json (all entries)"
           echo "=========================================="
 
-          jq -s '.[0] | group_by(.name) | map(sort_by(.pushedAt) | reverse | .[0]) | sort_by(.name)' "$ALL_STUDENTS_FILE" > /tmp/deduped.json
+          jq -s '.[0] | sort_by(.name)' "$ALL_STUDENTS_FILE" > /tmp/all_students.json
 
-          jq -n --argjson students "$(cat /tmp/deduped.json)" \
+          jq -n --argjson students "$(cat /tmp/all_students.json)" \
             --arg generated "$(date -u '+%Y-%m-%dT%H:%M:%SZ')" \
             '{
               generated: $generated,
               students: $students
             }' > dashboard/data/current.json
 
-          echo "Generated current.json with $(jq '.students | length' dashboard/data/current.json) unique students"
+          echo "Generated current.json with $(jq '.students | length' dashboard/data/current.json) student entries"
 
           # Update history with date-indexed snapshot
           echo ""
@@ -385,7 +385,7 @@ jobs:
 
           # Create snapshot with all students (summary data only)
           snapshot_date=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
-          snapshot_students=$(jq '[.[] | {name, repo, assignmentPattern, buildStatus: .build.status, estimatedScore, todoCount, hasStretch, maintainability: .sonar.maintainability, submittedAt}]' /tmp/deduped.json)
+          snapshot_students=$(jq '[.[] | {name, repo, assignmentPattern, buildStatus: .build.status, estimatedScore, todoCount, hasStretch, maintainability: .sonar.maintainability, submittedAt}]' /tmp/all_students.json)
 
           tmp_history=$(mktemp)
           jq --arg date "$snapshot_date" --argjson students "$snapshot_students" \
@@ -393,7 +393,7 @@ jobs:
             "$HISTORY_FILE" > "$tmp_history" && mv "$tmp_history" "$HISTORY_FILE"
 
           # Cleanup
-          rm -f "$ALL_STUDENTS_FILE" /tmp/deduped.json
+          rm -f "$ALL_STUDENTS_FILE" /tmp/all_students.json
 
           # Save last run timestamp
           date -u '+%Y-%m-%dT%H:%M:%SZ' > "$LAST_RUN_FILE"
@@ -402,9 +402,24 @@ jobs:
           echo "Dashboard update complete!"
 
       - name: Commit and Push
+        id: commit
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add dashboard/data/
-          git diff --staged --quiet || git commit -m "Update dashboard data $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "Update dashboard data $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Trigger Pages Deployment
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          echo "Triggering GitHub Pages deployment..."
+          gh workflow run static.yml
