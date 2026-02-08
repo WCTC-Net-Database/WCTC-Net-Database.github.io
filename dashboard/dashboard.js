@@ -280,7 +280,9 @@ function renderStudentCard(student, index) {
         : (student.assignmentPattern ? [student.assignmentPattern] : []);
     const assignmentBadges = assignments.map(a => {
         const abbrev = a.replace('w', 'W').replace(/-.*/, ''); // e.g., "w1-file-i-o" -> "W1"
-        return `<span class="badge badge-info mr-1" title="${a}">${abbrev}</span>`;
+        const isActive = (a === student.assignmentPattern);
+        const badgeClass = isActive ? 'badge badge-primary badge-active mr-1' : 'badge badge-info mr-1';
+        return `<span class="${badgeClass}" title="${a}">${abbrev}</span>`;
     }).join('');
 
     // Format submission date
@@ -374,6 +376,21 @@ function renderStudentCard(student, index) {
 // Render the expandable details section
 function renderDetailsSection(student, index) {
     let html = '';
+
+    // Build Errors (show at top for visibility)
+    if (student.build?.status === 'failure' && (student.build?.errorStep || (student.build?.errorLines && student.build.errorLines.length > 0))) {
+        html += `
+            <div class="detail-group">
+                <div class="detail-header"><i class="fas fa-exclamation-triangle text-danger"></i> Build Error Details</div>
+                <div class="detail-content">
+                    ${student.build.errorStep ? `<div class="mb-2"><strong>Failed Step:</strong> ${escapeHtml(student.build.errorStep)}</div>` : ''}
+                    ${student.build.errorLines && student.build.errorLines.length > 0 ? `
+                        <pre class="build-error-log">${student.build.errorLines.map(l => escapeHtml(l)).join('\n')}</pre>
+                    ` : ''}
+                </div>
+            </div>
+        `;
+    }
 
     // Generated Feedback (always show)
     const feedback = generateFeedback(student);
@@ -504,7 +521,19 @@ function generateFeedback(student) {
     if (student.build?.status === 'success') {
         lines.push(`✓ Build: Passing`);
     } else if (student.build?.status === 'failure') {
-        lines.push(`✗ Build: Failing - check GitHub Actions for error details`);
+        lines.push(`✗ Build: Failing`);
+        if (student.build?.errorStep) {
+            lines.push(`  Failed step: ${student.build.errorStep}`);
+        }
+        if (student.build?.errorLines?.length > 0) {
+            lines.push(`  Error details:`);
+            student.build.errorLines.slice(0, 5).forEach(l => {
+                lines.push(`    ${l}`);
+            });
+        }
+        if (student.build?.url) {
+            lines.push(`  → ${student.build.url}`);
+        }
     }
 
     // Code quality

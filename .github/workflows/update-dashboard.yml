@@ -90,10 +90,32 @@ jobs:
             # Build status
             build_status="unknown"
             build_url=""
+            build_error_step=""
+            build_error_lines="[]"
             run_info=$(gh api "repos/WCTC-Net-Database/$repo/actions/runs?per_page=1" 2>/dev/null || echo '{"total_count":0}')
             if echo "$run_info" | jq -e '.workflow_runs[0]' > /dev/null 2>&1; then
               build_status=$(echo "$run_info" | jq -r '.workflow_runs[0].conclusion // .workflow_runs[0].status')
               build_url=$(echo "$run_info" | jq -r '.workflow_runs[0].html_url')
+
+              # Extract error details for failed builds
+              if [ "$build_status" = "failure" ]; then
+                run_id=$(echo "$run_info" | jq -r '.workflow_runs[0].id')
+                echo "    -> Build failed, extracting error details..." >&2
+
+                # Get failed step name from jobs API
+                jobs_info=$(gh api "repos/WCTC-Net-Database/$repo/actions/runs/$run_id/jobs?per_page=5" 2>/dev/null || echo '{}')
+                build_error_step=$(echo "$jobs_info" | jq -r '[.jobs[].steps[] | select(.conclusion == "failure")] | .[0].name // empty' 2>/dev/null || echo "")
+
+                # Get failed log and extract error lines
+                error_log=$(gh run view "$run_id" --repo "WCTC-Net-Database/$repo" --log-failed 2>/dev/null || echo "")
+                if [ -n "$error_log" ]; then
+                  build_error_lines=$(echo "$error_log" \
+                    | grep -iE 'error [A-Z]{2}[0-9]|: error|Build FAILED|FAILED|Exception:' \
+                    | sed 's/^.*\t.*\t[0-9T:.Z-]* //' \
+                    | head -10 \
+                    | jq -R -s 'split("\n") | map(select(length > 0))' 2>/dev/null || echo '[]')
+                fi
+              fi
             fi
 
             # SonarCloud metrics
@@ -243,6 +265,8 @@ jobs:
               --arg pushed "$pushed_at" \
               --arg bstatus "$build_status" \
               --arg burl "$build_url" \
+              --arg berrstep "$build_error_step" \
+              --argjson berrlines "$build_error_lines" \
               --arg skey "$sonar_key" \
               --arg maint "$maintainability" \
               --arg smells "$code_smells" \
@@ -267,7 +291,7 @@ jobs:
                 assignmentPattern: $pattern,
                 submittedAt: $submitted,
                 pushedAt: $pushed,
-                build: { status: $bstatus, url: $burl },
+                build: { status: $bstatus, url: $burl, errorStep: $berrstep, errorLines: $berrlines },
                 sonar: {
                   projectKey: $skey,
                   maintainability: $maint,
