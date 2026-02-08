@@ -61,10 +61,8 @@ jobs:
             for repo in $repos; do
               student_name="${repo#${pattern}-}"
 
-              # Check if build.yml already exists (use '// empty' to avoid jq returning "null" string on 404)
-              has_workflow=$(gh api "repos/WCTC-Net-Database/$repo/contents/.github/workflows/build.yml" --jq '.name // empty' 2>/dev/null || echo "")
-
-              if [ -n "$has_workflow" ]; then
+              # Check if build.yml already exists (gh api doesn't apply --jq on 404, so check exit code)
+              if gh api "repos/WCTC-Net-Database/$repo/contents/.github/workflows/build.yml" --jq '.name' > /dev/null 2>&1; then
                 echo "  ✓ $student_name - build.yml exists"
                 ALREADY_OK=$((ALREADY_OK + 1))
                 continue
