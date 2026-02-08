@@ -1,6 +1,6 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-02-08T17:56:29Z",
+  "generated": "2026-02-08T17:58:51Z",
   "students": [
     {
       "name": "TGustafson1",
@@ -8,7 +8,9 @@
       "submittedAt": "2026-02-07T03:57:51Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/21773797177"
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/21773797177",
+        "errorStep": "",
+        "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-TGustafson1",
@@ -59,7 +61,9 @@
       "submittedAt": "2026-02-07T01:01:48Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/21773320169"
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/21773320169",
+        "errorStep": "",
+        "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
@@ -124,7 +128,9 @@
       "submittedAt": "2026-02-06T01:06:19Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-MW92007/actions/runs/21734788647"
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-MW92007/actions/runs/21734788647",
+        "errorStep": "",
+        "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-MW92007",
@@ -175,7 +181,15 @@
       "submittedAt": "2026-02-05T00:43:45Z",
       "build": {
         "status": "failure",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Samuel-dotcom-rgb/actions/runs/21694367868"
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Samuel-dotcom-rgb/actions/runs/21694367868",
+        "errorStep": "Build",
+        "errorLines": [
+          "##[error]D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\program.cs(60,31): error CS0117: 'File' does not contain a definition for 'RealAllLines' [D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\W1-assignment-template.csproj]",
+          "##[error]D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\program.cs(106,29): error CS0103: The name 'linesCound' does not exist in the current context [D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\W1-assignment-template.csproj]",
+          "Build FAILED.",
+          "##[error]D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\program.cs(60,31): error CS0117: 'File' does not contain a definition for 'RealAllLines' [D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\W1-assignment-template.csproj]",
+          "##[error]D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\program.cs(106,29): error CS0103: The name 'linesCound' does not exist in the current context [D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\W1-assignment-template.csproj]"
+        ]
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Samuel-dotcom-rgb",
@@ -223,7 +237,13 @@
       "submittedAt": "2026-02-03T01:17:30Z",
       "build": {
         "status": "failure",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-irodriguez5/actions/runs/21612840553"
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-irodriguez5/actions/runs/21612840553",
+        "errorStep": "Build",
+        "errorLines": [
+          "C:\\Program Files\\dotnet\\sdk\\10.0.102\\Microsoft.Common.CurrentVersion.targets(5416,5): error MSB3030: Could not copy the file \"D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\bin\\Debug\\net6.0\\input.csv\" because it was not found. [D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\W1-assignment-template.csproj]",
+          "Build FAILED.",
+          "C:\\Program Files\\dotnet\\sdk\\10.0.102\\Microsoft.Common.CurrentVersion.targets(5416,5): error MSB3030: Could not copy the file \"D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\bin\\Debug\\net6.0\\input.csv\" because it was not found. [D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\W1-assignment-template.csproj]"
+        ]
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-irodriguez5",
@@ -256,7 +276,9 @@
       "submittedAt": "2026-02-01T15:56:55Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-taylorharty/actions/runs/21565833850"
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-taylorharty/actions/runs/21565833850",
+        "errorStep": "",
+        "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-taylorharty",

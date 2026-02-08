@@ -1,6 +1,6 @@
 {
   "assignment": "w2-csv-parsing",
-  "generated": "2026-02-08T17:56:57Z",
+  "generated": "2026-02-08T17:59:23Z",
   "students": [
     {
       "name": "Samuel-dotcom-rgb",
@@ -8,7 +8,9 @@
       "submittedAt": "2026-02-08T16:40:24Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-Samuel-dotcom-rgb/actions/runs/21801633868"
+        "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-Samuel-dotcom-rgb/actions/runs/21801633868",
+        "errorStep": "",
+        "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-Samuel-dotcom-rgb",
@@ -37,7 +39,9 @@
       "submittedAt": "2026-02-01T16:03:04Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-taylorharty/actions/runs/21565922032"
+        "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-taylorharty/actions/runs/21565922032",
+        "errorStep": "",
+        "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-taylorharty",
@@ -79,7 +83,9 @@
       "submittedAt": "2026-01-29T21:27:02Z",
       "build": {
         "status": "unknown",
-        "url": ""
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-irodriguez5",
@@ -121,7 +127,9 @@
       "submittedAt": "2026-01-29T21:27:02Z",
       "build": {
         "status": "unknown",
-        "url": ""
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-TGustafson1",
@@ -163,7 +171,9 @@
       "submittedAt": "2026-01-29T21:27:02Z",
       "build": {
         "status": "unknown",
-        "url": ""
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-Sdunn235",
@@ -205,7 +215,9 @@
       "submittedAt": "2026-01-29T21:27:02Z",
       "build": {
         "status": "unknown",
-        "url": ""
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-MW92007",
