@@ -4,6 +4,42 @@ let currentStudent = null;
 let currentDateFilter = { start: null, end: null };
 let currentAssignmentFilter = '';
 
+// Stretch goal definitions (shared with dashboard.js)
+const STRETCH_GOALS = {
+    'CsvHelper':        { name: 'CsvHelper Library', week: 'W1-W2', desc: 'Use CsvHelper NuGet package for CSV handling' },
+    'Spectre.Console':  { name: 'Spectre.Console', week: 'W3', desc: 'Use Spectre.Console for enhanced console output' },
+    'JsonFileHandler':  { name: 'JSON File Handler', week: 'W4', desc: 'Implement runtime CSV/JSON format switching' },
+    'CommandPattern':   { name: 'Command Pattern', week: 'W5', desc: 'Implement ICommand interface with Execute()' },
+    'ExtraCharacters':  { name: 'Extra Characters', week: 'W6', desc: 'Add 2+ additional character classes' },
+    'ItemCombat':       { name: 'Item Combat', week: 'W8', desc: 'Implement item-driven combat system' },
+    'EFCoreUpdate':     { name: 'EF Core Update', week: 'W9', desc: 'Find and update characters via EF Core' }
+};
+
+// localStorage helpers for stretch goal credit tracking
+function isStretchCredited(studentName, goalId) {
+    return localStorage.getItem(`stretch-credit:${studentName.toLowerCase()}:${goalId}`) === 'true';
+}
+
+function setStretchCredit(studentName, goalId, credited) {
+    const key = `stretch-credit:${studentName.toLowerCase()}:${goalId}`;
+    if (credited) {
+        localStorage.setItem(key, 'true');
+    } else {
+        localStorage.removeItem(key);
+    }
+}
+
+function toggleStretchCredit(studentName, goalId, checkbox) {
+    setStretchCredit(studentName, goalId, checkbox.checked);
+    // Update the credited label next to the checkbox
+    const label = checkbox.closest('label');
+    const creditSpan = label?.querySelector('.credit-status');
+    if (creditSpan) {
+        creditSpan.innerHTML = checkbox.checked ? '<i class="fas fa-check"></i> credited' : '';
+        creditSpan.className = `credit-status ml-2 small ${checkbox.checked ? 'text-success' : ''}`;
+    }
+}
+
 // Load all student data from current.json and history
 async function loadAllData() {
     try {
@@ -296,6 +332,17 @@ function selectStudent(studentKey) {
     }
     snapshots.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+    // Collect all stretch goals across all entries for this student
+    const allStretchGoals = {};
+    for (const entry of student.currentEntries || []) {
+        if (entry.stretchGoals && Array.isArray(entry.stretchGoals)) {
+            for (const goalId of entry.stretchGoals) {
+                if (!allStretchGoals[goalId]) allStretchGoals[goalId] = new Set();
+                allStretchGoals[goalId].add(entry.assignmentPattern || 'unknown');
+            }
+        }
+    }
+
     const container = document.getElementById('student-detail');
 
     container.innerHTML = `
@@ -361,6 +408,30 @@ function selectStudent(studentKey) {
             </div>
             `}
         </div>
+
+        ${Object.keys(allStretchGoals).length > 0 ? `
+        <hr>
+        <h5><i class="fas fa-star"></i> Stretch Goals</h5>
+        <div class="mt-3">
+            ${Object.entries(allStretchGoals).map(([goalId, assignments]) => {
+                const goal = STRETCH_GOALS[goalId] || { name: goalId, week: '?', desc: '' };
+                const credited = isStretchCredited(student.name, goalId);
+                const assignList = Array.from(assignments).sort().map(a => a.replace('w', 'W').replace(/-.*/, '')).join(', ');
+                return `
+                    <div class="d-flex align-items-center mb-2 p-2 bg-light rounded">
+                        <label class="mb-0 d-flex align-items-center flex-grow-1">
+                            <input type="checkbox" class="mr-2" ${credited ? 'checked' : ''}
+                                onchange="toggleStretchCredit('${student.name}', '${goalId}', this)">
+                            <span class="badge badge-success mr-2">${goal.week}</span>
+                            <strong class="mr-2">${goal.name}</strong>
+                            <span class="text-muted small mr-2">found in: ${assignList}</span>
+                            <span class="credit-status ml-auto small ${credited ? 'text-success' : ''}">${credited ? '<i class="fas fa-check"></i> credited' : ''}</span>
+                        </label>
+                    </div>
+                `;
+            }).join('')}
+        </div>
+        ` : ''}
 
         <hr>
 

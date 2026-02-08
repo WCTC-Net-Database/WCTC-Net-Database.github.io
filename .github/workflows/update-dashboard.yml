@@ -159,12 +159,6 @@ jobs:
             stretch_goals="[]"
             has_stretch="false"
 
-            # Stretch patterns based on assignment
-            STRETCH_PATTERNS=""
-            case "$pattern" in
-              "w1-file-i-o"|"w2-csv-parsing") STRETCH_PATTERNS="CsvHelper" ;;
-            esac
-
             # Deep analysis if needed
             if [ "$NEEDS_ANALYSIS" = true ]; then
               echo "    -> Cloning for analysis..." >&2
@@ -205,12 +199,6 @@ jobs:
                     fi
                   done < "$cs_file"
 
-                  if [ -n "$STRETCH_PATTERNS" ] && [ "$has_stretch" = "false" ]; then
-                    if grep -q "$STRETCH_PATTERNS" "$cs_file" 2>/dev/null; then
-                      has_stretch="true"
-                      stretch_goals="[\"CsvHelper library implementation\"]"
-                    fi
-                  fi
                 done < <(find "$REPO_DIR" -name "*.cs" -type f ! -path "*/bin/*" ! -path "*/obj/*" 2>/dev/null)
 
                 echo "]" >> "$todos_file"
@@ -218,6 +206,50 @@ jobs:
                 todo_locations=$(cat "$todos_file")
                 student_comments=$(cat "$comments_file")
                 rm -f "$todos_file" "$comments_file"
+
+                # Detect ALL known stretch goals (check every repo for all patterns)
+                echo "    -> Checking stretch goals..." >&2
+                stretch_list=""
+
+                # NuGet packages (.csproj)
+                if grep -rq "CsvHelper" "$REPO_DIR" --include="*.csproj" 2>/dev/null; then
+                  stretch_list="${stretch_list}CsvHelper "
+                fi
+                if grep -rq "Spectre\.Console" "$REPO_DIR" --include="*.csproj" 2>/dev/null; then
+                  stretch_list="${stretch_list}Spectre.Console "
+                fi
+
+                # Code patterns (.cs files, skip bin/obj)
+                CS_DIR="$REPO_DIR"
+                CS_INC="--include=*.cs"
+                CS_EXC="--exclude-dir=bin --exclude-dir=obj"
+
+                if grep -rq $CS_INC $CS_EXC "JsonFileHandler\|IJsonFileHandler" "$CS_DIR" 2>/dev/null; then
+                  stretch_list="${stretch_list}JsonFileHandler "
+                fi
+                if grep -rq $CS_INC $CS_EXC "ICommand" "$CS_DIR" 2>/dev/null && \
+                   grep -rq $CS_INC $CS_EXC "\.Execute()" "$CS_DIR" 2>/dev/null; then
+                  stretch_list="${stretch_list}CommandPattern "
+                fi
+                char_class_count=$(grep -rl $CS_INC $CS_EXC ": CharacterBase" "$CS_DIR" 2>/dev/null | wc -l)
+                if [ "$char_class_count" -ge 3 ]; then
+                  stretch_list="${stretch_list}ExtraCharacters "
+                fi
+                if grep -rq $CS_INC $CS_EXC "GetTotalAttack\|GetTotalDefense" "$CS_DIR" 2>/dev/null; then
+                  stretch_list="${stretch_list}ItemCombat "
+                fi
+                if grep -rq $CS_INC $CS_EXC "SaveChanges" "$CS_DIR" 2>/dev/null && \
+                   grep -rq $CS_INC $CS_EXC "DbContext" "$CS_DIR" 2>/dev/null; then
+                  stretch_list="${stretch_list}EFCoreUpdate "
+                fi
+
+                # Convert to JSON array
+                if [ -n "$stretch_list" ]; then
+                  has_stretch="true"
+                  stretch_goals=$(echo "$stretch_list" | tr ' ' '\n' | grep -v '^$' | jq -R -s 'split("\n") | map(select(length > 0))')
+                  echo "    -> Found: $stretch_list" >&2
+                fi
+
                 rm -rf "$REPO_DIR"
               else
                 echo "    -> Clone failed: $clone_output" >&2

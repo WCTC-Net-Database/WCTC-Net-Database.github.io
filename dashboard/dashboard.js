@@ -440,16 +440,27 @@ function renderDetailsSection(student, index) {
         `;
     }
 
-    // Stretch Goals
+    // Stretch Goals (with credit tracking)
     if (student.stretchGoals && student.stretchGoals.length > 0) {
+        const goalItems = student.stretchGoals.map(goalId => {
+            const goal = STRETCH_GOALS[goalId] || { name: goalId, week: '?', desc: '' };
+            const credited = isStretchCredited(student.name, goalId);
+            return `
+                <div class="stretch-goal-item d-flex align-items-center mb-2">
+                    <label class="mb-0 d-flex align-items-center" title="Check to mark credit given for this stretch goal">
+                        <input type="checkbox" class="mr-2" ${credited ? 'checked' : ''}
+                            onchange="toggleStretchCredit('${student.name}', '${goalId}', this)">
+                        <span class="badge badge-success mr-2">${goal.week}</span>
+                        <strong>${escapeHtml(goal.name)}</strong>
+                        ${credited ? '<span class="ml-2 text-success small"><i class="fas fa-check"></i> credited</span>' : ''}
+                    </label>
+                </div>
+            `;
+        }).join('');
         html += `
             <div class="detail-group">
-                <div class="detail-header"><i class="fas fa-star text-success"></i> Stretch Goals Achieved</div>
-                <div class="detail-content">
-                    <ul class="stretch-list">
-                        ${student.stretchGoals.map(g => `<li>${escapeHtml(g)}</li>`).join('')}
-                    </ul>
-                </div>
+                <div class="detail-header"><i class="fas fa-star text-success"></i> Stretch Goals Detected</div>
+                <div class="detail-content">${goalItems}</div>
             </div>
         `;
     }
@@ -497,18 +508,47 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
-// Stretch goal descriptions per assignment (from READMEs)
+// Stretch goal definitions (id -> display info)
+const STRETCH_GOALS = {
+    'CsvHelper':        { name: 'CsvHelper Library', week: 'W1-W2', desc: 'Use CsvHelper NuGet package for CSV handling' },
+    'Spectre.Console':  { name: 'Spectre.Console', week: 'W3', desc: 'Use Spectre.Console for enhanced console output' },
+    'JsonFileHandler':  { name: 'JSON File Handler', week: 'W4', desc: 'Implement runtime CSV/JSON format switching' },
+    'CommandPattern':   { name: 'Command Pattern', week: 'W5', desc: 'Implement ICommand interface with Execute()' },
+    'ExtraCharacters':  { name: 'Extra Characters', week: 'W6', desc: 'Add 2+ additional character classes' },
+    'ItemCombat':       { name: 'Item Combat', week: 'W8', desc: 'Implement item-driven combat system' },
+    'EFCoreUpdate':     { name: 'EF Core Update', week: 'W9', desc: 'Find and update characters via EF Core' }
+};
+
+// Stretch goal suggested per assignment (for feedback when none detected)
 const stretchGoalDescriptions = {
     'w1-file-i-o': 'Use the CsvHelper NuGet package for file operations',
     'w2-csv-parsing': 'Use CsvHelper library for robust CSV handling',
-    'w3-srp-linq': 'Implement advanced LINQ queries with method syntax',
-    'w4-ocp-interfaces': 'Create additional interface implementations',
-    'w5-lsp-isp': 'Implement interface segregation patterns',
-    'w6-dip-abstractions': 'Use dependency injection container',
+    'w3-srp-linq': 'Use Spectre.Console for enhanced console output',
+    'w4-ocp-interfaces': 'Implement runtime CSV/JSON format switching',
+    'w5-lsp-isp': 'Implement the Command Pattern (ICommand)',
+    'w6-dip-abstractions': 'Add 2+ additional character classes',
     'w7-midterm-prep': 'Complete all SOLID principle implementations',
-    'w8-midterm': 'Demonstrate mastery of weeks 1-7',
-    'w9-efcore-intro': 'Implement additional entity relationships'
+    'w8-midterm': 'Implement item-driven combat or consumable items',
+    'w9-efcore-intro': 'Find and update characters via EF Core'
 };
+
+// localStorage helpers for stretch goal credit tracking
+function isStretchCredited(studentName, goalId) {
+    return localStorage.getItem(`stretch-credit:${studentName.toLowerCase()}:${goalId}`) === 'true';
+}
+
+function setStretchCredit(studentName, goalId, credited) {
+    const key = `stretch-credit:${studentName.toLowerCase()}:${goalId}`;
+    if (credited) {
+        localStorage.setItem(key, 'true');
+    } else {
+        localStorage.removeItem(key);
+    }
+}
+
+function toggleStretchCredit(studentName, goalId, checkbox) {
+    setStretchCredit(studentName, goalId, checkbox.checked);
+}
 
 // Generate feedback text for a student
 function generateFeedback(student) {
@@ -577,9 +617,14 @@ function generateFeedback(student) {
         lines.push(`○ Code Smells: ${smells} - consider refactoring for cleaner code`);
     }
 
-    // Stretch goal
-    if (student.hasStretch) {
-        lines.push(`★ Stretch Goal: Completed!`);
+    // Stretch goals
+    if (student.stretchGoals && student.stretchGoals.length > 0) {
+        const goalNames = student.stretchGoals.map(id => {
+            const goal = STRETCH_GOALS[id];
+            const credited = isStretchCredited(student.name, id);
+            return goal ? `${goal.name} (${goal.week})${credited ? ' [credited]' : ''}` : id;
+        });
+        lines.push(`★ Stretch Goal: ${goalNames.join(', ')}`);
     } else {
         const stretchDesc = stretchGoalDescriptions[assignment];
         if (stretchDesc) {
