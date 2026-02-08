@@ -2,6 +2,7 @@
 let allStudents = [];
 let renderedStudents = []; // Currently displayed students (after filter/sort)
 let studentAssignments = {}; // Track all assignments per student (from history)
+let studentEntries = {}; // studentKey -> { assignmentPattern -> studentData } for badge switching
 let currentFilter = 'all';
 let currentAssignmentFilter = 'all';
 let currentDateFilter = { start: null, end: null };
@@ -19,7 +20,7 @@ async function loadCurrentData() {
 
         allStudents = data.students || [];
 
-        // Initialize assignment tracking from current data
+        // Initialize assignment tracking and per-entry lookup from current data
         allStudents.forEach(s => {
             const key = s.name.toLowerCase();
             if (!studentAssignments[key]) {
@@ -27,6 +28,11 @@ async function loadCurrentData() {
             }
             if (s.assignmentPattern) {
                 studentAssignments[key].add(s.assignmentPattern);
+            }
+            // Build per-student per-assignment lookup for badge switching
+            if (!studentEntries[key]) studentEntries[key] = {};
+            if (s.assignmentPattern) {
+                studentEntries[key][s.assignmentPattern] = s;
             }
         });
 
@@ -280,9 +286,10 @@ function renderStudentCard(student, index) {
         : (student.assignmentPattern ? [student.assignmentPattern] : []);
     const assignmentBadges = assignments.map(a => {
         const abbrev = a.replace('w', 'W').replace(/-.*/, ''); // e.g., "w1-file-i-o" -> "W1"
-        const isActive = (a === student.assignmentPattern);
-        const badgeClass = isActive ? 'badge badge-primary badge-active mr-1' : 'badge badge-info mr-1';
-        return `<span class="${badgeClass}" title="${a}">${abbrev}</span>`;
+        const isViewing = (a === student.assignmentPattern);
+        const badgeClass = isViewing ? 'badge badge-primary badge-active mr-1' : 'badge badge-info badge-clickable mr-1';
+        const onclick = isViewing ? '' : ` onclick="switchAssignment('${studentKey}', '${a}', ${index})"`;
+        return `<span class="${badgeClass}" title="${a}"${onclick}>${abbrev}</span>`;
     }).join('');
 
     // Format submission date
@@ -291,7 +298,7 @@ function renderStudentCard(student, index) {
         : '';
 
     return `
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4" id="card-${studentKey}">
             <div class="card ${cardClass}">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-start mb-2">
@@ -662,6 +669,33 @@ function copyFeedback(studentIndex) {
             }, 2000);
         }
     });
+}
+
+// Switch a card to show a different assignment's data
+function switchAssignment(studentKey, assignmentPattern, cardIndex) {
+    const entry = studentEntries[studentKey]?.[assignmentPattern];
+    if (!entry) return;
+
+    // Update renderedStudents so copyFeedback references the right data
+    renderedStudents[cardIndex] = entry;
+
+    const cardCol = document.getElementById(`card-${studentKey}`);
+    if (!cardCol) return;
+
+    // Remember if the details panel was expanded
+    const wasExpanded = cardCol.querySelector('.collapse.show') !== null;
+
+    // Re-render the card with the new assignment's data
+    cardCol.outerHTML = renderStudentCard(entry, cardIndex);
+
+    // Re-expand details if they were open
+    if (wasExpanded) {
+        const newCard = document.getElementById(`card-${studentKey}`);
+        const collapse = newCard?.querySelector('.collapse');
+        if (collapse) {
+            collapse.classList.add('show');
+        }
+    }
 }
 
 // Show no data message
