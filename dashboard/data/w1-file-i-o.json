@@ -1,80 +1,27 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-02-08T18:38:01Z",
+  "generated": "2026-02-09T01:44:04Z",
   "students": [
-    {
-      "name": "TGustafson1",
-      "repo": "w1-file-i-o-TGustafson1",
-      "submittedAt": "2026-02-07T03:57:51Z",
-      "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/21773797177",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w1-file-i-o-TGustafson1",
-        "maintainability": "A",
-        "codeSmells": "18",
-        "bugs": "1",
-        "vulnerabilities": "0",
-        "reliability": "C",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "229"
-      },
-      "todoCount": 4,
-      "studentComments": 2,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 88,
-      "comments": [
-        {
-          "file": "Program.cs",
-          "line": 8,
-          "text": "/// TODO: Revisit using CsvHelper to do all file reading/writing"
-        },
-        {
-          "file": "Program.cs",
-          "line": 137,
-          "text": "        //TODO: Revisit this section, not sure if ArrayList is best"
-        }
-      ],
-      "todos": [
-        "Program.cs:8",
-        "Program.cs:137",
-        "Program.cs:138",
-        "Program.cs:180"
-      ],
-      "stretchGoals": [
-        "CsvHelper"
-      ],
-      "notes": [
-        "4 TODOs remaining",
-        "Completed stretch goal(s)",
-        "2 student comment(s) to review"
-      ]
-    },
     {
       "name": "Sdunn235",
       "repo": "w1-file-i-o-Sdunn235",
-      "submittedAt": "2026-02-07T01:01:48Z",
+      "submittedAt": "2026-02-09T01:02:20Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/21773320169",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/21808823449",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
         "maintainability": "A",
-        "codeSmells": "2",
+        "codeSmells": "3",
         "bugs": "3",
         "vulnerabilities": "0",
         "reliability": "C",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "221"
+        "linesOfCode": "248"
       },
       "todoCount": 0,
       "studentComments": 6,
@@ -109,7 +56,7 @@
         },
         {
           "file": "Program.cs",
-          "line": 262,
+          "line": 253,
           "text": "        // CsvHelper uses these mappings to match CSV column positions to Character properties."
         }
       ],
@@ -121,6 +68,37 @@
         "Completed stretch goal(s)",
         "6 student comment(s) to review"
       ]
+    },
+    {
+      "name": "TGustafson1",
+      "repo": "w1-file-i-o-TGustafson1",
+      "submittedAt": "2026-02-07T03:57:51Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/21773797177",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w1-file-i-o-TGustafson1",
+        "maintainability": "A",
+        "codeSmells": "18",
+        "bugs": "1",
+        "vulnerabilities": "0",
+        "reliability": "C",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "229"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
     },
     {
       "name": "MW92007",
@@ -143,37 +121,15 @@
         "duplication": "0.0",
         "linesOfCode": "189"
       },
-      "todoCount": 12,
-      "studentComments": 1,
+      "todoCount": 0,
+      "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 80,
-      "comments": [
-        {
-          "file": "Program.cs",
-          "line": 246,
-          "text": "        // Then here it just returns all the values back to the file?"
-        }
-      ],
-      "todos": [
-        "Program.cs:13",
-        "Program.cs:84",
-        "Program.cs:123",
-        "Program.cs:143",
-        "Program.cs:154",
-        "Program.cs:160",
-        "Program.cs:163",
-        "Program.cs:187",
-        "Program.cs:261",
-        "Program.cs:264",
-        "Program.cs:265",
-        "Program.cs:266"
-      ],
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
       "stretchGoals": [],
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "1 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "Samuel-dotcom-rgb",
@@ -202,34 +158,15 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 16,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 50,
+      "needsReview": false,
+      "estimatedScore": 70,
       "comments": [],
-      "todos": [
-        "Program.cs:10",
-        "Program.cs:81",
-        "Program.cs:99",
-        "Program.cs:118",
-        "Program.cs:126",
-        "Program.cs:137",
-        "Program.cs:143",
-        "Program.cs:146",
-        "Program.cs:149",
-        "Program.cs:155",
-        "Program.cs:174",
-        "Program.cs:178",
-        "Program.cs:181",
-        "Program.cs:182",
-        "Program.cs:183",
-        "Program.cs:185"
-      ],
+      "todos": [],
       "stretchGoals": [],
-      "notes": [
-        "Many TODOs remaining - likely incomplete"
-      ]
+      "notes": []
     },
     {
       "name": "irodriguez5",
@@ -256,19 +193,15 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 1,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 67,
+      "estimatedScore": 70,
       "comments": [],
-      "todos": [
-        "Program.cs:12"
-      ],
+      "todos": [],
       "stretchGoals": [],
-      "notes": [
-        "1 TODOs remaining"
-      ]
+      "notes": []
     },
     {
       "name": "taylorharty",
@@ -291,20 +224,15 @@
         "duplication": "0.0",
         "linesOfCode": "274"
       },
-      "todoCount": 2,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 94,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "Program.cs:135",
-        "Program.cs:259"
-      ],
+      "todos": [],
       "stretchGoals": [],
-      "notes": [
-        "2 TODOs remaining"
-      ]
+      "notes": []
     }
   ]
 }
