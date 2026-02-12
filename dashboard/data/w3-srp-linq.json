@@ -1,0 +1,37 @@
+{
+  "assignment": "w3-srp-linq",
+  "generated": "2026-02-12T06:54:54Z",
+  "students": [
+    {
+      "name": "irodriguez5",
+      "repo": "w3-srp-linq-irodriguez5",
+      "submittedAt": "2026-02-05T20:27:35Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w3-srp-linq-irodriguez5",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
+    }
+  ]
+}

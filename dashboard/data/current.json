@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-12T01:44:20Z",
+  "generated": "2026-02-12T06:54:59Z",
   "students": [
     {
       "name": "MW92007",
@@ -322,6 +322,39 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-irodriguez5",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
+    },
+    {
+      "name": "irodriguez5",
+      "repo": "w3-srp-linq-irodriguez5",
+      "assignmentPattern": "w3-srp-linq",
+      "submittedAt": "2026-02-05T20:27:35Z",
+      "pushedAt": "2026-02-05T20:27:35Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w3-srp-linq-irodriguez5",
         "maintainability": "-",
         "codeSmells": "-",
         "bugs": "-",

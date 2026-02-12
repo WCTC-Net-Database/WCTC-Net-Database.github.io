@@ -2,4 +2,6 @@
 {"pattern":"w1-file-i-o","name":"W1 File I O"}
 ,
 {"pattern":"w2-csv-parsing","name":"W2 Csv Parsing"}
+,
+{"pattern":"w3-srp-linq","name":"W3 Srp Linq"}
 ]}
