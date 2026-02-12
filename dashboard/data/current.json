@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-12T06:54:59Z",
+  "generated": "2026-02-12T12:53:31Z",
   "students": [
     {
       "name": "MW92007",
@@ -113,8 +113,8 @@
       "submittedAt": "2026-02-08T16:40:24Z",
       "pushedAt": "2026-02-08T16:40:24Z",
       "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-Samuel-dotcom-rgb/actions/runs/21801633868",
+        "status": "unknown",
+        "url": "",
         "errorStep": "",
         "errorLines": []
       },
@@ -412,7 +412,7 @@
       "repo": "w2-csv-parsing-taylorharty",
       "assignmentPattern": "w2-csv-parsing",
       "submittedAt": "2026-02-01T16:03:04Z",
-      "pushedAt": "2026-02-01T16:03:04Z",
+      "pushedAt": "",
       "build": {
         "status": "success",
         "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-taylorharty/actions/runs/21565922032",
@@ -430,15 +430,28 @@
         "duplication": "0.0",
         "linesOfCode": "132"
       },
-      "todoCount": 0,
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     }
   ]
 }
