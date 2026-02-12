@@ -1,14 +1,14 @@
 {
   "assignment": "w2-csv-parsing",
-  "generated": "2026-02-12T12:53:11Z",
+  "generated": "2026-02-12T18:54:55Z",
   "students": [
     {
       "name": "Samuel-dotcom-rgb",
       "repo": "w2-csv-parsing-Samuel-dotcom-rgb",
       "submittedAt": "2026-02-08T16:40:24Z",
       "build": {
-        "status": "unknown",
-        "url": "",
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-Samuel-dotcom-rgb/actions/runs/21801633868",
         "errorStep": "",
         "errorLines": []
       },
@@ -54,28 +54,15 @@
         "duplication": "0.0",
         "linesOfCode": "132"
       },
-      "todoCount": 10,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 80,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "Program.cs:56",
-        "Program.cs:57",
-        "Program.cs:62",
-        "Program.cs:66",
-        "Program.cs:71",
-        "Program.cs:81",
-        "Program.cs:97",
-        "Program.cs:102",
-        "Program.cs:106",
-        "Program.cs:110"
-      ],
+      "todos": [],
       "stretchGoals": [],
-      "notes": [
-        "Many TODOs remaining - likely incomplete"
-      ]
+      "notes": []
     },
     {
       "name": "irodriguez5",
