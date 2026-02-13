@@ -1,6 +1,6 @@
 {
   "assignment": "w3-srp-linq",
-  "generated": "2026-02-13T12:43:00Z",
+  "generated": "2026-02-13T18:39:02Z",
   "students": [
     {
       "name": "Samuel-dotcom-rgb",
@@ -22,6 +22,68 @@
         "security": "A",
         "duplication": "0.0",
         "linesOfCode": "359"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
+    },
+    {
+      "name": "Sdunn235",
+      "repo": "w3-srp-linq-Sdunn235",
+      "submittedAt": "2026-02-05T20:27:35Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w3-srp-linq-Sdunn235",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
+    },
+    {
+      "name": "TGustafson1",
+      "repo": "w3-srp-linq-TGustafson1",
+      "submittedAt": "2026-02-05T20:27:35Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w3-srp-linq-TGustafson1",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,
