@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-13T01:46:45Z",
+  "generated": "2026-02-13T06:53:08Z",
   "students": [
     {
       "name": "MW92007",
@@ -128,6 +128,39 @@
         "security": "A",
         "duplication": "0.0",
         "linesOfCode": "290"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
+    },
+    {
+      "name": "Samuel-dotcom-rgb",
+      "repo": "w3-srp-linq-Samuel-dotcom-rgb",
+      "assignmentPattern": "w3-srp-linq",
+      "submittedAt": "2026-02-13T03:39:26Z",
+      "pushedAt": "2026-02-13T03:39:45Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w3-srp-linq-Samuel-dotcom-rgb/actions/runs/21973731629",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w3-srp-linq-Samuel-dotcom-rgb",
+        "maintainability": "A",
+        "codeSmells": "11",
+        "bugs": "0",
+        "vulnerabilities": "0",
+        "reliability": "A",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "359"
       },
       "todoCount": 0,
       "studentComments": 0,
@@ -332,22 +365,14 @@
         "linesOfCode": "-"
       },
       "todoCount": 0,
-      "studentComments": 1,
+      "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
+      "needsReview": false,
       "estimatedScore": 100,
-      "comments": [
-        {
-          "file": "Program.cs",
-          "line": 272,
-          "text": "    // CSV helpers"
-        }
-      ],
+      "comments": [],
       "todos": [],
       "stretchGoals": [],
-      "notes": [
-        "1 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "irodriguez5",

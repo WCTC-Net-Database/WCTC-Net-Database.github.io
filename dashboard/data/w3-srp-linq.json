@@ -1,7 +1,38 @@
 {
   "assignment": "w3-srp-linq",
-  "generated": "2026-02-13T01:46:40Z",
+  "generated": "2026-02-13T06:52:59Z",
   "students": [
+    {
+      "name": "Samuel-dotcom-rgb",
+      "repo": "w3-srp-linq-Samuel-dotcom-rgb",
+      "submittedAt": "2026-02-13T03:39:26Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w3-srp-linq-Samuel-dotcom-rgb/actions/runs/21973731629",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w3-srp-linq-Samuel-dotcom-rgb",
+        "maintainability": "A",
+        "codeSmells": "11",
+        "bugs": "0",
+        "vulnerabilities": "0",
+        "reliability": "A",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "359"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
+    },
     {
       "name": "irodriguez5",
       "repo": "w3-srp-linq-irodriguez5",
