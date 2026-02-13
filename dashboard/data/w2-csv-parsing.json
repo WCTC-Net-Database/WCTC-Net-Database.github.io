@@ -1,7 +1,46 @@
 {
   "assignment": "w2-csv-parsing",
-  "generated": "2026-02-12T18:54:55Z",
+  "generated": "2026-02-13T01:46:26Z",
   "students": [
+    {
+      "name": "irodriguez5",
+      "repo": "w2-csv-parsing-irodriguez5",
+      "submittedAt": "2026-02-12T06:15:24Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w2-csv-parsing-irodriguez5",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 1,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 100,
+      "comments": [
+        {
+          "file": "Program.cs",
+          "line": 272,
+          "text": "    // CSV helpers"
+        }
+      ],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": [
+        "1 student comment(s) to review"
+      ]
+    },
     {
       "name": "Samuel-dotcom-rgb",
       "repo": "w2-csv-parsing-Samuel-dotcom-rgb",
@@ -53,37 +92,6 @@
         "security": "A",
         "duplication": "0.0",
         "linesOfCode": "132"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "notes": []
-    },
-    {
-      "name": "irodriguez5",
-      "repo": "w2-csv-parsing-irodriguez5",
-      "submittedAt": "2026-01-29T21:27:02Z",
-      "build": {
-        "status": "unknown",
-        "url": "",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w2-csv-parsing-irodriguez5",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,
