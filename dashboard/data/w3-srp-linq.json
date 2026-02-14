@@ -1,6 +1,6 @@
 {
   "assignment": "w3-srp-linq",
-  "generated": "2026-02-14T01:26:17Z",
+  "generated": "2026-02-14T06:37:17Z",
   "students": [
     {
       "name": "Samuel-dotcom-rgb",
@@ -22,6 +22,37 @@
         "security": "A",
         "duplication": "0.0",
         "linesOfCode": "359"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
+    },
+    {
+      "name": "MW92007",
+      "repo": "w3-srp-linq-MW92007",
+      "submittedAt": "2026-02-05T20:27:35Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w3-srp-linq-MW92007",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,

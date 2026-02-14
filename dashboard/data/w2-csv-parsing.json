@@ -1,7 +1,49 @@
 {
   "assignment": "w2-csv-parsing",
-  "generated": "2026-02-14T01:26:06Z",
+  "generated": "2026-02-14T06:37:08Z",
   "students": [
+    {
+      "name": "MW92007",
+      "repo": "w2-csv-parsing-MW92007",
+      "submittedAt": "2026-02-14T05:17:12Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w2-csv-parsing-MW92007",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 8,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [],
+      "todos": [
+        "Program.cs:62",
+        "Program.cs:63",
+        "Program.cs:107",
+        "Program.cs:112",
+        "Program.cs:154",
+        "Program.cs:159",
+        "Program.cs:163",
+        "Program.cs:167"
+      ],
+      "stretchGoals": [],
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
+    },
     {
       "name": "irodriguez5",
       "repo": "w2-csv-parsing-irodriguez5",
@@ -138,37 +180,6 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-Sdunn235",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "notes": []
-    },
-    {
-      "name": "MW92007",
-      "repo": "w2-csv-parsing-MW92007",
-      "submittedAt": "2026-01-29T21:27:02Z",
-      "build": {
-        "status": "unknown",
-        "url": "",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w2-csv-parsing-MW92007",
         "maintainability": "-",
         "codeSmells": "-",
         "bugs": "-",

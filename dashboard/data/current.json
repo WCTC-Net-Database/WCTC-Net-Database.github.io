@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-14T01:26:26Z",
+  "generated": "2026-02-14T06:37:25Z",
   "students": [
     {
       "name": "MW92007",
@@ -38,8 +38,8 @@
       "name": "MW92007",
       "repo": "w2-csv-parsing-MW92007",
       "assignmentPattern": "w2-csv-parsing",
-      "submittedAt": "2026-01-29T21:27:02Z",
-      "pushedAt": "2026-01-29T21:27:02Z",
+      "submittedAt": "2026-02-14T05:17:12Z",
+      "pushedAt": "2026-02-14T05:24:11Z",
       "build": {
         "status": "unknown",
         "url": "",
@@ -48,6 +48,50 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-MW92007",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 8,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [],
+      "todos": [
+        "Program.cs:62",
+        "Program.cs:63",
+        "Program.cs:107",
+        "Program.cs:112",
+        "Program.cs:154",
+        "Program.cs:159",
+        "Program.cs:163",
+        "Program.cs:167"
+      ],
+      "stretchGoals": [],
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
+    },
+    {
+      "name": "MW92007",
+      "repo": "w3-srp-linq-MW92007",
+      "assignmentPattern": "w3-srp-linq",
+      "submittedAt": "2026-02-05T20:27:35Z",
+      "pushedAt": "2026-02-05T20:27:35Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w3-srp-linq-MW92007",
         "maintainability": "-",
         "codeSmells": "-",
         "bugs": "-",
@@ -176,13 +220,15 @@
       "name": "Sdunn235",
       "repo": "w1-file-i-o-Sdunn235",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-02-09T01:02:20Z",
-      "pushedAt": "2026-02-09T01:02:33Z",
+      "submittedAt": "2026-02-14T02:00:04Z",
+      "pushedAt": "2026-02-14T02:00:20Z",
       "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/21808823449",
-        "errorStep": "",
-        "errorLines": []
+        "status": "failure",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/22009095904",
+        "errorStep": "Restore dependencies",
+        "errorLines": [
+          "MSBUILD : error MSB1011: Specify which project or solution file to use because this folder contains more than one project or solution file."
+        ]
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
@@ -196,14 +242,40 @@
         "linesOfCode": "248"
       },
       "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
+      "studentComments": 4,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 70,
+      "comments": [
+        {
+          "file": "CharacterMap.cs",
+          "line": 5,
+          "text": "/// This is used by CsvHelper to read and write CSV files correctly."
+        },
+        {
+          "file": "CharacterMap.cs",
+          "line": 11,
+          "text": "        // CsvHelper uses these mappings to match CSV column positions to Character properties."
+        },
+        {
+          "file": "CharacterUI.cs",
+          "line": 163,
+          "text": "    /// Helper method to display a single character's details."
+        },
+        {
+          "file": "Program.cs",
+          "line": 18,
+          "text": "/// *Disclosure*: This project was initially set up using AI assistance as part of a Week 2 learning exercise."
+        }
+      ],
       "todos": [],
-      "stretchGoals": [],
-      "notes": []
+      "stretchGoals": [
+        "CsvHelper"
+      ],
+      "notes": [
+        "Completed stretch goal(s)",
+        "4 student comment(s) to review"
+      ]
     },
     {
       "name": "Sdunn235",
@@ -296,57 +368,15 @@
         "duplication": "0.0",
         "linesOfCode": "229"
       },
-      "todoCount": 8,
-      "studentComments": 5,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 50,
-      "comments": [
-        {
-          "file": "Program.cs",
-          "line": 8,
-          "text": "/// TODO: Revisit using CsvHelper to do all file reading/writing"
-        },
-        {
-          "file": "Program.cs",
-          "line": 137,
-          "text": "        //TODO: Revisit this section, not sure if ArrayList is best"
-        },
-        {
-          "file": "CharacterReader.cs",
-          "line": 55,
-          "text": "            //TODO: Is null acceptable here?"
-        },
-        {
-          "file": "Program.cs",
-          "line": 10,
-          "text": "/// TODO: Revisit using CsvHelper to do all file reading/writing"
-        },
-        {
-          "file": "Program.cs",
-          "line": 165,
-          "text": "    // TODO: Fix this to work with quotations?"
-        }
-      ],
-      "todos": [
-        "Program.cs:8",
-        "Program.cs:137",
-        "Program.cs:138",
-        "Program.cs:180",
-        "CharacterReader.cs:55",
-        "Program.cs:10",
-        "Program.cs:165",
-        "Program.cs:203"
-      ],
-      "stretchGoals": [
-        "CsvHelper",
-        "Spectre.Console"
-      ],
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)",
-        "5 student comment(s) to review"
-      ]
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 70,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
     },
     {
       "name": "TGustafson1",
