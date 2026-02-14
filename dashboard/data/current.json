@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-13T18:39:13Z",
+  "generated": "2026-02-14T01:26:26Z",
   "students": [
     {
       "name": "MW92007",
@@ -275,13 +275,15 @@
       "name": "TGustafson1",
       "repo": "w1-file-i-o-TGustafson1",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-02-07T03:57:51Z",
-      "pushedAt": "2026-02-07T03:58:22Z",
+      "submittedAt": "2026-02-13T20:25:04Z",
+      "pushedAt": "2026-02-13T20:25:09Z",
       "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/21773797177",
-        "errorStep": "",
-        "errorLines": []
+        "status": "failure",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/22001642927",
+        "errorStep": "Restore dependencies",
+        "errorLines": [
+          "MSBUILD : error MSB1003: Specify a project or solution file. The current working directory does not contain a project or solution file."
+        ]
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-TGustafson1",
@@ -294,15 +296,57 @@
         "duplication": "0.0",
         "linesOfCode": "229"
       },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "notes": []
+      "todoCount": 8,
+      "studentComments": 5,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 50,
+      "comments": [
+        {
+          "file": "Program.cs",
+          "line": 8,
+          "text": "/// TODO: Revisit using CsvHelper to do all file reading/writing"
+        },
+        {
+          "file": "Program.cs",
+          "line": 137,
+          "text": "        //TODO: Revisit this section, not sure if ArrayList is best"
+        },
+        {
+          "file": "CharacterReader.cs",
+          "line": 55,
+          "text": "            //TODO: Is null acceptable here?"
+        },
+        {
+          "file": "Program.cs",
+          "line": 10,
+          "text": "/// TODO: Revisit using CsvHelper to do all file reading/writing"
+        },
+        {
+          "file": "Program.cs",
+          "line": 165,
+          "text": "    // TODO: Fix this to work with quotations?"
+        }
+      ],
+      "todos": [
+        "Program.cs:8",
+        "Program.cs:137",
+        "Program.cs:138",
+        "Program.cs:180",
+        "CharacterReader.cs:55",
+        "Program.cs:10",
+        "Program.cs:165",
+        "Program.cs:203"
+      ],
+      "stretchGoals": [
+        "CsvHelper",
+        "Spectre.Console"
+      ],
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "5 student comment(s) to review"
+      ]
     },
     {
       "name": "TGustafson1",
