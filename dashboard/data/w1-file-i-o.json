@@ -1,17 +1,17 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-02-19T12:51:23Z",
+  "generated": "2026-02-19T18:42:44Z",
   "students": [
     {
       "name": "TGustafson1",
       "repo": "w1-file-i-o-TGustafson1",
-      "submittedAt": "2026-02-15T16:58:32Z",
+      "submittedAt": "2026-02-19T14:46:44Z",
       "build": {
         "status": "failure",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/22039531692",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/22186563599",
         "errorStep": "Restore dependencies",
         "errorLines": [
-          "MSBUILD : error MSB1003: Specify a project or solution file. The current working directory does not contain a project or solution file."
+          "MSBUILD : error MSB1011: Specify which project or solution file to use because this folder contains more than one project or solution file."
         ]
       },
       "sonar": {
@@ -25,15 +25,24 @@
         "duplication": "0.0",
         "linesOfCode": "229"
       },
-      "todoCount": 0,
+      "todoCount": 1,
       "studentComments": 0,
-      "hasStretch": false,
+      "hasStretch": true,
       "needsReview": false,
-      "estimatedScore": 70,
+      "estimatedScore": 67,
       "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "notes": []
+      "todos": [
+        "Program.cs:193"
+      ],
+      "stretchGoals": [
+        "CsvHelper",
+        "Spectre.Console",
+        "JsonFileHandler"
+      ],
+      "notes": [
+        "1 TODOs remaining",
+        "Completed stretch goal(s)"
+      ]
     },
     {
       "name": "Sdunn235",
