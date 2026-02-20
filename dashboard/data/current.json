@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-19T18:43:17Z",
+  "generated": "2026-02-20T01:27:00Z",
   "students": [
     {
       "name": "MW92007",
@@ -331,24 +331,15 @@
         "duplication": "0.0",
         "linesOfCode": "229"
       },
-      "todoCount": 1,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 67,
+      "estimatedScore": 70,
       "comments": [],
-      "todos": [
-        "Program.cs:193"
-      ],
-      "stretchGoals": [
-        "CsvHelper",
-        "Spectre.Console",
-        "JsonFileHandler"
-      ],
-      "notes": [
-        "1 TODOs remaining",
-        "Completed stretch goal(s)"
-      ]
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
     },
     {
       "name": "TGustafson1",
