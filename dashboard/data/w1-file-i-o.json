@@ -1,7 +1,46 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-02-20T18:37:29Z",
+  "generated": "2026-02-21T01:24:33Z",
   "students": [
+    {
+      "name": "irodriguez5",
+      "repo": "w1-file-i-o-irodriguez5",
+      "submittedAt": "2026-02-20T23:34:49Z",
+      "build": {
+        "status": "failure",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-irodriguez5/actions/runs/22245375256",
+        "errorStep": "Build",
+        "errorLines": [
+          "C:\\Program Files\\dotnet\\sdk\\10.0.103\\Microsoft.Common.CurrentVersion.targets(5416,5): error MSB3030: Could not copy the file \"D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\bin\\Debug\\net6.0\\input.csv\" because it was not found. [D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\W1-assignment-template.csproj]",
+          "Build FAILED.",
+          "C:\\Program Files\\dotnet\\sdk\\10.0.103\\Microsoft.Common.CurrentVersion.targets(5416,5): error MSB3030: Could not copy the file \"D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\bin\\Debug\\net6.0\\input.csv\" because it was not found. [D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\W1-assignment-template.csproj]"
+        ]
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w1-file-i-o-irodriguez5",
+        "maintainability": "A",
+        "codeSmells": "20",
+        "bugs": "1",
+        "vulnerabilities": "0",
+        "reliability": "C",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "133"
+      },
+      "todoCount": 1,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 67,
+      "comments": [],
+      "todos": [
+        "Program.cs:12"
+      ],
+      "stretchGoals": [],
+      "notes": [
+        "1 TODOs remaining"
+      ]
+    },
     {
       "name": "TGustafson1",
       "repo": "w1-file-i-o-TGustafson1",
@@ -117,41 +156,6 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Samuel-dotcom-rgb",
-        "maintainability": "A",
-        "codeSmells": "20",
-        "bugs": "1",
-        "vulnerabilities": "0",
-        "reliability": "C",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "133"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 70,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "notes": []
-    },
-    {
-      "name": "irodriguez5",
-      "repo": "w1-file-i-o-irodriguez5",
-      "submittedAt": "2026-02-03T01:17:30Z",
-      "build": {
-        "status": "failure",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-irodriguez5/actions/runs/21612840553",
-        "errorStep": "Build",
-        "errorLines": [
-          "C:\\Program Files\\dotnet\\sdk\\10.0.102\\Microsoft.Common.CurrentVersion.targets(5416,5): error MSB3030: Could not copy the file \"D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\bin\\Debug\\net6.0\\input.csv\" because it was not found. [D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\W1-assignment-template.csproj]",
-          "Build FAILED.",
-          "C:\\Program Files\\dotnet\\sdk\\10.0.102\\Microsoft.Common.CurrentVersion.targets(5416,5): error MSB3030: Could not copy the file \"D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\bin\\Debug\\net6.0\\input.csv\" because it was not found. [D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\W1-assignment-template.csproj]"
-        ]
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w1-file-i-o-irodriguez5",
         "maintainability": "A",
         "codeSmells": "20",
         "bugs": "1",

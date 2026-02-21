@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-20T18:37:55Z",
+  "generated": "2026-02-21T01:25:15Z",
   "students": [
     {
       "name": "MW92007",
@@ -411,16 +411,16 @@
       "name": "irodriguez5",
       "repo": "w1-file-i-o-irodriguez5",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-02-03T01:17:30Z",
-      "pushedAt": "2026-02-03T01:17:37Z",
+      "submittedAt": "2026-02-20T23:34:49Z",
+      "pushedAt": "2026-02-20T23:34:59Z",
       "build": {
         "status": "failure",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-irodriguez5/actions/runs/21612840553",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-irodriguez5/actions/runs/22245375256",
         "errorStep": "Build",
         "errorLines": [
-          "C:\\Program Files\\dotnet\\sdk\\10.0.102\\Microsoft.Common.CurrentVersion.targets(5416,5): error MSB3030: Could not copy the file \"D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\bin\\Debug\\net6.0\\input.csv\" because it was not found. [D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\W1-assignment-template.csproj]",
+          "C:\\Program Files\\dotnet\\sdk\\10.0.103\\Microsoft.Common.CurrentVersion.targets(5416,5): error MSB3030: Could not copy the file \"D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\bin\\Debug\\net6.0\\input.csv\" because it was not found. [D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\W1-assignment-template.csproj]",
           "Build FAILED.",
-          "C:\\Program Files\\dotnet\\sdk\\10.0.102\\Microsoft.Common.CurrentVersion.targets(5416,5): error MSB3030: Could not copy the file \"D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\bin\\Debug\\net6.0\\input.csv\" because it was not found. [D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\W1-assignment-template.csproj]"
+          "C:\\Program Files\\dotnet\\sdk\\10.0.103\\Microsoft.Common.CurrentVersion.targets(5416,5): error MSB3030: Could not copy the file \"D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\bin\\Debug\\net6.0\\input.csv\" because it was not found. [D:\\a\\w1-file-i-o-irodriguez5\\w1-file-i-o-irodriguez5\\W1-assignment-template.csproj]"
         ]
       },
       "sonar": {
@@ -434,15 +434,19 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 0,
+      "todoCount": 1,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 70,
+      "estimatedScore": 67,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:12"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "1 TODOs remaining"
+      ]
     },
     {
       "name": "irodriguez5",
