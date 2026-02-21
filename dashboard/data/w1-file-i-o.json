@@ -1,6 +1,6 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-02-21T01:24:33Z",
+  "generated": "2026-02-21T06:34:03Z",
   "students": [
     {
       "name": "irodriguez5",
@@ -27,19 +27,15 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 1,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 67,
+      "estimatedScore": 70,
       "comments": [],
-      "todos": [
-        "Program.cs:12"
-      ],
+      "todos": [],
       "stretchGoals": [],
-      "notes": [
-        "1 TODOs remaining"
-      ]
+      "notes": []
     },
     {
       "name": "TGustafson1",
