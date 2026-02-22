@@ -1,6 +1,6 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-02-22T06:39:05Z",
+  "generated": "2026-02-22T12:34:58Z",
   "students": [
     {
       "name": "Sdunn235",
@@ -24,41 +24,14 @@
         "linesOfCode": "633"
       },
       "todoCount": 0,
-      "studentComments": 4,
-      "hasStretch": true,
-      "needsReview": true,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
       "estimatedScore": 100,
-      "comments": [
-        {
-          "file": "CharacterUI.cs",
-          "line": 164,
-          "text": "    /// Helper method to display a single character's details."
-        },
-        {
-          "file": "CharacterMap.cs",
-          "line": 5,
-          "text": "/// This is used by CsvHelper to read and write CSV files correctly."
-        },
-        {
-          "file": "CharacterMap.cs",
-          "line": 11,
-          "text": "        // CsvHelper uses these mappings to match CSV column positions to Character properties."
-        },
-        {
-          "file": "Program.cs",
-          "line": 22,
-          "text": "/// *Disclosure*: This project was initially set up using AI assistance as part of a Week 2 learning exercise."
-        }
-      ],
+      "comments": [],
       "todos": [],
-      "stretchGoals": [
-        "CsvHelper",
-        "JsonFileHandler"
-      ],
-      "notes": [
-        "Completed stretch goal(s)",
-        "4 student comment(s) to review"
-      ]
+      "stretchGoals": [],
+      "notes": []
     },
     {
       "name": "irodriguez5",
