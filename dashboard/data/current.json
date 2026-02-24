@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-23T18:55:33Z",
+  "generated": "2026-02-24T01:28:15Z",
   "students": [
     {
       "name": "MW92007",
@@ -563,6 +563,39 @@
         "security": "A",
         "duplication": "0.0",
         "linesOfCode": "132"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "notes": []
+    },
+    {
+      "name": "taylorharty",
+      "repo": "w3-srp-linq-taylorharty",
+      "assignmentPattern": "w3-srp-linq",
+      "submittedAt": "2026-02-05T20:27:35Z",
+      "pushedAt": "2026-02-05T20:27:35Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w3-srp-linq-taylorharty",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,
