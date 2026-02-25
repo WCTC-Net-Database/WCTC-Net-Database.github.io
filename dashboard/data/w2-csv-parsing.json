@@ -1,68 +1,87 @@
 {
   "assignment": "w2-csv-parsing",
-  "generated": "2026-02-25T06:55:39Z",
+  "generated": "2026-02-25T12:50:26Z",
   "students": [
-    {
-      "name": "MW92007",
-      "repo": "w2-csv-parsing-MW92007",
-      "submittedAt": "2026-02-14T05:17:12Z",
-      "build": {
-        "status": "unknown",
-        "url": "",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w2-csv-parsing-MW92007",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "notes": []
-    },
     {
       "name": "irodriguez5",
       "repo": "w2-csv-parsing-irodriguez5",
-      "submittedAt": "2026-02-12T06:15:24Z",
+      "submittedAt": "2026-02-25T10:39:27Z",
       "build": {
-        "status": "unknown",
-        "url": "",
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-irodriguez5/actions/runs/22393182881",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-irodriguez5",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
+        "maintainability": "A",
+        "codeSmells": "7",
+        "bugs": "1",
+        "vulnerabilities": "0",
+        "reliability": "C",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "394"
       },
       "todoCount": 0,
-      "studentComments": 0,
+      "studentComments": 1,
       "hasStretch": false,
-      "needsReview": false,
+      "needsReview": true,
       "estimatedScore": 100,
-      "comments": [],
+      "comments": [
+        {
+          "file": "Program.cs",
+          "line": 272,
+          "text": "    // CSV helpers"
+        }
+      ],
       "todos": [],
       "stretchGoals": [],
-      "notes": []
+      "notes": [
+        "1 student comment(s) to review"
+      ]
+    },
+    {
+      "name": "MW92007",
+      "repo": "w2-csv-parsing-MW92007",
+      "submittedAt": "2026-02-25T10:39:26Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-MW92007/actions/runs/22393182204",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w2-csv-parsing-MW92007",
+        "maintainability": "A",
+        "codeSmells": "17",
+        "bugs": "1",
+        "vulnerabilities": "0",
+        "reliability": "C",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "177"
+      },
+      "todoCount": 8,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [],
+      "todos": [
+        "Program.cs:62",
+        "Program.cs:63",
+        "Program.cs:107",
+        "Program.cs:112",
+        "Program.cs:154",
+        "Program.cs:159",
+        "Program.cs:163",
+        "Program.cs:167"
+      ],
+      "stretchGoals": [],
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     },
     {
       "name": "Samuel-dotcom-rgb",
