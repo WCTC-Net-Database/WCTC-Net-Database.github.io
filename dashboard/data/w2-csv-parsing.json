@@ -1,6 +1,6 @@
 {
   "assignment": "w2-csv-parsing",
-  "generated": "2026-02-25T12:50:26Z",
+  "generated": "2026-02-25T18:57:31Z",
   "students": [
     {
       "name": "irodriguez5",
@@ -24,22 +24,14 @@
         "linesOfCode": "394"
       },
       "todoCount": 0,
-      "studentComments": 1,
+      "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
+      "needsReview": false,
       "estimatedScore": 100,
-      "comments": [
-        {
-          "file": "Program.cs",
-          "line": 272,
-          "text": "    // CSV helpers"
-        }
-      ],
+      "comments": [],
       "todos": [],
       "stretchGoals": [],
-      "notes": [
-        "1 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "MW92007",
@@ -62,26 +54,15 @@
         "duplication": "0.0",
         "linesOfCode": "177"
       },
-      "todoCount": 8,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 80,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "Program.cs:62",
-        "Program.cs:63",
-        "Program.cs:107",
-        "Program.cs:112",
-        "Program.cs:154",
-        "Program.cs:159",
-        "Program.cs:163",
-        "Program.cs:167"
-      ],
+      "todos": [],
       "stretchGoals": [],
-      "notes": [
-        "Many TODOs remaining - likely incomplete"
-      ]
+      "notes": []
     },
     {
       "name": "Samuel-dotcom-rgb",
