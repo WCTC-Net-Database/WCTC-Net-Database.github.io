@@ -76,6 +76,16 @@ jobs:
             commit_date=$(echo "$commits_info" | jq -r '.[0].commit.author.date // empty')
             submitted_at="${commit_date:-$pushed_at}"
 
+            # Count student commits (exclude instructor/bot/workflow commits)
+            all_commits=$(gh api "repos/WCTC-Net-Database/$repo/commits?per_page=100" 2>/dev/null || echo '[]')
+            student_commit_count=$(echo "$all_commits" | jq '[.[] | select(
+              (.author.login // "" | test("^(mcarthey|github-classroom\\[bot\\]|web-flow)$") | not) and
+              (.commit.author.name // "" | test("^(WCTC Instructor|github-classroom\\[bot\\])$") | not) and
+              (.commit.message // "" | test("(?i)(workflow|sonarcloud)") | not)
+            )] | length' 2>/dev/null || echo "0")
+            student_commit_count=${student_commit_count:-0}
+            echo "    -> Student commits: $student_commit_count" >&2
+
             # Check if changed since last run
             NEEDS_ANALYSIS=true
             if [ -n "$LAST_RUN_TIME" ] && [ -n "$pushed_at" ]; then
@@ -288,6 +298,16 @@ jobs:
             [ "$comment_count" -gt 0 ] && needs_review="true"
             [ "$estimated_score" -lt 0 ] && estimated_score=0
 
+            # Template-only detection: override score when no student work
+            is_template_only="false"
+            if [ "$student_commit_count" -eq 0 ]; then
+              is_template_only="true"
+              estimated_score=0
+              needs_review="true"
+              notes=$(echo "$notes" | jq '. + ["Template only - no student commits detected"]')
+              echo "    -> Template only (no student commits)" >&2
+            fi
+
             # Output student JSON
             jq -n \
               --arg name "$student_name" \
@@ -316,6 +336,8 @@ jobs:
               --argjson comments "$student_comments" \
               --argjson todos "$todo_locations" \
               --argjson stretch "$stretch_goals" \
+              --argjson scommits "$student_commit_count" \
+              --argjson istemplate "$is_template_only" \
               --argjson notes "$notes" \
               '{
                 name: $name,
@@ -343,6 +365,8 @@ jobs:
                 comments: $comments,
                 todos: $todos,
                 stretchGoals: $stretch,
+                studentCommitCount: $scommits,
+                isTemplateOnly: $istemplate,
                 notes: $notes
               }'
           }
@@ -441,7 +465,7 @@ jobs:
 
           # Create snapshot with all students (summary data only)
           snapshot_date=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
-          snapshot_students=$(jq '[.[] | {name, repo, assignmentPattern, buildStatus: .build.status, estimatedScore, todoCount, hasStretch, maintainability: .sonar.maintainability, submittedAt}]' /tmp/all_students.json)
+          snapshot_students=$(jq '[.[] | {name, repo, assignmentPattern, buildStatus: .build.status, estimatedScore, todoCount, hasStretch, maintainability: .sonar.maintainability, submittedAt, studentCommitCount, isTemplateOnly}]' /tmp/all_students.json)
 
           tmp_history=$(mktemp)
           jq --arg date "$snapshot_date" --argjson students "$snapshot_students" \

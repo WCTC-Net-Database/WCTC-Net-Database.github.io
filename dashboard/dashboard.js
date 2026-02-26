@@ -190,6 +190,8 @@ function filterByStatus(students, filter) {
             return students.filter(s => s.needsReview);
         case 'stretch':
             return students.filter(s => s.hasStretch);
+        case 'template':
+            return students.filter(s => s.isTemplateOnly || s.studentCommitCount === 0);
         default:
             return students;
     }
@@ -239,8 +241,11 @@ function renderStudents(students) {
         return;
     }
 
-    // Sort: needs review first, then failed builds, then by score descending
+    // Sort: template-only first, then needs review, then failed builds, then by score descending
     students.sort((a, b) => {
+        const aTemplate = a.isTemplateOnly || a.studentCommitCount === 0;
+        const bTemplate = b.isTemplateOnly || b.studentCommitCount === 0;
+        if (aTemplate !== bTemplate) return bTemplate - aTemplate;
         if (a.needsReview !== b.needsReview) return b.needsReview - a.needsReview;
         if (a.build?.status === 'failure' && b.build?.status !== 'failure') return -1;
         if (b.build?.status === 'failure' && a.build?.status !== 'failure') return 1;
@@ -259,8 +264,11 @@ function renderStudentCard(student, index) {
     const buildIcon = buildStatus === 'success' ? 'check' : buildStatus === 'failure' ? 'times' : 'question';
     const buildClass = buildStatus === 'success' ? 'pass' : buildStatus === 'failure' ? 'fail' : 'unknown';
 
+    const isTemplate = student.isTemplateOnly || student.studentCommitCount === 0;
+
     let cardClass = 'student-card';
-    if (student.build?.status === 'failure') cardClass += ' build-failed';
+    if (isTemplate) cardClass += ' template-only';
+    else if (student.build?.status === 'failure') cardClass += ' build-failed';
     else if (student.needsReview) cardClass += ' needs-review';
     else if (student.hasStretch) cardClass += ' has-stretch';
 
@@ -306,7 +314,9 @@ function renderStudentCard(student, index) {
                             <span class="status-badge status-${buildClass}"></span>
                             ${student.name}
                         </h5>
-                        <span class="badge badge-secondary">${student.estimatedScore || '-'}%</span>
+                        ${isTemplate
+                            ? '<span class="template-badge">Template Only</span>'
+                            : `<span class="badge badge-secondary">${student.estimatedScore || '-'}%</span>`}
                     </div>
 
                     <div class="mb-2">
@@ -344,6 +354,7 @@ function renderStudentCard(student, index) {
                     </div>
 
                     <div class="mt-3">
+                        ${isTemplate ? `<span class="template-badge"><i class="fas fa-exclamation-circle"></i> No Student Work</span> ` : ''}
                         ${student.hasStretch ? `<span class="stretch-badge"><i class="fas fa-star"></i> Stretch Goal</span> ` : ''}
                         ${(student.studentComments > 0 || hasComments) ? `<span class="attention-badge"><i class="fas fa-comment"></i> ${student.studentComments || student.comments?.length || 0} comment(s)</span>` : ''}
                     </div>
@@ -559,6 +570,11 @@ function toggleStretchCredit(studentName, goalId, checkbox) {
 
 // Generate feedback text for a student
 function generateFeedback(student) {
+    // Short-circuit for template-only repos
+    if (student.isTemplateOnly || student.studentCommitCount === 0) {
+        return `TEMPLATE ONLY - No student commits detected\n\nThis repository contains only the template code. No student work has been submitted.\n\nAction: Follow up with student about missing submission.`;
+    }
+
     const lines = [];
     const assignment = student.assignmentPattern || 'assignment';
     const weekNum = assignment.match(/w(\d+)/)?.[1] || '';

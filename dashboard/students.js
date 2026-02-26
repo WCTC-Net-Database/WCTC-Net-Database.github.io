@@ -276,6 +276,8 @@ function renderStudentList() {
 
     container.innerHTML = filteredStudents.map(student => {
         const stats = calculateStudentStats(student);
+        const current = getCurrentEntry(student);
+        const isTemplate = current?.isTemplateOnly || current?.studentCommitCount === 0;
         const trendIcon = stats.trend === 'up' ? 'arrow-up' : stats.trend === 'down' ? 'arrow-down' : 'minus';
         const trendClass = stats.trend === 'up' ? 'trend-up' : stats.trend === 'down' ? 'trend-down' : 'trend-stable';
 
@@ -294,7 +296,7 @@ function renderStudentList() {
                     </div>
                     <div class="text-right">
                         <div class="h5 mb-0">
-                            ${stats.currentScore}%
+                            ${isTemplate ? '<span class="template-badge">Template</span>' : `${stats.currentScore}%`}
                             <i class="fas fa-${trendIcon} ${trendClass} ml-1"></i>
                         </div>
                         <div class="small">
@@ -352,6 +354,11 @@ function selectStudent(studentKey) {
             ${current ? `
             <div class="current-info mt-3 p-3 bg-light rounded">
                 <h6><i class="fas fa-code-branch"></i> Latest Repository: <a href="https://github.com/WCTC-Net-Database/${current.repo}" target="_blank"><code>${current.repo}</code></a></h6>
+                ${(current.isTemplateOnly || current.studentCommitCount === 0) ? `
+                <div class="alert alert-secondary mt-2 mb-2">
+                    <i class="fas fa-exclamation-circle"></i> <strong>Template Only</strong> - No student commits detected in this repository. This contains only the original template code.
+                </div>
+                ` : ''}
                 <div class="row mt-3">
                     <div class="col-md-2 text-center">
                         <div class="h3 mb-0">${stats.currentScore}%</div>

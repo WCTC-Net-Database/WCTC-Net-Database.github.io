@@ -103,6 +103,20 @@
             font-size: 0.85em;
         }
 
+        .template-badge {
+            background-color: #e2e3e5;
+            color: #383d41;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .student-card.template-only {
+            border-left: 4px solid #6c757d;
+            opacity: 0.7;
+        }
+
         /* Expandable Details Styles */
         .details-section {
             background-color: #f8f9fa;
@@ -281,6 +295,9 @@
                 </button>
                 <button type="button" class="btn btn-outline-success filter-btn" data-filter="stretch">
                     <i class="fas fa-star"></i> Stretch Goals
+                </button>
+                <button type="button" class="btn btn-outline-secondary filter-btn" data-filter="template">
+                    <i class="fas fa-file-alt"></i> Template Only
                 </button>
             </div>
         </div>
