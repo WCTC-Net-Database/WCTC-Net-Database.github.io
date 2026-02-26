@@ -1,6 +1,6 @@
 {
   "assignment": "w2-csv-parsing",
-  "generated": "2026-02-26T18:43:25Z",
+  "generated": "2026-02-26T21:44:02Z",
   "students": [
     {
       "name": "irodriguez5",
@@ -24,14 +24,24 @@
         "linesOfCode": "394"
       },
       "todoCount": 0,
-      "studentComments": 0,
+      "studentComments": 1,
       "hasStretch": false,
-      "needsReview": false,
+      "needsReview": true,
       "estimatedScore": 100,
-      "comments": [],
+      "comments": [
+        {
+          "file": "Program.cs",
+          "line": 272,
+          "text": "    // CSV helpers"
+        }
+      ],
       "todos": [],
       "stretchGoals": [],
-      "notes": []
+      "studentCommitCount": 2,
+      "isTemplateOnly": false,
+      "notes": [
+        "1 student comment(s) to review"
+      ]
     },
     {
       "name": "MW92007",
@@ -54,15 +64,28 @@
         "duplication": "0.0",
         "linesOfCode": "177"
       },
-      "todoCount": 0,
+      "todoCount": 8,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:62",
+        "Program.cs:63",
+        "Program.cs:107",
+        "Program.cs:112",
+        "Program.cs:154",
+        "Program.cs:159",
+        "Program.cs:163",
+        "Program.cs:167"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     },
     {
       "name": "Samuel-dotcom-rgb",
@@ -93,6 +116,8 @@
       "comments": [],
       "todos": [],
       "stretchGoals": [],
+      "studentCommitCount": 8,
+      "isTemplateOnly": false,
       "notes": []
     },
     {
@@ -116,15 +141,31 @@
         "duplication": "0.0",
         "linesOfCode": "132"
       },
-      "todoCount": 0,
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 0,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Template only - no student commits detected"
+      ]
     },
     {
       "name": "TGustafson1",
@@ -147,15 +188,31 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 0,
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 0,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Template only - no student commits detected"
+      ]
     },
     {
       "name": "Sdunn235",
@@ -178,15 +235,31 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 0,
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 0,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Template only - no student commits detected"
+      ]
     }
   ]
 }

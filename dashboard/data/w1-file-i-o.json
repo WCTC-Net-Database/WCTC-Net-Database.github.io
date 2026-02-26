@@ -1,6 +1,6 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-02-26T18:43:09Z",
+  "generated": "2026-02-26T21:43:21Z",
   "students": [
     {
       "name": "irodriguez5",
@@ -23,15 +23,21 @@
         "duplication": "0.0",
         "linesOfCode": "251"
       },
-      "todoCount": 0,
+      "todoCount": 1,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 100,
+      "estimatedScore": 97,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:12"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "studentCommitCount": 4,
+      "isTemplateOnly": false,
+      "notes": [
+        "1 TODOs remaining"
+      ]
     },
     {
       "name": "Sdunn235",
@@ -55,14 +61,43 @@
         "linesOfCode": "633"
       },
       "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
+      "studentComments": 4,
+      "hasStretch": true,
+      "needsReview": true,
       "estimatedScore": 100,
-      "comments": [],
+      "comments": [
+        {
+          "file": "CharacterMap.cs",
+          "line": 5,
+          "text": "/// This is used by CsvHelper to read and write CSV files correctly."
+        },
+        {
+          "file": "CharacterMap.cs",
+          "line": 11,
+          "text": "        // CsvHelper uses these mappings to match CSV column positions to Character properties."
+        },
+        {
+          "file": "CharacterUI.cs",
+          "line": 164,
+          "text": "    /// Helper method to display a single character's details."
+        },
+        {
+          "file": "Program.cs",
+          "line": 22,
+          "text": "/// *Disclosure*: This project was initially set up using AI assistance as part of a Week 2 learning exercise."
+        }
+      ],
       "todos": [],
-      "stretchGoals": [],
-      "notes": []
+      "stretchGoals": [
+        "CsvHelper",
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 9,
+      "isTemplateOnly": false,
+      "notes": [
+        "Completed stretch goal(s)",
+        "4 student comment(s) to review"
+      ]
     },
     {
       "name": "TGustafson1",
@@ -87,15 +122,26 @@
         "duplication": "0.0",
         "linesOfCode": "229"
       },
-      "todoCount": 0,
+      "todoCount": 1,
       "studentComments": 0,
-      "hasStretch": false,
+      "hasStretch": true,
       "needsReview": false,
-      "estimatedScore": 70,
+      "estimatedScore": 67,
       "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "notes": []
+      "todos": [
+        "Program.cs:193"
+      ],
+      "stretchGoals": [
+        "CsvHelper",
+        "Spectre.Console",
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 21,
+      "isTemplateOnly": false,
+      "notes": [
+        "1 TODOs remaining",
+        "Completed stretch goal(s)"
+      ]
     },
     {
       "name": "MW92007",
@@ -118,15 +164,39 @@
         "duplication": "0.0",
         "linesOfCode": "189"
       },
-      "todoCount": 0,
-      "studentComments": 0,
+      "todoCount": 12,
+      "studentComments": 1,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [
+        {
+          "file": "Program.cs",
+          "line": 246,
+          "text": "        // Then here it just returns all the values back to the file?"
+        }
+      ],
+      "todos": [
+        "Program.cs:13",
+        "Program.cs:84",
+        "Program.cs:123",
+        "Program.cs:143",
+        "Program.cs:154",
+        "Program.cs:160",
+        "Program.cs:163",
+        "Program.cs:187",
+        "Program.cs:261",
+        "Program.cs:264",
+        "Program.cs:265",
+        "Program.cs:266"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "studentCommitCount": 2,
+      "isTemplateOnly": false,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "1 student comment(s) to review"
+      ]
     },
     {
       "name": "Samuel-dotcom-rgb",
@@ -155,15 +225,36 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 0,
+      "todoCount": 16,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 70,
+      "needsReview": true,
+      "estimatedScore": 50,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:10",
+        "Program.cs:81",
+        "Program.cs:99",
+        "Program.cs:118",
+        "Program.cs:126",
+        "Program.cs:137",
+        "Program.cs:143",
+        "Program.cs:146",
+        "Program.cs:149",
+        "Program.cs:155",
+        "Program.cs:174",
+        "Program.cs:178",
+        "Program.cs:181",
+        "Program.cs:182",
+        "Program.cs:183",
+        "Program.cs:185"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "studentCommitCount": 5,
+      "isTemplateOnly": false,
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     },
     {
       "name": "taylorharty",
@@ -186,15 +277,22 @@
         "duplication": "0.0",
         "linesOfCode": "274"
       },
-      "todoCount": 0,
+      "todoCount": 2,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 100,
+      "estimatedScore": 94,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:135",
+        "Program.cs:259"
+      ],
       "stretchGoals": [],
-      "notes": []
+      "studentCommitCount": 2,
+      "isTemplateOnly": false,
+      "notes": [
+        "2 TODOs remaining"
+      ]
     }
   ]
 }
