@@ -1,6 +1,6 @@
 {
   "assignment": "w3-srp-linq",
-  "generated": "2026-02-27T06:44:14Z",
+  "generated": "2026-02-27T12:43:23Z",
   "students": [
     {
       "name": "MW92007",
@@ -23,54 +23,17 @@
         "duplication": "0.0",
         "linesOfCode": "328"
       },
-      "todoCount": 12,
-      "studentComments": 4,
+      "todoCount": 0,
+      "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 80,
-      "comments": [
-        {
-          "file": "CharacterManager.cs",
-          "line": 17,
-          "text": "/// Why is this bad?"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 13,
-          "text": "/// Why separate reading and writing?"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 88,
-          "text": "    /// Helper method to format a Character object as a CSV line."
-        },
-        {
-          "file": "CharacterReader.cs",
-          "line": 115,
-          "text": "    /// Helper method to parse a single CSV line into a Character object."
-        }
-      ],
-      "todos": [
-        "CharacterManager.cs:40",
-        "CharacterManager.cs:52",
-        "CharacterManager.cs:113",
-        "CharacterWriter.cs:37",
-        "CharacterWriter.cs:47",
-        "CharacterWriter.cs:70",
-        "CharacterWriter.cs:79",
-        "CharacterWriter.cs:96",
-        "CharacterReader.cs:34",
-        "CharacterReader.cs:60",
-        "CharacterReader.cs:63",
-        "CharacterReader.cs:108"
-      ],
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 1,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "4 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "Samuel-dotcom-rgb",
