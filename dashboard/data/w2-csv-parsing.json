@@ -1,6 +1,6 @@
 {
   "assignment": "w2-csv-parsing",
-  "generated": "2026-02-26T21:44:02Z",
+  "generated": "2026-02-27T01:24:53Z",
   "students": [
     {
       "name": "irodriguez5",
@@ -24,24 +24,16 @@
         "linesOfCode": "394"
       },
       "todoCount": 0,
-      "studentComments": 1,
+      "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
+      "needsReview": false,
       "estimatedScore": 100,
-      "comments": [
-        {
-          "file": "Program.cs",
-          "line": 272,
-          "text": "    // CSV helpers"
-        }
-      ],
+      "comments": [],
       "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 2,
       "isTemplateOnly": false,
-      "notes": [
-        "1 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "MW92007",
@@ -64,28 +56,17 @@
         "duplication": "0.0",
         "linesOfCode": "177"
       },
-      "todoCount": 8,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 80,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "Program.cs:62",
-        "Program.cs:63",
-        "Program.cs:107",
-        "Program.cs:112",
-        "Program.cs:154",
-        "Program.cs:159",
-        "Program.cs:163",
-        "Program.cs:167"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 1,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete"
-      ]
+      "notes": []
     },
     {
       "name": "Samuel-dotcom-rgb",
@@ -141,29 +122,17 @@
         "duplication": "0.0",
         "linesOfCode": "132"
       },
-      "todoCount": 10,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [
-        "Program.cs:56",
-        "Program.cs:57",
-        "Program.cs:62",
-        "Program.cs:66",
-        "Program.cs:71",
-        "Program.cs:81",
-        "Program.cs:97",
-        "Program.cs:102",
-        "Program.cs:106",
-        "Program.cs:110"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
         "Template only - no student commits detected"
       ]
     },
@@ -188,29 +157,17 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 10,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [
-        "Program.cs:56",
-        "Program.cs:57",
-        "Program.cs:62",
-        "Program.cs:66",
-        "Program.cs:71",
-        "Program.cs:81",
-        "Program.cs:97",
-        "Program.cs:102",
-        "Program.cs:106",
-        "Program.cs:110"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
         "Template only - no student commits detected"
       ]
     },
@@ -235,29 +192,17 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 10,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [
-        "Program.cs:56",
-        "Program.cs:57",
-        "Program.cs:62",
-        "Program.cs:66",
-        "Program.cs:71",
-        "Program.cs:81",
-        "Program.cs:97",
-        "Program.cs:102",
-        "Program.cs:106",
-        "Program.cs:110"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
         "Template only - no student commits detected"
       ]
     }

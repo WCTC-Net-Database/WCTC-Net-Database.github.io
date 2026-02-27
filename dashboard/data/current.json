@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-26T21:45:06Z",
+  "generated": "2026-02-27T01:25:15Z",
   "students": [
     {
       "name": "MW92007",
@@ -24,39 +24,17 @@
         "duplication": "0.0",
         "linesOfCode": "189"
       },
-      "todoCount": 12,
-      "studentComments": 1,
+      "todoCount": 0,
+      "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 80,
-      "comments": [
-        {
-          "file": "Program.cs",
-          "line": 246,
-          "text": "        // Then here it just returns all the values back to the file?"
-        }
-      ],
-      "todos": [
-        "Program.cs:13",
-        "Program.cs:84",
-        "Program.cs:123",
-        "Program.cs:143",
-        "Program.cs:154",
-        "Program.cs:160",
-        "Program.cs:163",
-        "Program.cs:187",
-        "Program.cs:261",
-        "Program.cs:264",
-        "Program.cs:265",
-        "Program.cs:266"
-      ],
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 2,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "1 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "MW92007",
@@ -81,28 +59,17 @@
         "duplication": "0.0",
         "linesOfCode": "177"
       },
-      "todoCount": 8,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 80,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "Program.cs:62",
-        "Program.cs:63",
-        "Program.cs:107",
-        "Program.cs:112",
-        "Program.cs:154",
-        "Program.cs:159",
-        "Program.cs:163",
-        "Program.cs:167"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 1,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete"
-      ]
+      "notes": []
     },
     {
       "name": "MW92007",
@@ -127,57 +94,17 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 16,
-      "studentComments": 4,
+      "todoCount": 0,
+      "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
-      "comments": [
-        {
-          "file": "CharacterManager.cs",
-          "line": 14,
-          "text": "/// Why is this bad?"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 13,
-          "text": "/// Why separate reading and writing?"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 75,
-          "text": "    /// Helper method to format a Character object as a CSV line."
-        },
-        {
-          "file": "CharacterReader.cs",
-          "line": 107,
-          "text": "    /// Helper method to parse a single CSV line into a Character object."
-        }
-      ],
-      "todos": [
-        "CharacterManager.cs:37",
-        "CharacterManager.cs:49",
-        "CharacterManager.cs:71",
-        "CharacterManager.cs:85",
-        "CharacterManager.cs:105",
-        "CharacterWriter.cs:37",
-        "CharacterWriter.cs:46",
-        "CharacterWriter.cs:60",
-        "CharacterWriter.cs:69",
-        "CharacterWriter.cs:83",
-        "CharacterReader.cs:34",
-        "CharacterReader.cs:47",
-        "CharacterReader.cs:50",
-        "CharacterReader.cs:77",
-        "CharacterReader.cs:100",
-        "CharacterReader.cs:114"
-      ],
+      "comments": [],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "4 student comment(s) to review",
         "Template only - no student commits detected"
       ]
     },
@@ -210,36 +137,17 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 16,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 50,
+      "needsReview": false,
+      "estimatedScore": 70,
       "comments": [],
-      "todos": [
-        "Program.cs:10",
-        "Program.cs:81",
-        "Program.cs:99",
-        "Program.cs:118",
-        "Program.cs:126",
-        "Program.cs:137",
-        "Program.cs:143",
-        "Program.cs:146",
-        "Program.cs:149",
-        "Program.cs:155",
-        "Program.cs:174",
-        "Program.cs:178",
-        "Program.cs:181",
-        "Program.cs:182",
-        "Program.cs:183",
-        "Program.cs:185"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 5,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete"
-      ]
+      "notes": []
     },
     {
       "name": "Samuel-dotcom-rgb",
@@ -335,43 +243,16 @@
         "linesOfCode": "633"
       },
       "todoCount": 0,
-      "studentComments": 4,
-      "hasStretch": true,
-      "needsReview": true,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
       "estimatedScore": 100,
-      "comments": [
-        {
-          "file": "CharacterMap.cs",
-          "line": 5,
-          "text": "/// This is used by CsvHelper to read and write CSV files correctly."
-        },
-        {
-          "file": "CharacterMap.cs",
-          "line": 11,
-          "text": "        // CsvHelper uses these mappings to match CSV column positions to Character properties."
-        },
-        {
-          "file": "CharacterUI.cs",
-          "line": 164,
-          "text": "    /// Helper method to display a single character's details."
-        },
-        {
-          "file": "Program.cs",
-          "line": 22,
-          "text": "/// *Disclosure*: This project was initially set up using AI assistance as part of a Week 2 learning exercise."
-        }
-      ],
+      "comments": [],
       "todos": [],
-      "stretchGoals": [
-        "CsvHelper",
-        "JsonFileHandler"
-      ],
+      "stretchGoals": [],
       "studentCommitCount": 9,
       "isTemplateOnly": false,
-      "notes": [
-        "Completed stretch goal(s)",
-        "4 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "Sdunn235",
@@ -396,29 +277,17 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 10,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [
-        "Program.cs:56",
-        "Program.cs:57",
-        "Program.cs:62",
-        "Program.cs:66",
-        "Program.cs:71",
-        "Program.cs:81",
-        "Program.cs:97",
-        "Program.cs:102",
-        "Program.cs:106",
-        "Program.cs:110"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
         "Template only - no student commits detected"
       ]
     },
@@ -445,57 +314,17 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 16,
-      "studentComments": 4,
+      "todoCount": 0,
+      "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
-      "comments": [
-        {
-          "file": "CharacterManager.cs",
-          "line": 14,
-          "text": "/// Why is this bad?"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 13,
-          "text": "/// Why separate reading and writing?"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 75,
-          "text": "    /// Helper method to format a Character object as a CSV line."
-        },
-        {
-          "file": "CharacterReader.cs",
-          "line": 107,
-          "text": "    /// Helper method to parse a single CSV line into a Character object."
-        }
-      ],
-      "todos": [
-        "CharacterManager.cs:37",
-        "CharacterManager.cs:49",
-        "CharacterManager.cs:71",
-        "CharacterManager.cs:85",
-        "CharacterManager.cs:105",
-        "CharacterWriter.cs:37",
-        "CharacterWriter.cs:46",
-        "CharacterWriter.cs:60",
-        "CharacterWriter.cs:69",
-        "CharacterWriter.cs:83",
-        "CharacterReader.cs:34",
-        "CharacterReader.cs:47",
-        "CharacterReader.cs:50",
-        "CharacterReader.cs:77",
-        "CharacterReader.cs:100",
-        "CharacterReader.cs:114"
-      ],
+      "comments": [],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "4 student comment(s) to review",
         "Template only - no student commits detected"
       ]
     },
@@ -524,26 +353,17 @@
         "duplication": "0.0",
         "linesOfCode": "229"
       },
-      "todoCount": 1,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 67,
+      "estimatedScore": 70,
       "comments": [],
-      "todos": [
-        "Program.cs:193"
-      ],
-      "stretchGoals": [
-        "CsvHelper",
-        "Spectre.Console",
-        "JsonFileHandler"
-      ],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 21,
       "isTemplateOnly": false,
-      "notes": [
-        "1 TODOs remaining",
-        "Completed stretch goal(s)"
-      ]
+      "notes": []
     },
     {
       "name": "TGustafson1",
@@ -568,29 +388,17 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 10,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [
-        "Program.cs:56",
-        "Program.cs:57",
-        "Program.cs:62",
-        "Program.cs:66",
-        "Program.cs:71",
-        "Program.cs:81",
-        "Program.cs:97",
-        "Program.cs:102",
-        "Program.cs:106",
-        "Program.cs:110"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
         "Template only - no student commits detected"
       ]
     },
@@ -617,57 +425,17 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 16,
-      "studentComments": 4,
+      "todoCount": 0,
+      "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
-      "comments": [
-        {
-          "file": "CharacterManager.cs",
-          "line": 14,
-          "text": "/// Why is this bad?"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 13,
-          "text": "/// Why separate reading and writing?"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 75,
-          "text": "    /// Helper method to format a Character object as a CSV line."
-        },
-        {
-          "file": "CharacterReader.cs",
-          "line": 107,
-          "text": "    /// Helper method to parse a single CSV line into a Character object."
-        }
-      ],
-      "todos": [
-        "CharacterManager.cs:37",
-        "CharacterManager.cs:49",
-        "CharacterManager.cs:71",
-        "CharacterManager.cs:85",
-        "CharacterManager.cs:105",
-        "CharacterWriter.cs:37",
-        "CharacterWriter.cs:46",
-        "CharacterWriter.cs:60",
-        "CharacterWriter.cs:69",
-        "CharacterWriter.cs:83",
-        "CharacterReader.cs:34",
-        "CharacterReader.cs:47",
-        "CharacterReader.cs:50",
-        "CharacterReader.cs:77",
-        "CharacterReader.cs:100",
-        "CharacterReader.cs:114"
-      ],
+      "comments": [],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "4 student comment(s) to review",
         "Template only - no student commits detected"
       ]
     },
@@ -694,21 +462,17 @@
         "duplication": "0.0",
         "linesOfCode": "251"
       },
-      "todoCount": 1,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 97,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "Program.cs:12"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 4,
       "isTemplateOnly": false,
-      "notes": [
-        "1 TODOs remaining"
-      ]
+      "notes": []
     },
     {
       "name": "irodriguez5",
@@ -734,24 +498,16 @@
         "linesOfCode": "394"
       },
       "todoCount": 0,
-      "studentComments": 1,
+      "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
+      "needsReview": false,
       "estimatedScore": 100,
-      "comments": [
-        {
-          "file": "Program.cs",
-          "line": 272,
-          "text": "    // CSV helpers"
-        }
-      ],
+      "comments": [],
       "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 2,
       "isTemplateOnly": false,
-      "notes": [
-        "1 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "irodriguez5",
@@ -776,57 +532,17 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 16,
-      "studentComments": 4,
+      "todoCount": 0,
+      "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
-      "comments": [
-        {
-          "file": "CharacterManager.cs",
-          "line": 14,
-          "text": "/// Why is this bad?"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 13,
-          "text": "/// Why separate reading and writing?"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 75,
-          "text": "    /// Helper method to format a Character object as a CSV line."
-        },
-        {
-          "file": "CharacterReader.cs",
-          "line": 107,
-          "text": "    /// Helper method to parse a single CSV line into a Character object."
-        }
-      ],
-      "todos": [
-        "CharacterManager.cs:37",
-        "CharacterManager.cs:49",
-        "CharacterManager.cs:71",
-        "CharacterManager.cs:85",
-        "CharacterManager.cs:105",
-        "CharacterWriter.cs:37",
-        "CharacterWriter.cs:46",
-        "CharacterWriter.cs:60",
-        "CharacterWriter.cs:69",
-        "CharacterWriter.cs:83",
-        "CharacterReader.cs:34",
-        "CharacterReader.cs:47",
-        "CharacterReader.cs:50",
-        "CharacterReader.cs:77",
-        "CharacterReader.cs:100",
-        "CharacterReader.cs:114"
-      ],
+      "comments": [],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "4 student comment(s) to review",
         "Template only - no student commits detected"
       ]
     },
@@ -853,22 +569,17 @@
         "duplication": "0.0",
         "linesOfCode": "274"
       },
-      "todoCount": 2,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 94,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "Program.cs:135",
-        "Program.cs:259"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 2,
       "isTemplateOnly": false,
-      "notes": [
-        "2 TODOs remaining"
-      ]
+      "notes": []
     },
     {
       "name": "taylorharty",
@@ -893,29 +604,17 @@
         "duplication": "0.0",
         "linesOfCode": "132"
       },
-      "todoCount": 10,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [
-        "Program.cs:56",
-        "Program.cs:57",
-        "Program.cs:62",
-        "Program.cs:66",
-        "Program.cs:71",
-        "Program.cs:81",
-        "Program.cs:97",
-        "Program.cs:102",
-        "Program.cs:106",
-        "Program.cs:110"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
         "Template only - no student commits detected"
       ]
     },
@@ -942,57 +641,17 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 16,
-      "studentComments": 4,
+      "todoCount": 0,
+      "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
-      "comments": [
-        {
-          "file": "CharacterManager.cs",
-          "line": 14,
-          "text": "/// Why is this bad?"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 13,
-          "text": "/// Why separate reading and writing?"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 75,
-          "text": "    /// Helper method to format a Character object as a CSV line."
-        },
-        {
-          "file": "CharacterReader.cs",
-          "line": 107,
-          "text": "    /// Helper method to parse a single CSV line into a Character object."
-        }
-      ],
-      "todos": [
-        "CharacterManager.cs:37",
-        "CharacterManager.cs:49",
-        "CharacterManager.cs:71",
-        "CharacterManager.cs:85",
-        "CharacterManager.cs:105",
-        "CharacterWriter.cs:37",
-        "CharacterWriter.cs:46",
-        "CharacterWriter.cs:60",
-        "CharacterWriter.cs:69",
-        "CharacterWriter.cs:83",
-        "CharacterReader.cs:34",
-        "CharacterReader.cs:47",
-        "CharacterReader.cs:50",
-        "CharacterReader.cs:77",
-        "CharacterReader.cs:100",
-        "CharacterReader.cs:114"
-      ],
+      "comments": [],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "4 student comment(s) to review",
         "Template only - no student commits detected"
       ]
     }
