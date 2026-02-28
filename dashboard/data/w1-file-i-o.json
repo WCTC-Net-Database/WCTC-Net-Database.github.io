@@ -1,7 +1,53 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-02-28T01:19:02Z",
+  "generated": "2026-02-28T06:29:33Z",
   "students": [
+    {
+      "name": "TGustafson1",
+      "repo": "w1-file-i-o-TGustafson1",
+      "submittedAt": "2026-02-28T03:28:30Z",
+      "build": {
+        "status": "failure",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/22512387872",
+        "errorStep": "Restore dependencies",
+        "errorLines": [
+          "MSBUILD : error MSB1011: Specify which project or solution file to use because this folder contains more than one project or solution file."
+        ]
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w1-file-i-o-TGustafson1",
+        "maintainability": "A",
+        "codeSmells": "18",
+        "bugs": "1",
+        "vulnerabilities": "0",
+        "reliability": "C",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "229"
+      },
+      "todoCount": 2,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": false,
+      "estimatedScore": 64,
+      "comments": [],
+      "todos": [
+        "MainMenu.cs:180",
+        "GameEngine.cs:34"
+      ],
+      "stretchGoals": [
+        "CsvHelper",
+        "Spectre.Console",
+        "JsonFileHandler",
+        "CommandPattern"
+      ],
+      "studentCommitCount": 26,
+      "isTemplateOnly": false,
+      "notes": [
+        "2 TODOs remaining",
+        "Completed stretch goal(s)"
+      ]
+    },
     {
       "name": "irodriguez5",
       "repo": "w1-file-i-o-irodriguez5",
@@ -65,41 +111,6 @@
       "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 9,
-      "isTemplateOnly": false,
-      "notes": []
-    },
-    {
-      "name": "TGustafson1",
-      "repo": "w1-file-i-o-TGustafson1",
-      "submittedAt": "2026-02-19T14:46:44Z",
-      "build": {
-        "status": "failure",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/22186563599",
-        "errorStep": "Restore dependencies",
-        "errorLines": [
-          "MSBUILD : error MSB1011: Specify which project or solution file to use because this folder contains more than one project or solution file."
-        ]
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w1-file-i-o-TGustafson1",
-        "maintainability": "A",
-        "codeSmells": "18",
-        "bugs": "1",
-        "vulnerabilities": "0",
-        "reliability": "C",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "229"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 70,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 21,
       "isTemplateOnly": false,
       "notes": []
     },
