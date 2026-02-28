@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-28T06:30:07Z",
+  "generated": "2026-02-28T12:32:48Z",
   "students": [
     {
       "name": "MW92007",
@@ -351,28 +351,17 @@
         "duplication": "0.0",
         "linesOfCode": "229"
       },
-      "todoCount": 2,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 64,
+      "estimatedScore": 70,
       "comments": [],
-      "todos": [
-        "MainMenu.cs:180",
-        "GameEngine.cs:34"
-      ],
-      "stretchGoals": [
-        "CsvHelper",
-        "Spectre.Console",
-        "JsonFileHandler",
-        "CommandPattern"
-      ],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 26,
       "isTemplateOnly": false,
-      "notes": [
-        "2 TODOs remaining",
-        "Completed stretch goal(s)"
-      ]
+      "notes": []
     },
     {
       "name": "TGustafson1",
