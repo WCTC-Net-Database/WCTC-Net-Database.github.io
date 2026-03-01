@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-01T01:47:53Z",
+  "generated": "2026-03-01T06:38:50Z",
   "students": [
     {
       "name": "MW92007",
@@ -221,36 +221,69 @@
       "name": "Sdunn235",
       "repo": "w1-file-i-o-Sdunn235",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-02-22T02:22:15Z",
-      "pushedAt": "2026-02-22T02:22:31Z",
+      "submittedAt": "2026-03-01T03:30:41Z",
+      "pushedAt": "2026-03-01T04:25:35Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/22268785440",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/22535874441",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
         "maintainability": "A",
-        "codeSmells": "24",
-        "bugs": "3",
+        "codeSmells": "34",
+        "bugs": "1",
         "vulnerabilities": "0",
         "reliability": "C",
         "security": "A",
-        "duplication": "12.2",
-        "linesOfCode": "633"
+        "duplication": "6.8",
+        "linesOfCode": "1053"
       },
       "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
+      "studentComments": 5,
+      "hasStretch": true,
+      "needsReview": true,
       "estimatedScore": 100,
-      "comments": [],
+      "comments": [
+        {
+          "file": "Character.cs",
+          "line": 5,
+          "text": "/// Kept concrete (non-abstract) so CsvHelper can instantiate it directly for file I/O."
+        },
+        {
+          "file": "CharacterMap.cs",
+          "line": 8,
+          "text": "/// Used by CsvHelper to read and write CSV files correctly."
+        },
+        {
+          "file": "CharacterMap.cs",
+          "line": 14,
+          "text": "        // CsvHelper uses these mappings to match CSV column positions to Character properties."
+        },
+        {
+          "file": "CharacterUI.cs",
+          "line": 165,
+          "text": "    /// Helper method to display a single character's details."
+        },
+        {
+          "file": "Program.cs",
+          "line": 21,
+          "text": "/// *Disclosure*: This project was initially set up using AI assistance as part of a Week 2 learning exercise."
+        }
+      ],
       "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 9,
+      "stretchGoals": [
+        "CsvHelper",
+        "JsonFileHandler",
+        "CommandPattern"
+      ],
+      "studentCommitCount": 10,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Completed stretch goal(s)",
+        "5 student comment(s) to review"
+      ]
     },
     {
       "name": "Sdunn235",
