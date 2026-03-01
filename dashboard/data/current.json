@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-01T06:38:50Z",
+  "generated": "2026-03-01T12:34:56Z",
   "students": [
     {
       "name": "MW92007",
@@ -241,49 +241,16 @@
         "linesOfCode": "1053"
       },
       "todoCount": 0,
-      "studentComments": 5,
-      "hasStretch": true,
-      "needsReview": true,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
       "estimatedScore": 100,
-      "comments": [
-        {
-          "file": "Character.cs",
-          "line": 5,
-          "text": "/// Kept concrete (non-abstract) so CsvHelper can instantiate it directly for file I/O."
-        },
-        {
-          "file": "CharacterMap.cs",
-          "line": 8,
-          "text": "/// Used by CsvHelper to read and write CSV files correctly."
-        },
-        {
-          "file": "CharacterMap.cs",
-          "line": 14,
-          "text": "        // CsvHelper uses these mappings to match CSV column positions to Character properties."
-        },
-        {
-          "file": "CharacterUI.cs",
-          "line": 165,
-          "text": "    /// Helper method to display a single character's details."
-        },
-        {
-          "file": "Program.cs",
-          "line": 21,
-          "text": "/// *Disclosure*: This project was initially set up using AI assistance as part of a Week 2 learning exercise."
-        }
-      ],
+      "comments": [],
       "todos": [],
-      "stretchGoals": [
-        "CsvHelper",
-        "JsonFileHandler",
-        "CommandPattern"
-      ],
+      "stretchGoals": [],
       "studentCommitCount": 10,
       "isTemplateOnly": false,
-      "notes": [
-        "Completed stretch goal(s)",
-        "5 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "Sdunn235",
