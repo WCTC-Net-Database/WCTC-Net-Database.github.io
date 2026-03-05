@@ -3,6 +3,7 @@ let allStudents = [];
 let renderedStudents = []; // Currently displayed students (after filter/sort)
 let studentAssignments = {}; // Track all assignments per student (from history)
 let studentEntries = {}; // studentKey -> { assignmentPattern -> studentData } for badge switching
+let analysisData = {}; // studentKey -> { assignmentPattern -> analysis entry }
 let currentFilter = 'all';
 let currentAssignmentFilter = 'all';
 let currentDateFilter = { start: null, end: null };
@@ -58,6 +59,17 @@ async function loadCurrentData() {
             }
         } catch (e) {
             console.log('No history data available');
+        }
+
+        // Load code analysis data (AI indicators + quiz questions)
+        try {
+            const analysisResponse = await fetch('data/analysis.json');
+            const analysisJson = await analysisResponse.json();
+            if (analysisJson.students) {
+                analysisData = analysisJson.students;
+            }
+        } catch (e) {
+            console.log('No analysis data available');
         }
 
         // Extract unique assignment patterns for filter (from all sources)
@@ -357,6 +369,14 @@ function renderStudentCard(student, index) {
                         ${isTemplate ? `<span class="template-badge"><i class="fas fa-exclamation-circle"></i> No Student Work</span> ` : ''}
                         ${student.hasStretch ? `<span class="stretch-badge"><i class="fas fa-star"></i> Stretch Goal</span> ` : ''}
                         ${(student.studentComments > 0 || hasComments) ? `<span class="attention-badge"><i class="fas fa-comment"></i> ${student.studentComments || student.comments?.length || 0} comment(s)</span>` : ''}
+                        ${(() => {
+                            const a = getAnalysis(student);
+                            if (!a) return '';
+                            const level = a.aiIndicators?.level;
+                            if (level === 'high') return '<span class="ai-badge ai-high" title="Multiple AI-generation indicators"><i class="fas fa-robot"></i> AI: High</span> ';
+                            if (level === 'medium') return '<span class="ai-badge ai-medium" title="Some AI-generation indicators"><i class="fas fa-robot"></i> AI: Med</span> ';
+                            return '';
+                        })()}
                     </div>
 
                     <!-- Action buttons -->
@@ -502,6 +522,51 @@ function renderDetailsSection(student, index) {
         `;
     }
 
+    // Code Analysis (AI indicators + quiz questions)
+    const analysis = getAnalysis(student);
+    if (analysis) {
+        // AI Indicators
+        if (analysis.aiIndicators && analysis.aiIndicators.flags > 0) {
+            const levelClass = analysis.aiIndicators.level === 'high' ? 'text-danger' : 'text-warning';
+            html += `
+                <div class="detail-group">
+                    <div class="detail-header"><i class="fas fa-robot ${levelClass}"></i> AI Generation Indicators</div>
+                    <div class="detail-content">
+                        <div class="mb-2">
+                            <strong>Commit stats:</strong> ${analysis.commitStats.count} commits, max ${analysis.commitStats.maxLines} lines, avg ${analysis.commitStats.avgLines} lines/commit
+                        </div>
+                        <div class="mb-2">
+                            <strong>Comment density:</strong> ${analysis.commentDensity}% XML doc comments (${analysis.commentDetails?.xmlDocLines || '?'}/${analysis.commentDetails?.totalCodeLines || '?'} lines)
+                        </div>
+                        <ul class="mb-0">
+                            ${analysis.aiIndicators.reasons.map(r => `<li>${escapeHtml(r)}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Quiz Questions
+        if (analysis.quizQuestions && analysis.quizQuestions.length > 0) {
+            html += `
+                <div class="detail-group">
+                    <div class="detail-header"><i class="fas fa-question-circle text-info"></i> Comprehension Quiz</div>
+                    <div class="detail-content">
+                        <ol class="quiz-questions">
+                            ${analysis.quizQuestions.map(q => `
+                                <li class="mb-2">
+                                    <span class="badge badge-${q.difficulty === 'basic' ? 'success' : q.difficulty === 'design' ? 'primary' : 'warning'} mr-1">${q.difficulty}</span>
+                                    ${escapeHtml(q.question)}
+                                    ${q.context ? `<br><small class="text-muted"><code>${escapeHtml(q.context)}</code></small>` : ''}
+                                </li>
+                            `).join('')}
+                        </ol>
+                    </div>
+                </div>
+            `;
+        }
+    }
+
     // Grading Notes
     if (student.notes && student.notes.length > 0) {
         html += `
@@ -566,6 +631,13 @@ function setStretchCredit(studentName, goalId, credited) {
 
 function toggleStretchCredit(studentName, goalId, checkbox) {
     setStretchCredit(studentName, goalId, checkbox.checked);
+}
+
+// Get analysis data for a student's current assignment
+function getAnalysis(student) {
+    const key = student.name.toLowerCase();
+    const assignment = student.assignmentPattern;
+    return analysisData[key]?.[assignment] || null;
 }
 
 // Generate feedback text for a student

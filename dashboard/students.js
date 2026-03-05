@@ -1,5 +1,6 @@
 // Students History JavaScript
 let allStudentData = {};
+let analysisData = {}; // studentKey -> { assignmentPattern -> analysis entry }
 let currentStudent = null;
 let currentDateFilter = { start: null, end: null };
 let currentAssignmentFilter = '';
@@ -100,6 +101,17 @@ async function loadAllData() {
             }
         } catch (error) {
             console.log('No history data available yet');
+        }
+
+        // Load code analysis data
+        try {
+            const analysisResponse = await fetch('data/analysis.json');
+            const analysisJson = await analysisResponse.json();
+            if (analysisJson.students) {
+                analysisData = analysisJson.students;
+            }
+        } catch (e) {
+            console.log('No analysis data available');
         }
 
         // Populate assignment filter from all sources
@@ -439,6 +451,59 @@ function selectStudent(studentKey) {
             }).join('')}
         </div>
         ` : ''}
+
+        ${(() => {
+            // Show analysis data for the current assignment
+            const assignmentKey = current?.assignmentPattern;
+            const a = analysisData[studentKey]?.[assignmentKey];
+            if (!a) return '';
+
+            let analysisHtml = '<hr><h5><i class="fas fa-robot"></i> Code Analysis</h5>';
+
+            // AI Indicators
+            if (a.aiIndicators && a.aiIndicators.flags > 0) {
+                const levelClass = a.aiIndicators.level === 'high' ? 'danger' : 'warning';
+                analysisHtml += `
+                    <div class="alert alert-${levelClass} mt-3">
+                        <strong><i class="fas fa-robot"></i> AI Indicators: ${a.aiIndicators.level.toUpperCase()}</strong>
+                        <div class="mt-2">
+                            <strong>Commit stats:</strong> ${a.commitStats.count} commits, max ${a.commitStats.maxLines} lines, avg ${a.commitStats.avgLines} lines/commit<br>
+                            <strong>Comment density:</strong> ${a.commentDensity}% XML doc comments
+                        </div>
+                        <ul class="mt-2 mb-0">
+                            ${a.aiIndicators.reasons.map(r => '<li>' + r + '</li>').join('')}
+                        </ul>
+                    </div>
+                `;
+            } else if (a.commitStats) {
+                analysisHtml += `
+                    <div class="mt-3 p-2 bg-light rounded">
+                        <strong>Commit stats:</strong> ${a.commitStats.count} commits, max ${a.commitStats.maxLines} lines, avg ${a.commitStats.avgLines} lines/commit |
+                        <strong>Comment density:</strong> ${a.commentDensity}% XML docs
+                    </div>
+                `;
+            }
+
+            // Quiz Questions
+            if (a.quizQuestions && a.quizQuestions.length > 0) {
+                analysisHtml += `
+                    <div class="mt-3">
+                        <h6><i class="fas fa-question-circle"></i> Comprehension Quiz</h6>
+                        <ol class="quiz-questions">
+                            ${a.quizQuestions.map(q => `
+                                <li class="mb-2">
+                                    <span class="badge badge-${q.difficulty === 'basic' ? 'success' : q.difficulty === 'design' ? 'primary' : 'warning'}">${q.difficulty}</span>
+                                    ${q.question}
+                                    ${q.context ? '<br><small class="text-muted"><code>' + q.context + '</code></small>' : ''}
+                                </li>
+                            `).join('')}
+                        </ol>
+                    </div>
+                `;
+            }
+
+            return analysisHtml;
+        })()}
 
         <hr>
 
