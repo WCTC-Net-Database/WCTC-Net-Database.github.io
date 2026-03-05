@@ -33,7 +33,7 @@ if [ -z "$repos" ]; then
   exit 0
 fi
 
-echo "$repos" | while IFS='|' read -r student_name repo assignment; do
+while IFS='|' read -r student_name repo assignment; do
   [ -z "$repo" ] && continue
 
   echo ""
@@ -61,6 +61,7 @@ echo "$repos" | while IFS='|' read -r student_name repo assignment; do
   for sha in $student_shas; do
     commit_count=$((commit_count + 1))
     additions=$(gh api "repos/WCTC-Net-Database/$repo/commits/$sha" --jq '.stats.additions // 0' 2>/dev/null || echo "0")
+    additions=$(echo "$additions" | tr -d '[:space:]')
     additions=${additions:-0}
     total_lines=$((total_lines + additions))
     [ "$additions" -gt "$max_lines" ] && max_lines=$additions
@@ -85,8 +86,9 @@ echo "$repos" | while IFS='|' read -r student_name repo assignment; do
     [ -z "$f" ] && continue
     relative=$(echo "$f" | sed "s|$tmpdir/||")
 
-    lines=$(wc -l < "$f")
+    lines=$(wc -l < "$f" | tr -d '[:space:]')
     xml_comments=$(grep -c '^\s*///' "$f" 2>/dev/null || echo "0")
+    xml_comments=$(echo "$xml_comments" | tr -d '[:space:]')
 
     total_code_lines=$((total_code_lines + lines))
     total_xml_comment_lines=$((total_xml_comment_lines + xml_comments))
@@ -184,6 +186,8 @@ echo "$repos" | while IFS='|' read -r student_name repo assignment; do
     quiz_text=$(echo "$response" | jq -r '.content[0].text // ""' 2>/dev/null || echo "")
 
     if [ -n "$quiz_text" ]; then
+      # Strip markdown fencing if present (```json ... ```)
+      quiz_text=$(echo "$quiz_text" | sed '/^```/d')
       parsed=$(echo "$quiz_text" | jq '.' 2>/dev/null || echo "")
       if [ -n "$parsed" ] && echo "$parsed" | jq 'type == "array"' 2>/dev/null | grep -q true; then
         quiz_questions="$parsed"
@@ -232,7 +236,7 @@ echo "$repos" | while IFS='|' read -r student_name repo assignment; do
     --argjson entry "$entry" \
     '.students[$key][$assignment] = $entry')
 
-done
+done < <(echo "$repos")
 
 # Write output
 mkdir -p dashboard/data
