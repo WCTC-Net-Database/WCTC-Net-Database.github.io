@@ -1,0 +1,447 @@
+{
+  "generated": "2026-03-05T23:19:09Z",
+  "students": {
+    "mw92007": {
+      "w1-file-i-o": {
+        "name": "MW92007",
+        "repo": "w1-file-i-o-MW92007",
+        "assignment": "w1-file-i-o",
+        "commitStats": {
+          "count": 2,
+          "maxLines": 101,
+          "avgLines": 88,
+          "totalLines": 176
+        },
+        "commentDensity": 20.4,
+        "commentDetails": {
+          "xmlDocLines": 55,
+          "totalCodeLines": 269
+        },
+        "aiIndicators": {
+          "level": "medium",
+          "flags": 1,
+          "reasons": [
+            "High XML doc density: 20.4% of code is /// comments"
+          ]
+        },
+        "quizQuestions": [
+          {
+            "question": "In the DisplayAllCharacters() method, what does the line `equipmentItems.Split('|')` accomplish, and why is a different delimiter used here compared to the initial Split(',')?",
+            "context": "Program.cs:DisplayAllCharacters",
+            "difficulty": "basic"
+          },
+          {
+            "question": "In AddCharacter(), you write the new character with spaces after commas (e.g., `\"{charName}, {charClass},...\"`), but the existing CSV data in DisplayAllCharacters() is parsed without spaces. Why might this inconsistency cause problems, and how should the format be standardized?",
+            "context": "Program.cs:AddCharacter",
+            "difficulty": "design"
+          },
+          {
+            "question": "In LevelUpCharacter(), if a user enters a character name with leading or trailing whitespace (e.g., \" John\" instead of \"John\"), the name comparison `if (name == chosenChar)` will fail. How would you modify the code to handle this edge case?",
+            "context": "Program.cs:LevelUpCharacter",
+            "difficulty": "modify"
+          }
+        ]
+      },
+      "w2-csv-parsing": {
+        "name": "MW92007",
+        "repo": "w2-csv-parsing-MW92007",
+        "assignment": "w2-csv-parsing",
+        "commitStats": {
+          "count": 1,
+          "maxLines": 63,
+          "avgLines": 63,
+          "totalLines": 63
+        },
+        "commentDensity": 0.0,
+        "commentDetails": {
+          "xmlDocLines": 0,
+          "totalCodeLines": 172
+        },
+        "aiIndicators": {
+          "level": "low",
+          "flags": 0,
+          "reasons": []
+        },
+        "quizQuestions": [
+          {
+            "question": "In the DisplayAllCharacters method, what does the code do when it detects that a line starts with a quotation mark, and why is this check necessary?",
+            "context": "Program.cs:DisplayAllCharacters",
+            "difficulty": "basic"
+          },
+          {
+            "question": "Why does the AddCharacter method use the 'ref' keyword for the lines parameter, and what problem might occur if you removed it?",
+            "context": "Program.cs:AddCharacter",
+            "difficulty": "design"
+          },
+          {
+            "question": "In the LevelUpCharacter method, the current code only checks if the line contains the character name using Contains(). How would you modify this to handle quoted names the same way DisplayAllCharacters does, and what edge case would this fix?",
+            "context": "Program.cs:LevelUpCharacter",
+            "difficulty": "modify"
+          }
+        ]
+      },
+      "w3-srp-linq": {
+        "name": "MW92007",
+        "repo": "w3-srp-linq-MW92007",
+        "assignment": "w3-srp-linq",
+        "commitStats": {
+          "count": 1,
+          "maxLines": 94,
+          "avgLines": 94,
+          "totalLines": 94
+        },
+        "commentDensity": 33.5,
+        "commentDetails": {
+          "xmlDocLines": 174,
+          "totalCodeLines": 519
+        },
+        "aiIndicators": {
+          "level": "medium",
+          "flags": 1,
+          "reasons": [
+            "High XML doc density: 33.5% of code is /// comments"
+          ]
+        },
+        "quizQuestions": [
+          {
+            "question": "What does the FindByName method in CharacterReader.cs do, and what LINQ method does it use to search for a character?",
+            "context": "CharacterReader.cs:FindByName",
+            "difficulty": "basic"
+          },
+          {
+            "question": "Why did you separate CharacterReader and CharacterWriter into two different classes instead of combining them into one class that handles both reading and writing?",
+            "context": "CharacterReader.cs:class",
+            "difficulty": "design"
+          },
+          {
+            "question": "The FormatCharacter method in CharacterWriter.cs currently returns an empty string—what CSV line format should it return, and how should it handle character names that contain commas?",
+            "context": "CharacterWriter.cs:FormatCharacter",
+            "difficulty": "modify"
+          }
+        ]
+      }
+    },
+    "samuel-dotcom-rgb": {
+      "w1-file-i-o": {
+        "name": "Samuel-dotcom-rgb",
+        "repo": "w1-file-i-o-Samuel-dotcom-rgb",
+        "assignment": "w1-file-i-o",
+        "commitStats": {
+          "count": 5,
+          "maxLines": 129,
+          "avgLines": 52,
+          "totalLines": 261
+        },
+        "commentDensity": 17.7,
+        "commentDetails": {
+          "xmlDocLines": 55,
+          "totalCodeLines": 311
+        },
+        "aiIndicators": {
+          "level": "low",
+          "flags": 0,
+          "reasons": []
+        },
+        "quizQuestions": [
+          {
+            "question": "In the DisplayAllCharacters method, what does the line `string[] parts = line.Split(',');` accomplish, and why is it necessary before accessing parts[0], parts[1], and parts[2]?",
+            "context": "program.cs:DisplayAllCharacters",
+            "difficulty": "basic"
+          },
+          {
+            "question": "Why does the LevelUpCharacter method use `List<string>` instead of a `string[]` array like DisplayAllCharacters does, and what advantage does this provide when modifying the CSV data?",
+            "context": "program.cs:LevelUpCharacter",
+            "difficulty": "design"
+          },
+          {
+            "question": "If you needed to add validation in the AddCharacter method to ensure the level entered is a valid integer before appending to the file, what changes would you make to the current code?",
+            "context": "program.cs:AddCharacter",
+            "difficulty": "modify"
+          }
+        ]
+      },
+      "w2-csv-parsing": {
+        "name": "Samuel-dotcom-rgb",
+        "repo": "w2-csv-parsing-Samuel-dotcom-rgb",
+        "assignment": "w2-csv-parsing",
+        "commitStats": {
+          "count": 8,
+          "maxLines": 184,
+          "avgLines": 24,
+          "totalLines": 193
+        },
+        "commentDensity": 0.0,
+        "commentDetails": {
+          "xmlDocLines": 0,
+          "totalCodeLines": 248
+        },
+        "aiIndicators": {
+          "level": "low",
+          "flags": 0,
+          "reasons": []
+        },
+        "quizQuestions": [
+          {
+            "question": "What does the ParseCsvLine method do with the first character in the line if it is a quotation mark, and why might this be necessary?",
+            "context": "Program.cs:ParseCsvLine",
+            "difficulty": "basic"
+          },
+          {
+            "question": "Why does the AddCharacter method use `ref string[] lines` as a parameter and then also assign to `Program.lines` separately, rather than just modifying the static field directly?",
+            "context": "Program.cs:AddCharacter",
+            "difficulty": "design"
+          },
+          {
+            "question": "How would you modify the LevelUpCharacter method to increase hit points by 10 in addition to incrementing the level, and what parts of the code would need to change?",
+            "context": "Program.cs:LevelUpCharacter",
+            "difficulty": "modify"
+          }
+        ]
+      },
+      "w3-srp-linq": {
+        "name": "Samuel-dotcom-rgb",
+        "repo": "w3-srp-linq-Samuel-dotcom-rgb",
+        "assignment": "w3-srp-linq",
+        "commitStats": {
+          "count": 1,
+          "maxLines": 175,
+          "avgLines": 175,
+          "totalLines": 175
+        },
+        "commentDensity": 1.9,
+        "commentDetails": {
+          "xmlDocLines": 7,
+          "totalCodeLines": 368
+        },
+        "aiIndicators": {
+          "level": "low",
+          "flags": 0,
+          "reasons": []
+        },
+        "quizQuestions": [
+          {
+            "question": "What does the ParseLine method in CharacterReader do, and why does it use a StringBuilder with an inQuotes boolean flag?",
+            "context": "CharacterReader.cs:ParseLine",
+            "difficulty": "basic"
+          },
+          {
+            "question": "Why did you create separate IInput and IOutput interfaces if CharacterReader and CharacterWriter are never actually injected into CharacterManager as dependencies?",
+            "context": "CharacterManager.cs:CharacterManager",
+            "difficulty": "design"
+          },
+          {
+            "question": "How would you modify the FindByName method in CharacterReader to use LINQ (like your FindByProfession method does) instead of calling FirstOrDefault directly on the list passed as a parameter?",
+            "context": "CharacterReader.cs:FindByName",
+            "difficulty": "modify"
+          }
+        ]
+      }
+    },
+    "sdunn235": {
+      "w1-file-i-o": {
+        "name": "Sdunn235",
+        "repo": "w1-file-i-o-Sdunn235",
+        "assignment": "w1-file-i-o",
+        "commitStats": {
+          "count": 10,
+          "maxLines": 1345,
+          "avgLines": 447,
+          "totalLines": 4473
+        },
+        "commentDensity": 28.8,
+        "commentDetails": {
+          "xmlDocLines": 495,
+          "totalCodeLines": 1718
+        },
+        "aiIndicators": {
+          "level": "high",
+          "flags": 3,
+          "reasons": [
+            "Large commit: +1345 lines in single commit",
+            "High XML doc density: 28.8% of code is /// comments",
+            "High avg commit size: 447 lines/commit"
+          ]
+        },
+        "quizQuestions": [
+          {
+            "question": "What does the GetEquipmentList() method in Character.cs do, and why does it use both Split() and Where()?",
+            "context": "Character.cs:GetEquipmentList",
+            "difficulty": "basic"
+          },
+          {
+            "question": "Why did you separate IFlyable, IShootable, ISwimmable, and IDefendable into distinct interfaces instead of adding all these methods directly to IEntity?",
+            "context": "IEntity.cs:IEntity",
+            "difficulty": "design"
+          },
+          {
+            "question": "The GameEngine.ProcessEntity() method uses 'is' checks before calling Defend(), Fly(), Shoot(), and Swim(). How would you modify this method if you wanted to add a new IHealable interface that some entities support?",
+            "context": "GameEngine.cs:ProcessEntity",
+            "difficulty": "modify"
+          }
+        ]
+      }
+    },
+    "tgustafson1": {
+      "w1-file-i-o": {
+        "name": "TGustafson1",
+        "repo": "w1-file-i-o-TGustafson1",
+        "assignment": "w1-file-i-o",
+        "commitStats": {
+          "count": 27,
+          "maxLines": 1425,
+          "avgLines": 160,
+          "totalLines": 4320
+        },
+        "commentDensity": 0.6,
+        "commentDetails": {
+          "xmlDocLines": 6,
+          "totalCodeLines": 1030
+        },
+        "aiIndicators": {
+          "level": "medium",
+          "flags": 1,
+          "reasons": [
+            "Large commit: +1425 lines in single commit"
+          ]
+        },
+        "quizQuestions": [
+          {
+            "question": "What does the ReadAll() method in JsonFileHandler do, and what happens if the file is empty or the deserialization fails?",
+            "context": "JsonFileHandler.cs:ReadAll",
+            "difficulty": "basic"
+          },
+          {
+            "question": "Why did you create separate interfaces like IDodgeable, ISneakable, and IFlyable instead of adding those methods directly to IEntity?",
+            "context": "Interfaces/IEntity.cs and related ability interfaces",
+            "difficulty": "design"
+          },
+          {
+            "question": "In GameEngine.ProcessCombat(), how would you modify the dodge logic to make it harder to dodge attacks from higher-level characters, assuming you have access to level information?",
+            "context": "GameEngine.cs:ProcessCombat",
+            "difficulty": "modify"
+          }
+        ]
+      }
+    },
+    "irodriguez5": {
+      "w1-file-i-o": {
+        "name": "irodriguez5",
+        "repo": "w1-file-i-o-irodriguez5",
+        "assignment": "w1-file-i-o",
+        "commitStats": {
+          "count": 4,
+          "maxLines": 182,
+          "avgLines": 65,
+          "totalLines": 262
+        },
+        "commentDensity": 9.4,
+        "commentDetails": {
+          "xmlDocLines": 27,
+          "totalCodeLines": 288
+        },
+        "aiIndicators": {
+          "level": "low",
+          "flags": 0,
+          "reasons": []
+        },
+        "quizQuestions": [
+          {
+            "question": "In the DisplayAllCharacters method, what does the line `var equipment = equipmentRaw.Split('|', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);` accomplish that a simple `Split('|')` would not?",
+            "context": "Program.cs:DisplayAllCharacters",
+            "difficulty": "basic"
+          },
+          {
+            "question": "Why does the AddCharacter method use separate validation loops with `int.TryParse()` for level and HP instead of using a single generic validation function?",
+            "context": "Program.cs:AddCharacter",
+            "difficulty": "design"
+          },
+          {
+            "question": "In the LevelUpCharacter method, if you wanted to also increase the character's HP by 5 when they level up (in addition to incrementing level), what specific lines would you need to modify and how?",
+            "context": "Program.cs:LevelUpCharacter",
+            "difficulty": "modify"
+          }
+        ]
+      },
+      "w2-csv-parsing": {
+        "name": "irodriguez5",
+        "repo": "w2-csv-parsing-irodriguez5",
+        "assignment": "w2-csv-parsing",
+        "commitStats": {
+          "count": 2,
+          "maxLines": 263,
+          "avgLines": 195,
+          "totalLines": 390
+        },
+        "commentDensity": 1.8,
+        "commentDetails": {
+          "xmlDocLines": 8,
+          "totalCodeLines": 437
+        },
+        "aiIndicators": {
+          "level": "medium",
+          "flags": 1,
+          "reasons": [
+            "Bulk submission: 390 lines in only 2 commit(s)"
+          ]
+        },
+        "quizQuestions": [
+          {
+            "question": "What does the TryParseCsvLine method do when it encounters a line starting with a double quote, and how does it find the closing quote?",
+            "context": "Program.cs:TryParseCsvLine",
+            "difficulty": "basic"
+          },
+          {
+            "question": "Why does the BuildCsvLine method check if a name contains a comma before deciding whether to wrap it in quotes, and what problem would occur if you didn't perform this check?",
+            "context": "Program.cs:BuildCsvLine",
+            "difficulty": "design"
+          },
+          {
+            "question": "In the EditEquipment method, the equipment field is split using pipe delimiters with StringSplitOptions.RemoveEmptyEntries and StringSplitOptions.TrimEntries—how would you modify this logic if users needed to preserve equipment item names that contained leading or trailing spaces?",
+            "context": "Program.cs:EditEquipment",
+            "difficulty": "modify"
+          }
+        ]
+      }
+    },
+    "taylorharty": {
+      "w1-file-i-o": {
+        "name": "taylorharty",
+        "repo": "w1-file-i-o-taylorharty",
+        "assignment": "w1-file-i-o",
+        "commitStats": {
+          "count": 2,
+          "maxLines": 215,
+          "avgLines": 129,
+          "totalLines": 259
+        },
+        "commentDensity": 4.2,
+        "commentDetails": {
+          "xmlDocLines": 13,
+          "totalCodeLines": 312
+        },
+        "aiIndicators": {
+          "level": "low",
+          "flags": 0,
+          "reasons": []
+        },
+        "quizQuestions": [
+          {
+            "question": "In the DisplayAllCharacters() method, what does the line.Split(',') operation accomplish, and why is a second split operation performed on the equipment field?",
+            "context": "Program.cs:DisplayAllCharacters",
+            "difficulty": "basic"
+          },
+          {
+            "question": "In AddCharacter(), you validate user input for name and profession using nearly identical while loops with IsWhiteSpace() checks, but you use a different validation pattern for level and hitPoints with TryParse(). Why did you choose different validation approaches for these different input types?",
+            "context": "Program.cs:AddCharacter",
+            "difficulty": "design"
+          },
+          {
+            "question": "In the LevelUpCharacter() method, you reconstruct the output string by checking if parts.Length > 4 before appending equipment. How would you modify this approach if a character could have multiple additional fields beyond equipment that need to be preserved?",
+            "context": "Program.cs:LevelUpCharacter",
+            "difficulty": "modify"
+          }
+        ]
+      }
+    }
+  }
+}
