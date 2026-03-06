@@ -1,0 +1,283 @@
+{
+  "assignment": "w4-solid-ocp",
+  "generated": "2026-03-06T03:51:01Z",
+  "students": [
+    {
+      "name": "Samuel-dotcom-rgb",
+      "repo": "w4-solid-ocp-Samuel-dotcom-rgb",
+      "submittedAt": "2026-02-19T16:24:26Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w4-solid-ocp-Samuel-dotcom-rgb/actions/runs/22190301985",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w4-solid-ocp-Samuel-dotcom-rgb",
+        "maintainability": "A",
+        "codeSmells": "6",
+        "bugs": "0",
+        "vulnerabilities": "0",
+        "reliability": "A",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "437"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 2,
+      "isTemplateOnly": false,
+      "notes": [
+        "Completed stretch goal(s)"
+      ]
+    },
+    {
+      "name": "MW92007",
+      "repo": "w4-solid-ocp-MW92007",
+      "submittedAt": "2026-02-12T22:22:27Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w4-solid-ocp-MW92007",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 8,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [
+        "JsonFileHandler.cs:32",
+        "JsonFileHandler.cs:42",
+        "JsonFileHandler.cs:52",
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:35",
+        "CsvFileHandler.cs:43",
+        "CsvFileHandler.cs:50",
+        "CsvFileHandler.cs:57"
+      ],
+      "stretchGoals": [
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "irodriguez5",
+      "repo": "w4-solid-ocp-irodriguez5",
+      "submittedAt": "2026-02-12T22:22:27Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w4-solid-ocp-irodriguez5",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 8,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [
+        "JsonFileHandler.cs:32",
+        "JsonFileHandler.cs:42",
+        "JsonFileHandler.cs:52",
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:35",
+        "CsvFileHandler.cs:43",
+        "CsvFileHandler.cs:50",
+        "CsvFileHandler.cs:57"
+      ],
+      "stretchGoals": [
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "TGustafson1",
+      "repo": "w4-solid-ocp-TGustafson1",
+      "submittedAt": "2026-02-12T22:22:27Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w4-solid-ocp-TGustafson1",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 8,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [
+        "JsonFileHandler.cs:32",
+        "JsonFileHandler.cs:42",
+        "JsonFileHandler.cs:52",
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:35",
+        "CsvFileHandler.cs:43",
+        "CsvFileHandler.cs:50",
+        "CsvFileHandler.cs:57"
+      ],
+      "stretchGoals": [
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "Sdunn235",
+      "repo": "w4-solid-ocp-Sdunn235",
+      "submittedAt": "2026-02-12T22:22:27Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w4-solid-ocp-Sdunn235",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 8,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [
+        "JsonFileHandler.cs:32",
+        "JsonFileHandler.cs:42",
+        "JsonFileHandler.cs:52",
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:35",
+        "CsvFileHandler.cs:43",
+        "CsvFileHandler.cs:50",
+        "CsvFileHandler.cs:57"
+      ],
+      "stretchGoals": [
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "taylorharty",
+      "repo": "w4-solid-ocp-taylorharty",
+      "submittedAt": "2026-02-12T22:22:27Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w4-solid-ocp-taylorharty",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 8,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [
+        "JsonFileHandler.cs:32",
+        "JsonFileHandler.cs:42",
+        "JsonFileHandler.cs:52",
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:35",
+        "CsvFileHandler.cs:43",
+        "CsvFileHandler.cs:50",
+        "CsvFileHandler.cs:57"
+      ],
+      "stretchGoals": [
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "Template only - no student commits detected"
+      ]
+    }
+  ]
+}

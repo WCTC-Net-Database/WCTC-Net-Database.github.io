@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-06T01:29:59Z",
+  "generated": "2026-03-06T03:52:00Z",
   "students": [
     {
       "name": "MW92007",
@@ -24,17 +24,39 @@
         "duplication": "0.0",
         "linesOfCode": "189"
       },
-      "todoCount": 0,
-      "studentComments": 0,
+      "todoCount": 12,
+      "studentComments": 1,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [
+        {
+          "file": "Program.cs",
+          "line": 246,
+          "text": "        // Then here it just returns all the values back to the file?"
+        }
+      ],
+      "todos": [
+        "Program.cs:13",
+        "Program.cs:84",
+        "Program.cs:123",
+        "Program.cs:143",
+        "Program.cs:154",
+        "Program.cs:160",
+        "Program.cs:163",
+        "Program.cs:187",
+        "Program.cs:261",
+        "Program.cs:264",
+        "Program.cs:265",
+        "Program.cs:266"
+      ],
       "stretchGoals": [],
       "studentCommitCount": 2,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "1 student comment(s) to review"
+      ]
     },
     {
       "name": "MW92007",
@@ -59,17 +81,28 @@
         "duplication": "0.0",
         "linesOfCode": "177"
       },
-      "todoCount": 0,
+      "todoCount": 8,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:62",
+        "Program.cs:63",
+        "Program.cs:107",
+        "Program.cs:112",
+        "Program.cs:154",
+        "Program.cs:159",
+        "Program.cs:163",
+        "Program.cs:167"
+      ],
       "stretchGoals": [],
       "studentCommitCount": 1,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     },
     {
       "name": "MW92007",
@@ -94,17 +127,104 @@
         "duplication": "0.0",
         "linesOfCode": "328"
       },
-      "todoCount": 0,
-      "studentComments": 0,
+      "todoCount": 12,
+      "studentComments": 4,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [
+        {
+          "file": "CharacterManager.cs",
+          "line": 17,
+          "text": "/// Why is this bad?"
+        },
+        {
+          "file": "CharacterWriter.cs",
+          "line": 13,
+          "text": "/// Why separate reading and writing?"
+        },
+        {
+          "file": "CharacterWriter.cs",
+          "line": 88,
+          "text": "    /// Helper method to format a Character object as a CSV line."
+        },
+        {
+          "file": "CharacterReader.cs",
+          "line": 115,
+          "text": "    /// Helper method to parse a single CSV line into a Character object."
+        }
+      ],
+      "todos": [
+        "CharacterManager.cs:40",
+        "CharacterManager.cs:52",
+        "CharacterManager.cs:113",
+        "CharacterWriter.cs:37",
+        "CharacterWriter.cs:47",
+        "CharacterWriter.cs:70",
+        "CharacterWriter.cs:79",
+        "CharacterWriter.cs:96",
+        "CharacterReader.cs:34",
+        "CharacterReader.cs:60",
+        "CharacterReader.cs:63",
+        "CharacterReader.cs:108"
+      ],
       "stretchGoals": [],
       "studentCommitCount": 1,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "4 student comment(s) to review"
+      ]
+    },
+    {
+      "name": "MW92007",
+      "repo": "w4-solid-ocp-MW92007",
+      "assignmentPattern": "w4-solid-ocp",
+      "submittedAt": "2026-02-12T22:22:27Z",
+      "pushedAt": "2026-02-12T22:22:27Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w4-solid-ocp-MW92007",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 8,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [
+        "JsonFileHandler.cs:32",
+        "JsonFileHandler.cs:42",
+        "JsonFileHandler.cs:52",
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:35",
+        "CsvFileHandler.cs:43",
+        "CsvFileHandler.cs:50",
+        "CsvFileHandler.cs:57"
+      ],
+      "stretchGoals": [
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "Template only - no student commits detected"
+      ]
     },
     {
       "name": "Samuel-dotcom-rgb",
@@ -135,17 +255,36 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 0,
+      "todoCount": 16,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 70,
+      "needsReview": true,
+      "estimatedScore": 50,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:10",
+        "Program.cs:81",
+        "Program.cs:99",
+        "Program.cs:118",
+        "Program.cs:126",
+        "Program.cs:137",
+        "Program.cs:143",
+        "Program.cs:146",
+        "Program.cs:149",
+        "Program.cs:155",
+        "Program.cs:174",
+        "Program.cs:178",
+        "Program.cs:181",
+        "Program.cs:182",
+        "Program.cs:183",
+        "Program.cs:185"
+      ],
       "stretchGoals": [],
       "studentCommitCount": 5,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete"
+      ]
     },
     {
       "name": "Samuel-dotcom-rgb",
@@ -218,6 +357,140 @@
       "notes": []
     },
     {
+      "name": "Samuel-dotcom-rgb",
+      "repo": "w4-solid-ocp-Samuel-dotcom-rgb",
+      "assignmentPattern": "w4-solid-ocp",
+      "submittedAt": "2026-02-19T16:24:26Z",
+      "pushedAt": "2026-02-19T16:24:27Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w4-solid-ocp-Samuel-dotcom-rgb/actions/runs/22190301985",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w4-solid-ocp-Samuel-dotcom-rgb",
+        "maintainability": "A",
+        "codeSmells": "6",
+        "bugs": "0",
+        "vulnerabilities": "0",
+        "reliability": "A",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "437"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 2,
+      "isTemplateOnly": false,
+      "notes": [
+        "Completed stretch goal(s)"
+      ]
+    },
+    {
+      "name": "Samuel-dotcom-rgb",
+      "repo": "w5-solid-lsp-Samuel-dotcom-rgb",
+      "assignmentPattern": "w5-solid-lsp",
+      "submittedAt": "2026-02-27T04:14:22Z",
+      "pushedAt": "2026-02-27T04:14:22Z",
+      "build": {
+        "status": "failure",
+        "url": "https://github.com/WCTC-Net-Database/w5-solid-lsp-Samuel-dotcom-rgb/actions/runs/22472486032",
+        "errorStep": "Build",
+        "errorLines": [
+          "##[error]/home/runner/work/w5-solid-lsp-Samuel-dotcom-rgb/w5-solid-lsp-Samuel-dotcom-rgb/Services/GameEngine.cs(26,31): error CS0246: The type or namespace name 'ICommand' could not be found (are you missing a using directive or an assembly reference?) [/home/runner/work/w5-solid-lsp-Samuel-dotcom-rgb/w5-solid-lsp-Samuel-dotcom-rgb/W5-assignment-template.csproj]",
+          "Build FAILED.",
+          "##[error]/home/runner/work/w5-solid-lsp-Samuel-dotcom-rgb/w5-solid-lsp-Samuel-dotcom-rgb/Services/GameEngine.cs(26,31): error CS0246: The type or namespace name 'ICommand' could not be found (are you missing a using directive or an assembly reference?) [/home/runner/work/w5-solid-lsp-Samuel-dotcom-rgb/w5-solid-lsp-Samuel-dotcom-rgb/W5-assignment-template.csproj]"
+        ]
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w5-solid-lsp-Samuel-dotcom-rgb",
+        "maintainability": "-",
+        "codeSmells": "",
+        "bugs": "",
+        "vulnerabilities": "",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "",
+        "linesOfCode": ""
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": false,
+      "estimatedScore": 70,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [
+        "CommandPattern"
+      ],
+      "studentCommitCount": 2,
+      "isTemplateOnly": false,
+      "notes": [
+        "Completed stretch goal(s)"
+      ]
+    },
+    {
+      "name": "Samuel-dotcom-rgb",
+      "repo": "w6-solid-dip-Samuel-dotcom-rgb",
+      "assignmentPattern": "w6-solid-dip",
+      "submittedAt": "2026-03-06T03:20:21Z",
+      "pushedAt": "2026-03-06T03:20:22Z",
+      "build": {
+        "status": "failure",
+        "url": "https://github.com/WCTC-Net-Database/w6-solid-dip-Samuel-dotcom-rgb/actions/runs/22747538843",
+        "errorStep": "Build",
+        "errorLines": [
+          "##[error]/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/Models/CharacterBase.cs(47,2): error CS1513: } expected [/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/W6-assignment-template.csproj]",
+          "##[error]/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/Interfaces/ICharacter.cs(12,2): error CS1513: } expected [/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/W6-assignment-template.csproj]",
+          "Build FAILED.",
+          "##[error]/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/Models/CharacterBase.cs(47,2): error CS1513: } expected [/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/W6-assignment-template.csproj]",
+          "##[error]/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/Interfaces/ICharacter.cs(12,2): error CS1513: } expected [/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/W6-assignment-template.csproj]"
+        ]
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w6-solid-dip-Samuel-dotcom-rgb",
+        "maintainability": "-",
+        "codeSmells": "",
+        "bugs": "",
+        "vulnerabilities": "",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "",
+        "linesOfCode": ""
+      },
+      "todoCount": 0,
+      "studentComments": 1,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 70,
+      "comments": [
+        {
+          "file": "CharacterBase.cs",
+          "line": 44,
+          "text": "    // ── Helper ────────────────────────────────────────────────────────────────"
+        }
+      ],
+      "todos": [],
+      "stretchGoals": [
+        "ExtraCharacters"
+      ],
+      "studentCommitCount": 2,
+      "isTemplateOnly": false,
+      "notes": [
+        "Completed stretch goal(s)",
+        "1 student comment(s) to review"
+      ]
+    },
+    {
       "name": "Sdunn235",
       "repo": "w1-file-i-o-Sdunn235",
       "assignmentPattern": "w1-file-i-o",
@@ -241,16 +514,49 @@
         "linesOfCode": "1053"
       },
       "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
+      "studentComments": 5,
+      "hasStretch": true,
+      "needsReview": true,
       "estimatedScore": 100,
-      "comments": [],
+      "comments": [
+        {
+          "file": "Character.cs",
+          "line": 5,
+          "text": "/// Kept concrete (non-abstract) so CsvHelper can instantiate it directly for file I/O."
+        },
+        {
+          "file": "CharacterMap.cs",
+          "line": 8,
+          "text": "/// Used by CsvHelper to read and write CSV files correctly."
+        },
+        {
+          "file": "CharacterMap.cs",
+          "line": 14,
+          "text": "        // CsvHelper uses these mappings to match CSV column positions to Character properties."
+        },
+        {
+          "file": "CharacterUI.cs",
+          "line": 165,
+          "text": "    /// Helper method to display a single character's details."
+        },
+        {
+          "file": "Program.cs",
+          "line": 21,
+          "text": "/// *Disclosure*: This project was initially set up using AI assistance as part of a Week 2 learning exercise."
+        }
+      ],
       "todos": [],
-      "stretchGoals": [],
+      "stretchGoals": [
+        "CsvHelper",
+        "JsonFileHandler",
+        "CommandPattern"
+      ],
       "studentCommitCount": 10,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Completed stretch goal(s)",
+        "5 student comment(s) to review"
+      ]
     },
     {
       "name": "Sdunn235",
@@ -275,17 +581,29 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 0,
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
+        "Many TODOs remaining - likely incomplete",
         "Template only - no student commits detected"
       ]
     },
@@ -312,17 +630,187 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 0,
+      "todoCount": 16,
+      "studentComments": 4,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [
+        {
+          "file": "CharacterManager.cs",
+          "line": 14,
+          "text": "/// Why is this bad?"
+        },
+        {
+          "file": "CharacterWriter.cs",
+          "line": 13,
+          "text": "/// Why separate reading and writing?"
+        },
+        {
+          "file": "CharacterWriter.cs",
+          "line": 75,
+          "text": "    /// Helper method to format a Character object as a CSV line."
+        },
+        {
+          "file": "CharacterReader.cs",
+          "line": 107,
+          "text": "    /// Helper method to parse a single CSV line into a Character object."
+        }
+      ],
+      "todos": [
+        "CharacterManager.cs:37",
+        "CharacterManager.cs:49",
+        "CharacterManager.cs:71",
+        "CharacterManager.cs:85",
+        "CharacterManager.cs:105",
+        "CharacterWriter.cs:37",
+        "CharacterWriter.cs:46",
+        "CharacterWriter.cs:60",
+        "CharacterWriter.cs:69",
+        "CharacterWriter.cs:83",
+        "CharacterReader.cs:34",
+        "CharacterReader.cs:47",
+        "CharacterReader.cs:50",
+        "CharacterReader.cs:77",
+        "CharacterReader.cs:100",
+        "CharacterReader.cs:114"
+      ],
+      "stretchGoals": [],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "4 student comment(s) to review",
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "Sdunn235",
+      "repo": "w4-solid-ocp-Sdunn235",
+      "assignmentPattern": "w4-solid-ocp",
+      "submittedAt": "2026-02-12T22:22:27Z",
+      "pushedAt": "2026-02-12T22:22:27Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w4-solid-ocp-Sdunn235",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 8,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [
+        "JsonFileHandler.cs:32",
+        "JsonFileHandler.cs:42",
+        "JsonFileHandler.cs:52",
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:35",
+        "CsvFileHandler.cs:43",
+        "CsvFileHandler.cs:50",
+        "CsvFileHandler.cs:57"
+      ],
+      "stretchGoals": [
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "Sdunn235",
+      "repo": "w5-solid-lsp-Sdunn235",
+      "assignmentPattern": "w5-solid-lsp",
+      "submittedAt": "2026-02-19T01:43:26Z",
+      "pushedAt": "2026-02-19T01:43:27Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w5-solid-lsp-Sdunn235",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 1,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "GameEngine.cs:88"
+      ],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
+        "1 TODOs remaining",
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "Sdunn235",
+      "repo": "w6-solid-dip-Sdunn235",
+      "assignmentPattern": "w6-solid-dip",
+      "submittedAt": "2026-02-26T21:04:47Z",
+      "pushedAt": "2026-02-26T21:04:47Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w6-solid-dip-Sdunn235",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [
+        "ExtraCharacters"
+      ],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Completed stretch goal(s)",
         "Template only - no student commits detected"
       ]
     },
@@ -351,17 +839,30 @@
         "duplication": "0.0",
         "linesOfCode": "229"
       },
-      "todoCount": 0,
+      "todoCount": 4,
       "studentComments": 0,
-      "hasStretch": false,
+      "hasStretch": true,
       "needsReview": false,
-      "estimatedScore": 70,
+      "estimatedScore": 58,
       "comments": [],
-      "todos": [],
-      "stretchGoals": [],
+      "todos": [
+        "MainMenu.cs:184",
+        "MainMenu.cs:230",
+        "CharacterFactory.cs:15",
+        "GameEngine.cs:34"
+      ],
+      "stretchGoals": [
+        "CsvHelper",
+        "Spectre.Console",
+        "JsonFileHandler",
+        "CommandPattern"
+      ],
       "studentCommitCount": 27,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "4 TODOs remaining",
+        "Completed stretch goal(s)"
+      ]
     },
     {
       "name": "TGustafson1",
@@ -386,17 +887,29 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 0,
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
+        "Many TODOs remaining - likely incomplete",
         "Template only - no student commits detected"
       ]
     },
@@ -423,17 +936,147 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 0,
+      "todoCount": 16,
+      "studentComments": 4,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [
+        {
+          "file": "CharacterManager.cs",
+          "line": 14,
+          "text": "/// Why is this bad?"
+        },
+        {
+          "file": "CharacterWriter.cs",
+          "line": 13,
+          "text": "/// Why separate reading and writing?"
+        },
+        {
+          "file": "CharacterWriter.cs",
+          "line": 75,
+          "text": "    /// Helper method to format a Character object as a CSV line."
+        },
+        {
+          "file": "CharacterReader.cs",
+          "line": 107,
+          "text": "    /// Helper method to parse a single CSV line into a Character object."
+        }
+      ],
+      "todos": [
+        "CharacterManager.cs:37",
+        "CharacterManager.cs:49",
+        "CharacterManager.cs:71",
+        "CharacterManager.cs:85",
+        "CharacterManager.cs:105",
+        "CharacterWriter.cs:37",
+        "CharacterWriter.cs:46",
+        "CharacterWriter.cs:60",
+        "CharacterWriter.cs:69",
+        "CharacterWriter.cs:83",
+        "CharacterReader.cs:34",
+        "CharacterReader.cs:47",
+        "CharacterReader.cs:50",
+        "CharacterReader.cs:77",
+        "CharacterReader.cs:100",
+        "CharacterReader.cs:114"
+      ],
+      "stretchGoals": [],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "4 student comment(s) to review",
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "TGustafson1",
+      "repo": "w4-solid-ocp-TGustafson1",
+      "assignmentPattern": "w4-solid-ocp",
+      "submittedAt": "2026-02-12T22:22:27Z",
+      "pushedAt": "2026-02-12T22:22:27Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w4-solid-ocp-TGustafson1",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 8,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [
+        "JsonFileHandler.cs:32",
+        "JsonFileHandler.cs:42",
+        "JsonFileHandler.cs:52",
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:35",
+        "CsvFileHandler.cs:43",
+        "CsvFileHandler.cs:50",
+        "CsvFileHandler.cs:57"
+      ],
+      "stretchGoals": [
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "TGustafson1",
+      "repo": "w5-solid-lsp-TGustafson1",
+      "assignmentPattern": "w5-solid-lsp",
+      "submittedAt": "2026-02-19T01:43:26Z",
+      "pushedAt": "2026-02-19T01:43:27Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w5-solid-lsp-TGustafson1",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 1,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "GameEngine.cs:88"
+      ],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
+        "1 TODOs remaining",
         "Template only - no student commits detected"
       ]
     },
@@ -460,17 +1103,21 @@
         "duplication": "0.0",
         "linesOfCode": "251"
       },
-      "todoCount": 0,
+      "todoCount": 1,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 100,
+      "estimatedScore": 97,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:12"
+      ],
       "stretchGoals": [],
       "studentCommitCount": 4,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "1 TODOs remaining"
+      ]
     },
     {
       "name": "irodriguez5",
@@ -496,16 +1143,24 @@
         "linesOfCode": "394"
       },
       "todoCount": 0,
-      "studentComments": 0,
+      "studentComments": 1,
       "hasStretch": false,
-      "needsReview": false,
+      "needsReview": true,
       "estimatedScore": 100,
-      "comments": [],
+      "comments": [
+        {
+          "file": "Program.cs",
+          "line": 272,
+          "text": "    // CSV helpers"
+        }
+      ],
       "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 2,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "1 student comment(s) to review"
+      ]
     },
     {
       "name": "irodriguez5",
@@ -530,17 +1185,107 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 0,
-      "studentComments": 0,
+      "todoCount": 16,
+      "studentComments": 4,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
-      "comments": [],
-      "todos": [],
+      "comments": [
+        {
+          "file": "CharacterManager.cs",
+          "line": 14,
+          "text": "/// Why is this bad?"
+        },
+        {
+          "file": "CharacterWriter.cs",
+          "line": 13,
+          "text": "/// Why separate reading and writing?"
+        },
+        {
+          "file": "CharacterWriter.cs",
+          "line": 75,
+          "text": "    /// Helper method to format a Character object as a CSV line."
+        },
+        {
+          "file": "CharacterReader.cs",
+          "line": 107,
+          "text": "    /// Helper method to parse a single CSV line into a Character object."
+        }
+      ],
+      "todos": [
+        "CharacterManager.cs:37",
+        "CharacterManager.cs:49",
+        "CharacterManager.cs:71",
+        "CharacterManager.cs:85",
+        "CharacterManager.cs:105",
+        "CharacterWriter.cs:37",
+        "CharacterWriter.cs:46",
+        "CharacterWriter.cs:60",
+        "CharacterWriter.cs:69",
+        "CharacterWriter.cs:83",
+        "CharacterReader.cs:34",
+        "CharacterReader.cs:47",
+        "CharacterReader.cs:50",
+        "CharacterReader.cs:77",
+        "CharacterReader.cs:100",
+        "CharacterReader.cs:114"
+      ],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "4 student comment(s) to review",
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "irodriguez5",
+      "repo": "w4-solid-ocp-irodriguez5",
+      "assignmentPattern": "w4-solid-ocp",
+      "submittedAt": "2026-02-12T22:22:27Z",
+      "pushedAt": "2026-02-12T22:22:27Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w4-solid-ocp-irodriguez5",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 8,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [
+        "JsonFileHandler.cs:32",
+        "JsonFileHandler.cs:42",
+        "JsonFileHandler.cs:52",
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:35",
+        "CsvFileHandler.cs:43",
+        "CsvFileHandler.cs:50",
+        "CsvFileHandler.cs:57"
+      ],
+      "stretchGoals": [
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
         "Template only - no student commits detected"
       ]
     },
@@ -567,17 +1312,22 @@
         "duplication": "0.0",
         "linesOfCode": "274"
       },
-      "todoCount": 0,
+      "todoCount": 2,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 100,
+      "estimatedScore": 94,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:135",
+        "Program.cs:259"
+      ],
       "stretchGoals": [],
       "studentCommitCount": 2,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "2 TODOs remaining"
+      ]
     },
     {
       "name": "taylorharty",
@@ -602,17 +1352,29 @@
         "duplication": "0.0",
         "linesOfCode": "132"
       },
-      "todoCount": 0,
+      "todoCount": 10,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:56",
+        "Program.cs:57",
+        "Program.cs:62",
+        "Program.cs:66",
+        "Program.cs:71",
+        "Program.cs:81",
+        "Program.cs:97",
+        "Program.cs:102",
+        "Program.cs:106",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
+        "Many TODOs remaining - likely incomplete",
         "Template only - no student commits detected"
       ]
     },
@@ -639,17 +1401,147 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 0,
+      "todoCount": 16,
+      "studentComments": 4,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [
+        {
+          "file": "CharacterManager.cs",
+          "line": 14,
+          "text": "/// Why is this bad?"
+        },
+        {
+          "file": "CharacterWriter.cs",
+          "line": 13,
+          "text": "/// Why separate reading and writing?"
+        },
+        {
+          "file": "CharacterWriter.cs",
+          "line": 75,
+          "text": "    /// Helper method to format a Character object as a CSV line."
+        },
+        {
+          "file": "CharacterReader.cs",
+          "line": 107,
+          "text": "    /// Helper method to parse a single CSV line into a Character object."
+        }
+      ],
+      "todos": [
+        "CharacterManager.cs:37",
+        "CharacterManager.cs:49",
+        "CharacterManager.cs:71",
+        "CharacterManager.cs:85",
+        "CharacterManager.cs:105",
+        "CharacterWriter.cs:37",
+        "CharacterWriter.cs:46",
+        "CharacterWriter.cs:60",
+        "CharacterWriter.cs:69",
+        "CharacterWriter.cs:83",
+        "CharacterReader.cs:34",
+        "CharacterReader.cs:47",
+        "CharacterReader.cs:50",
+        "CharacterReader.cs:77",
+        "CharacterReader.cs:100",
+        "CharacterReader.cs:114"
+      ],
+      "stretchGoals": [],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "4 student comment(s) to review",
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "taylorharty",
+      "repo": "w4-solid-ocp-taylorharty",
+      "assignmentPattern": "w4-solid-ocp",
+      "submittedAt": "2026-02-12T22:22:27Z",
+      "pushedAt": "2026-02-12T22:22:27Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w4-solid-ocp-taylorharty",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 8,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [
+        "JsonFileHandler.cs:32",
+        "JsonFileHandler.cs:42",
+        "JsonFileHandler.cs:52",
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:35",
+        "CsvFileHandler.cs:43",
+        "CsvFileHandler.cs:50",
+        "CsvFileHandler.cs:57"
+      ],
+      "stretchGoals": [
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "taylorharty",
+      "repo": "w5-solid-lsp-taylorharty",
+      "assignmentPattern": "w5-solid-lsp",
+      "submittedAt": "2026-02-19T01:43:26Z",
+      "pushedAt": "2026-02-19T01:43:27Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w5-solid-lsp-taylorharty",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 1,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "GameEngine.cs:88"
+      ],
       "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
+        "1 TODOs remaining",
         "Template only - no student commits detected"
       ]
     }

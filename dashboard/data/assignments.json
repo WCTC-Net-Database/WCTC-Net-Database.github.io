@@ -4,4 +4,10 @@
 {"pattern":"w2-csv-parsing","name":"W2 Csv Parsing"}
 ,
 {"pattern":"w3-srp-linq","name":"W3 Srp Linq"}
+,
+{"pattern":"w4-solid-ocp","name":"W4 Solid Ocp"}
+,
+{"pattern":"w5-solid-lsp","name":"W5 Solid Lsp"}
+,
+{"pattern":"w6-solid-dip","name":"W6 Solid Dip"}
 ]}
