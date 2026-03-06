@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-06T12:40:44Z",
+  "generated": "2026-03-06T18:36:43Z",
   "students": [
     {
       "name": "MW92007",
@@ -376,8 +376,8 @@
       "submittedAt": "2026-03-01T03:30:41Z",
       "pushedAt": "2026-03-01T04:25:35Z",
       "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/22535874441",
+        "status": "action_required",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/22776371609",
         "errorStep": "",
         "errorLines": []
       },
@@ -593,11 +593,11 @@
       "name": "TGustafson1",
       "repo": "w1-file-i-o-TGustafson1",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-03-05T13:37:22Z",
-      "pushedAt": "2026-03-05T13:38:53Z",
+      "submittedAt": "2026-03-06T15:00:17Z",
+      "pushedAt": "2026-03-06T15:00:23Z",
       "build": {
         "status": "failure",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/22720517659",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/22768917328",
         "errorStep": "Restore dependencies",
         "errorLines": [
           "MSBUILD : error MSB1011: Specify which project or solution file to use because this folder contains more than one project or solution file."
@@ -614,17 +614,33 @@
         "duplication": "0.0",
         "linesOfCode": "229"
       },
-      "todoCount": 0,
+      "todoCount": 6,
       "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 70,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 50,
       "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 27,
+      "todos": [
+        "DataContext.cs:14",
+        "DataContext.cs:45",
+        "MainMenu.cs:91",
+        "MainMenu.cs:184",
+        "MainMenu.cs:230",
+        "GameEngine.cs:34"
+      ],
+      "stretchGoals": [
+        "CsvHelper",
+        "Spectre.Console",
+        "JsonFileHandler",
+        "CommandPattern",
+        "ExtraCharacters"
+      ],
+      "studentCommitCount": 33,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)"
+      ]
     },
     {
       "name": "TGustafson1",
@@ -751,6 +767,43 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w5-solid-lsp-TGustafson1",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "TGustafson1",
+      "repo": "w6-solid-dip-TGustafson1",
+      "assignmentPattern": "w6-solid-dip",
+      "submittedAt": "2026-02-26T21:04:47Z",
+      "pushedAt": "2026-02-26T21:04:47Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w6-solid-dip-TGustafson1",
         "maintainability": "-",
         "codeSmells": "-",
         "bugs": "-",

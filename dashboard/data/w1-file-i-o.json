@@ -1,14 +1,14 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-03-06T12:39:31Z",
+  "generated": "2026-03-06T18:35:41Z",
   "students": [
     {
       "name": "TGustafson1",
       "repo": "w1-file-i-o-TGustafson1",
-      "submittedAt": "2026-03-05T13:37:22Z",
+      "submittedAt": "2026-03-06T15:00:17Z",
       "build": {
         "status": "failure",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/22720517659",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/22768917328",
         "errorStep": "Restore dependencies",
         "errorLines": [
           "MSBUILD : error MSB1011: Specify which project or solution file to use because this folder contains more than one project or solution file."
@@ -25,25 +25,41 @@
         "duplication": "0.0",
         "linesOfCode": "229"
       },
-      "todoCount": 0,
+      "todoCount": 6,
       "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 70,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 50,
       "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 27,
+      "todos": [
+        "DataContext.cs:14",
+        "DataContext.cs:45",
+        "MainMenu.cs:91",
+        "MainMenu.cs:184",
+        "MainMenu.cs:230",
+        "GameEngine.cs:34"
+      ],
+      "stretchGoals": [
+        "CsvHelper",
+        "Spectre.Console",
+        "JsonFileHandler",
+        "CommandPattern",
+        "ExtraCharacters"
+      ],
+      "studentCommitCount": 33,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)"
+      ]
     },
     {
       "name": "Sdunn235",
       "repo": "w1-file-i-o-Sdunn235",
       "submittedAt": "2026-03-01T03:30:41Z",
       "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/22535874441",
+        "status": "action_required",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/22776371609",
         "errorStep": "",
         "errorLines": []
       },
