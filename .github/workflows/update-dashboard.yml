@@ -36,7 +36,7 @@ jobs:
           mkdir -p /tmp/repos
 
           # All known assignment patterns
-          ALL_PATTERNS="w1-file-i-o w2-csv-parsing w3-srp-linq w4-ocp-interfaces w5-lsp-isp w6-dip-abstractions w7-midterm-prep w8-midterm w9-efcore-intro"
+          ALL_PATTERNS="w1-file-i-o w2-csv-parsing w3-srp-linq w4-solid-ocp w5-solid-lsp w6-solid-dip w7-midterm-prep w8-midterm w9-efcore-intro"
 
           # Load last run timestamp
           LAST_RUN_FILE="dashboard/data/.last_run"
