@@ -1,6 +1,6 @@
 {
   "assignment": "w6-solid-dip",
-  "generated": "2026-03-06T03:51:48Z",
+  "generated": "2026-03-06T06:39:51Z",
   "students": [
     {
       "name": "Samuel-dotcom-rgb",
@@ -30,27 +30,16 @@
         "linesOfCode": ""
       },
       "todoCount": 0,
-      "studentComments": 1,
-      "hasStretch": true,
-      "needsReview": true,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
       "estimatedScore": 70,
-      "comments": [
-        {
-          "file": "CharacterBase.cs",
-          "line": 44,
-          "text": "    // ── Helper ────────────────────────────────────────────────────────────────"
-        }
-      ],
+      "comments": [],
       "todos": [],
-      "stretchGoals": [
-        "ExtraCharacters"
-      ],
+      "stretchGoals": [],
       "studentCommitCount": 2,
       "isTemplateOnly": false,
-      "notes": [
-        "Completed stretch goal(s)",
-        "1 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "Sdunn235",
@@ -75,18 +64,15 @@
       },
       "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
       "todos": [],
-      "stretchGoals": [
-        "ExtraCharacters"
-      ],
+      "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Completed stretch goal(s)",
         "Template only - no student commits detected"
       ]
     }

@@ -1,6 +1,6 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-03-06T03:49:24Z",
+  "generated": "2026-03-06T06:39:03Z",
   "students": [
     {
       "name": "TGustafson1",
@@ -25,30 +25,17 @@
         "duplication": "0.0",
         "linesOfCode": "229"
       },
-      "todoCount": 4,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 58,
+      "estimatedScore": 70,
       "comments": [],
-      "todos": [
-        "MainMenu.cs:184",
-        "MainMenu.cs:230",
-        "CharacterFactory.cs:15",
-        "GameEngine.cs:34"
-      ],
-      "stretchGoals": [
-        "CsvHelper",
-        "Spectre.Console",
-        "JsonFileHandler",
-        "CommandPattern"
-      ],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 27,
       "isTemplateOnly": false,
-      "notes": [
-        "4 TODOs remaining",
-        "Completed stretch goal(s)"
-      ]
+      "notes": []
     },
     {
       "name": "Sdunn235",
@@ -72,49 +59,16 @@
         "linesOfCode": "1053"
       },
       "todoCount": 0,
-      "studentComments": 5,
-      "hasStretch": true,
-      "needsReview": true,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
       "estimatedScore": 100,
-      "comments": [
-        {
-          "file": "Character.cs",
-          "line": 5,
-          "text": "/// Kept concrete (non-abstract) so CsvHelper can instantiate it directly for file I/O."
-        },
-        {
-          "file": "CharacterMap.cs",
-          "line": 8,
-          "text": "/// Used by CsvHelper to read and write CSV files correctly."
-        },
-        {
-          "file": "CharacterMap.cs",
-          "line": 14,
-          "text": "        // CsvHelper uses these mappings to match CSV column positions to Character properties."
-        },
-        {
-          "file": "CharacterUI.cs",
-          "line": 165,
-          "text": "    /// Helper method to display a single character's details."
-        },
-        {
-          "file": "Program.cs",
-          "line": 21,
-          "text": "/// *Disclosure*: This project was initially set up using AI assistance as part of a Week 2 learning exercise."
-        }
-      ],
+      "comments": [],
       "todos": [],
-      "stretchGoals": [
-        "CsvHelper",
-        "JsonFileHandler",
-        "CommandPattern"
-      ],
+      "stretchGoals": [],
       "studentCommitCount": 10,
       "isTemplateOnly": false,
-      "notes": [
-        "Completed stretch goal(s)",
-        "5 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "irodriguez5",
@@ -137,21 +91,17 @@
         "duplication": "0.0",
         "linesOfCode": "251"
       },
-      "todoCount": 1,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 97,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "Program.cs:12"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 4,
       "isTemplateOnly": false,
-      "notes": [
-        "1 TODOs remaining"
-      ]
+      "notes": []
     },
     {
       "name": "MW92007",
@@ -174,39 +124,17 @@
         "duplication": "0.0",
         "linesOfCode": "189"
       },
-      "todoCount": 12,
-      "studentComments": 1,
+      "todoCount": 0,
+      "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 80,
-      "comments": [
-        {
-          "file": "Program.cs",
-          "line": 246,
-          "text": "        // Then here it just returns all the values back to the file?"
-        }
-      ],
-      "todos": [
-        "Program.cs:13",
-        "Program.cs:84",
-        "Program.cs:123",
-        "Program.cs:143",
-        "Program.cs:154",
-        "Program.cs:160",
-        "Program.cs:163",
-        "Program.cs:187",
-        "Program.cs:261",
-        "Program.cs:264",
-        "Program.cs:265",
-        "Program.cs:266"
-      ],
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 2,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "1 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "Samuel-dotcom-rgb",
@@ -235,36 +163,17 @@
         "duplication": "0.0",
         "linesOfCode": "133"
       },
-      "todoCount": 16,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 50,
+      "needsReview": false,
+      "estimatedScore": 70,
       "comments": [],
-      "todos": [
-        "Program.cs:10",
-        "Program.cs:81",
-        "Program.cs:99",
-        "Program.cs:118",
-        "Program.cs:126",
-        "Program.cs:137",
-        "Program.cs:143",
-        "Program.cs:146",
-        "Program.cs:149",
-        "Program.cs:155",
-        "Program.cs:174",
-        "Program.cs:178",
-        "Program.cs:181",
-        "Program.cs:182",
-        "Program.cs:183",
-        "Program.cs:185"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 5,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete"
-      ]
+      "notes": []
     },
     {
       "name": "taylorharty",
@@ -287,22 +196,17 @@
         "duplication": "0.0",
         "linesOfCode": "274"
       },
-      "todoCount": 2,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 94,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "Program.cs:135",
-        "Program.cs:259"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 2,
       "isTemplateOnly": false,
-      "notes": [
-        "2 TODOs remaining"
-      ]
+      "notes": []
     }
   ]
 }

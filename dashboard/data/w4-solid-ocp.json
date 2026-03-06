@@ -1,6 +1,6 @@
 {
   "assignment": "w4-solid-ocp",
-  "generated": "2026-03-06T03:51:01Z",
+  "generated": "2026-03-06T06:39:35Z",
   "students": [
     {
       "name": "Samuel-dotcom-rgb",
@@ -25,19 +25,15 @@
       },
       "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": false,
       "estimatedScore": 100,
       "comments": [],
       "todos": [],
-      "stretchGoals": [
-        "JsonFileHandler"
-      ],
+      "stretchGoals": [],
       "studentCommitCount": 2,
       "isTemplateOnly": false,
-      "notes": [
-        "Completed stretch goal(s)"
-      ]
+      "notes": []
     },
     {
       "name": "MW92007",
@@ -60,30 +56,17 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 8,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [
-        "JsonFileHandler.cs:32",
-        "JsonFileHandler.cs:42",
-        "JsonFileHandler.cs:52",
-        "CsvFileHandler.cs:25",
-        "CsvFileHandler.cs:35",
-        "CsvFileHandler.cs:43",
-        "CsvFileHandler.cs:50",
-        "CsvFileHandler.cs:57"
-      ],
-      "stretchGoals": [
-        "JsonFileHandler"
-      ],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)",
         "Template only - no student commits detected"
       ]
     },
@@ -108,30 +91,17 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 8,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [
-        "JsonFileHandler.cs:32",
-        "JsonFileHandler.cs:42",
-        "JsonFileHandler.cs:52",
-        "CsvFileHandler.cs:25",
-        "CsvFileHandler.cs:35",
-        "CsvFileHandler.cs:43",
-        "CsvFileHandler.cs:50",
-        "CsvFileHandler.cs:57"
-      ],
-      "stretchGoals": [
-        "JsonFileHandler"
-      ],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)",
         "Template only - no student commits detected"
       ]
     },
@@ -156,30 +126,17 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 8,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [
-        "JsonFileHandler.cs:32",
-        "JsonFileHandler.cs:42",
-        "JsonFileHandler.cs:52",
-        "CsvFileHandler.cs:25",
-        "CsvFileHandler.cs:35",
-        "CsvFileHandler.cs:43",
-        "CsvFileHandler.cs:50",
-        "CsvFileHandler.cs:57"
-      ],
-      "stretchGoals": [
-        "JsonFileHandler"
-      ],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)",
         "Template only - no student commits detected"
       ]
     },
@@ -204,30 +161,17 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 8,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [
-        "JsonFileHandler.cs:32",
-        "JsonFileHandler.cs:42",
-        "JsonFileHandler.cs:52",
-        "CsvFileHandler.cs:25",
-        "CsvFileHandler.cs:35",
-        "CsvFileHandler.cs:43",
-        "CsvFileHandler.cs:50",
-        "CsvFileHandler.cs:57"
-      ],
-      "stretchGoals": [
-        "JsonFileHandler"
-      ],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)",
         "Template only - no student commits detected"
       ]
     },
@@ -252,30 +196,17 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 8,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [
-        "JsonFileHandler.cs:32",
-        "JsonFileHandler.cs:42",
-        "JsonFileHandler.cs:52",
-        "CsvFileHandler.cs:25",
-        "CsvFileHandler.cs:35",
-        "CsvFileHandler.cs:43",
-        "CsvFileHandler.cs:50",
-        "CsvFileHandler.cs:57"
-      ],
-      "stretchGoals": [
-        "JsonFileHandler"
-      ],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)",
         "Template only - no student commits detected"
       ]
     }
