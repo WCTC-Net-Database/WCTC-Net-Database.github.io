@@ -1,6 +1,6 @@
 {
   "assignment": "w3-srp-linq",
-  "generated": "2026-03-08T06:35:17Z",
+  "generated": "2026-03-08T12:35:14Z",
   "students": [
     {
       "name": "irodriguez5",
@@ -23,52 +23,17 @@
         "duplication": "0.0",
         "linesOfCode": "389"
       },
-      "todoCount": 2,
-      "studentComments": 5,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 94,
-      "comments": [
-        {
-          "file": "CharacterManager.cs",
-          "line": 22,
-          "text": "/// Why is this bad?"
-        },
-        {
-          "file": "CharacterManager.cs",
-          "line": 94,
-          "text": "        //Table header + stretch goal  ( i did have copilot help with how to do this portion)"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 14,
-          "text": "/// Why separate reading and writing?"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 76,
-          "text": "    /// Helper method to format a Character object as a CSV line."
-        },
-        {
-          "file": "CharacterReader.cs",
-          "line": 130,
-          "text": "    /// Helper method to parse a single CSV line into a Character object."
-        }
-      ],
-      "todos": [
-        "CharacterWriter.cs:38",
-        "CharacterWriter.cs:47"
-      ],
-      "stretchGoals": [
-        "Spectre.Console"
-      ],
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 1,
       "isTemplateOnly": false,
-      "notes": [
-        "2 TODOs remaining",
-        "Completed stretch goal(s)",
-        "5 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "MW92007",
