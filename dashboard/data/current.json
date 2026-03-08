@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-08T01:29:25Z",
+  "generated": "2026-03-08T06:35:53Z",
   "students": [
     {
       "name": "MW92007",
@@ -885,37 +885,70 @@
       "name": "irodriguez5",
       "repo": "w3-srp-linq-irodriguez5",
       "assignmentPattern": "w3-srp-linq",
-      "submittedAt": "2026-02-05T20:27:35Z",
-      "pushedAt": "2026-02-05T20:27:35Z",
+      "submittedAt": "2026-03-08T05:22:11Z",
+      "pushedAt": "2026-03-08T05:22:14Z",
       "build": {
-        "status": "unknown",
-        "url": "",
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w3-srp-linq-irodriguez5/actions/runs/22814658338",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w3-srp-linq-irodriguez5",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
+        "maintainability": "A",
+        "codeSmells": "25",
+        "bugs": "0",
+        "vulnerabilities": "0",
+        "reliability": "A",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "389"
       },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
+      "todoCount": 2,
+      "studentComments": 5,
+      "hasStretch": true,
       "needsReview": true,
-      "estimatedScore": 0,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 0,
-      "isTemplateOnly": true,
+      "estimatedScore": 94,
+      "comments": [
+        {
+          "file": "CharacterManager.cs",
+          "line": 22,
+          "text": "/// Why is this bad?"
+        },
+        {
+          "file": "CharacterManager.cs",
+          "line": 94,
+          "text": "        //Table header + stretch goal  ( i did have copilot help with how to do this portion)"
+        },
+        {
+          "file": "CharacterWriter.cs",
+          "line": 14,
+          "text": "/// Why separate reading and writing?"
+        },
+        {
+          "file": "CharacterWriter.cs",
+          "line": 76,
+          "text": "    /// Helper method to format a Character object as a CSV line."
+        },
+        {
+          "file": "CharacterReader.cs",
+          "line": 130,
+          "text": "    /// Helper method to parse a single CSV line into a Character object."
+        }
+      ],
+      "todos": [
+        "CharacterWriter.cs:38",
+        "CharacterWriter.cs:47"
+      ],
+      "stretchGoals": [
+        "Spectre.Console"
+      ],
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
       "notes": [
-        "Template only - no student commits detected"
+        "2 TODOs remaining",
+        "Completed stretch goal(s)",
+        "5 student comment(s) to review"
       ]
     },
     {
