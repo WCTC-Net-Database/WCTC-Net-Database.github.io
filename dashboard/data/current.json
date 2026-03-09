@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-09T06:54:58Z",
+  "generated": "2026-03-09T12:47:02Z",
   "students": [
     {
       "name": "MW92007",
@@ -593,11 +593,11 @@
       "name": "TGustafson1",
       "repo": "w1-file-i-o-TGustafson1",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-03-06T15:00:17Z",
-      "pushedAt": "2026-03-06T15:00:23Z",
+      "submittedAt": "2026-03-09T11:47:09Z",
+      "pushedAt": "2026-03-09T11:47:15Z",
       "build": {
         "status": "failure",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/22768917328",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/22851967114",
         "errorStep": "Restore dependencies",
         "errorLines": [
           "MSBUILD : error MSB1011: Specify which project or solution file to use because this folder contains more than one project or solution file."
@@ -614,17 +614,34 @@
         "duplication": "0.0",
         "linesOfCode": "229"
       },
-      "todoCount": 0,
+      "todoCount": 7,
       "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 70,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 50,
       "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 33,
+      "todos": [
+        "DataContext.cs:18",
+        "DataContext.cs:52",
+        "MainMenu.cs:153",
+        "MainMenu.cs:179",
+        "MainMenu.cs:225",
+        "GameEngine.cs:17",
+        "GameEngine.cs:35"
+      ],
+      "stretchGoals": [
+        "CsvHelper",
+        "Spectre.Console",
+        "JsonFileHandler",
+        "CommandPattern",
+        "ExtraCharacters"
+      ],
+      "studentCommitCount": 37,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)"
+      ]
     },
     {
       "name": "TGustafson1",
@@ -930,6 +947,80 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w4-solid-ocp-irodriguez5",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "irodriguez5",
+      "repo": "w5-solid-lsp-irodriguez5",
+      "assignmentPattern": "w5-solid-lsp",
+      "submittedAt": "2026-02-19T01:43:26Z",
+      "pushedAt": "2026-02-19T01:43:27Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w5-solid-lsp-irodriguez5",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "irodriguez5",
+      "repo": "w6-solid-dip-irodriguez5",
+      "assignmentPattern": "w6-solid-dip",
+      "submittedAt": "2026-02-26T21:04:47Z",
+      "pushedAt": "2026-02-26T21:04:47Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w6-solid-dip-irodriguez5",
         "maintainability": "-",
         "codeSmells": "-",
         "bugs": "-",

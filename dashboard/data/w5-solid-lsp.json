@@ -1,6 +1,6 @@
 {
   "assignment": "w5-solid-lsp",
-  "generated": "2026-03-09T06:54:46Z",
+  "generated": "2026-03-09T12:46:37Z",
   "students": [
     {
       "name": "Samuel-dotcom-rgb",
@@ -38,6 +38,41 @@
       "studentCommitCount": 2,
       "isTemplateOnly": false,
       "notes": []
+    },
+    {
+      "name": "irodriguez5",
+      "repo": "w5-solid-lsp-irodriguez5",
+      "submittedAt": "2026-02-19T01:43:26Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w5-solid-lsp-irodriguez5",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Template only - no student commits detected"
+      ]
     },
     {
       "name": "Sdunn235",
