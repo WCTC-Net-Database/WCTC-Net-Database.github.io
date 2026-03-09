@@ -1,39 +1,73 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-03-08T18:25:03Z",
+  "generated": "2026-03-09T01:28:19Z",
   "students": [
     {
       "name": "Sdunn235",
       "repo": "w1-file-i-o-Sdunn235",
-      "submittedAt": "2026-03-01T03:30:41Z",
+      "submittedAt": "2026-03-08T19:34:16Z",
       "build": {
-        "status": "action_required",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/22776911553",
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/22828278180",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
         "maintainability": "A",
-        "codeSmells": "34",
+        "codeSmells": "36",
         "bugs": "1",
         "vulnerabilities": "0",
         "reliability": "C",
         "security": "A",
-        "duplication": "6.8",
-        "linesOfCode": "1053"
+        "duplication": "6.6",
+        "linesOfCode": "1254"
       },
       "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
+      "studentComments": 5,
+      "hasStretch": true,
+      "needsReview": true,
       "estimatedScore": 100,
-      "comments": [],
+      "comments": [
+        {
+          "file": "CharacterDto.cs",
+          "line": 8,
+          "text": "/// Why a DTO?"
+        },
+        {
+          "file": "CharacterDtoMap.cs",
+          "line": 8,
+          "text": "/// Used by CsvHelper to read and write CSV files correctly."
+        },
+        {
+          "file": "CharacterDtoMap.cs",
+          "line": 17,
+          "text": "        // CsvHelper uses these mappings to match CSV column positions to CharacterDto properties."
+        },
+        {
+          "file": "CharacterUI.cs",
+          "line": 166,
+          "text": "    /// Helper method to display a single character's details."
+        },
+        {
+          "file": "Program.cs",
+          "line": 21,
+          "text": "/// *Disclosure*: This project was initially set up using AI assistance as part of a Week 2 learning exercise."
+        }
+      ],
       "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 10,
+      "stretchGoals": [
+        "CsvHelper",
+        "JsonFileHandler",
+        "CommandPattern",
+        "ExtraCharacters"
+      ],
+      "studentCommitCount": 11,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Completed stretch goal(s)",
+        "5 student comment(s) to review"
+      ]
     },
     {
       "name": "TGustafson1",
