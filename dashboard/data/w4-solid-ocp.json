@@ -1,7 +1,55 @@
 {
   "assignment": "w4-solid-ocp",
-  "generated": "2026-03-10T01:23:40Z",
+  "generated": "2026-03-10T06:40:33Z",
   "students": [
+    {
+      "name": "irodriguez5",
+      "repo": "w4-solid-ocp-irodriguez5",
+      "submittedAt": "2026-03-10T05:48:08Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w4-solid-ocp-irodriguez5/actions/runs/22889056881",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w4-solid-ocp-irodriguez5",
+        "maintainability": "A",
+        "codeSmells": "28",
+        "bugs": "0",
+        "vulnerabilities": "0",
+        "reliability": "A",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "476"
+      },
+      "todoCount": 8,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [],
+      "todos": [
+        "JsonFileHandler.cs:33",
+        "JsonFileHandler.cs:43",
+        "JsonFileHandler.cs:53",
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:60",
+        "CsvFileHandler.cs:74",
+        "CsvFileHandler.cs:83",
+        "CsvFileHandler.cs:92"
+      ],
+      "stretchGoals": [
+        "Spectre.Console",
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)"
+      ]
+    },
     {
       "name": "Samuel-dotcom-rgb",
       "repo": "w4-solid-ocp-Samuel-dotcom-rgb",
@@ -47,41 +95,6 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w4-solid-ocp-MW92007",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 0,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 0,
-      "isTemplateOnly": true,
-      "notes": [
-        "Template only - no student commits detected"
-      ]
-    },
-    {
-      "name": "irodriguez5",
-      "repo": "w4-solid-ocp-irodriguez5",
-      "submittedAt": "2026-02-12T22:22:27Z",
-      "build": {
-        "status": "unknown",
-        "url": "",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w4-solid-ocp-irodriguez5",
         "maintainability": "-",
         "codeSmells": "-",
         "bugs": "-",

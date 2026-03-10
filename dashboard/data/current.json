@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-10T01:24:06Z",
+  "generated": "2026-03-10T06:40:58Z",
   "students": [
     {
       "name": "MW92007",
@@ -920,37 +920,50 @@
       "name": "irodriguez5",
       "repo": "w4-solid-ocp-irodriguez5",
       "assignmentPattern": "w4-solid-ocp",
-      "submittedAt": "2026-02-12T22:22:27Z",
-      "pushedAt": "2026-02-12T22:22:27Z",
+      "submittedAt": "2026-03-10T05:48:08Z",
+      "pushedAt": "2026-03-10T05:48:11Z",
       "build": {
-        "status": "unknown",
-        "url": "",
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w4-solid-ocp-irodriguez5/actions/runs/22889056881",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w4-solid-ocp-irodriguez5",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
+        "maintainability": "A",
+        "codeSmells": "28",
+        "bugs": "0",
+        "vulnerabilities": "0",
+        "reliability": "A",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "476"
       },
-      "todoCount": 0,
+      "todoCount": 8,
       "studentComments": 0,
-      "hasStretch": false,
+      "hasStretch": true,
       "needsReview": true,
-      "estimatedScore": 0,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 0,
-      "isTemplateOnly": true,
+      "todos": [
+        "JsonFileHandler.cs:33",
+        "JsonFileHandler.cs:43",
+        "JsonFileHandler.cs:53",
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:60",
+        "CsvFileHandler.cs:74",
+        "CsvFileHandler.cs:83",
+        "CsvFileHandler.cs:92"
+      ],
+      "stretchGoals": [
+        "Spectre.Console",
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
       "notes": [
-        "Template only - no student commits detected"
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)"
       ]
     },
     {
