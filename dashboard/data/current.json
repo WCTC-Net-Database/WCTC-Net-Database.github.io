@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-12T06:46:08Z",
+  "generated": "2026-03-12T12:43:51Z",
   "students": [
     {
       "name": "MW92007",
@@ -1121,39 +1121,16 @@
         "linesOfCode": "363"
       },
       "todoCount": 0,
-      "studentComments": 4,
+      "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
+      "needsReview": false,
       "estimatedScore": 100,
-      "comments": [
-        {
-          "file": "CharacterManager.cs",
-          "line": 15,
-          "text": "///     Why is this bad?"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 11,
-          "text": "///     Why separate reading and writing?"
-        },
-        {
-          "file": "CharacterWriter.cs",
-          "line": 54,
-          "text": "    ///     Helper method to format a Character object as a CSV line."
-        },
-        {
-          "file": "CharacterReader.cs",
-          "line": 89,
-          "text": "    ///     Helper method to parse a single CSV line into a Character object."
-        }
-      ],
+      "comments": [],
       "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 1,
       "isTemplateOnly": false,
-      "notes": [
-        "4 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "taylorharty",
