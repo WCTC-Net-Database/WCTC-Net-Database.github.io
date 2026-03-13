@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-13T06:44:20Z",
+  "generated": "2026-03-13T12:43:50Z",
   "students": [
     {
       "name": "MW92007",
@@ -832,67 +832,17 @@
         "duplication": "0.0",
         "linesOfCode": "1207"
       },
-      "todoCount": 10,
-      "studentComments": 6,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 80,
-      "comments": [
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 10,
-          "text": "/// What is a Decorator?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 16,
-          "text": "/// What does this decorator do?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 23,
-          "text": "/// How is this decorator used in this project?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 32,
-          "text": "/// How does this relate to dependency injection?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 40,
-          "text": "/// Why is this good design?"
-        },
-        {
-          "file": "BattleService.cs",
-          "line": 11,
-          "text": "// - Equipped weapons should increase attack damage."
-        }
-      ],
-      "todos": [
-        "Player.cs:40",
-        "Player.cs:81",
-        "Item.cs:36",
-        "BattleService.cs:63",
-        "BattleService.cs:68",
-        "BattleService.cs:70",
-        "BattleService.cs:89",
-        "BattleService.cs:91",
-        "BattleService.cs:97",
-        "BattleService.cs:119"
-      ],
-      "stretchGoals": [
-        "CsvHelper",
-        "Spectre.Console",
-        "ItemCombat"
-      ],
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 1,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)",
-        "6 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "exam-Samuel-dotcom-rgb",
