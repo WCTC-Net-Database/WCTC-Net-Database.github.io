@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-12T18:44:37Z",
+  "generated": "2026-03-13T01:28:33Z",
   "students": [
     {
       "name": "MW92007",
@@ -593,38 +593,54 @@
       "name": "TGustafson1",
       "repo": "w1-file-i-o-TGustafson1",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-03-09T11:47:09Z",
-      "pushedAt": "2026-03-09T11:47:15Z",
+      "submittedAt": "2026-03-12T22:33:06Z",
+      "pushedAt": "2026-03-12T22:33:08Z",
       "build": {
-        "status": "failure",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/22851967114",
-        "errorStep": "Restore dependencies",
-        "errorLines": [
-          "MSBUILD : error MSB1011: Specify which project or solution file to use because this folder contains more than one project or solution file."
-        ]
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-TGustafson1/actions/runs/23027078914",
+        "errorStep": "",
+        "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-TGustafson1",
         "maintainability": "A",
-        "codeSmells": "18",
-        "bugs": "1",
+        "codeSmells": "84",
+        "bugs": "2",
         "vulnerabilities": "0",
         "reliability": "C",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "229"
+        "linesOfCode": "1178"
       },
-      "todoCount": 0,
+      "todoCount": 8,
       "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 70,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 37,
+      "todos": [
+        "DataContext.cs:18",
+        "DataContext.cs:52",
+        "MainMenu.cs:154",
+        "MainMenu.cs:180",
+        "MainMenu.cs:226",
+        "MainMenu.cs:229",
+        "GameEngine.cs:15",
+        "GameEngine.cs:25"
+      ],
+      "stretchGoals": [
+        "CsvHelper",
+        "Spectre.Console",
+        "JsonFileHandler",
+        "CommandPattern",
+        "ExtraCharacters"
+      ],
+      "studentCommitCount": 38,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)"
+      ]
     },
     {
       "name": "TGustafson1",
@@ -809,6 +825,446 @@
       "isTemplateOnly": true,
       "notes": [
         "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "exam-MW92007",
+      "repo": "w8-midterm-exam-MW92007",
+      "assignmentPattern": "w8-midterm",
+      "submittedAt": "2026-03-12T01:42:09Z",
+      "pushedAt": "2026-03-12T01:42:09Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w8-midterm-exam-MW92007",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "exam-Samuel-dotcom-rgb",
+      "repo": "w8-midterm-exam-Samuel-dotcom-rgb",
+      "assignmentPattern": "w8-midterm",
+      "submittedAt": "2026-03-12T23:56:42Z",
+      "pushedAt": "2026-03-12T23:56:43Z",
+      "build": {
+        "status": "failure",
+        "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-Samuel-dotcom-rgb/actions/runs/23029562250",
+        "errorStep": "Build",
+        "errorLines": [
+          "##[error]D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\Models\\MonsterBase.cs(7,41): error CS0535: 'MonsterBase' does not implement interface member 'IMonster.TakeDamage(int)' [D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\ConsoleRpgEntities.csproj]",
+          "Build FAILED.",
+          "##[error]D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\Models\\MonsterBase.cs(7,41): error CS0535: 'MonsterBase' does not implement interface member 'IMonster.TakeDamage(int)' [D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\ConsoleRpgEntities.csproj]"
+        ]
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w8-midterm-exam-Samuel-dotcom-rgb",
+        "maintainability": "-",
+        "codeSmells": "",
+        "bugs": "",
+        "vulnerabilities": "",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "",
+        "linesOfCode": ""
+      },
+      "todoCount": 0,
+      "studentComments": 5,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 70,
+      "comments": [
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 10,
+          "text": "/// What is a Decorator?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 16,
+          "text": "/// What does this decorator do?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 23,
+          "text": "/// How is this decorator used in this project?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 32,
+          "text": "/// How does this relate to dependency injection?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 40,
+          "text": "/// Why is this good design?"
+        }
+      ],
+      "todos": [],
+      "stretchGoals": [
+        "CsvHelper",
+        "Spectre.Console",
+        "ItemCombat"
+      ],
+      "studentCommitCount": 2,
+      "isTemplateOnly": false,
+      "notes": [
+        "Completed stretch goal(s)",
+        "5 student comment(s) to review"
+      ]
+    },
+    {
+      "name": "exam-Sdunn235",
+      "repo": "w8-midterm-exam-Sdunn235",
+      "assignmentPattern": "w8-midterm",
+      "submittedAt": "2026-03-13T00:56:45Z",
+      "pushedAt": "2026-03-13T00:56:53Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-Sdunn235/actions/runs/23031219976",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w8-midterm-exam-Sdunn235",
+        "maintainability": "A",
+        "codeSmells": "60",
+        "bugs": "4",
+        "vulnerabilities": "0",
+        "reliability": "E",
+        "security": "A",
+        "duplication": "2.2",
+        "linesOfCode": "1524"
+      },
+      "todoCount": 3,
+      "studentComments": 5,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 91,
+      "comments": [
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 10,
+          "text": "/// What is a Decorator?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 16,
+          "text": "/// What does this decorator do?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 23,
+          "text": "/// How is this decorator used in this project?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 32,
+          "text": "/// How does this relate to dependency injection?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 40,
+          "text": "/// Why is this good design?"
+        }
+      ],
+      "todos": [
+        "Player.cs:39",
+        "Player.cs:65",
+        "Item.cs:38"
+      ],
+      "stretchGoals": [
+        "CsvHelper",
+        "Spectre.Console",
+        "ItemCombat"
+      ],
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
+      "notes": [
+        "3 TODOs remaining",
+        "Completed stretch goal(s)",
+        "5 student comment(s) to review"
+      ]
+    },
+    {
+      "name": "exam-TGustafson1",
+      "repo": "w8-midterm-exam-TGustafson1",
+      "assignmentPattern": "w8-midterm",
+      "submittedAt": "2026-03-13T00:23:25Z",
+      "pushedAt": "2026-03-13T00:23:29Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-TGustafson1/actions/runs/23030317660",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w8-midterm-exam-TGustafson1",
+        "maintainability": "A",
+        "codeSmells": "58",
+        "bugs": "7",
+        "vulnerabilities": "0",
+        "reliability": "E",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "1247"
+      },
+      "todoCount": 10,
+      "studentComments": 6,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 10,
+          "text": "/// What is a Decorator?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 16,
+          "text": "/// What does this decorator do?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 23,
+          "text": "/// How is this decorator used in this project?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 32,
+          "text": "/// How does this relate to dependency injection?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 40,
+          "text": "/// Why is this good design?"
+        },
+        {
+          "file": "BattleService.cs",
+          "line": 11,
+          "text": "// - Equipped weapons should increase attack damage."
+        }
+      ],
+      "todos": [
+        "Player.cs:39",
+        "Player.cs:66",
+        "Item.cs:36",
+        "BattleService.cs:53",
+        "BattleService.cs:57",
+        "BattleService.cs:61",
+        "BattleService.cs:80",
+        "BattleService.cs:82",
+        "BattleService.cs:88",
+        "BattleService.cs:121"
+      ],
+      "stretchGoals": [
+        "CsvHelper",
+        "Spectre.Console",
+        "ItemCombat"
+      ],
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "6 student comment(s) to review"
+      ]
+    },
+    {
+      "name": "exam-irodriguez5",
+      "repo": "w8-midterm-exam-irodriguez5",
+      "assignmentPattern": "w8-midterm",
+      "submittedAt": "2026-03-13T00:57:56Z",
+      "pushedAt": "2026-03-13T00:58:01Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-irodriguez5/actions/runs/23031247551",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w8-midterm-exam-irodriguez5",
+        "maintainability": "A",
+        "codeSmells": "48",
+        "bugs": "7",
+        "vulnerabilities": "0",
+        "reliability": "E",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "1199"
+      },
+      "todoCount": 10,
+      "studentComments": 7,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [
+        {
+          "file": "MonsterBase.cs",
+          "line": 73,
+          "text": "        //linq methods worked fine for the monsters so this wasn't done manuall not sure what i was doing wrong for players"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 10,
+          "text": "/// What is a Decorator?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 16,
+          "text": "/// What does this decorator do?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 23,
+          "text": "/// How is this decorator used in this project?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 32,
+          "text": "/// How does this relate to dependency injection?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 40,
+          "text": "/// Why is this good design?"
+        },
+        {
+          "file": "BattleService.cs",
+          "line": 11,
+          "text": "// - Equipped weapons should increase attack damage."
+        }
+      ],
+      "todos": [
+        "Player.cs:40",
+        "Player.cs:71",
+        "Item.cs:36",
+        "BattleService.cs:53",
+        "BattleService.cs:57",
+        "BattleService.cs:59",
+        "BattleService.cs:78",
+        "BattleService.cs:80",
+        "BattleService.cs:86",
+        "BattleService.cs:107"
+      ],
+      "stretchGoals": [
+        "CsvHelper",
+        "Spectre.Console",
+        "ItemCombat"
+      ],
+      "studentCommitCount": 2,
+      "isTemplateOnly": false,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "7 student comment(s) to review"
+      ]
+    },
+    {
+      "name": "exam-taylorharty",
+      "repo": "w8-midterm-exam-taylorharty",
+      "assignmentPattern": "w8-midterm",
+      "submittedAt": "2026-03-13T00:41:40Z",
+      "pushedAt": "2026-03-13T00:41:44Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-taylorharty/actions/runs/23030813783",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w8-midterm-exam-taylorharty",
+        "maintainability": "A",
+        "codeSmells": "44",
+        "bugs": "7",
+        "vulnerabilities": "0",
+        "reliability": "E",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "1166"
+      },
+      "todoCount": 8,
+      "studentComments": 6,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 10,
+          "text": "/// What is a Decorator?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 16,
+          "text": "/// What does this decorator do?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 23,
+          "text": "/// How is this decorator used in this project?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 32,
+          "text": "/// How does this relate to dependency injection?"
+        },
+        {
+          "file": "AutoSavePlayerServiceDecorator.cs",
+          "line": 40,
+          "text": "/// Why is this good design?"
+        },
+        {
+          "file": "BattleService.cs",
+          "line": 11,
+          "text": "// - Equipped weapons should increase attack damage."
+        }
+      ],
+      "todos": [
+        "Item.cs:36",
+        "BattleService.cs:53",
+        "BattleService.cs:57",
+        "BattleService.cs:59",
+        "BattleService.cs:78",
+        "BattleService.cs:80",
+        "BattleService.cs:86",
+        "BattleService.cs:107"
+      ],
+      "stretchGoals": [
+        "CsvHelper",
+        "Spectre.Console",
+        "ItemCombat"
+      ],
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "6 student comment(s) to review"
       ]
     },
     {
