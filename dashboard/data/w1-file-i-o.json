@@ -1,6 +1,6 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-03-13T01:26:51Z",
+  "generated": "2026-03-13T06:42:55Z",
   "students": [
     {
       "name": "TGustafson1",
@@ -23,35 +23,17 @@
         "duplication": "0.0",
         "linesOfCode": "1178"
       },
-      "todoCount": 8,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 80,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "DataContext.cs:18",
-        "DataContext.cs:52",
-        "MainMenu.cs:154",
-        "MainMenu.cs:180",
-        "MainMenu.cs:226",
-        "MainMenu.cs:229",
-        "GameEngine.cs:15",
-        "GameEngine.cs:25"
-      ],
-      "stretchGoals": [
-        "CsvHelper",
-        "Spectre.Console",
-        "JsonFileHandler",
-        "CommandPattern",
-        "ExtraCharacters"
-      ],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 38,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)"
-      ]
+      "notes": []
     },
     {
       "name": "Sdunn235",

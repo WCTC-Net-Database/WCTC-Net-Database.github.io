@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-13T01:28:33Z",
+  "generated": "2026-03-13T06:44:20Z",
   "students": [
     {
       "name": "MW92007",
@@ -612,35 +612,17 @@
         "duplication": "0.0",
         "linesOfCode": "1178"
       },
-      "todoCount": 8,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 80,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "DataContext.cs:18",
-        "DataContext.cs:52",
-        "MainMenu.cs:154",
-        "MainMenu.cs:180",
-        "MainMenu.cs:226",
-        "MainMenu.cs:229",
-        "GameEngine.cs:15",
-        "GameEngine.cs:25"
-      ],
-      "stretchGoals": [
-        "CsvHelper",
-        "Spectre.Console",
-        "JsonFileHandler",
-        "CommandPattern",
-        "ExtraCharacters"
-      ],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 38,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)"
-      ]
+      "notes": []
     },
     {
       "name": "TGustafson1",
@@ -831,206 +813,24 @@
       "name": "exam-MW92007",
       "repo": "w8-midterm-exam-MW92007",
       "assignmentPattern": "w8-midterm",
-      "submittedAt": "2026-03-12T01:42:09Z",
-      "pushedAt": "2026-03-12T01:42:09Z",
+      "submittedAt": "2026-03-13T01:38:20Z",
+      "pushedAt": "2026-03-13T01:38:26Z",
       "build": {
-        "status": "unknown",
-        "url": "",
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-MW92007/actions/runs/23032268890",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w8-midterm-exam-MW92007",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 0,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 0,
-      "isTemplateOnly": true,
-      "notes": [
-        "Template only - no student commits detected"
-      ]
-    },
-    {
-      "name": "exam-Samuel-dotcom-rgb",
-      "repo": "w8-midterm-exam-Samuel-dotcom-rgb",
-      "assignmentPattern": "w8-midterm",
-      "submittedAt": "2026-03-12T23:56:42Z",
-      "pushedAt": "2026-03-12T23:56:43Z",
-      "build": {
-        "status": "failure",
-        "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-Samuel-dotcom-rgb/actions/runs/23029562250",
-        "errorStep": "Build",
-        "errorLines": [
-          "##[error]D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\Models\\MonsterBase.cs(7,41): error CS0535: 'MonsterBase' does not implement interface member 'IMonster.TakeDamage(int)' [D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\ConsoleRpgEntities.csproj]",
-          "Build FAILED.",
-          "##[error]D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\Models\\MonsterBase.cs(7,41): error CS0535: 'MonsterBase' does not implement interface member 'IMonster.TakeDamage(int)' [D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\ConsoleRpgEntities.csproj]"
-        ]
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w8-midterm-exam-Samuel-dotcom-rgb",
-        "maintainability": "-",
-        "codeSmells": "",
-        "bugs": "",
-        "vulnerabilities": "",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "",
-        "linesOfCode": ""
-      },
-      "todoCount": 0,
-      "studentComments": 5,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 70,
-      "comments": [
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 10,
-          "text": "/// What is a Decorator?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 16,
-          "text": "/// What does this decorator do?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 23,
-          "text": "/// How is this decorator used in this project?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 32,
-          "text": "/// How does this relate to dependency injection?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 40,
-          "text": "/// Why is this good design?"
-        }
-      ],
-      "todos": [],
-      "stretchGoals": [
-        "CsvHelper",
-        "Spectre.Console",
-        "ItemCombat"
-      ],
-      "studentCommitCount": 2,
-      "isTemplateOnly": false,
-      "notes": [
-        "Completed stretch goal(s)",
-        "5 student comment(s) to review"
-      ]
-    },
-    {
-      "name": "exam-Sdunn235",
-      "repo": "w8-midterm-exam-Sdunn235",
-      "assignmentPattern": "w8-midterm",
-      "submittedAt": "2026-03-13T00:56:45Z",
-      "pushedAt": "2026-03-13T00:56:53Z",
-      "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-Sdunn235/actions/runs/23031219976",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w8-midterm-exam-Sdunn235",
         "maintainability": "A",
-        "codeSmells": "60",
-        "bugs": "4",
-        "vulnerabilities": "0",
-        "reliability": "E",
-        "security": "A",
-        "duplication": "2.2",
-        "linesOfCode": "1524"
-      },
-      "todoCount": 3,
-      "studentComments": 5,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 91,
-      "comments": [
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 10,
-          "text": "/// What is a Decorator?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 16,
-          "text": "/// What does this decorator do?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 23,
-          "text": "/// How is this decorator used in this project?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 32,
-          "text": "/// How does this relate to dependency injection?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 40,
-          "text": "/// Why is this good design?"
-        }
-      ],
-      "todos": [
-        "Player.cs:39",
-        "Player.cs:65",
-        "Item.cs:38"
-      ],
-      "stretchGoals": [
-        "CsvHelper",
-        "Spectre.Console",
-        "ItemCombat"
-      ],
-      "studentCommitCount": 1,
-      "isTemplateOnly": false,
-      "notes": [
-        "3 TODOs remaining",
-        "Completed stretch goal(s)",
-        "5 student comment(s) to review"
-      ]
-    },
-    {
-      "name": "exam-TGustafson1",
-      "repo": "w8-midterm-exam-TGustafson1",
-      "assignmentPattern": "w8-midterm",
-      "submittedAt": "2026-03-13T00:23:25Z",
-      "pushedAt": "2026-03-13T00:23:29Z",
-      "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-TGustafson1/actions/runs/23030317660",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w8-midterm-exam-TGustafson1",
-        "maintainability": "A",
-        "codeSmells": "58",
+        "codeSmells": "49",
         "bugs": "7",
         "vulnerabilities": "0",
         "reliability": "E",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "1247"
+        "linesOfCode": "1207"
       },
       "todoCount": 10,
       "studentComments": 6,
@@ -1038,96 +838,6 @@
       "needsReview": true,
       "estimatedScore": 80,
       "comments": [
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 10,
-          "text": "/// What is a Decorator?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 16,
-          "text": "/// What does this decorator do?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 23,
-          "text": "/// How is this decorator used in this project?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 32,
-          "text": "/// How does this relate to dependency injection?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 40,
-          "text": "/// Why is this good design?"
-        },
-        {
-          "file": "BattleService.cs",
-          "line": 11,
-          "text": "// - Equipped weapons should increase attack damage."
-        }
-      ],
-      "todos": [
-        "Player.cs:39",
-        "Player.cs:66",
-        "Item.cs:36",
-        "BattleService.cs:53",
-        "BattleService.cs:57",
-        "BattleService.cs:61",
-        "BattleService.cs:80",
-        "BattleService.cs:82",
-        "BattleService.cs:88",
-        "BattleService.cs:121"
-      ],
-      "stretchGoals": [
-        "CsvHelper",
-        "Spectre.Console",
-        "ItemCombat"
-      ],
-      "studentCommitCount": 1,
-      "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)",
-        "6 student comment(s) to review"
-      ]
-    },
-    {
-      "name": "exam-irodriguez5",
-      "repo": "w8-midterm-exam-irodriguez5",
-      "assignmentPattern": "w8-midterm",
-      "submittedAt": "2026-03-13T00:57:56Z",
-      "pushedAt": "2026-03-13T00:58:01Z",
-      "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-irodriguez5/actions/runs/23031247551",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w8-midterm-exam-irodriguez5",
-        "maintainability": "A",
-        "codeSmells": "48",
-        "bugs": "7",
-        "vulnerabilities": "0",
-        "reliability": "E",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "1199"
-      },
-      "todoCount": 10,
-      "studentComments": 7,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 80,
-      "comments": [
-        {
-          "file": "MonsterBase.cs",
-          "line": 73,
-          "text": "        //linq methods worked fine for the monsters so this wasn't done manuall not sure what i was doing wrong for players"
-        },
         {
           "file": "AutoSavePlayerServiceDecorator.cs",
           "line": 10,
@@ -1161,28 +871,172 @@
       ],
       "todos": [
         "Player.cs:40",
-        "Player.cs:71",
+        "Player.cs:81",
         "Item.cs:36",
-        "BattleService.cs:53",
-        "BattleService.cs:57",
-        "BattleService.cs:59",
-        "BattleService.cs:78",
-        "BattleService.cs:80",
-        "BattleService.cs:86",
-        "BattleService.cs:107"
+        "BattleService.cs:63",
+        "BattleService.cs:68",
+        "BattleService.cs:70",
+        "BattleService.cs:89",
+        "BattleService.cs:91",
+        "BattleService.cs:97",
+        "BattleService.cs:119"
       ],
       "stretchGoals": [
         "CsvHelper",
         "Spectre.Console",
         "ItemCombat"
       ],
-      "studentCommitCount": 2,
+      "studentCommitCount": 1,
       "isTemplateOnly": false,
       "notes": [
         "Many TODOs remaining - likely incomplete",
         "Completed stretch goal(s)",
-        "7 student comment(s) to review"
+        "6 student comment(s) to review"
       ]
+    },
+    {
+      "name": "exam-Samuel-dotcom-rgb",
+      "repo": "w8-midterm-exam-Samuel-dotcom-rgb",
+      "assignmentPattern": "w8-midterm",
+      "submittedAt": "2026-03-12T23:56:42Z",
+      "pushedAt": "2026-03-12T23:56:43Z",
+      "build": {
+        "status": "failure",
+        "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-Samuel-dotcom-rgb/actions/runs/23029562250",
+        "errorStep": "Build",
+        "errorLines": [
+          "##[error]D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\Models\\MonsterBase.cs(7,41): error CS0535: 'MonsterBase' does not implement interface member 'IMonster.TakeDamage(int)' [D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\ConsoleRpgEntities.csproj]",
+          "Build FAILED.",
+          "##[error]D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\Models\\MonsterBase.cs(7,41): error CS0535: 'MonsterBase' does not implement interface member 'IMonster.TakeDamage(int)' [D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\ConsoleRpgEntities.csproj]"
+        ]
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w8-midterm-exam-Samuel-dotcom-rgb",
+        "maintainability": "-",
+        "codeSmells": "",
+        "bugs": "",
+        "vulnerabilities": "",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "",
+        "linesOfCode": ""
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 70,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "studentCommitCount": 2,
+      "isTemplateOnly": false,
+      "notes": []
+    },
+    {
+      "name": "exam-Sdunn235",
+      "repo": "w8-midterm-exam-Sdunn235",
+      "assignmentPattern": "w8-midterm",
+      "submittedAt": "2026-03-13T00:56:45Z",
+      "pushedAt": "2026-03-13T00:56:53Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-Sdunn235/actions/runs/23031219976",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w8-midterm-exam-Sdunn235",
+        "maintainability": "A",
+        "codeSmells": "60",
+        "bugs": "4",
+        "vulnerabilities": "0",
+        "reliability": "E",
+        "security": "A",
+        "duplication": "2.2",
+        "linesOfCode": "1524"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
+      "notes": []
+    },
+    {
+      "name": "exam-TGustafson1",
+      "repo": "w8-midterm-exam-TGustafson1",
+      "assignmentPattern": "w8-midterm",
+      "submittedAt": "2026-03-13T00:23:25Z",
+      "pushedAt": "2026-03-13T00:23:29Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-TGustafson1/actions/runs/23030317660",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w8-midterm-exam-TGustafson1",
+        "maintainability": "A",
+        "codeSmells": "58",
+        "bugs": "7",
+        "vulnerabilities": "0",
+        "reliability": "E",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "1247"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
+      "notes": []
+    },
+    {
+      "name": "exam-irodriguez5",
+      "repo": "w8-midterm-exam-irodriguez5",
+      "assignmentPattern": "w8-midterm",
+      "submittedAt": "2026-03-13T00:57:56Z",
+      "pushedAt": "2026-03-13T00:58:01Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-irodriguez5/actions/runs/23031247551",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w8-midterm-exam-irodriguez5",
+        "maintainability": "A",
+        "codeSmells": "48",
+        "bugs": "7",
+        "vulnerabilities": "0",
+        "reliability": "E",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "1199"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "studentCommitCount": 2,
+      "isTemplateOnly": false,
+      "notes": []
     },
     {
       "name": "exam-taylorharty",
@@ -1207,65 +1061,17 @@
         "duplication": "0.0",
         "linesOfCode": "1166"
       },
-      "todoCount": 8,
-      "studentComments": 6,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 80,
-      "comments": [
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 10,
-          "text": "/// What is a Decorator?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 16,
-          "text": "/// What does this decorator do?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 23,
-          "text": "/// How is this decorator used in this project?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 32,
-          "text": "/// How does this relate to dependency injection?"
-        },
-        {
-          "file": "AutoSavePlayerServiceDecorator.cs",
-          "line": 40,
-          "text": "/// Why is this good design?"
-        },
-        {
-          "file": "BattleService.cs",
-          "line": 11,
-          "text": "// - Equipped weapons should increase attack damage."
-        }
-      ],
-      "todos": [
-        "Item.cs:36",
-        "BattleService.cs:53",
-        "BattleService.cs:57",
-        "BattleService.cs:59",
-        "BattleService.cs:78",
-        "BattleService.cs:80",
-        "BattleService.cs:86",
-        "BattleService.cs:107"
-      ],
-      "stretchGoals": [
-        "CsvHelper",
-        "Spectre.Console",
-        "ItemCombat"
-      ],
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 1,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)",
-        "6 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "irodriguez5",
