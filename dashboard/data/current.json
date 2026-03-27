@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-26T18:59:03Z",
+  "generated": "2026-03-27T01:51:18Z",
   "students": [
     {
       "name": "MW92007",
@@ -1432,6 +1432,43 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w6-solid-dip-taylorharty",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "taylorharty",
+      "repo": "w9-efcore-intro-taylorharty",
+      "assignmentPattern": "w9-efcore-intro",
+      "submittedAt": "2026-03-26T01:27:58Z",
+      "pushedAt": "2026-03-26T01:27:58Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w9-efcore-intro-taylorharty",
         "maintainability": "-",
         "codeSmells": "-",
         "bugs": "-",

@@ -1,0 +1,41 @@
+{
+  "assignment": "w9-efcore-intro",
+  "generated": "2026-03-27T01:51:16Z",
+  "students": [
+    {
+      "name": "taylorharty",
+      "repo": "w9-efcore-intro-taylorharty",
+      "submittedAt": "2026-03-26T01:27:58Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w9-efcore-intro-taylorharty",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Template only - no student commits detected"
+      ]
+    }
+  ]
+}
