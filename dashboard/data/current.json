@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-02T07:05:52Z",
+  "generated": "2026-04-02T12:59:47Z",
   "students": [
     {
       "name": "MW92007",
@@ -373,36 +373,71 @@
       "name": "Sdunn235",
       "repo": "w1-file-i-o-Sdunn235",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-03-11T22:20:00Z",
-      "pushedAt": "2026-03-11T22:20:08Z",
+      "submittedAt": "2026-04-02T09:38:07Z",
+      "pushedAt": "2026-04-02T09:38:39Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/22977184562",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/23894181723",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
         "maintainability": "A",
-        "codeSmells": "37",
+        "codeSmells": "40",
         "bugs": "0",
         "vulnerabilities": "0",
         "reliability": "A",
         "security": "A",
-        "duplication": "4.6",
-        "linesOfCode": "1908"
+        "duplication": "4.0",
+        "linesOfCode": "2190"
       },
       "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
+      "studentComments": 5,
+      "hasStretch": true,
+      "needsReview": true,
       "estimatedScore": 100,
-      "comments": [],
+      "comments": [
+        {
+          "file": "CharacterDto.cs",
+          "line": 8,
+          "text": "/// Why a DTO?"
+        },
+        {
+          "file": "CharacterDtoMap.cs",
+          "line": 8,
+          "text": "/// Used by CsvHelper to read and write CSV files correctly."
+        },
+        {
+          "file": "CharacterDtoMap.cs",
+          "line": 17,
+          "text": "        // CsvHelper uses these mappings to match CSV column positions to CharacterDto properties."
+        },
+        {
+          "file": "Program.cs",
+          "line": 24,
+          "text": "/// *Disclosure*: This project was initially set up using AI assistance as part of a Week 2 learning exercise."
+        },
+        {
+          "file": "CharacterUI.cs",
+          "line": 166,
+          "text": "    /// Helper method to display a single character's details."
+        }
+      ],
       "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 13,
+      "stretchGoals": [
+        "CsvHelper",
+        "JsonFileHandler",
+        "CommandPattern",
+        "ExtraCharacters",
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 14,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Completed stretch goal(s)",
+        "5 student comment(s) to review"
+      ]
     },
     {
       "name": "Sdunn235",
