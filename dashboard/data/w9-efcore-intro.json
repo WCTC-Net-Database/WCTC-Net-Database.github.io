@@ -1,6 +1,6 @@
 {
   "assignment": "w9-efcore-intro",
-  "generated": "2026-04-03T07:02:03Z",
+  "generated": "2026-04-03T12:49:21Z",
   "students": [
     {
       "name": "Samuel-dotcom-rgb",
@@ -25,19 +25,15 @@
       },
       "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": false,
       "estimatedScore": 100,
       "comments": [],
       "todos": [],
-      "stretchGoals": [
-        "EFCoreUpdate"
-      ],
+      "stretchGoals": [],
       "studentCommitCount": 2,
       "isTemplateOnly": false,
-      "notes": [
-        "Completed stretch goal(s)"
-      ]
+      "notes": []
     },
     {
       "name": "Sdunn235-1",
