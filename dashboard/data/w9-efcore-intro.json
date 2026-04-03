@@ -1,6 +1,6 @@
 {
   "assignment": "w9-efcore-intro",
-  "generated": "2026-04-03T12:49:21Z",
+  "generated": "2026-04-03T18:39:21Z",
   "students": [
     {
       "name": "Samuel-dotcom-rgb",
@@ -34,6 +34,41 @@
       "studentCommitCount": 2,
       "isTemplateOnly": false,
       "notes": []
+    },
+    {
+      "name": "MW92007",
+      "repo": "w9-efcore-intro-MW92007",
+      "submittedAt": "2026-03-26T01:27:58Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w9-efcore-intro-MW92007",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Template only - no student commits detected"
+      ]
     },
     {
       "name": "Sdunn235-1",
