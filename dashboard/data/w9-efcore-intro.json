@@ -1,40 +1,42 @@
 {
   "assignment": "w9-efcore-intro",
-  "generated": "2026-04-03T01:50:14Z",
+  "generated": "2026-04-03T07:02:03Z",
   "students": [
     {
       "name": "Samuel-dotcom-rgb",
       "repo": "w9-efcore-intro-Samuel-dotcom-rgb",
-      "submittedAt": "2026-03-26T01:27:58Z",
+      "submittedAt": "2026-04-03T02:36:40Z",
       "build": {
-        "status": "unknown",
-        "url": "",
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-Samuel-dotcom-rgb/actions/runs/23931268842",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-Samuel-dotcom-rgb",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
+        "maintainability": "A",
+        "codeSmells": "13",
+        "bugs": "0",
+        "vulnerabilities": "0",
+        "reliability": "A",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "305"
       },
       "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 0,
+      "hasStretch": true,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
       "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 0,
-      "isTemplateOnly": true,
+      "stretchGoals": [
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 2,
+      "isTemplateOnly": false,
       "notes": [
-        "Template only - no student commits detected"
+        "Completed stretch goal(s)"
       ]
     },
     {
