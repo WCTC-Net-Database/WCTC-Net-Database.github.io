@@ -1,14 +1,14 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-04-04T12:40:01Z",
+  "generated": "2026-04-04T18:32:17Z",
   "students": [
     {
       "name": "Sdunn235",
       "repo": "w1-file-i-o-Sdunn235",
-      "submittedAt": "2026-04-02T09:38:07Z",
+      "submittedAt": "2026-04-04T16:19:40Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/23894181723",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/23982764163",
         "errorStep": "",
         "errorLines": []
       },
@@ -17,23 +17,58 @@
         "maintainability": "A",
         "codeSmells": "40",
         "bugs": "0",
-        "vulnerabilities": "0",
+        "vulnerabilities": "2",
         "reliability": "A",
-        "security": "A",
+        "security": "E",
         "duplication": "4.0",
-        "linesOfCode": "2190"
+        "linesOfCode": "2193"
       },
       "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
+      "studentComments": 5,
+      "hasStretch": true,
+      "needsReview": true,
       "estimatedScore": 100,
-      "comments": [],
+      "comments": [
+        {
+          "file": "CharacterDto.cs",
+          "line": 8,
+          "text": "/// Why a DTO?"
+        },
+        {
+          "file": "CharacterDtoMap.cs",
+          "line": 8,
+          "text": "/// Used by CsvHelper to read and write CSV files correctly."
+        },
+        {
+          "file": "CharacterDtoMap.cs",
+          "line": 17,
+          "text": "        // CsvHelper uses these mappings to match CSV column positions to CharacterDto properties."
+        },
+        {
+          "file": "Program.cs",
+          "line": 24,
+          "text": "/// *Disclosure*: This project was initially set up using AI assistance as part of a Week 2 learning exercise."
+        },
+        {
+          "file": "CharacterUI.cs",
+          "line": 166,
+          "text": "    /// Helper method to display a single character's details."
+        }
+      ],
       "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 14,
+      "stretchGoals": [
+        "CsvHelper",
+        "JsonFileHandler",
+        "CommandPattern",
+        "ExtraCharacters",
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 15,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Completed stretch goal(s)",
+        "5 student comment(s) to review"
+      ]
     },
     {
       "name": "TGustafson1",
