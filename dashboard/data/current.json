@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-03T18:39:31Z",
+  "generated": "2026-04-04T01:44:30Z",
   "students": [
     {
       "name": "MW92007",
@@ -147,37 +147,39 @@
       "name": "MW92007",
       "repo": "w9-efcore-intro-MW92007",
       "assignmentPattern": "w9-efcore-intro",
-      "submittedAt": "2026-03-26T01:27:58Z",
-      "pushedAt": "2026-03-26T01:27:58Z",
+      "submittedAt": "2026-04-03T20:28:25Z",
+      "pushedAt": "2026-04-03T20:28:35Z",
       "build": {
-        "status": "unknown",
-        "url": "",
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-MW92007/actions/runs/23961088089",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-MW92007",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
+        "maintainability": "A",
+        "codeSmells": "7",
+        "bugs": "0",
+        "vulnerabilities": "0",
+        "reliability": "A",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "340"
       },
       "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 0,
+      "hasStretch": true,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
       "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 0,
-      "isTemplateOnly": true,
+      "stretchGoals": [
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
       "notes": [
-        "Template only - no student commits detected"
+        "Completed stretch goal(s)"
       ]
     },
     {
