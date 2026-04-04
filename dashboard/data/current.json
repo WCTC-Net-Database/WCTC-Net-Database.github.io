@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-04T01:44:30Z",
+  "generated": "2026-04-04T06:53:42Z",
   "students": [
     {
       "name": "MW92007",
@@ -168,19 +168,15 @@
       },
       "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": false,
       "estimatedScore": 100,
       "comments": [],
       "todos": [],
-      "stretchGoals": [
-        "EFCoreUpdate"
-      ],
+      "stretchGoals": [],
       "studentCommitCount": 1,
       "isTemplateOnly": false,
-      "notes": [
-        "Completed stretch goal(s)"
-      ]
+      "notes": []
     },
     {
       "name": "Samuel-dotcom-rgb",
