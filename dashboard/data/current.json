@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-09T07:15:47Z",
+  "generated": "2026-04-09T13:10:32Z",
   "students": [
     {
       "name": "MW92007",
@@ -75,7 +75,7 @@
       "name": "MW92007",
       "repo": "w3-srp-linq-MW92007",
       "assignmentPattern": "w3-srp-linq",
-      "submittedAt": "2026-02-27T03:20:48Z",
+      "submittedAt": "2026-02-27T03:19:41Z",
       "pushedAt": "2026-02-27T03:20:48Z",
       "build": {
         "status": "success",
@@ -97,16 +97,14 @@
       "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 0,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
       "todos": [],
       "stretchGoals": [],
-      "studentCommitCount": 0,
-      "isTemplateOnly": true,
-      "notes": [
-        "Template only - no student commits detected"
-      ]
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
+      "notes": []
     },
     {
       "name": "MW92007",
@@ -1481,16 +1479,14 @@
       "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 0,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
       "todos": [],
       "stretchGoals": [],
-      "studentCommitCount": 0,
-      "isTemplateOnly": true,
-      "notes": [
-        "Template only - no student commits detected"
-      ]
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
+      "notes": []
     },
     {
       "name": "taylorharty",
