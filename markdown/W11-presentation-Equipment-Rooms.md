@@ -131,6 +131,30 @@ style: |
 
 ---
 
+#### **ICollection vs IEnumerable vs IQueryable**
+
+| Type | When to Use | Key Difference |
+|------|-------------|----------------|
+| `ICollection<T>` | **Navigation properties** in EF Core | Supports `.Add()`, `.Remove()`, `.Count` |
+| `IEnumerable<T>` | Read-only iteration | No modification, evaluates in memory |
+| `IQueryable<T>` | Building database queries | Translates to SQL, executes on server |
+
+```csharp
+// ICollection - EF Core navigation properties (preferred)
+public virtual ICollection<Ability> Abilities { get; set; } = new List<Ability>();
+
+// IEnumerable - read-only, no .Add() support
+// DON'T use for EF navigation properties!
+
+// IQueryable - deferred execution, builds SQL
+var highLevel = _context.Players.Where(p => p.Level > 5); // SQL not sent yet
+var results = highLevel.ToList(); // NOW it sends the query
+```
+
+**Rule of thumb:** Navigation properties = `ICollection<T>`, queries = `IQueryable<T>`
+
+---
+
 #### **Entity Relationships**
 
 - In Entity Framework Core (EF Core), navigation properties in your entity classes should **use the concrete entity types rather than interfaces**. 
@@ -154,13 +178,156 @@ style: |
        .WithMany(a => a.Players)
        .UsingEntity(j => j.ToTable("PlayerAbilities"));
    ```
-   - **One-to-Many Example:** Room containing multiple Characters.
+   - **One-to-Many Example:** Room containing multiple Players.
    ```csharp
    public class Room
    {
        public int Id { get; set; }
        public string Name { get; set; }
-       public List<Character> Characters { get; set; }
+       public virtual ICollection<Player> Players { get; set; } = new List<Player>();
+   }
+   ```
+
+---
+
+#### **Equipment System: One-to-One Relationship**
+   - A Player has **one** Equipment (weapon + armor slots)
+   - Equipment references Items via nullable foreign keys
+
+   ```csharp
+   public class Equipment
+   {
+       public int Id { get; set; }
+       public int? WeaponId { get; set; }
+       public int? ArmorId { get; set; }
+       public virtual Item? Weapon { get; set; }
+       public virtual Item? Armor { get; set; }
+       public virtual Player Player { get; set; }
+   }
+   ```
+
+   **Player gets EquipmentId + helper methods:**
+   ```csharp
+   public int GetTotalAttack()
+   {
+       int baseAttack = Level * 2;
+       int weaponBonus = Equipment?.Weapon?.Attack ?? 0;
+       return baseAttack + weaponBonus;
+   }
+   ```
+
+---
+
+#### **Equipment: GameContext Configuration**
+   ```csharp
+   // Equipment-Item relationships
+   modelBuilder.Entity<Equipment>()
+       .HasOne(e => e.Weapon)
+       .WithMany()
+       .HasForeignKey(e => e.WeaponId)
+       .OnDelete(DeleteBehavior.Restrict);
+
+   modelBuilder.Entity<Equipment>()
+       .HasOne(e => e.Armor)
+       .WithMany()
+       .HasForeignKey(e => e.ArmorId)
+       .OnDelete(DeleteBehavior.Restrict);
+   ```
+
+   **Why `DeleteBehavior.Restrict`?**
+   - Prevents deleting an Item that's still equipped
+   - Without it, deleting a Sword could cascade and break Equipment records
+
+---
+
+#### **Room Navigation: Self-Referencing Foreign Keys**
+   > **Critical:** This pattern is DIRECTLY used in the Final Exam!
+
+   A Room points to **other Rooms** via nullable FKs:
+   ```csharp
+   public class Room
+   {
+       public int Id { get; set; }
+       public string Name { get; set; }
+       public string Description { get; set; }
+
+       // Self-referencing FKs (nullable = no exit in that direction)
+       public int? NorthRoomId { get; set; }
+       public int? SouthRoomId { get; set; }
+       public int? EastRoomId { get; set; }
+       public int? WestRoomId { get; set; }
+
+       // Navigation properties
+       public virtual Room? NorthRoom { get; set; }
+       public virtual Room? SouthRoom { get; set; }
+       public virtual Room? EastRoom { get; set; }
+       public virtual Room? WestRoom { get; set; }
+   }
+   ```
+
+---
+
+#### **Room Navigation: How It Looks in the Database**
+
+| Id | Name | NorthRoomId | SouthRoomId | EastRoomId | WestRoomId |
+|----|------|-------------|-------------|------------|------------|
+| 1 | Town Square | 2 | NULL | 3 | NULL |
+| 2 | Market | NULL | 1 | NULL | NULL |
+| 3 | Armory | NULL | NULL | NULL | 1 |
+
+- Town Square → North → Market (Room 2)
+- Market → South → Town Square (Room 1)
+- Town Square → East → Armory (Room 3)
+- Armory → West → Town Square (Room 1)
+
+**Note:** Going North from Town Square = going to Market. Going South from Market = going back. You set up **both directions** in the data.
+
+---
+
+#### **Room Navigation: GameContext Configuration**
+   ```csharp
+   modelBuilder.Entity<Room>()
+       .HasOne(r => r.NorthRoom)
+       .WithMany()
+       .HasForeignKey(r => r.NorthRoomId)
+       .OnDelete(DeleteBehavior.Restrict);
+   // ... repeat for South, East, West
+   ```
+
+   **Player/Monster location:**
+   ```csharp
+   modelBuilder.Entity<Player>()
+       .HasOne(p => p.Room)
+       .WithMany(r => r.Players)
+       .HasForeignKey(p => p.RoomId)
+       .OnDelete(DeleteBehavior.SetNull);
+   ```
+
+---
+
+#### **Room Navigation: MovePlayer Pattern**
+   ```csharp
+   public void MovePlayer(Player player, string direction)
+   {
+       var currentRoom = _context.Rooms
+           .Include(r => r.NorthRoom).Include(r => r.SouthRoom)
+           .Include(r => r.EastRoom).Include(r => r.WestRoom)
+           .FirstOrDefault(r => r.Id == player.RoomId);
+
+       Room? nextRoom = direction.ToUpper() switch
+       {
+           "N" or "NORTH" => currentRoom.NorthRoom,
+           "S" or "SOUTH" => currentRoom.SouthRoom,
+           "E" or "EAST"  => currentRoom.EastRoom,
+           "W" or "WEST"  => currentRoom.WestRoom,
+           _ => null
+       };
+
+       if (nextRoom == null) { Console.WriteLine("You can't go that way!"); return; }
+
+       player.RoomId = nextRoom.Id;
+       _context.SaveChanges();
+       Console.WriteLine($"You move to {nextRoom.Name}.");
    }
    ```
 
