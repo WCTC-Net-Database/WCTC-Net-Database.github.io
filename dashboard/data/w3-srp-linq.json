@@ -1,6 +1,6 @@
 {
   "assignment": "w3-srp-linq",
-  "generated": "2026-04-09T01:45:16Z",
+  "generated": "2026-04-09T07:14:24Z",
   "students": [
     {
       "name": "taylorharty",
@@ -26,14 +26,16 @@
       "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 0,
       "comments": [],
       "todos": [],
       "stretchGoals": [],
-      "studentCommitCount": 1,
-      "isTemplateOnly": false,
-      "notes": []
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Template only - no student commits detected"
+      ]
     },
     {
       "name": "irodriguez5",
@@ -71,7 +73,7 @@
     {
       "name": "MW92007",
       "repo": "w3-srp-linq-MW92007",
-      "submittedAt": "2026-02-27T03:19:41Z",
+      "submittedAt": "2026-02-27T03:20:48Z",
       "build": {
         "status": "success",
         "url": "https://github.com/WCTC-Net-Database/w3-srp-linq-MW92007/actions/runs/22471343703",
@@ -92,14 +94,16 @@
       "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 0,
       "comments": [],
       "todos": [],
       "stretchGoals": [],
-      "studentCommitCount": 1,
-      "isTemplateOnly": false,
-      "notes": []
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Template only - no student commits detected"
+      ]
     },
     {
       "name": "Samuel-dotcom-rgb",
