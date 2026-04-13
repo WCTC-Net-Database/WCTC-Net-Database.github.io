@@ -1,6 +1,6 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-04-13T02:03:45Z",
+  "generated": "2026-04-13T07:52:52Z",
   "students": [
     {
       "name": "Sdunn235",
@@ -24,51 +24,16 @@
         "linesOfCode": "2334"
       },
       "todoCount": 0,
-      "studentComments": 5,
-      "hasStretch": true,
-      "needsReview": true,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
       "estimatedScore": 100,
-      "comments": [
-        {
-          "file": "CharacterUI.cs",
-          "line": 166,
-          "text": "    /// Helper method to display a single character's details."
-        },
-        {
-          "file": "Program.cs",
-          "line": 24,
-          "text": "/// *Disclosure*: This project was initially set up using AI assistance as part of a Week 2 learning exercise."
-        },
-        {
-          "file": "CharacterDto.cs",
-          "line": 8,
-          "text": "/// Why a DTO?"
-        },
-        {
-          "file": "CharacterDtoMap.cs",
-          "line": 8,
-          "text": "/// Used by CsvHelper to read and write CSV files correctly."
-        },
-        {
-          "file": "CharacterDtoMap.cs",
-          "line": 17,
-          "text": "        // CsvHelper uses these mappings to match CSV column positions to CharacterDto properties."
-        }
-      ],
+      "comments": [],
       "todos": [],
-      "stretchGoals": [
-        "CsvHelper",
-        "JsonFileHandler",
-        "CommandPattern",
-        "ExtraCharacters",
-        "EFCoreUpdate"
-      ],
+      "stretchGoals": [],
       "studentCommitCount": 16,
       "isTemplateOnly": false,
-      "notes": [
-        "Completed stretch goal(s)",
-        "5 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "TGustafson1",
