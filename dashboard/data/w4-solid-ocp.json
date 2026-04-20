@@ -1,39 +1,72 @@
 {
   "assignment": "w4-solid-ocp",
-  "generated": "2026-04-19T18:39:15Z",
+  "generated": "2026-04-20T02:04:41Z",
   "students": [
     {
       "name": "irodriguez5",
       "repo": "w4-solid-ocp-irodriguez5",
-      "submittedAt": "2026-03-10T05:48:08Z",
+      "submittedAt": "2026-04-20T01:23:36Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w4-solid-ocp-irodriguez5/actions/runs/22889056881",
+        "url": "https://github.com/WCTC-Net-Database/w4-solid-ocp-irodriguez5/actions/runs/24644125344",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w4-solid-ocp-irodriguez5",
         "maintainability": "A",
-        "codeSmells": "28",
+        "codeSmells": "37",
         "bugs": "0",
         "vulnerabilities": "0",
         "reliability": "A",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "476"
+        "linesOfCode": "807"
       },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 1,
+      "todoCount": 8,
+      "studentComments": 3,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [
+        {
+          "file": "Wizard.cs",
+          "line": 14,
+          "text": "        //cast spell(s) -> not sure if this has to be generic or if i have to code each specific spell?"
+        },
+        {
+          "file": "Wizard.cs",
+          "line": 16,
+          "text": "        //want to have a summon spell to summon dead characters to fight for you?? is this doable witin the scope of this projecct?"
+        },
+        {
+          "file": "Wizard.cs",
+          "line": 18,
+          "text": "        //healing spell? for self and others? "
+        }
+      ],
+      "todos": [
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:60",
+        "CsvFileHandler.cs:74",
+        "CsvFileHandler.cs:83",
+        "CsvFileHandler.cs:92",
+        "JsonFileHandler.cs:33",
+        "JsonFileHandler.cs:43",
+        "JsonFileHandler.cs:53"
+      ],
+      "stretchGoals": [
+        "Spectre.Console",
+        "JsonFileHandler",
+        "CommandPattern"
+      ],
+      "studentCommitCount": 2,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "3 student comment(s) to review"
+      ]
     },
     {
       "name": "Samuel-dotcom-rgb",
