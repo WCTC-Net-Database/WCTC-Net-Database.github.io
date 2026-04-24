@@ -1,14 +1,14 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-04-24T02:02:52Z",
+  "generated": "2026-04-24T07:52:17Z",
   "students": [
     {
       "name": "Sdunn235",
       "repo": "w1-file-i-o-Sdunn235",
-      "submittedAt": "2026-04-17T23:57:06Z",
+      "submittedAt": "2026-04-24T02:21:42Z",
       "build": {
         "status": "failure",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/24591882325",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/24868956247",
         "errorStep": "Install SonarScanner",
         "errorLines": []
       },
@@ -24,16 +24,33 @@
         "linesOfCode": "2334"
       },
       "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
+      "studentComments": 2,
+      "hasStretch": true,
+      "needsReview": true,
       "estimatedScore": 70,
-      "comments": [],
+      "comments": [
+        {
+          "file": "Character.cs",
+          "line": 36,
+          "text": "    // --- Derivation helpers (bible §5: resources are derived from stats) ---"
+        },
+        {
+          "file": "Character.cs",
+          "line": 43,
+          "text": "    // --- Combat helpers ---"
+        }
+      ],
       "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 17,
+      "stretchGoals": [
+        "ItemCombat",
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 18,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Completed stretch goal(s)",
+        "2 student comment(s) to review"
+      ]
     },
     {
       "name": "TGustafson1",
