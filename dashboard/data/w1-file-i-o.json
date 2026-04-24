@@ -1,6 +1,6 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-04-24T07:52:17Z",
+  "generated": "2026-04-24T13:08:23Z",
   "students": [
     {
       "name": "Sdunn235",
@@ -24,33 +24,16 @@
         "linesOfCode": "2334"
       },
       "todoCount": 0,
-      "studentComments": 2,
-      "hasStretch": true,
-      "needsReview": true,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
       "estimatedScore": 70,
-      "comments": [
-        {
-          "file": "Character.cs",
-          "line": 36,
-          "text": "    // --- Derivation helpers (bible §5: resources are derived from stats) ---"
-        },
-        {
-          "file": "Character.cs",
-          "line": 43,
-          "text": "    // --- Combat helpers ---"
-        }
-      ],
+      "comments": [],
       "todos": [],
-      "stretchGoals": [
-        "ItemCombat",
-        "EFCoreUpdate"
-      ],
+      "stretchGoals": [],
       "studentCommitCount": 18,
       "isTemplateOnly": false,
-      "notes": [
-        "Completed stretch goal(s)",
-        "2 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "TGustafson1",
