@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-25T01:54:36Z",
+  "generated": "2026-04-25T07:07:18Z",
   "students": [
     {
       "name": "MW92007",
@@ -978,19 +978,15 @@
       },
       "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": false,
       "estimatedScore": 100,
       "comments": [],
       "todos": [],
-      "stretchGoals": [
-        "EFCoreUpdate"
-      ],
+      "stretchGoals": [],
       "studentCommitCount": 3,
       "isTemplateOnly": false,
-      "notes": [
-        "Completed stretch goal(s)"
-      ]
+      "notes": []
     },
     {
       "name": "exam-MW92007",
