@@ -1,39 +1,43 @@
 {
   "assignment": "w9-efcore-intro",
-  "generated": "2026-04-24T18:41:28Z",
+  "generated": "2026-04-25T01:54:19Z",
   "students": [
     {
       "name": "TGustafson1",
       "repo": "w9-efcore-intro-TGustafson1",
-      "submittedAt": "2026-04-23T20:44:21Z",
+      "submittedAt": "2026-04-24T23:14:42Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/24858010807",
+        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/24916098819",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-TGustafson1",
         "maintainability": "A",
-        "codeSmells": "12",
+        "codeSmells": "18",
         "bugs": "0",
         "vulnerabilities": "0",
         "reliability": "A",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "349"
+        "linesOfCode": "689"
       },
       "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": false,
+      "hasStretch": true,
       "needsReview": false,
       "estimatedScore": 100,
       "comments": [],
       "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 1,
+      "stretchGoals": [
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 3,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Completed stretch goal(s)"
+      ]
     },
     {
       "name": "MW92007",
