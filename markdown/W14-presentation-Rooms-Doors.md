@@ -26,24 +26,45 @@ style: |
 
 ## Recap: Where We Are
 
-What you've built so far this semester:
+What we covered together in class:
 
 ```
 W12  →  Item TPH (Weapon, Armor, Consumable, KeyItem)
         Container TPH (Inventory, Equipment)
         Items live in containers via ContainerId FK
 
-W13  →  Container hierarchy extended (Chest, MonsterLoot)
-        ILockable interface (Chest implements it)
-        Equipment.CanEquip — first subclass rule
-        Player.TryUnlock(Chest, KeyItem)
+W13  →  Container hierarchy extended (Chest as a third subclass)
+        EquipmentSlot entity + SlotType enum
+        Chest with IsLocked + RequiredKeyId properties
+        InteractWithChest — basic locked-check flow
 ```
 
+The W13 **template assignment** also introduced `ILockable`, `MonsterLoot`,
+and `Player.TryUnlock` — concepts we'll meet properly tonight as the bridge
+from chests to doors.
+
 **Today: the architecture pays off.**
-- Room becomes the FIFTH Container subclass — items on the floor are just items in a container
-- Door becomes the SECOND ILockable entity — and your W13 unlock code works on it without modification
+- `Room` becomes another Container subclass — items on the floor are just items in a container
+- `Door` becomes a second `ILockable` entity — and one unlock method works on both
 
 *Light week on scope. Heavy on the payoff.*
+
+---
+
+## A Quick Note on Equipment
+
+In class last week we built `EquipmentSlot` as a **separate entity** with FKs
+back to Equipment and the equipped item. The W13 template takes a simpler
+path: a `SlotType` enum + a single `CanEquip()` method on Equipment.
+
+**Both are valid.** The entity version is more flexible (slot-specific
+unlocks, cosmetics, enchantments later). The enum version is less ceremony.
+You'll see the enum-only approach in the W14 template; if you stuck with
+your `EquipmentSlot` entity from last week, no changes needed — it works
+the same way for everything we'll do tonight.
+
+The general lesson: there's no single right shape. Promote a value to an
+entity when it gains state of its own — not before.
 
 ---
 
@@ -197,35 +218,53 @@ var door = _doors.FirstOrDefault(d =>
 
 ---
 
-## The Liskov Payoff: One Method, Two Entities
+## Meet `ILockable` — The Bridge
 
-In Week 13, your `Player.TryUnlock` looked like this:
+Last week our Chest had `IsLocked` and `RequiredKeyId` as direct properties.
+That works for one entity. But Door is about to need the same properties —
+and a future `LockedJournal` or `MagicPortal` will too. We don't want to
+copy-paste lock state across every entity that might get locked.
 
 ```csharp
-// W13
-public bool TryUnlock(Chest chest, KeyItem key) { ... }
+public interface ILockable
+{
+    bool IsLocked { get; set; }
+    bool IsTrapped { get; set; }
+    bool IsPickable { get; set; }
+    string? RequiredKeyId { get; set; }
+    int TrapDamage { get; set; }
+    bool TrapDisarmed { get; set; }
+}
 ```
 
-Perfect for chests. Useless for doors. So in W14 we made **one tiny change**:
+`ILockable` describes **anything that can be locked and trapped** — without
+saying *what kind of thing*. Today, Chest implements it. In the same lesson,
+Door implements it. One contract, two entities, one unlock method.
+
+---
+
+## The Liskov Payoff: One Method, Two Entities
+
+If `Player.TryUnlock` had been written `(Chest chest, KeyItem key)`, it
+would be perfect for chests and useless for doors. Instead we write it
+against the interface:
 
 ```csharp
-// W14
 public bool TryUnlock(ILockable target, KeyItem key) { ... }
 ```
 
-That's it. `Chest` → `ILockable`. Every `chest.X` inside the method became `target.X`. Nothing else.
+The body of the method only ever reads/writes properties defined in
+`ILockable` — `target.IsLocked`, `target.RequiredKeyId`, etc. It doesn't
+know — and doesn't care — whether `target` is a Chest or a Door.
 
-And now:
 ```csharp
-player.TryUnlock(chest, dungeonKey);   // Works (W13)
+player.TryUnlock(chest, dungeonKey);   // Works
 player.TryUnlock(door,  cellarKey);    // ALSO WORKS — zero new code
 ```
 
 ---
 
-## Why That Works
-
-The body of `TryUnlock` only ever reads/writes properties defined in `ILockable`:
+## Inside `TryUnlock`
 
 ```csharp
 public bool TryUnlock(ILockable target, KeyItem key)
@@ -235,21 +274,23 @@ public bool TryUnlock(ILockable target, KeyItem key)
         if (!target.IsPickable) return false;
         if (target.RequiredKeyId != null) return false;
         target.IsLocked = false;
-        Inventory.RemoveItem(key);
+        Inventory.RemoveItem(key);              // lockpick consumed on use
         return true;
     }
 
     if (key.KeyId == target.RequiredKeyId)      // SPECIFIC KEY branch
     {
         target.IsLocked = false;
-        return true;
+        return true;                            // key NOT consumed - reusable
     }
 
     return false;
 }
 ```
 
-The method doesn't know — and doesn't care — whether `target` is a Chest or a Door. Both implement the same contract. **That is the Liskov Substitution Principle.**
+Two branches: lockpick (consumed, only on pickable locks with no specific
+key) vs. matching key (not consumed, can reuse). The contract is `ILockable`
+on both sides. **That is the Liskov Substitution Principle.**
 
 ---
 
