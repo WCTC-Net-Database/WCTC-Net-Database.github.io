@@ -51,22 +51,20 @@ from chests to doors.
 
 ---
 
-## A Quick Note on Equipment
+## Quick Recap: Equipment Slots
 
-In class last week we built `EquipmentSlot` as a **separate entity** with
-a `SlotType` enum identifying each slot and an FK back to Equipment.
+Last week we built `EquipmentSlot` as a **separate entity** with a `SlotType`
+enum identifying each slot and an FK back to Equipment. Each character now
+has nine slots (Head, Body, Legs, Feet, Hands, Weapon, Shield, Ring, Accessory)
+seeded automatically when their Equipment container is created.
 
-A simpler alternative would be just the `SlotType` enum plus a single
-`CanEquip()` method on Equipment — no separate entity. **Both designs are
-valid.** The entity version is more flexible (slot-specific unlocks,
-cosmetics, enchantments later). The enum-only version is less ceremony.
+`Player.Equip(item)` now does a slot-aware lookup: find the slot whose
+`SlotType` matches `item.EligibleSlot`, refuse if it's missing or already
+filled, otherwise place the item AND record `slot.EquippedItem = item`.
 
-The W14 template inherits last week's W13 baseline, so it doesn't add
-anything new on the equipment front — your in-class `EquipmentSlot` design
-keeps working exactly as-is for everything we'll do tonight.
-
-The general lesson: there's no single right shape. Promote a value to an
-entity when it gains state of its own — not before.
+Tonight's keys/chests/doors content doesn't touch any of that — slots keep
+working exactly as-is. Mentioning it because the template you'll be working
+in tonight has the same shape we built in class.
 
 ---
 
