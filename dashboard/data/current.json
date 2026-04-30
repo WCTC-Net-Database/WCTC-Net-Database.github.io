@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-29T19:16:05Z",
+  "generated": "2026-04-30T02:27:57Z",
   "students": [
     {
       "name": "MW92007",
@@ -443,36 +443,53 @@
       "name": "Sdunn235",
       "repo": "w1-file-i-o-Sdunn235",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-04-24T02:21:42Z",
-      "pushedAt": "2026-04-24T02:21:55Z",
+      "submittedAt": "2026-04-29T20:59:07Z",
+      "pushedAt": "2026-04-29T20:59:08Z",
       "build": {
-        "status": "failure",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/24868956247",
-        "errorStep": "Install SonarScanner",
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/25133558871",
+        "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
         "maintainability": "A",
-        "codeSmells": "42",
+        "codeSmells": "80",
         "bugs": "0",
         "vulnerabilities": "2",
         "reliability": "A",
         "security": "C",
-        "duplication": "3.8",
-        "linesOfCode": "2334"
+        "duplication": "5.8",
+        "linesOfCode": "3306"
       },
       "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 70,
-      "comments": [],
+      "studentComments": 2,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 100,
+      "comments": [
+        {
+          "file": "Character.cs",
+          "line": 36,
+          "text": "    // --- Derivation helpers (bible §5: resources are derived from stats) ---"
+        },
+        {
+          "file": "Character.cs",
+          "line": 43,
+          "text": "    // --- Combat helpers ---"
+        }
+      ],
       "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 18,
+      "stretchGoals": [
+        "ItemCombat",
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 20,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Completed stretch goal(s)",
+        "2 student comment(s) to review"
+      ]
     },
     {
       "name": "Sdunn235",
