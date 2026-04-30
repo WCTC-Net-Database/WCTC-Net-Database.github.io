@@ -53,15 +53,17 @@ from chests to doors.
 
 ## A Quick Note on Equipment
 
-In class last week we built `EquipmentSlot` as a **separate entity** with FKs
-back to Equipment and the equipped item. The W13 template takes a simpler
-path: a `SlotType` enum + a single `CanEquip()` method on Equipment.
+In class last week we built `EquipmentSlot` as a **separate entity** with
+a `SlotType` enum identifying each slot and an FK back to Equipment.
 
-**Both are valid.** The entity version is more flexible (slot-specific
-unlocks, cosmetics, enchantments later). The enum version is less ceremony.
-You'll see the enum-only approach in the W14 template; if you stuck with
-your `EquipmentSlot` entity from last week, no changes needed — it works
-the same way for everything we'll do tonight.
+A simpler alternative would be just the `SlotType` enum plus a single
+`CanEquip()` method on Equipment — no separate entity. **Both designs are
+valid.** The entity version is more flexible (slot-specific unlocks,
+cosmetics, enchantments later). The enum-only version is less ceremony.
+
+The W14 template inherits last week's W13 baseline, so it doesn't add
+anything new on the equipment front — your in-class `EquipmentSlot` design
+keeps working exactly as-is for everything we'll do tonight.
 
 The general lesson: there's no single right shape. Promote a value to an
 entity when it gains state of its own — not before.
