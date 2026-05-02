@@ -1,47 +1,46 @@
 {
   "assignment": "w9-efcore-intro",
-  "generated": "2026-05-02T02:08:30Z",
+  "generated": "2026-05-02T07:24:38Z",
   "students": [
     {
       "name": "TGustafson1",
       "repo": "w9-efcore-intro-TGustafson1",
-      "submittedAt": "2026-05-02T00:41:39Z",
+      "submittedAt": "2026-05-02T02:43:16Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/25239357518",
+        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/25241831939",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-TGustafson1",
         "maintainability": "A",
-        "codeSmells": "25",
+        "codeSmells": "26",
         "bugs": "0",
         "vulnerabilities": "0",
         "reliability": "A",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "1012"
+        "linesOfCode": "862"
       },
-      "todoCount": 7,
+      "todoCount": 6,
       "studentComments": 0,
       "hasStretch": true,
       "needsReview": true,
       "estimatedScore": 80,
       "comments": [],
       "todos": [
-        "CombatEngine.cs:20",
-        "CombatEngine.cs:25",
-        "CombatEngine.cs:49",
-        "CombatEngine.cs:50",
-        "GameEngine.cs:151",
-        "Player.cs:18",
-        "Monster.cs:18"
+        "CombatEngine.cs:54",
+        "CombatEngine.cs:55",
+        "CombatEngine.cs:110",
+        "GameEngine.cs:19",
+        "GameEngine.cs:139",
+        "GameEngine.cs:163"
       ],
       "stretchGoals": [
         "EFCoreUpdate"
       ],
-      "studentCommitCount": 7,
+      "studentCommitCount": 9,
       "isTemplateOnly": false,
       "notes": [
         "Many TODOs remaining - likely incomplete",
