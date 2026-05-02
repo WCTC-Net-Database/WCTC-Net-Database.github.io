@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-01T19:03:34Z",
+  "generated": "2026-05-02T02:08:49Z",
   "students": [
     {
       "name": "MW92007",
@@ -443,36 +443,53 @@
       "name": "Sdunn235",
       "repo": "w1-file-i-o-Sdunn235",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-04-29T20:59:07Z",
-      "pushedAt": "2026-04-29T20:59:08Z",
+      "submittedAt": "2026-05-01T21:26:55Z",
+      "pushedAt": "2026-05-01T21:26:57Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/25133558871",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/25233897488",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
         "maintainability": "A",
-        "codeSmells": "80",
+        "codeSmells": "97",
         "bugs": "0",
         "vulnerabilities": "2",
         "reliability": "A",
         "security": "C",
-        "duplication": "5.8",
-        "linesOfCode": "3306"
+        "duplication": "5.0",
+        "linesOfCode": "3900"
       },
       "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
+      "studentComments": 2,
+      "hasStretch": true,
+      "needsReview": true,
       "estimatedScore": 100,
-      "comments": [],
+      "comments": [
+        {
+          "file": "Character.cs",
+          "line": 36,
+          "text": "    // --- Derivation helpers (bible §5: resources are derived from stats) ---"
+        },
+        {
+          "file": "Character.cs",
+          "line": 43,
+          "text": "    // --- Combat helpers ---"
+        }
+      ],
       "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 20,
+      "stretchGoals": [
+        "ItemCombat",
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 22,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Completed stretch goal(s)",
+        "2 student comment(s) to review"
+      ]
     },
     {
       "name": "Sdunn235",
@@ -957,36 +974,49 @@
       "name": "TGustafson1",
       "repo": "w9-efcore-intro-TGustafson1",
       "assignmentPattern": "w9-efcore-intro",
-      "submittedAt": "2026-04-24T23:14:42Z",
-      "pushedAt": "2026-04-24T23:14:55Z",
+      "submittedAt": "2026-05-02T00:41:39Z",
+      "pushedAt": "2026-05-02T00:41:45Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/24916098819",
+        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/25239357518",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-TGustafson1",
         "maintainability": "A",
-        "codeSmells": "18",
+        "codeSmells": "25",
         "bugs": "0",
         "vulnerabilities": "0",
         "reliability": "A",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "689"
+        "linesOfCode": "1012"
       },
-      "todoCount": 0,
+      "todoCount": 7,
       "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 3,
+      "todos": [
+        "CombatEngine.cs:20",
+        "CombatEngine.cs:25",
+        "CombatEngine.cs:49",
+        "CombatEngine.cs:50",
+        "GameEngine.cs:151",
+        "Player.cs:18",
+        "Monster.cs:18"
+      ],
+      "stretchGoals": [
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 7,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)"
+      ]
     },
     {
       "name": "exam-MW92007",

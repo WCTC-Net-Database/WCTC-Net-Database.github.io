@@ -1,39 +1,52 @@
 {
   "assignment": "w9-efcore-intro",
-  "generated": "2026-05-01T19:03:25Z",
+  "generated": "2026-05-02T02:08:30Z",
   "students": [
     {
       "name": "TGustafson1",
       "repo": "w9-efcore-intro-TGustafson1",
-      "submittedAt": "2026-04-24T23:14:42Z",
+      "submittedAt": "2026-05-02T00:41:39Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/24916098819",
+        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/25239357518",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-TGustafson1",
         "maintainability": "A",
-        "codeSmells": "18",
+        "codeSmells": "25",
         "bugs": "0",
         "vulnerabilities": "0",
         "reliability": "A",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "689"
+        "linesOfCode": "1012"
       },
-      "todoCount": 0,
+      "todoCount": 7,
       "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 3,
+      "todos": [
+        "CombatEngine.cs:20",
+        "CombatEngine.cs:25",
+        "CombatEngine.cs:49",
+        "CombatEngine.cs:50",
+        "GameEngine.cs:151",
+        "Player.cs:18",
+        "Monster.cs:18"
+      ],
+      "stretchGoals": [
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 7,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)"
+      ]
     },
     {
       "name": "MW92007",
