@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-04T08:23:15Z",
+  "generated": "2026-05-04T13:30:24Z",
   "students": [
     {
       "name": "MW92007",
@@ -976,30 +976,17 @@
         "duplication": "0.0",
         "linesOfCode": "1279"
       },
-      "todoCount": 6,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 80,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "CombatEngine.cs:54",
-        "CombatEngine.cs:55",
-        "GameEngine.cs:80",
-        "GameEngine.cs:86",
-        "GameEngine.cs:94",
-        "GameEngine.cs:221"
-      ],
-      "stretchGoals": [
-        "ItemCombat",
-        "EFCoreUpdate"
-      ],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 16,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)"
-      ]
+      "notes": []
     },
     {
       "name": "exam-MW92007",
