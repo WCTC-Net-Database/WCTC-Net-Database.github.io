@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-03T18:51:19Z",
+  "generated": "2026-05-04T02:12:57Z",
   "students": [
     {
       "name": "MW92007",
@@ -957,36 +957,49 @@
       "name": "TGustafson1",
       "repo": "w9-efcore-intro-TGustafson1",
       "assignmentPattern": "w9-efcore-intro",
-      "submittedAt": "2026-05-03T01:26:31Z",
-      "pushedAt": "2026-05-03T01:26:37Z",
+      "submittedAt": "2026-05-04T01:40:58Z",
+      "pushedAt": "2026-05-04T01:41:02Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/25266659372",
+        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/25296980346",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-TGustafson1",
         "maintainability": "A",
-        "codeSmells": "42",
+        "codeSmells": "39",
         "bugs": "0",
         "vulnerabilities": "0",
         "reliability": "A",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "1247"
+        "linesOfCode": "1227"
       },
-      "todoCount": 0,
+      "todoCount": 6,
       "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 11,
+      "todos": [
+        "CombatEngine.cs:54",
+        "CombatEngine.cs:55",
+        "GameEngine.cs:31",
+        "GameEngine.cs:147",
+        "GameEngine.cs:172",
+        "GameContext.cs:103"
+      ],
+      "stretchGoals": [
+        "ItemCombat",
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 15,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)"
+      ]
     },
     {
       "name": "exam-MW92007",
