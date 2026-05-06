@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-05T19:11:31Z",
+  "generated": "2026-05-06T02:12:40Z",
   "students": [
     {
       "name": "MW92007",
@@ -188,13 +188,7 @@
         "status": "failure",
         "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Samuel-dotcom-rgb/actions/runs/21694367868",
         "errorStep": "Build",
-        "errorLines": [
-          "##[error]D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\program.cs(60,31): error CS0117: 'File' does not contain a definition for 'RealAllLines' [D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\W1-assignment-template.csproj]",
-          "##[error]D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\program.cs(106,29): error CS0103: The name 'linesCound' does not exist in the current context [D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\W1-assignment-template.csproj]",
-          "Build FAILED.",
-          "##[error]D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\program.cs(60,31): error CS0117: 'File' does not contain a definition for 'RealAllLines' [D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\W1-assignment-template.csproj]",
-          "##[error]D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\program.cs(106,29): error CS0103: The name 'linesCound' does not exist in the current context [D:\\a\\w1-file-i-o-Samuel-dotcom-rgb\\w1-file-i-o-Samuel-dotcom-rgb\\W1-assignment-template.csproj]"
-        ]
+        "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Samuel-dotcom-rgb",
