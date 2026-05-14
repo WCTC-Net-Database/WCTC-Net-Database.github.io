@@ -1,13 +1,13 @@
 {
   "assignment": "w9-efcore-intro",
-  "generated": "2026-05-14T02:38:03Z",
+  "generated": "2026-05-14T08:33:40Z",
   "students": [
     {
       "name": "TGustafson1",
       "repo": "w9-efcore-intro-TGustafson1",
       "submittedAt": "2026-05-14T02:37:53Z",
       "build": {
-        "status": "in_progress",
+        "status": "success",
         "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/25838381871",
         "errorStep": "",
         "errorLines": []
@@ -15,48 +15,25 @@
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-TGustafson1",
         "maintainability": "A",
-        "codeSmells": "63",
+        "codeSmells": "78",
         "bugs": "1",
         "vulnerabilities": "0",
         "reliability": "C",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "1496"
+        "linesOfCode": "1917"
       },
-      "todoCount": 9,
-      "studentComments": 1,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 80,
-      "comments": [
-        {
-          "file": "GameEngine.cs",
-          "line": 437,
-          "text": "        //TODO: Review this to understand loading of context references"
-        }
-      ],
-      "todos": [
-        "CombatEngine.cs:56",
-        "CombatEngine.cs:107",
-        "GameEngine.cs:77",
-        "GameEngine.cs:391",
-        "GameEngine.cs:437",
-        "GameContext.cs:50",
-        "Consumable.cs:12",
-        "Consumable.cs:28",
-        "PlayerAbility.cs:22"
-      ],
-      "stretchGoals": [
-        "ItemCombat",
-        "EFCoreUpdate"
-      ],
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 20,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)",
-        "1 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "MW92007",

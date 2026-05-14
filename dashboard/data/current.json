@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-14T02:38:33Z",
+  "generated": "2026-05-14T08:33:55Z",
   "students": [
     {
       "name": "MW92007",
@@ -437,24 +437,24 @@
       "name": "Sdunn235",
       "repo": "w1-file-i-o-Sdunn235",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-05-14T00:13:24Z",
-      "pushedAt": "2026-05-14T00:22:00Z",
+      "submittedAt": "2026-05-14T06:33:50Z",
+      "pushedAt": "2026-05-14T06:33:55Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/25834151920",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/25845755888",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
         "maintainability": "A",
-        "codeSmells": "116",
+        "codeSmells": "180",
         "bugs": "0",
         "vulnerabilities": "0",
         "reliability": "A",
         "security": "A",
-        "duplication": "3.7",
-        "linesOfCode": "4835"
+        "duplication": "4.0",
+        "linesOfCode": "7345"
       },
       "todoCount": 0,
       "studentComments": 8,
@@ -464,22 +464,22 @@
       "comments": [
         {
           "file": "GameEngine.cs",
-          "line": 1496,
+          "line": 1628,
           "text": "    // W14 Phase D / +5 challenge — single helper for all ILockable unlocks."
         },
         {
           "file": "GameEngine.cs",
-          "line": 1590,
+          "line": 1730,
           "text": "    // Fires FindKeyLocation only when it would actually help: the target"
         },
         {
           "file": "GameEngine.cs",
-          "line": 2048,
+          "line": 2193,
           "text": "    // shared TryUnlockTarget helper. Same algorithm, same outcome"
         },
         {
           "file": "GameEngine.cs",
-          "line": 2062,
+          "line": 2207,
           "text": "    // Same Character.DisarmTrap(ILockable, Item) helper underneath."
         },
         {
@@ -499,7 +499,7 @@
         },
         {
           "file": "Door.cs",
-          "line": 63,
+          "line": 66,
           "text": "    /// doors. Combined with <see cref=\"IsSecret\"/> via the helper below.</summary>"
         }
       ],
@@ -509,7 +509,7 @@
         "ItemCombat",
         "EFCoreUpdate"
       ],
-      "studentCommitCount": 36,
+      "studentCommitCount": 57,
       "isTemplateOnly": false,
       "notes": [
         "Completed stretch goal(s)",
@@ -1002,7 +1002,7 @@
       "submittedAt": "2026-05-14T02:37:53Z",
       "pushedAt": "2026-05-14T02:37:57Z",
       "build": {
-        "status": "in_progress",
+        "status": "success",
         "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/25838381871",
         "errorStep": "",
         "errorLines": []
@@ -1010,48 +1010,25 @@
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-TGustafson1",
         "maintainability": "A",
-        "codeSmells": "63",
+        "codeSmells": "78",
         "bugs": "1",
         "vulnerabilities": "0",
         "reliability": "C",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "1496"
+        "linesOfCode": "1917"
       },
-      "todoCount": 9,
-      "studentComments": 1,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 80,
-      "comments": [
-        {
-          "file": "GameEngine.cs",
-          "line": 437,
-          "text": "        //TODO: Review this to understand loading of context references"
-        }
-      ],
-      "todos": [
-        "CombatEngine.cs:56",
-        "CombatEngine.cs:107",
-        "GameEngine.cs:77",
-        "GameEngine.cs:391",
-        "GameEngine.cs:437",
-        "GameContext.cs:50",
-        "Consumable.cs:12",
-        "Consumable.cs:28",
-        "PlayerAbility.cs:22"
-      ],
-      "stretchGoals": [
-        "ItemCombat",
-        "EFCoreUpdate"
-      ],
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 20,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)",
-        "1 student comment(s) to review"
-      ]
+      "notes": []
     },
     {
       "name": "exam-MW92007",
@@ -1376,36 +1353,53 @@
       "name": "irodriguez5",
       "repo": "w4-solid-ocp-irodriguez5",
       "assignmentPattern": "w4-solid-ocp",
-      "submittedAt": "2026-05-11T22:09:19Z",
-      "pushedAt": "2026-05-11T22:09:28Z",
+      "submittedAt": "2026-05-14T07:54:30Z",
+      "pushedAt": "2026-05-14T07:54:38Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w4-solid-ocp-irodriguez5/actions/runs/25700247637",
+        "url": "https://github.com/WCTC-Net-Database/w4-solid-ocp-irodriguez5/actions/runs/25848762135",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w4-solid-ocp-irodriguez5",
         "maintainability": "A",
-        "codeSmells": "42",
+        "codeSmells": "45",
         "bugs": "0",
-        "vulnerabilities": "0",
+        "vulnerabilities": "2",
         "reliability": "A",
-        "security": "A",
+        "security": "E",
         "duplication": "0.0",
-        "linesOfCode": "1116"
+        "linesOfCode": "1365"
       },
-      "todoCount": 0,
+      "todoCount": 8,
       "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 80,
       "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 3,
+      "todos": [
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:60",
+        "CsvFileHandler.cs:74",
+        "CsvFileHandler.cs:83",
+        "CsvFileHandler.cs:92",
+        "JsonFileHandler.cs:33",
+        "JsonFileHandler.cs:43",
+        "JsonFileHandler.cs:53"
+      ],
+      "stretchGoals": [
+        "Spectre.Console",
+        "JsonFileHandler",
+        "ExtraCharacters",
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 5,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)"
+      ]
     },
     {
       "name": "irodriguez5",

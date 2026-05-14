@@ -1,27 +1,27 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-05-14T02:35:23Z",
+  "generated": "2026-05-14T08:30:08Z",
   "students": [
     {
       "name": "Sdunn235",
       "repo": "w1-file-i-o-Sdunn235",
-      "submittedAt": "2026-05-14T00:13:24Z",
+      "submittedAt": "2026-05-14T06:33:50Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/25834151920",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/25845755888",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
         "maintainability": "A",
-        "codeSmells": "116",
+        "codeSmells": "180",
         "bugs": "0",
         "vulnerabilities": "0",
         "reliability": "A",
         "security": "A",
-        "duplication": "3.7",
-        "linesOfCode": "4835"
+        "duplication": "4.0",
+        "linesOfCode": "7345"
       },
       "todoCount": 0,
       "studentComments": 8,
@@ -31,22 +31,22 @@
       "comments": [
         {
           "file": "GameEngine.cs",
-          "line": 1496,
+          "line": 1628,
           "text": "    // W14 Phase D / +5 challenge — single helper for all ILockable unlocks."
         },
         {
           "file": "GameEngine.cs",
-          "line": 1590,
+          "line": 1730,
           "text": "    // Fires FindKeyLocation only when it would actually help: the target"
         },
         {
           "file": "GameEngine.cs",
-          "line": 2048,
+          "line": 2193,
           "text": "    // shared TryUnlockTarget helper. Same algorithm, same outcome"
         },
         {
           "file": "GameEngine.cs",
-          "line": 2062,
+          "line": 2207,
           "text": "    // Same Character.DisarmTrap(ILockable, Item) helper underneath."
         },
         {
@@ -66,7 +66,7 @@
         },
         {
           "file": "Door.cs",
-          "line": 63,
+          "line": 66,
           "text": "    /// doors. Combined with <see cref=\"IsSecret\"/> via the helper below.</summary>"
         }
       ],
@@ -76,7 +76,7 @@
         "ItemCombat",
         "EFCoreUpdate"
       ],
-      "studentCommitCount": 36,
+      "studentCommitCount": 57,
       "isTemplateOnly": false,
       "notes": [
         "Completed stretch goal(s)",
