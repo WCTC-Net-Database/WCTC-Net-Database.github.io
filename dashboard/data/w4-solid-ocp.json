@@ -1,6 +1,6 @@
 {
   "assignment": "w4-solid-ocp",
-  "generated": "2026-05-14T08:32:37Z",
+  "generated": "2026-05-14T13:54:08Z",
   "students": [
     {
       "name": "irodriguez5",
@@ -23,34 +23,17 @@
         "duplication": "0.0",
         "linesOfCode": "1365"
       },
-      "todoCount": 8,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 80,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "CsvFileHandler.cs:25",
-        "CsvFileHandler.cs:60",
-        "CsvFileHandler.cs:74",
-        "CsvFileHandler.cs:83",
-        "CsvFileHandler.cs:92",
-        "JsonFileHandler.cs:33",
-        "JsonFileHandler.cs:43",
-        "JsonFileHandler.cs:53"
-      ],
-      "stretchGoals": [
-        "Spectre.Console",
-        "JsonFileHandler",
-        "ExtraCharacters",
-        "EFCoreUpdate"
-      ],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 5,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)"
-      ]
+      "notes": []
     },
     {
       "name": "Samuel-dotcom-rgb",
