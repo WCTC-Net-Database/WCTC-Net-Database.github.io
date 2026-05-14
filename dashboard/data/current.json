@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-13T19:47:08Z",
+  "generated": "2026-05-14T02:38:33Z",
   "students": [
     {
       "name": "MW92007",
@@ -437,36 +437,84 @@
       "name": "Sdunn235",
       "repo": "w1-file-i-o-Sdunn235",
       "assignmentPattern": "w1-file-i-o",
-      "submittedAt": "2026-05-09T05:17:26Z",
-      "pushedAt": "2026-05-09T05:17:36Z",
+      "submittedAt": "2026-05-14T00:13:24Z",
+      "pushedAt": "2026-05-14T00:22:00Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/25592691793",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/25834151920",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
         "maintainability": "A",
-        "codeSmells": "107",
+        "codeSmells": "116",
         "bugs": "0",
         "vulnerabilities": "0",
         "reliability": "A",
         "security": "A",
-        "duplication": "4.1",
-        "linesOfCode": "4453"
+        "duplication": "3.7",
+        "linesOfCode": "4835"
       },
       "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
+      "studentComments": 8,
+      "hasStretch": true,
+      "needsReview": true,
       "estimatedScore": 100,
-      "comments": [],
+      "comments": [
+        {
+          "file": "GameEngine.cs",
+          "line": 1496,
+          "text": "    // W14 Phase D / +5 challenge — single helper for all ILockable unlocks."
+        },
+        {
+          "file": "GameEngine.cs",
+          "line": 1590,
+          "text": "    // Fires FindKeyLocation only when it would actually help: the target"
+        },
+        {
+          "file": "GameEngine.cs",
+          "line": 2048,
+          "text": "    // shared TryUnlockTarget helper. Same algorithm, same outcome"
+        },
+        {
+          "file": "GameEngine.cs",
+          "line": 2062,
+          "text": "    // Same Character.DisarmTrap(ILockable, Item) helper underneath."
+        },
+        {
+          "file": "20260511014949_W14_DropIsKeyItem.cs",
+          "line": 10,
+          "text": "    /// \"is this a key\" predicate is now Item.KeyId != null. To make that"
+        },
+        {
+          "file": "Character.cs",
+          "line": 37,
+          "text": "    // --- Derivation helpers (bible §5: resources are derived from stats) ---"
+        },
+        {
+          "file": "Character.cs",
+          "line": 44,
+          "text": "    // --- Combat helpers ---"
+        },
+        {
+          "file": "Door.cs",
+          "line": 63,
+          "text": "    /// doors. Combined with <see cref=\"IsSecret\"/> via the helper below.</summary>"
+        }
+      ],
       "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 31,
+      "stretchGoals": [
+        "Spectre.Console",
+        "ItemCombat",
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 36,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Completed stretch goal(s)",
+        "8 student comment(s) to review"
+      ]
     },
     {
       "name": "Sdunn235",
@@ -951,36 +999,59 @@
       "name": "TGustafson1",
       "repo": "w9-efcore-intro-TGustafson1",
       "assignmentPattern": "w9-efcore-intro",
-      "submittedAt": "2026-05-04T02:14:26Z",
-      "pushedAt": "2026-05-04T02:14:31Z",
+      "submittedAt": "2026-05-14T02:37:53Z",
+      "pushedAt": "2026-05-14T02:37:57Z",
       "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/25297767663",
+        "status": "in_progress",
+        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/25838381871",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-TGustafson1",
         "maintainability": "A",
-        "codeSmells": "48",
-        "bugs": "0",
+        "codeSmells": "63",
+        "bugs": "1",
         "vulnerabilities": "0",
-        "reliability": "A",
+        "reliability": "C",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "1279"
+        "linesOfCode": "1496"
       },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 16,
+      "todoCount": 9,
+      "studentComments": 1,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [
+        {
+          "file": "GameEngine.cs",
+          "line": 437,
+          "text": "        //TODO: Review this to understand loading of context references"
+        }
+      ],
+      "todos": [
+        "CombatEngine.cs:56",
+        "CombatEngine.cs:107",
+        "GameEngine.cs:77",
+        "GameEngine.cs:391",
+        "GameEngine.cs:437",
+        "GameContext.cs:50",
+        "Consumable.cs:12",
+        "Consumable.cs:28",
+        "PlayerAbility.cs:22"
+      ],
+      "stretchGoals": [
+        "ItemCombat",
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 20,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "1 student comment(s) to review"
+      ]
     },
     {
       "name": "exam-MW92007",
@@ -1387,6 +1458,43 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w6-solid-dip-irodriguez5",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Template only - no student commits detected"
+      ]
+    },
+    {
+      "name": "irodriguez5",
+      "repo": "w9-efcore-intro-irodriguez5",
+      "assignmentPattern": "w9-efcore-intro",
+      "submittedAt": "2026-03-26T01:27:58Z",
+      "pushedAt": "2026-03-26T01:27:58Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w9-efcore-intro-irodriguez5",
         "maintainability": "-",
         "codeSmells": "-",
         "bugs": "-",

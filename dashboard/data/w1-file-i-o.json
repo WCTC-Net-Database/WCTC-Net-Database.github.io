@@ -1,39 +1,87 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-05-13T19:45:19Z",
+  "generated": "2026-05-14T02:35:23Z",
   "students": [
     {
       "name": "Sdunn235",
       "repo": "w1-file-i-o-Sdunn235",
-      "submittedAt": "2026-05-09T05:17:26Z",
+      "submittedAt": "2026-05-14T00:13:24Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/25592691793",
+        "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Sdunn235/actions/runs/25834151920",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
         "maintainability": "A",
-        "codeSmells": "107",
+        "codeSmells": "116",
         "bugs": "0",
         "vulnerabilities": "0",
         "reliability": "A",
         "security": "A",
-        "duplication": "4.1",
-        "linesOfCode": "4453"
+        "duplication": "3.7",
+        "linesOfCode": "4835"
       },
       "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
+      "studentComments": 8,
+      "hasStretch": true,
+      "needsReview": true,
       "estimatedScore": 100,
-      "comments": [],
+      "comments": [
+        {
+          "file": "GameEngine.cs",
+          "line": 1496,
+          "text": "    // W14 Phase D / +5 challenge — single helper for all ILockable unlocks."
+        },
+        {
+          "file": "GameEngine.cs",
+          "line": 1590,
+          "text": "    // Fires FindKeyLocation only when it would actually help: the target"
+        },
+        {
+          "file": "GameEngine.cs",
+          "line": 2048,
+          "text": "    // shared TryUnlockTarget helper. Same algorithm, same outcome"
+        },
+        {
+          "file": "GameEngine.cs",
+          "line": 2062,
+          "text": "    // Same Character.DisarmTrap(ILockable, Item) helper underneath."
+        },
+        {
+          "file": "20260511014949_W14_DropIsKeyItem.cs",
+          "line": 10,
+          "text": "    /// \"is this a key\" predicate is now Item.KeyId != null. To make that"
+        },
+        {
+          "file": "Character.cs",
+          "line": 37,
+          "text": "    // --- Derivation helpers (bible §5: resources are derived from stats) ---"
+        },
+        {
+          "file": "Character.cs",
+          "line": 44,
+          "text": "    // --- Combat helpers ---"
+        },
+        {
+          "file": "Door.cs",
+          "line": 63,
+          "text": "    /// doors. Combined with <see cref=\"IsSecret\"/> via the helper below.</summary>"
+        }
+      ],
       "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 31,
+      "stretchGoals": [
+        "Spectre.Console",
+        "ItemCombat",
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 36,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Completed stretch goal(s)",
+        "8 student comment(s) to review"
+      ]
     },
     {
       "name": "TGustafson1",

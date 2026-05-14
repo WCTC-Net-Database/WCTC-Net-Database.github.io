@@ -1,39 +1,62 @@
 {
   "assignment": "w9-efcore-intro",
-  "generated": "2026-05-13T19:46:57Z",
+  "generated": "2026-05-14T02:38:03Z",
   "students": [
     {
       "name": "TGustafson1",
       "repo": "w9-efcore-intro-TGustafson1",
-      "submittedAt": "2026-05-04T02:14:26Z",
+      "submittedAt": "2026-05-14T02:37:53Z",
       "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/25297767663",
+        "status": "in_progress",
+        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/25838381871",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-TGustafson1",
         "maintainability": "A",
-        "codeSmells": "48",
-        "bugs": "0",
+        "codeSmells": "63",
+        "bugs": "1",
         "vulnerabilities": "0",
-        "reliability": "A",
+        "reliability": "C",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "1279"
+        "linesOfCode": "1496"
       },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 16,
+      "todoCount": 9,
+      "studentComments": 1,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [
+        {
+          "file": "GameEngine.cs",
+          "line": 437,
+          "text": "        //TODO: Review this to understand loading of context references"
+        }
+      ],
+      "todos": [
+        "CombatEngine.cs:56",
+        "CombatEngine.cs:107",
+        "GameEngine.cs:77",
+        "GameEngine.cs:391",
+        "GameEngine.cs:437",
+        "GameContext.cs:50",
+        "Consumable.cs:12",
+        "Consumable.cs:28",
+        "PlayerAbility.cs:22"
+      ],
+      "stretchGoals": [
+        "ItemCombat",
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 20,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "1 student comment(s) to review"
+      ]
     },
     {
       "name": "MW92007",
@@ -100,6 +123,41 @@
       "studentCommitCount": 2,
       "isTemplateOnly": false,
       "notes": []
+    },
+    {
+      "name": "irodriguez5",
+      "repo": "w9-efcore-intro-irodriguez5",
+      "submittedAt": "2026-03-26T01:27:58Z",
+      "build": {
+        "status": "unknown",
+        "url": "",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w9-efcore-intro-irodriguez5",
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": true,
+      "estimatedScore": 0,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [],
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Template only - no student commits detected"
+      ]
     },
     {
       "name": "Sdunn235-1",
