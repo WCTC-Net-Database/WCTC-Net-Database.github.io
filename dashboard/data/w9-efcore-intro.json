@@ -1,39 +1,65 @@
 {
   "assignment": "w9-efcore-intro",
-  "generated": "2026-05-14T13:55:11Z",
+  "generated": "2026-05-14T19:40:31Z",
   "students": [
     {
       "name": "TGustafson1",
       "repo": "w9-efcore-intro-TGustafson1",
-      "submittedAt": "2026-05-14T02:37:53Z",
+      "submittedAt": "2026-05-14T18:39:03Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/25838381871",
+        "url": "https://github.com/WCTC-Net-Database/w9-efcore-intro-TGustafson1/actions/runs/25878457754",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-TGustafson1",
         "maintainability": "A",
-        "codeSmells": "78",
-        "bugs": "1",
+        "codeSmells": "93",
+        "bugs": "0",
         "vulnerabilities": "0",
-        "reliability": "C",
+        "reliability": "A",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "1917"
+        "linesOfCode": "2302"
       },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 20,
+      "todoCount": 12,
+      "studentComments": 1,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [
+        {
+          "file": "GameEngine.cs",
+          "line": 511,
+          "text": "        //TODO: Review this to understand loading of context references"
+        }
+      ],
+      "todos": [
+        "Chest.cs:13",
+        "Consumable.cs:27",
+        "PlayerAbility.cs:22",
+        "GameContext.cs:52",
+        "GameContext.cs:81",
+        "GameEngine.cs:64",
+        "GameEngine.cs:123",
+        "GameEngine.cs:247",
+        "GameEngine.cs:459",
+        "GameEngine.cs:511",
+        "CombatEngine.cs:56",
+        "MenuEngine.cs:11"
+      ],
+      "stretchGoals": [
+        "ItemCombat",
+        "EFCoreUpdate"
+      ],
+      "studentCommitCount": 22,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
+        "1 student comment(s) to review"
+      ]
     },
     {
       "name": "MW92007",
