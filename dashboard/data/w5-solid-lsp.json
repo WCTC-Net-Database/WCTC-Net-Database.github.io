@@ -1,7 +1,44 @@
 {
   "assignment": "w5-solid-lsp",
-  "generated": "2026-05-17T02:32:57Z",
+  "generated": "2026-05-17T08:13:14Z",
   "students": [
+    {
+      "name": "MW92007",
+      "repo": "w5-solid-lsp-MW92007",
+      "submittedAt": "2026-05-17T03:42:49Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w5-solid-lsp-MW92007/actions/runs/25980511346",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w5-solid-lsp-MW92007",
+        "maintainability": "-",
+        "codeSmells": "",
+        "bugs": "",
+        "vulnerabilities": "",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "",
+        "linesOfCode": ""
+      },
+      "todoCount": 1,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 97,
+      "comments": [],
+      "todos": [
+        "GameEngine.cs:102"
+      ],
+      "stretchGoals": [],
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
+      "notes": [
+        "1 TODOs remaining"
+      ]
+    },
     {
       "name": "Samuel-dotcom-rgb",
       "repo": "w5-solid-lsp-Samuel-dotcom-rgb",

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-17T02:33:40Z",
+  "generated": "2026-05-17T08:13:56Z",
   "students": [
     {
       "name": "MW92007",
@@ -110,8 +110,94 @@
       "name": "MW92007",
       "repo": "w4-solid-ocp-MW92007",
       "assignmentPattern": "w4-solid-ocp",
-      "submittedAt": "2026-02-12T22:22:27Z",
-      "pushedAt": "2026-02-12T22:22:27Z",
+      "submittedAt": "2026-05-17T03:05:49Z",
+      "pushedAt": "2026-05-17T03:05:55Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w4-solid-ocp-MW92007/actions/runs/25979821064",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w4-solid-ocp-MW92007",
+        "maintainability": "-",
+        "codeSmells": "",
+        "bugs": "",
+        "vulnerabilities": "",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "",
+        "linesOfCode": ""
+      },
+      "todoCount": 6,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": true,
+      "estimatedScore": 80,
+      "comments": [],
+      "todos": [
+        "JsonFileHandler.cs:32",
+        "JsonFileHandler.cs:43",
+        "JsonFileHandler.cs:54",
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:67",
+        "CsvFileHandler.cs:80"
+      ],
+      "stretchGoals": [
+        "JsonFileHandler"
+      ],
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
+      "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)"
+      ]
+    },
+    {
+      "name": "MW92007",
+      "repo": "w5-solid-lsp-MW92007",
+      "assignmentPattern": "w5-solid-lsp",
+      "submittedAt": "2026-05-17T03:42:49Z",
+      "pushedAt": "2026-05-17T03:42:54Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w5-solid-lsp-MW92007/actions/runs/25980511346",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w5-solid-lsp-MW92007",
+        "maintainability": "-",
+        "codeSmells": "",
+        "bugs": "",
+        "vulnerabilities": "",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "",
+        "linesOfCode": ""
+      },
+      "todoCount": 1,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 97,
+      "comments": [],
+      "todos": [
+        "GameEngine.cs:102"
+      ],
+      "stretchGoals": [],
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
+      "notes": [
+        "1 TODOs remaining"
+      ]
+    },
+    {
+      "name": "MW92007",
+      "repo": "w6-solid-dip-MW92007",
+      "assignmentPattern": "w6-solid-dip",
+      "submittedAt": "2026-02-26T21:04:47Z",
+      "pushedAt": "2026-02-26T21:04:47Z",
       "build": {
         "status": "unknown",
         "url": "",
@@ -119,7 +205,7 @@
         "errorLines": []
       },
       "sonar": {
-        "projectKey": "WCTC-Net-Database_w4-solid-ocp-MW92007",
+        "projectKey": "WCTC-Net-Database_w6-solid-dip-MW92007",
         "maintainability": "-",
         "codeSmells": "-",
         "bugs": "-",
@@ -1324,34 +1410,17 @@
         "duplication": "0.0",
         "linesOfCode": "1693"
       },
-      "todoCount": 8,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 80,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "JsonFileHandler.cs:33",
-        "JsonFileHandler.cs:43",
-        "JsonFileHandler.cs:53",
-        "CsvFileHandler.cs:25",
-        "CsvFileHandler.cs:60",
-        "CsvFileHandler.cs:74",
-        "CsvFileHandler.cs:83",
-        "CsvFileHandler.cs:92"
-      ],
-      "stretchGoals": [
-        "Spectre.Console",
-        "JsonFileHandler",
-        "ExtraCharacters",
-        "EFCoreUpdate"
-      ],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 6,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)"
-      ]
+      "notes": []
     },
     {
       "name": "irodriguez5",
