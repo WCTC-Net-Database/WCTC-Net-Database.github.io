@@ -1,7 +1,44 @@
 {
   "assignment": "w6-solid-dip",
-  "generated": "2026-05-17T13:06:07Z",
+  "generated": "2026-05-17T19:00:12Z",
   "students": [
+    {
+      "name": "MW92007",
+      "repo": "w6-solid-dip-MW92007",
+      "submittedAt": "2026-05-17T15:33:45Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w6-solid-dip-MW92007/actions/runs/25995083049",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w6-solid-dip-MW92007",
+        "maintainability": "-",
+        "codeSmells": "",
+        "bugs": "",
+        "vulnerabilities": "",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "",
+        "linesOfCode": ""
+      },
+      "todoCount": 0,
+      "studentComments": 0,
+      "hasStretch": true,
+      "needsReview": false,
+      "estimatedScore": 100,
+      "comments": [],
+      "todos": [],
+      "stretchGoals": [
+        "ExtraCharacters"
+      ],
+      "studentCommitCount": 1,
+      "isTemplateOnly": false,
+      "notes": [
+        "Completed stretch goal(s)"
+      ]
+    },
     {
       "name": "taylorharty",
       "repo": "w6-solid-dip-taylorharty",
@@ -73,41 +110,6 @@
       "studentCommitCount": 2,
       "isTemplateOnly": false,
       "notes": []
-    },
-    {
-      "name": "MW92007",
-      "repo": "w6-solid-dip-MW92007",
-      "submittedAt": "2026-02-26T21:04:47Z",
-      "build": {
-        "status": "unknown",
-        "url": "",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w6-solid-dip-MW92007",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 0,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 0,
-      "isTemplateOnly": true,
-      "notes": [
-        "Template only - no student commits detected"
-      ]
     },
     {
       "name": "irodriguez5",
