@@ -1,6 +1,6 @@
 {
   "assignment": "w5-solid-lsp",
-  "generated": "2026-05-17T08:13:14Z",
+  "generated": "2026-05-17T13:05:55Z",
   "students": [
     {
       "name": "MW92007",
@@ -23,21 +23,17 @@
         "duplication": "",
         "linesOfCode": ""
       },
-      "todoCount": 1,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 97,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "GameEngine.cs:102"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 1,
       "isTemplateOnly": false,
-      "notes": [
-        "1 TODOs remaining"
-      ]
+      "notes": []
     },
     {
       "name": "Samuel-dotcom-rgb",

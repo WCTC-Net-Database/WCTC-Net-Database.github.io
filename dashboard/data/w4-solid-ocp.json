@@ -1,6 +1,6 @@
 {
   "assignment": "w4-solid-ocp",
-  "generated": "2026-05-17T08:13:01Z",
+  "generated": "2026-05-17T13:05:44Z",
   "students": [
     {
       "name": "MW92007",
@@ -23,29 +23,17 @@
         "duplication": "",
         "linesOfCode": ""
       },
-      "todoCount": 6,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
-      "needsReview": true,
-      "estimatedScore": 80,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "JsonFileHandler.cs:32",
-        "JsonFileHandler.cs:43",
-        "JsonFileHandler.cs:54",
-        "CsvFileHandler.cs:25",
-        "CsvFileHandler.cs:67",
-        "CsvFileHandler.cs:80"
-      ],
-      "stretchGoals": [
-        "JsonFileHandler"
-      ],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 1,
       "isTemplateOnly": false,
-      "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)"
-      ]
+      "notes": []
     },
     {
       "name": "irodriguez5",
