@@ -1,6 +1,6 @@
 {
   "assignment": "w2-csv-parsing",
-  "generated": "2026-05-18T02:42:44Z",
+  "generated": "2026-05-18T09:47:49Z",
   "students": [
     {
       "name": "MW92007",
@@ -23,22 +23,17 @@
         "duplication": "0.0",
         "linesOfCode": "198"
       },
-      "todoCount": 2,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 94,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "Program.cs:105",
-        "Program.cs:110"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 3,
       "isTemplateOnly": false,
-      "notes": [
-        "2 TODOs remaining"
-      ]
+      "notes": []
     },
     {
       "name": "irodriguez5",

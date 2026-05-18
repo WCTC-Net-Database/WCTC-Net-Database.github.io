@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-18T02:44:21Z",
+  "generated": "2026-05-18T09:49:38Z",
   "students": [
     {
       "name": "MW92007",
@@ -59,22 +59,17 @@
         "duplication": "0.0",
         "linesOfCode": "198"
       },
-      "todoCount": 2,
+      "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 94,
+      "estimatedScore": 100,
       "comments": [],
-      "todos": [
-        "Program.cs:105",
-        "Program.cs:110"
-      ],
+      "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 3,
       "isTemplateOnly": false,
-      "notes": [
-        "2 TODOs remaining"
-      ]
+      "notes": []
     },
     {
       "name": "MW92007",
