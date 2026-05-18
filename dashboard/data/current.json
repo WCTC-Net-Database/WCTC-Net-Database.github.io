@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-17T19:01:01Z",
+  "generated": "2026-05-18T02:44:21Z",
   "students": [
     {
       "name": "MW92007",
@@ -40,36 +40,41 @@
       "name": "MW92007",
       "repo": "w2-csv-parsing-MW92007",
       "assignmentPattern": "w2-csv-parsing",
-      "submittedAt": "2026-02-25T10:39:26Z",
-      "pushedAt": "2026-02-25T10:39:26Z",
+      "submittedAt": "2026-05-17T21:11:16Z",
+      "pushedAt": "2026-05-17T21:11:23Z",
       "build": {
         "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-MW92007/actions/runs/22393182204",
+        "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-MW92007/actions/runs/26002832411",
         "errorStep": "",
         "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-MW92007",
         "maintainability": "A",
-        "codeSmells": "17",
+        "codeSmells": "8",
         "bugs": "1",
         "vulnerabilities": "0",
         "reliability": "C",
         "security": "A",
         "duplication": "0.0",
-        "linesOfCode": "177"
+        "linesOfCode": "198"
       },
-      "todoCount": 0,
+      "todoCount": 2,
       "studentComments": 0,
       "hasStretch": false,
       "needsReview": false,
-      "estimatedScore": 100,
+      "estimatedScore": 94,
       "comments": [],
-      "todos": [],
+      "todos": [
+        "Program.cs:105",
+        "Program.cs:110"
+      ],
       "stretchGoals": [],
-      "studentCommitCount": 1,
+      "studentCommitCount": 3,
       "isTemplateOnly": false,
-      "notes": []
+      "notes": [
+        "2 TODOs remaining"
+      ]
     },
     {
       "name": "MW92007",
@@ -201,19 +206,15 @@
       },
       "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": false,
       "estimatedScore": 100,
       "comments": [],
       "todos": [],
-      "stretchGoals": [
-        "ExtraCharacters"
-      ],
+      "stretchGoals": [],
       "studentCommitCount": 1,
       "isTemplateOnly": false,
-      "notes": [
-        "Completed stretch goal(s)"
-      ]
+      "notes": []
     },
     {
       "name": "MW92007",

@@ -1,7 +1,45 @@
 {
   "assignment": "w2-csv-parsing",
-  "generated": "2026-05-17T18:59:21Z",
+  "generated": "2026-05-18T02:42:44Z",
   "students": [
+    {
+      "name": "MW92007",
+      "repo": "w2-csv-parsing-MW92007",
+      "submittedAt": "2026-05-17T21:11:16Z",
+      "build": {
+        "status": "success",
+        "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-MW92007/actions/runs/26002832411",
+        "errorStep": "",
+        "errorLines": []
+      },
+      "sonar": {
+        "projectKey": "WCTC-Net-Database_w2-csv-parsing-MW92007",
+        "maintainability": "A",
+        "codeSmells": "8",
+        "bugs": "1",
+        "vulnerabilities": "0",
+        "reliability": "C",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "198"
+      },
+      "todoCount": 2,
+      "studentComments": 0,
+      "hasStretch": false,
+      "needsReview": false,
+      "estimatedScore": 94,
+      "comments": [],
+      "todos": [
+        "Program.cs:105",
+        "Program.cs:110"
+      ],
+      "stretchGoals": [],
+      "studentCommitCount": 3,
+      "isTemplateOnly": false,
+      "notes": [
+        "2 TODOs remaining"
+      ]
+    },
     {
       "name": "irodriguez5",
       "repo": "w2-csv-parsing-irodriguez5",
@@ -32,39 +70,6 @@
       "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 2,
-      "isTemplateOnly": false,
-      "notes": []
-    },
-    {
-      "name": "MW92007",
-      "repo": "w2-csv-parsing-MW92007",
-      "submittedAt": "2026-02-25T10:39:26Z",
-      "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w2-csv-parsing-MW92007/actions/runs/22393182204",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w2-csv-parsing-MW92007",
-        "maintainability": "A",
-        "codeSmells": "17",
-        "bugs": "1",
-        "vulnerabilities": "0",
-        "reliability": "C",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "177"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 1,
       "isTemplateOnly": false,
       "notes": []
     },

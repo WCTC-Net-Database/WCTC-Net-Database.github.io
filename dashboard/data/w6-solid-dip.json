@@ -1,6 +1,6 @@
 {
   "assignment": "w6-solid-dip",
-  "generated": "2026-05-17T19:00:12Z",
+  "generated": "2026-05-18T02:43:40Z",
   "students": [
     {
       "name": "MW92007",
@@ -25,19 +25,15 @@
       },
       "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": false,
       "estimatedScore": 100,
       "comments": [],
       "todos": [],
-      "stretchGoals": [
-        "ExtraCharacters"
-      ],
+      "stretchGoals": [],
       "studentCommitCount": 1,
       "isTemplateOnly": false,
-      "notes": [
-        "Completed stretch goal(s)"
-      ]
+      "notes": []
     },
     {
       "name": "taylorharty",
