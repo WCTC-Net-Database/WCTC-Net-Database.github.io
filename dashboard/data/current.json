@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-28T02:36:30Z",
+  "generated": "2026-05-28T09:53:48Z",
   "students": [
     {
       "name": "MW92007",
@@ -396,11 +396,7 @@
         "status": "failure",
         "url": "https://github.com/WCTC-Net-Database/w5-solid-lsp-Samuel-dotcom-rgb/actions/runs/22472486032",
         "errorStep": "Build",
-        "errorLines": [
-          "##[error]/home/runner/work/w5-solid-lsp-Samuel-dotcom-rgb/w5-solid-lsp-Samuel-dotcom-rgb/Services/GameEngine.cs(26,31): error CS0246: The type or namespace name 'ICommand' could not be found (are you missing a using directive or an assembly reference?) [/home/runner/work/w5-solid-lsp-Samuel-dotcom-rgb/w5-solid-lsp-Samuel-dotcom-rgb/W5-assignment-template.csproj]",
-          "Build FAILED.",
-          "##[error]/home/runner/work/w5-solid-lsp-Samuel-dotcom-rgb/w5-solid-lsp-Samuel-dotcom-rgb/Services/GameEngine.cs(26,31): error CS0246: The type or namespace name 'ICommand' could not be found (are you missing a using directive or an assembly reference?) [/home/runner/work/w5-solid-lsp-Samuel-dotcom-rgb/w5-solid-lsp-Samuel-dotcom-rgb/W5-assignment-template.csproj]"
-        ]
+        "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w5-solid-lsp-Samuel-dotcom-rgb",
