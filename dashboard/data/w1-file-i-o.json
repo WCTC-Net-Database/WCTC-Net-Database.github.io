@@ -1,6 +1,6 @@
 {
   "assignment": "w1-file-i-o",
-  "generated": "2026-06-02T10:10:36Z",
+  "generated": "2026-06-02T16:09:15Z",
   "students": [
     {
       "name": "Sdunn235",
@@ -141,7 +141,7 @@
       "build": {
         "status": "failure",
         "url": "https://github.com/WCTC-Net-Database/w1-file-i-o-Samuel-dotcom-rgb/actions/runs/21694367868",
-        "errorStep": "",
+        "errorStep": "Build",
         "errorLines": []
       },
       "sonar": {
