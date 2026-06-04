@@ -1,6 +1,6 @@
 {
   "assignment": "w6-solid-dip",
-  "generated": "2026-06-04T02:59:57Z",
+  "generated": "2026-06-04T09:47:39Z",
   "students": [
     {
       "name": "MW92007",
@@ -76,13 +76,7 @@
         "status": "failure",
         "url": "https://github.com/WCTC-Net-Database/w6-solid-dip-Samuel-dotcom-rgb/actions/runs/22747538843",
         "errorStep": "Build",
-        "errorLines": [
-          "##[error]/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/Models/CharacterBase.cs(47,2): error CS1513: } expected [/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/W6-assignment-template.csproj]",
-          "##[error]/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/Interfaces/ICharacter.cs(12,2): error CS1513: } expected [/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/W6-assignment-template.csproj]",
-          "Build FAILED.",
-          "##[error]/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/Models/CharacterBase.cs(47,2): error CS1513: } expected [/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/W6-assignment-template.csproj]",
-          "##[error]/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/Interfaces/ICharacter.cs(12,2): error CS1513: } expected [/home/runner/work/w6-solid-dip-Samuel-dotcom-rgb/w6-solid-dip-Samuel-dotcom-rgb/W6-assignment-template.csproj]"
-        ]
+        "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w6-solid-dip-Samuel-dotcom-rgb",
