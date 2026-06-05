@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-05T02:48:34Z",
+  "generated": "2026-06-05T09:36:55Z",
   "students": [
     {
       "name": "MW92007",
@@ -68,41 +68,6 @@
       "todos": [],
       "stretchGoals": [],
       "studentCommitCount": 3,
-      "isTemplateOnly": false,
-      "notes": []
-    },
-    {
-      "name": "MW92007",
-      "repo": "w3-srp-linq-MW92007",
-      "assignmentPattern": "w3-srp-linq",
-      "submittedAt": "2026-02-27T03:19:41Z",
-      "pushedAt": "2026-02-27T03:20:48Z",
-      "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w3-srp-linq-MW92007/actions/runs/22471343703",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w3-srp-linq-MW92007",
-        "maintainability": "A",
-        "codeSmells": "30",
-        "bugs": "0",
-        "vulnerabilities": "0",
-        "reliability": "A",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "328"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 1,
       "isTemplateOnly": false,
       "notes": []
     },
@@ -318,41 +283,6 @@
     },
     {
       "name": "Samuel-dotcom-rgb",
-      "repo": "w3-srp-linq-Samuel-dotcom-rgb",
-      "assignmentPattern": "w3-srp-linq",
-      "submittedAt": "2026-02-13T03:39:26Z",
-      "pushedAt": "2026-02-13T03:39:45Z",
-      "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w3-srp-linq-Samuel-dotcom-rgb/actions/runs/21973731629",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w3-srp-linq-Samuel-dotcom-rgb",
-        "maintainability": "A",
-        "codeSmells": "11",
-        "bugs": "0",
-        "vulnerabilities": "0",
-        "reliability": "A",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "359"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 1,
-      "isTemplateOnly": false,
-      "notes": []
-    },
-    {
-      "name": "Samuel-dotcom-rgb",
       "repo": "w4-solid-ocp-Samuel-dotcom-rgb",
       "assignmentPattern": "w4-solid-ocp",
       "submittedAt": "2026-02-19T16:24:26Z",
@@ -540,43 +470,6 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-Sdunn235",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 0,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 0,
-      "isTemplateOnly": true,
-      "notes": [
-        "Template only - no student commits detected"
-      ]
-    },
-    {
-      "name": "Sdunn235",
-      "repo": "w3-srp-linq-Sdunn235",
-      "assignmentPattern": "w3-srp-linq",
-      "submittedAt": "2026-02-05T20:27:35Z",
-      "pushedAt": "2026-02-05T20:27:35Z",
-      "build": {
-        "status": "unknown",
-        "url": "",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w3-srp-linq-Sdunn235",
         "maintainability": "-",
         "codeSmells": "-",
         "bugs": "-",
@@ -834,43 +727,6 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-TGustafson1",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": true,
-      "estimatedScore": 0,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 0,
-      "isTemplateOnly": true,
-      "notes": [
-        "Template only - no student commits detected"
-      ]
-    },
-    {
-      "name": "TGustafson1",
-      "repo": "w3-srp-linq-TGustafson1",
-      "assignmentPattern": "w3-srp-linq",
-      "submittedAt": "2026-02-05T20:27:35Z",
-      "pushedAt": "2026-02-05T20:27:35Z",
-      "build": {
-        "status": "unknown",
-        "url": "",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w3-srp-linq-TGustafson1",
         "maintainability": "-",
         "codeSmells": "-",
         "bugs": "-",
@@ -1326,41 +1182,6 @@
     },
     {
       "name": "irodriguez5",
-      "repo": "w3-srp-linq-irodriguez5",
-      "assignmentPattern": "w3-srp-linq",
-      "submittedAt": "2026-03-08T05:22:11Z",
-      "pushedAt": "2026-03-08T05:22:14Z",
-      "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w3-srp-linq-irodriguez5/actions/runs/22814658338",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w3-srp-linq-irodriguez5",
-        "maintainability": "A",
-        "codeSmells": "25",
-        "bugs": "0",
-        "vulnerabilities": "0",
-        "reliability": "A",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "389"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 1,
-      "isTemplateOnly": false,
-      "notes": []
-    },
-    {
-      "name": "irodriguez5",
       "repo": "w4-solid-ocp-irodriguez5",
       "assignmentPattern": "w4-solid-ocp",
       "submittedAt": "2026-05-17T00:24:00Z",
@@ -1576,41 +1397,6 @@
       "notes": [
         "Template only - no student commits detected"
       ]
-    },
-    {
-      "name": "taylorharty",
-      "repo": "w3-srp-linq-taylorharty",
-      "assignmentPattern": "w3-srp-linq",
-      "submittedAt": "2026-03-12T02:41:16Z",
-      "pushedAt": "2026-03-12T02:44:54Z",
-      "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w3-srp-linq-taylorharty/actions/runs/22984251967",
-        "errorStep": "",
-        "errorLines": []
-      },
-      "sonar": {
-        "projectKey": "WCTC-Net-Database_w3-srp-linq-taylorharty",
-        "maintainability": "A",
-        "codeSmells": "11",
-        "bugs": "0",
-        "vulnerabilities": "0",
-        "reliability": "A",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "363"
-      },
-      "todoCount": 0,
-      "studentComments": 0,
-      "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
-      "comments": [],
-      "todos": [],
-      "stretchGoals": [],
-      "studentCommitCount": 1,
-      "isTemplateOnly": false,
-      "notes": []
     },
     {
       "name": "taylorharty",
