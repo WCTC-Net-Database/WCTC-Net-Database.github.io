@@ -1,6 +1,6 @@
 {
   "assignment": "w8-midterm",
-  "generated": "2026-06-10T20:22:09Z",
+  "generated": "2026-06-11T02:58:05Z",
   "students": [
     {
       "name": "exam-MW92007",
@@ -175,11 +175,7 @@
         "status": "failure",
         "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-Samuel-dotcom-rgb/actions/runs/23029562250",
         "errorStep": "Build",
-        "errorLines": [
-          "##[error]D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\Models\\MonsterBase.cs(7,41): error CS0535: 'MonsterBase' does not implement interface member 'IMonster.TakeDamage(int)' [D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\ConsoleRpgEntities.csproj]",
-          "Build FAILED.",
-          "##[error]D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\Models\\MonsterBase.cs(7,41): error CS0535: 'MonsterBase' does not implement interface member 'IMonster.TakeDamage(int)' [D:\\a\\w8-midterm-exam-Samuel-dotcom-rgb\\w8-midterm-exam-Samuel-dotcom-rgb\\ConsoleRpgEntities\\ConsoleRpgEntities.csproj]"
-        ]
+        "errorLines": []
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w8-midterm-exam-Samuel-dotcom-rgb",
