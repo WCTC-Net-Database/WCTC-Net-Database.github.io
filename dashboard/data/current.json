@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-16T03:29:12Z",
+  "generated": "2026-06-16T11:00:24Z",
   "students": [
     {
       "name": "MW92007",
@@ -1187,8 +1187,8 @@
       "submittedAt": "2026-03-13T00:57:56Z",
       "pushedAt": "2026-03-13T00:58:01Z",
       "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-irodriguez5/actions/runs/23031247551",
+        "status": "unknown",
+        "url": "",
         "errorStep": "",
         "errorLines": []
       },
