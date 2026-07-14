@@ -1,6 +1,6 @@
 {
   "assignment": "w4-solid-ocp",
-  "generated": "2026-07-14T13:18:06Z",
+  "generated": "2026-07-14T19:08:58Z",
   "students": [
     {
       "name": "MW92007",
@@ -122,30 +122,17 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 8,
+      "todoCount": 0,
       "studentComments": 0,
-      "hasStretch": true,
+      "hasStretch": false,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [
-        "CsvFileHandler.cs:25",
-        "CsvFileHandler.cs:35",
-        "CsvFileHandler.cs:43",
-        "CsvFileHandler.cs:50",
-        "CsvFileHandler.cs:57",
-        "JsonFileHandler.cs:32",
-        "JsonFileHandler.cs:42",
-        "JsonFileHandler.cs:52"
-      ],
-      "stretchGoals": [
-        "JsonFileHandler"
-      ],
+      "todos": [],
+      "stretchGoals": [],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
-        "Many TODOs remaining - likely incomplete",
-        "Completed stretch goal(s)",
         "Template only - no student commits detected"
       ]
     },
