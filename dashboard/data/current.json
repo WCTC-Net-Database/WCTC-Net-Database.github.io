@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-14T07:52:30Z",
+  "generated": "2026-07-14T13:19:12Z",
   "students": [
     {
       "name": "MW92007",
@@ -899,7 +899,7 @@
       "repo": "w4-solid-ocp-TGustafson1",
       "assignmentPattern": "w4-solid-ocp",
       "submittedAt": "2026-02-12T22:22:27Z",
-      "pushedAt": "2026-02-12T22:22:27Z",
+      "pushedAt": "",
       "build": {
         "status": "unknown",
         "url": "",
@@ -917,17 +917,30 @@
         "duplication": "-",
         "linesOfCode": "-"
       },
-      "todoCount": 0,
+      "todoCount": 8,
       "studentComments": 0,
-      "hasStretch": false,
+      "hasStretch": true,
       "needsReview": true,
       "estimatedScore": 0,
       "comments": [],
-      "todos": [],
-      "stretchGoals": [],
+      "todos": [
+        "CsvFileHandler.cs:25",
+        "CsvFileHandler.cs:35",
+        "CsvFileHandler.cs:43",
+        "CsvFileHandler.cs:50",
+        "CsvFileHandler.cs:57",
+        "JsonFileHandler.cs:32",
+        "JsonFileHandler.cs:42",
+        "JsonFileHandler.cs:52"
+      ],
+      "stretchGoals": [
+        "JsonFileHandler"
+      ],
       "studentCommitCount": 0,
       "isTemplateOnly": true,
       "notes": [
+        "Many TODOs remaining - likely incomplete",
+        "Completed stretch goal(s)",
         "Template only - no student commits detected"
       ]
     },
