@@ -1,6 +1,6 @@
 {
   "assignment": "w5-solid-lsp",
-  "generated": "2026-07-16T01:59:44Z",
+  "generated": "2026-07-16T08:13:23Z",
   "students": [
     {
       "name": "MW92007",
@@ -15,13 +15,13 @@
       "sonar": {
         "projectKey": "WCTC-Net-Database_w5-solid-lsp-MW92007",
         "maintainability": "-",
-        "codeSmells": "",
-        "bugs": "",
-        "vulnerabilities": "",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
         "reliability": "-",
         "security": "-",
-        "duplication": "",
-        "linesOfCode": ""
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,
@@ -48,13 +48,13 @@
       "sonar": {
         "projectKey": "WCTC-Net-Database_w5-solid-lsp-Samuel-dotcom-rgb",
         "maintainability": "-",
-        "codeSmells": "",
-        "bugs": "",
-        "vulnerabilities": "",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
         "reliability": "-",
         "security": "-",
-        "duplication": "",
-        "linesOfCode": ""
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,

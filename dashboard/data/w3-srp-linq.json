@@ -1,6 +1,6 @@
 {
   "assignment": "w3-srp-linq",
-  "generated": "2026-07-16T01:59:26Z",
+  "generated": "2026-07-16T08:07:00Z",
   "students": [
     {
       "name": "taylorharty",
@@ -14,14 +14,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w3-srp-linq-taylorharty",
-        "maintainability": "A",
-        "codeSmells": "11",
-        "bugs": "0",
-        "vulnerabilities": "0",
-        "reliability": "A",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "363"
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,
@@ -47,14 +47,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w3-srp-linq-irodriguez5",
-        "maintainability": "A",
-        "codeSmells": "25",
-        "bugs": "0",
-        "vulnerabilities": "0",
-        "reliability": "A",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "389"
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,
@@ -80,14 +80,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w3-srp-linq-MW92007",
-        "maintainability": "A",
-        "codeSmells": "30",
-        "bugs": "0",
-        "vulnerabilities": "0",
-        "reliability": "A",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "328"
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,
@@ -113,14 +113,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w3-srp-linq-Samuel-dotcom-rgb",
-        "maintainability": "A",
-        "codeSmells": "11",
-        "bugs": "0",
-        "vulnerabilities": "0",
-        "reliability": "A",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "359"
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,
