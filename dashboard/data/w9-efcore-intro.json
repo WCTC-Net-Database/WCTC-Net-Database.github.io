@@ -1,6 +1,6 @@
 {
   "assignment": "w9-efcore-intro",
-  "generated": "2026-07-16T08:23:02Z",
+  "generated": "2026-07-16T13:28:51Z",
   "students": [
     {
       "name": "TGustafson1",
@@ -14,14 +14,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-TGustafson1",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
+        "maintainability": "A",
+        "codeSmells": "98",
+        "bugs": "0",
+        "vulnerabilities": "0",
+        "reliability": "A",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "2634"
       },
       "todoCount": 0,
       "studentComments": 0,
@@ -47,14 +47,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-MW92007",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
+        "maintainability": "A",
+        "codeSmells": "7",
+        "bugs": "0",
+        "vulnerabilities": "0",
+        "reliability": "A",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "340"
       },
       "todoCount": 0,
       "studentComments": 0,
@@ -80,14 +80,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-Samuel-dotcom-rgb",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
+        "maintainability": "A",
+        "codeSmells": "13",
+        "bugs": "0",
+        "vulnerabilities": "0",
+        "reliability": "A",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "305"
       },
       "todoCount": 0,
       "studentComments": 0,
