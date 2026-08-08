@@ -1,6 +1,6 @@
 {
   "assignment": "w5-solid-lsp",
-  "generated": "2026-08-08T01:06:15Z",
+  "generated": "2026-08-08T06:39:39Z",
   "students": [
     {
       "name": "MW92007",
@@ -42,7 +42,7 @@
       "build": {
         "status": "failure",
         "url": "https://github.com/WCTC-Net-Database/w5-solid-lsp-Samuel-dotcom-rgb/actions/runs/22472486032",
-        "errorStep": "Build",
+        "errorStep": "",
         "errorLines": []
       },
       "sonar": {
