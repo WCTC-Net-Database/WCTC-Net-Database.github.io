@@ -1,6 +1,6 @@
 {
   "assignment": "w9-efcore-intro",
-  "generated": "2026-08-20T18:29:59Z",
+  "generated": "2026-08-21T00:55:30Z",
   "students": [
     {
       "name": "TGustafson1",
@@ -47,14 +47,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w9-efcore-intro-MW92007",
-        "maintainability": "A",
-        "codeSmells": "7",
-        "bugs": "0",
-        "vulnerabilities": "0",
-        "reliability": "A",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "340"
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,
