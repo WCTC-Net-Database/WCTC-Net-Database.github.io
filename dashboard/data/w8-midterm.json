@@ -1,6 +1,6 @@
 {
   "assignment": "w8-midterm",
-  "generated": "2026-08-25T06:35:50Z",
+  "generated": "2026-08-25T12:35:26Z",
   "students": [
     {
       "name": "exam-MW92007",
@@ -174,7 +174,7 @@
       "build": {
         "status": "failure",
         "url": "https://github.com/WCTC-Net-Database/w8-midterm-exam-Samuel-dotcom-rgb/actions/runs/23029562250",
-        "errorStep": "Build",
+        "errorStep": "",
         "errorLines": []
       },
       "sonar": {
