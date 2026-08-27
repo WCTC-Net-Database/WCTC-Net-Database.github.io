@@ -1,6 +1,6 @@
 {
   "assignment": "w8-midterm",
-  "generated": "2026-08-27T06:37:31Z",
+  "generated": "2026-08-27T21:34:52Z",
   "students": [
     {
       "name": "exam-MW92007",
@@ -47,14 +47,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w8-midterm-exam-irodriguez5",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
+        "maintainability": "A",
+        "codeSmells": "48",
+        "bugs": "7",
+        "vulnerabilities": "0",
+        "reliability": "E",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "1199"
       },
       "todoCount": 0,
       "studentComments": 0,
