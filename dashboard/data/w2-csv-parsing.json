@@ -1,6 +1,6 @@
 {
   "assignment": "w2-csv-parsing",
-  "generated": "2026-08-26T19:41:17Z",
+  "generated": "2026-08-27T06:36:34Z",
   "students": [
     {
       "name": "MW92007",
@@ -14,14 +14,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-MW92007",
-        "maintainability": "A",
-        "codeSmells": "8",
-        "bugs": "1",
-        "vulnerabilities": "0",
-        "reliability": "C",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "198"
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,
@@ -80,14 +80,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-Samuel-dotcom-rgb",
-        "maintainability": "A",
-        "codeSmells": "23",
-        "bugs": "1",
-        "vulnerabilities": "0",
-        "reliability": "C",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "290"
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,

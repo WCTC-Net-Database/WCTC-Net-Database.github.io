@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-26T19:42:31Z",
+  "generated": "2026-08-27T06:37:56Z",
   "students": [
     {
       "name": "MW92007",
@@ -50,14 +50,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-MW92007",
-        "maintainability": "A",
-        "codeSmells": "8",
-        "bugs": "1",
-        "vulnerabilities": "0",
-        "reliability": "C",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "198"
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,
@@ -295,14 +295,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-Samuel-dotcom-rgb",
-        "maintainability": "A",
-        "codeSmells": "23",
-        "bugs": "1",
-        "vulnerabilities": "0",
-        "reliability": "C",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "290"
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,
@@ -1194,14 +1194,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w8-midterm-exam-irodriguez5",
-        "maintainability": "A",
-        "codeSmells": "48",
-        "bugs": "7",
-        "vulnerabilities": "0",
-        "reliability": "E",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "1199"
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,
