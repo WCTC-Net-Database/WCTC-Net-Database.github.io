@@ -1,6 +1,6 @@
 {
   "assignment": "w6-solid-dip",
-  "generated": "2026-09-01T20:23:45Z",
+  "generated": "2026-09-02T02:21:35Z",
   "students": [
     {
       "name": "MW92007",
@@ -40,8 +40,8 @@
       "repo": "w6-solid-dip-taylorharty",
       "submittedAt": "2026-04-11T03:22:22Z",
       "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w6-solid-dip-taylorharty/actions/runs/24273545322",
+        "status": "unknown",
+        "url": "",
         "errorStep": "",
         "errorLines": []
       },

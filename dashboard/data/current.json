@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T20:24:35Z",
+  "generated": "2026-09-02T02:22:39Z",
   "students": [
     {
       "name": "MW92007",
@@ -1206,14 +1206,16 @@
       "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 0,
       "comments": [],
       "todos": [],
       "stretchGoals": [],
-      "studentCommitCount": 2,
-      "isTemplateOnly": false,
-      "notes": []
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Template only - no student commits detected"
+      ]
     },
     {
       "name": "exam-taylorharty",
@@ -1689,8 +1691,8 @@
       "submittedAt": "2026-04-11T03:22:22Z",
       "pushedAt": "2026-04-11T03:22:46Z",
       "build": {
-        "status": "success",
-        "url": "https://github.com/WCTC-Net-Database/w6-solid-dip-taylorharty/actions/runs/24273545322",
+        "status": "unknown",
+        "url": "",
         "errorStep": "",
         "errorLines": []
       },

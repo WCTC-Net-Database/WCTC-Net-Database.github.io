@@ -1,6 +1,6 @@
 {
   "assignment": "w8-midterm",
-  "generated": "2026-09-01T20:24:02Z",
+  "generated": "2026-09-02T02:22:00Z",
   "students": [
     {
       "name": "exam-MW92007",
@@ -59,14 +59,16 @@
       "todoCount": 0,
       "studentComments": 0,
       "hasStretch": false,
-      "needsReview": false,
-      "estimatedScore": 100,
+      "needsReview": true,
+      "estimatedScore": 0,
       "comments": [],
       "todos": [],
       "stretchGoals": [],
-      "studentCommitCount": 2,
-      "isTemplateOnly": false,
-      "notes": []
+      "studentCommitCount": 0,
+      "isTemplateOnly": true,
+      "notes": [
+        "Template only - no student commits detected"
+      ]
     },
     {
       "name": "exam-Sdunn235",
