@@ -1,6 +1,6 @@
 {
   "assignment": "w2-csv-parsing",
-  "generated": "2026-09-12T14:47:30Z",
+  "generated": "2026-09-12T19:59:25Z",
   "students": [
     {
       "name": "MW92007",
@@ -113,14 +113,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-taylorharty",
-        "maintainability": "A",
-        "codeSmells": "22",
-        "bugs": "2",
-        "vulnerabilities": "0",
-        "reliability": "C",
-        "security": "A",
-        "duplication": "0.0",
-        "linesOfCode": "132"
+        "maintainability": "-",
+        "codeSmells": "-",
+        "bugs": "-",
+        "vulnerabilities": "-",
+        "reliability": "-",
+        "security": "-",
+        "duplication": "-",
+        "linesOfCode": "-"
       },
       "todoCount": 0,
       "studentComments": 0,
