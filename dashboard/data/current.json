@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-12T20:01:01Z",
+  "generated": "2026-09-13T02:34:59Z",
   "students": [
     {
       "name": "MW92007",
@@ -505,14 +505,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w1-file-i-o-Sdunn235",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
+        "maintainability": "A",
+        "codeSmells": "180",
+        "bugs": "0",
+        "vulnerabilities": "0",
+        "reliability": "A",
+        "security": "A",
+        "duplication": "4.0",
+        "linesOfCode": "7362"
       },
       "todoCount": 0,
       "studentComments": 0,
@@ -1550,14 +1550,14 @@
       },
       "sonar": {
         "projectKey": "WCTC-Net-Database_w2-csv-parsing-taylorharty",
-        "maintainability": "-",
-        "codeSmells": "-",
-        "bugs": "-",
-        "vulnerabilities": "-",
-        "reliability": "-",
-        "security": "-",
-        "duplication": "-",
-        "linesOfCode": "-"
+        "maintainability": "A",
+        "codeSmells": "22",
+        "bugs": "2",
+        "vulnerabilities": "0",
+        "reliability": "C",
+        "security": "A",
+        "duplication": "0.0",
+        "linesOfCode": "132"
       },
       "todoCount": 0,
       "studentComments": 0,
